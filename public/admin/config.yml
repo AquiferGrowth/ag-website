@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: AquiferGrowth/ag-website
   branch: main # Branch to update (optional; defaults to main)
+  base_url: https://decap-cms-oauth.aquifergrowth.workers.dev # We will need to set this up or use a proxy
 
 media_folder: "public/images/uploads" # Folder where user uploaded files should go
 public_folder: "/images/uploads" # The src attribute for uploaded media
