@@ -3,74 +3,244 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+
+const testimonials = (await getCollection('testimonials'))
+  .filter(t => t.data.featured);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<Header />
 	<main class="container">
-		<section class="hero animate-fade-in" style="padding: var(--space-xl) 0; text-align: center;">
-			<h1 style="font-size: clamp(3rem, 8vw, 5rem); margin-bottom: var(--space-md); line-height: 1.1;">
-				Elevating Digital <span style="color: var(--accent-primary);">Experiences</span>
+		<section class="hero animate-fade-in">
+			<div class="badge">Next-Gen Digital Solutions</div>
+			<h1>
+				Building the <span class="text-gradient">Future</span> of Web Apps
 			</h1>
-			<p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto var(--space-lg) auto; font-size: 1.25rem;">
-				High-performance, content-driven websites built with Astro, Cloudflare, and cutting-edge design principles.
+			<p>
+				High-performance, content-driven websites built with Astro, Cloudflare, and premium design principles. We bridge the gap between imagination and implementation.
 			</p>
-			<div style="display: flex; gap: var(--space-md); justify-content: center;">
-				<a href="/blog" class="btn btn-primary">Read the Blog</a>
-				<a href="/about" class="btn btn-outline">Learn More</a>
+			<div class="cta-group">
+				<a href="/blog" class="btn btn-primary">Explore Our Work</a>
+				<a href="/team" class="btn btn-outline">Meet the Team</a>
 			</div>
 		</section>
 
-		<section class="grid grid-3" style="padding: var(--space-lg) 0;">
-			<div class="glass card">
+		<section class="grid grid-3 feature-section">
+			<div class="nolo-card">
+				<div class="card-icon">🚀</div>
 				<h3>Performance First</h3>
-				<p>Astro ships zero JavaScript by default, ensuring lightning-fast load times.</p>
+				<p>Astro ships zero JavaScript by default, ensuring lightning-fast load times and perfect SEO scores.</p>
 			</div>
-			<div class="glass card">
-				<h3>Content Managed</h3>
-				<p>Integrated Git-based CMS allows for easy updates without leaving your workflow.</p>
+			<div class="nolo-card highlighted">
+				<div class="card-icon">💎</div>
+				<h3>Premium Design</h3>
+				<p>High-contrast, modular, and responsive interfaces that captivate your audience from the first click.</p>
 			</div>
-			<div class="glass card">
-				<h3>Scalable Hosting</h3>
-				<p>Deployed on Cloudflare's global edge network for maximum availability.</p>
+			<div class="nolo-card">
+				<div class="card-icon">☁️</div>
+				<h3>Edge Scaling</h3>
+				<p>Deployed on Cloudflare's global edge network for maximum speed and 99.9% availability.</p>
 			</div>
 		</section>
+
+		{testimonials.length > 0 && (
+			<section class="testimonials-section">
+				<div class="section-header">
+					<div class="badge">Social Proof</div>
+					<h2>What Clients <span class="text-gradient">Say</span></h2>
+				</div>
+				<div class="testimonials-grid">
+					{testimonials.map((t) => (
+						<div class="testimonial-card">
+							<div class="stars">{'⭐'.repeat(t.data.rating ?? 5)}</div>
+							<blockquote>"{t.data.quote}"</blockquote>
+							<div class="testimonial-author">
+								{t.data.avatar && (
+									<img src={t.data.avatar} alt={t.data.author} class="author-avatar" />
+								)}
+								<div class="author-info">
+									<strong>{t.data.author}</strong>
+									{(t.data.role || t.data.company) && (
+										<span>{t.data.role}{t.data.role && t.data.company ? ' · ' : ''}{t.data.company}</span>
+									)}
+								</div>
+							</div>
+						</div>
+					))}
+				</div>
+			</section>
+		)}
 	</main>
 	<Footer />
 </Layout>
 
 <style>
+	.hero {
+		padding: var(--space-xl) 0;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: var(--space-md);
+	}
+	.badge {
+		background: var(--bg-dark);
+		color: var(--text-on-dark);
+		padding: 0.5rem 1.25rem;
+		border-radius: var(--radius-pill);
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-bottom: var(--space-sm);
+	}
+	h1 {
+		font-size: clamp(3.5rem, 10vw, 6rem);
+		max-width: 900px;
+		margin: 0;
+	}
+	.text-gradient {
+		color: var(--accent-primary);
+	}
+	.hero p {
+		color: var(--text-secondary);
+		max-width: 650px;
+		font-size: 1.25rem;
+		line-height: 1.5;
+	}
+	.cta-group {
+		display: flex;
+		gap: var(--space-md);
+		margin-top: var(--space-md);
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 	.btn {
-		padding: 0.8rem 2rem;
-		border-radius: 8px;
-		font-weight: 600;
+		padding: 1rem 2.5rem;
+		border-radius: var(--radius-pill);
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		letter-spacing: 0.05em;
 		transition: var(--transition-fast);
+		border: 2px solid var(--border-color);
 	}
 	.btn-primary {
 		background: var(--accent-primary);
 		color: white;
+		border-color: var(--accent-primary);
 	}
 	.btn-primary:hover {
-		background: var(--accent-secondary);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 20px var(--accent-glow);
+		background: var(--text-primary);
+		border-color: var(--text-primary);
+		transform: translateY(-3px);
 	}
 	.btn-outline {
-		border: 1px solid var(--border-color);
+		background: transparent;
+		color: var(--text-primary);
 	}
 	.btn-outline:hover {
-		background: rgba(255, 255, 255, 0.05);
-		border-color: var(--text-secondary);
+		background: var(--bg-secondary);
+		transform: translateY(-3px);
 	}
-	.card {
-		padding: var(--space-md);
+
+	.feature-section {
+		padding-bottom: var(--space-xl);
+	}
+	.nolo-card {
+		background: var(--bg-secondary);
+		border: 2px solid var(--border-color);
+		border-radius: var(--radius-lg);
+		padding: var(--space-lg) var(--space-md);
+		text-align: center;
+		transition: var(--transition-fast);
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-sm);
+	}
+	.nolo-card:hover {
+		transform: translateY(-8px) rotate(-1deg);
+		box-shadow: 10px 10px 0px var(--border-color);
+	}
+	.nolo-card.highlighted {
+		border-color: var(--accent-primary);
+	}
+	.card-icon {
+		font-size: 2.5rem;
+		margin-bottom: var(--space-sm);
+	}
+	.nolo-card h3 { font-size: 1.5rem; }
+	.nolo-card p {
+		color: var(--text-secondary);
+		font-size: 1rem;
+	}
+
+	/* Testimonials */
+	.testimonials-section {
+		padding-bottom: var(--space-xl);
+	}
+	.section-header {
+		text-align: center;
+		margin-bottom: var(--space-lg);
+	}
+	.section-header h2 {
+		font-size: clamp(2rem, 5vw, 3.5rem);
+		margin: 0.5rem 0 0;
+	}
+	.testimonials-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 1.5rem;
+	}
+	.testimonial-card {
+		background: var(--bg-secondary);
+		border: 2px solid var(--border-color);
+		border-radius: var(--radius-lg);
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 		transition: var(--transition-fast);
 	}
-	.card:hover {
+	.testimonial-card:hover {
 		border-color: var(--accent-primary);
-		transform: translateY(-5px);
+		transform: translateY(-4px);
 	}
-	.card h3 {
-		margin-bottom: var(--space-sm);
+	.stars { font-size: 1rem; letter-spacing: 0.1em; }
+	blockquote {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: var(--text-primary);
+		margin: 0;
+		font-style: italic;
+		flex: 1;
+	}
+	.testimonial-author {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		padding-top: 0.5rem;
+		border-top: 1px solid var(--border-color);
+	}
+	.author-avatar {
+		width: 44px;
+		height: 44px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 2px solid var(--accent-primary);
+	}
+	.author-info {
+		display: flex;
+		flex-direction: column;
+		gap: 0.1rem;
+	}
+	.author-info strong {
+		font-size: 0.9rem;
+		font-weight: 800;
+	}
+	.author-info span {
+		font-size: 0.8rem;
+		color: var(--text-secondary);
 	}
 </style>

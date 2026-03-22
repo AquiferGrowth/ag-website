@@ -1,23 +1,35 @@
 :root {
-  /* Color Palette - Deep Navy & Vibrant Teal */
-  --bg-primary: #0a0c10;
-  --bg-secondary: #161b22;
-  --text-primary: #f0f6fc;
-  --text-secondary: #8b949e;
-  --accent-primary: #2ea043; /* Green */
-  --accent-secondary: #3fb950;
-  --accent-glow: rgba(46, 160, 67, 0.15);
-  --border-color: rgba(240, 246, 252, 0.1);
+  /* Color Palette - Nolo-Inspired High Contrast */
+  --bg-primary: #F0F0F0;      /* Light Gray Page Background */
+  --bg-secondary: #FFFFFF;    /* Pure White Cards */
+  --bg-dark: #000000;         /* Pure Black transition sections */
   
-  /* Glassmorphism */
-  --glass-bg: rgba(22, 27, 34, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-blur: 12px;
+  --text-primary: #000000;    /* High-contrast Black */
+  --text-secondary: #555555;  /* Muted Gray for body */
+  --text-on-dark: #FFFFFF;
+  
+  --accent-primary: #FF4D2D;  /* Nolo Orange */
+  --accent-orange: #FF4D2D;
+  --accent-glow: rgba(255, 77, 45, 0.2);
+  
+  --border-color: #000000;    /* Solid thin borders */
+  --border-muted: #D1D1D1;
+  
+  /* Glassmorphism / Depth */
+  --glass-bg: rgba(255, 255, 255, 0.8);
+  --glass-border: rgba(0, 0, 0, 0.1);
+  --glass-blur: 16px;
 
   /* Typography */
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Fira Code', monospace;
+  --font-display: 'Inter Tight', 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
   
+  /* Radii */
+  --radius-pill: 9999px;
+  --radius-lg: 24px;
+  --radius-md: 12px;
+
   /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -26,8 +38,14 @@
   --space-xl: 8rem;
 
   /* Transitions */
-  --transition-fast: 0.2s ease;
+  --transition-fast: 0.15s ease;
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dot Grid Background Utility */
+.bg-grid {
+  background-image: radial-gradient(var(--border-muted) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
 * {
@@ -50,10 +68,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
   color: var(--text-primary);
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
 }
 
 a {
@@ -65,6 +85,7 @@ a {
 img {
   max-width: 100%;
   display: block;
+  border-radius: var(--radius-md);
 }
 
 /* Glass Utility */

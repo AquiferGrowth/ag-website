@@ -1,21 +1,89 @@
 backend:
   name: github
   repo: AquiferGrowth/ag-website
-  branch: main # Branch to update (optional; defaults to main)
+  branch: main
   base_url: https://ag-website-oauth.divjot-6b1.workers.dev
 
-media_folder: "public/images/uploads" # Folder where user uploaded files should go
-public_folder: "/images/uploads" # The src attribute for uploaded media
+publish_mode: editorial_workflow
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/content/blog" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "pubDate", widget: "datetime"}
       - {label: "Hero Image", name: "heroImage", widget: "image", required: false}
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Growth", value: "Growth" }
+          - { label: "AI & Automation", value: "AI & Automation" }
+          - { label: "Design", value: "Design" }
+          - { label: "Dev", value: "Dev" }
+          - { label: "Strategy", value: "Strategy" }
       - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "team"
+    label: "Team Members"
+    folder: "src/content/team"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Bio", name: "bio", widget: "text"}
+      - {label: "Photo", name: "photo", widget: "image", required: false}
+      - {label: "LinkedIn URL", name: "linkedin", widget: "string", required: false}
+      - {label: "Twitter URL", name: "twitter", widget: "string", required: false}
+      - {label: "Order", name: "order", widget: "number", default: 99, required: false}
+
+  - name: "categories"
+    label: "Categories"
+    folder: "src/content/categories"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Category Slug", name: "categorySlug", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - label: "Color"
+        name: "color"
+        widget: "select"
+        required: false
+        options:
+          - { label: "Orange", value: "#FF5500" }
+          - { label: "Blue", value: "#3B82F6" }
+          - { label: "Green", value: "#10B981" }
+          - { label: "Purple", value: "#8B5CF6" }
+          - { label: "Red", value: "#EF4444" }
+      - {label: "Icon (emoji)", name: "icon", widget: "string", required: false}
+
+  - name: "testimonials"
+    label: "Testimonials"
+    folder: "src/content/testimonials"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Quote", name: "quote", widget: "text"}
+      - {label: "Author Name", name: "author", widget: "string"}
+      - {label: "Company", name: "company", widget: "string", required: false}
+      - {label: "Role / Title", name: "role", widget: "string", required: false}
+      - {label: "Avatar", name: "avatar", widget: "image", required: false}
+      - label: "Rating (1-5)"
+        name: "rating"
+        widget: "select"
+        required: false
+        options:
+          - { label: "⭐⭐⭐", value: 3 }
+          - { label: "⭐⭐⭐⭐", value: 4 }
+          - { label: "⭐⭐⭐⭐⭐", value: 5 }
+      - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}

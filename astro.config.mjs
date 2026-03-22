@@ -3,6 +3,6 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  adapter: cloudflare()
+  site: "https://dev.ag-website-c9y.pages.dev",
+  output: "static"
 });
