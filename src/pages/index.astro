@@ -5,12 +5,14 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import NoloPitch from '../components/NoloPitch.astro';
+import ParticleBackground from '../components/ParticleBackground.astro';
 
 const testimonials = (await getCollection('testimonials'))
   .filter(t => t.data.featured);
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<ParticleBackground />
 	<Header />
 	<main class="container">
 		<section class="hero animate-fade-in">
