@@ -1,18 +1,18 @@
 :root {
-  /* Color Palette - Nolo-Inspired High Contrast */
-  --bg-primary: #F0F0F0;      /* Light Gray Page Background */
+  /* Color Palette - Aquifer Growth High Contrast */
+  --bg-primary: #F9F7F2;      /* Off-white/Cream Background */
   --bg-secondary: #FFFFFF;    /* Pure White Cards */
-  --bg-dark: #000000;         /* Pure Black transition sections */
+  --bg-dark: #1A1A1A;         /* Dark charcoal transition sections */
   
-  --text-primary: #000000;    /* High-contrast Black */
+  --text-primary: #1A1A1A;    /* Dark charcoal/black for text */
   --text-secondary: #555555;  /* Muted Gray for body */
-  --text-on-dark: #FFFFFF;
+  --text-on-dark: #F9F7F2;
   
-  --accent-primary: #FF4D2D;  /* Nolo Orange */
-  --accent-orange: #FF4D2D;
-  --accent-glow: rgba(255, 77, 45, 0.2);
+  --accent-primary: #FF4D6D;  /* Aquifer Pink/Red */
+  --accent-orange: #FF7E5F;   /* Aquifer Orange/Peach */
+  --accent-glow: rgba(255, 77, 109, 0.2);
   
-  --border-color: #000000;    /* Solid thin borders */
+  --border-color: #1A1A1A;    /* Solid thin borders */
   --border-muted: #D1D1D1;
   
   /* Glassmorphism / Depth */

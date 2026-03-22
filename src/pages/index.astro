@@ -13,34 +13,34 @@ const testimonials = (await getCollection('testimonials'))
 	<Header />
 	<main class="container">
 		<section class="hero animate-fade-in">
-			<div class="badge">Next-Gen Digital Solutions</div>
+			<div class="badge">The Operating System for Modern Commerce</div>
 			<h1>
-				Building the <span class="text-gradient">Future</span> of Web Apps
+				We Engineer and <span class="text-gradient">Run</span> Your Commerce Operations.
 			</h1>
 			<p>
-				High-performance, content-driven websites built with Astro, Cloudflare, and premium design principles. We bridge the gap between imagination and implementation.
+				No more fragmented tools, missed opportunities, or manual spreadsheets. We build your single source of truth and run the daily execution so you can scale efficiently.
 			</p>
 			<div class="cta-group">
-				<a href="/blog" class="btn btn-primary">Explore Our Work</a>
-				<a href="/team" class="btn btn-outline">Meet the Team</a>
+				<a href="/contact" class="btn btn-primary">Book a Consultation</a>
+				<a href="#capabilities" class="btn btn-outline">Explore Capabilities</a>
 			</div>
 		</section>
 
-		<section class="grid grid-3 feature-section">
+		<section id="capabilities" class="grid grid-3 feature-section">
 			<div class="nolo-card">
-				<div class="card-icon">🚀</div>
-				<h3>Performance First</h3>
-				<p>Astro ships zero JavaScript by default, ensuring lightning-fast load times and perfect SEO scores.</p>
+				<div class="card-icon">⚡️</div>
+				<h3>Eliminate System Decay</h3>
+				<p>Replacing fragmented tools with a solid, unified foundation that connects tooling directly to execution.</p>
 			</div>
 			<div class="nolo-card highlighted">
-				<div class="card-icon">💎</div>
-				<h3>Premium Design</h3>
-				<p>High-contrast, modular, and responsive interfaces that captivate your audience from the first click.</p>
+				<div class="card-icon">📦</div>
+				<h3>Optimized Product Data</h3>
+				<p>Improving discoverability and taxonomy so that your customers find exactly what they need immediately.</p>
 			</div>
 			<div class="nolo-card">
-				<div class="card-icon">☁️</div>
-				<h3>Edge Scaling</h3>
-				<p>Deployed on Cloudflare's global edge network for maximum speed and 99.9% availability.</p>
+				<div class="card-icon">🚢</div>
+				<h3>Operational Ownership</h3>
+				<p>Dynamic inventory tracking, logistics scaling, and taking over heavy lifting like POs so you can grow.</p>
 			</div>
 		</section>
 
@@ -48,7 +48,7 @@ const testimonials = (await getCollection('testimonials'))
 			<section class="testimonials-section">
 				<div class="section-header">
 					<div class="badge">Social Proof</div>
-					<h2>What Clients <span class="text-gradient">Say</span></h2>
+					<h2>Trusted by <span class="text-gradient">growth-minded</span> storefronts</h2>
 				</div>
 				<div class="testimonials-grid">
 					{testimonials.map((t) => (
