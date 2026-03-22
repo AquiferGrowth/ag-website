@@ -118,31 +118,7 @@
       </div>
     </div>
 
-    <div class="dark-grid">
-      <div class="dark-col nolo-reveal" style="--delay: 0.1s;">
-        <h2 class="orange-text">Onboarding new client projects from Q2 2026</h2>
-      </div>
-      <div class="dark-col nolo-reveal" style="--delay: 0.2s;">
-        <h3 class="orange-text">Want to receive our emails?</h3>
-        <p class="orange-text-small">We send 1 or 2 emails per month—that's it. You'll receive company updates and a summary of what we've been working on and new Airtable features.</p>
-        <form class="nolo-form">
-          <input type="email" placeholder="Enter your email right here." required />
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
 
-    <div class="dark-footer nolo-reveal" style="--delay: 0.3s;">
-      <div class="nolo-small-logo">
-        <div class="dash" style="width: 15px;"></div><div class="dash" style="width: 15px;"></div>
-        <div class="dash" style="width: 15px;"></div><div class="dash" style="width: 15px;"></div>
-      </div>
-      <div class="copyright">© Nolo Apps Limited</div>
-      <div class="address">
-        71-75 Shelton Street, Covent Garden,<br />
-        London, United Kingdom, WC2H 9JQ
-      </div>
-    </div>
   </div>
 </section>
 
@@ -388,20 +364,7 @@
     background: transparent;
   }
 
-  .dark-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    width: 100%;
-    max-width: 1000px;
-    margin-bottom: 100px;
-  }
-
   @media (max-width: 768px) {
-    .dark-grid {
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
     .pills-wrapper {
         flex-direction: column;
         gap: 20px;
@@ -414,105 +377,10 @@
     }
   }
 
-  .dark-col {
-    display: flex;
-    flex-direction: column;
-  }
 
-  .orange-text {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    color: var(--nolo-orange);
-    letter-spacing: -0.02em;
-  }
-  .orange-text-small {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    color: var(--nolo-orange);
-    max-width: 400px;
-  }
-
-  .nolo-form {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-  }
-  .nolo-form input {
-    background: transparent;
-    border: 1px solid rgba(255, 90, 45, 0.4);
-    border-radius: 30px;
-    padding: 14px 24px;
-    color: #fff;
-    font-size: 1rem;
-    flex: 1;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  .nolo-form input:focus {
-    border-color: var(--nolo-orange);
-  }
-  .nolo-form input::placeholder {
-    color: rgba(255, 90, 45, 0.6);
-  }
-  .nolo-form button {
-    background: transparent;
-    border: 1px solid rgba(255, 90, 45, 0.4);
-    border-radius: 30px;
-    padding: 14px 24px;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  .nolo-form button:hover {
-    background: rgba(255, 90, 45, 0.1);
-    border-color: var(--nolo-orange);
-  }
-
-  .dark-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(255, 90, 45, 0.2);
-    padding-top: 30px;
-    font-size: 0.85rem;
-    color: var(--nolo-orange);
-  }
-
-  .nolo-small-logo {
-    display: flex;
-    gap: 4px;
-    flex-wrap: wrap;
-    width: 40px;
-  }
-  .nolo-small-logo .dash {
-    height: 6px;
-    margin-bottom: 4px;
-  }
-
-  .copyright {
-    opacity: 0.8;
-  }
-  .address {
-    text-align: right;
-    opacity: 0.8;
-  }
-  
   @media (max-width: 600px) {
     .pitch-card {
         padding: 40px 20px;
-    }
-    .dark-footer {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .address {
-        text-align: center;
     }
   }
 
