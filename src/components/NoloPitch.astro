@@ -1,0 +1,262 @@
+---
+---
+<section class="nolo-pitch-section">
+  <div class="pitch-container">
+    <div class="line-container">
+      <div class="vertical-line"></div>
+    </div>
+    
+    <div class="pitch-intro nolo-reveal">
+      <p>For the empowered Product Operations leader, this is your opportunity to transform how your brand launches products. Our battle-tested components and proven implementation approach mean you can deliver real results that fit around your existing systems.</p>
+    </div>
+
+    <div class="pitch-card nolo-reveal">
+      <h2>Lead Product Operations Forward</h2>
+      <p>Your product teams are creating amazing things, but operations haven't kept pace. While development and creative push boundaries, launches are still orchestrated through spreadsheets and status meetings. You see the opportunity: streamlined product operations could unlock your brand's true potential. It's operations leaders like you who drive real transformation.</p>
+      
+      <div class="pill-box-container">
+        <div class="pill-box nolo-reveal">
+          <div class="connecting-line"></div>
+          <div class="pills-wrapper">
+            <div class="nolo-pill" style="--delay: 0s;">Rigid Systems</div>
+            <div class="nolo-pill" style="--delay: 0.2s;">Data Silos</div>
+            <div class="nolo-pill" style="--delay: 0.4s;">Roadmapped</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-outro nolo-reveal">
+      <p>Transform your product operations with the Nolo Framework: A proven system that grows with your brand. Start with core workflows, then expand strategically. Built on Airtable, backed by battle-tested components, delivered by experts who understand how product-driven brands innovate.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  :root {
+    --nolo-bg: #EAE8E2;
+    --nolo-dark-bg: #1A1C1A;
+    --nolo-text: #1C1C1C;
+    --nolo-orange: #FF5A2D;
+    --nolo-orange-dark: #D44E27;
+    --nolo-line: #1C1C1C;
+    --nolo-border: #1C1C1C;
+    --pill-bg: #EAE8E2;
+  }
+
+  .nolo-pitch-section {
+    background-color: var(--nolo-bg);
+    color: var(--nolo-text);
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  /* Connecting vertical line */
+  .line-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    z-index: 0;
+  }
+  .vertical-line {
+    width: 100%;
+    height: 100%;
+    background-color: var(--nolo-line);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .line-container.reveal .vertical-line {
+    transform: scaleY(1);
+  }
+
+  .pitch-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pitch-intro {
+    max-width: 650px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 60px;
+    font-weight: 500;
+  }
+
+  .pitch-card {
+    background: var(--nolo-bg);
+    border: 1.5px solid var(--nolo-border);
+    border-radius: 20px;
+    padding: 60px 40px;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 0; /* Box attaches to the line */
+    position: relative;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.05);
+  }
+  .pitch-card::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    width: 1px;
+    height: 60px;
+    background: var(--nolo-line);
+  }
+
+  .pitch-card h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    color: var(--nolo-text);
+  }
+  
+  .pitch-card p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+  }
+
+  .pill-box-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pill-box {
+    border: 1px solid rgba(28, 28, 28, 0.4);
+    background: #FAFAFD;
+    border-radius: 20px;
+    padding: 60px 20px;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 0px 40px rgba(100, 150, 255, 0.1) inset;
+    border-color: #6a8cff;
+  }
+
+  .pill-box .connecting-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--nolo-line);
+    z-index: 0;
+  }
+
+  .pills-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    padding: 0 10%;
+  }
+
+  .nolo-pill {
+    background: var(--nolo-bg);
+    border: 1.5px solid var(--nolo-border);
+    border-radius: 30px;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--nolo-text);
+    animation: float 4s ease-in-out infinite;
+    animation-delay: var(--delay);
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+  }
+
+  /* Reveal Animations */
+  .nolo-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nolo-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .pitch-outro {
+    max-width: 650px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-weight: 500;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .pills-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .pill-box .connecting-line {
+        width: 1px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+    }
+  }
+
+
+  @media (max-width: 600px) {
+    .pitch-card {
+        padding: 40px 20px;
+    }
+  }
+
+</style>
+
+<script>
+  // Simple intersection observer to trigger reveals
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          
+          if (entry.target.classList.contains('line-container')) {
+            entry.target.classList.add('reveal');
+          }
+        }
+      });
+    }, {
+      threshold: 0.2,
+      rootMargin: '0px 0px -100px 0px'
+    });
+
+    document.querySelectorAll('.nolo-reveal').forEach(el => observer.observe(el));
+    
+    // Also observe the line container if not already
+    const lineCont = document.querySelector('.line-container');
+    if (lineCont) observer.observe(lineCont);
+  });
+</script>

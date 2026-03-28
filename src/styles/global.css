@@ -42,7 +42,11 @@
   --transition-slow: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-
+/* Dot Grid Background Utility */
+.bg-grid {
+  background-image: radial-gradient(var(--border-muted) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
 * {
   box-sizing: border-box;
@@ -53,15 +57,12 @@
 html {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0);
-  background-size: 40px 40px;
   color: var(--text-primary);
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: transparent;
   line-height: 1.6;
   overflow-x: hidden;
 }

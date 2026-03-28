@@ -21,16 +21,7 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Inter+Tight:wght@800&display=swap" rel="stylesheet">
 	</head>
-	<body>
-		<div class="site-wrapper">
-			<slot />
-		</div>
+	<body class="bg-grid">
+		<slot />
 	</body>
 </html>
-
-<style is:global>
-	.site-wrapper {
-		position: relative;
-		z-index: 10; /* Put all page content above the particle background */
-	}
-</style>
