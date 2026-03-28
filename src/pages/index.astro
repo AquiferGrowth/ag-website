@@ -1989,7 +1989,12 @@ const testimonials = (await getCollection('testimonials'))
 
 	@media (max-width: 768px) {
 		.framework-content p { font-size: 1.1rem; }
+
+		/* Hide the use-case visualisation on mobile — focus on CTA */
+		.framework-banner { display: none; }
 	}
+
+
 	.check-icon {
 		color: white;
 		background: #10B981; /* Green */
