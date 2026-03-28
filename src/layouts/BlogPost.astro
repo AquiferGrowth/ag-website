@@ -33,21 +33,76 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				width: 720px;
 				max-width: calc(100% - 2em);
 				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				padding: 2em 0;
+				color: var(--text-primary);
+			}
+			.prose :global(h1),
+			.prose :global(h2),
+			.prose :global(h3),
+			.prose :global(h4),
+			.prose :global(h5),
+			.prose :global(h6) {
+				margin-top: 2rem;
+				margin-bottom: 1rem;
+			}
+			.prose :global(p) {
+				margin-bottom: 1.5rem;
+				font-size: 1.1rem;
+				line-height: 1.8;
+				color: var(--text-secondary);
+			}
+			.prose :global(ul),
+			.prose :global(ol) {
+				margin-bottom: 1.5rem;
+				padding-left: 1.5rem;
+				color: var(--text-secondary);
+			}
+			.prose :global(li) {
+				margin-bottom: 0.5rem;
+			}
+			.prose :global(img) {
+				border-radius: 12px;
+				margin: 2rem 0;
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+			}
+			.prose :global(blockquote) {
+				margin: 2rem 0;
+				padding: 1rem 2rem;
+				border-left: 4px solid var(--accent-primary);
+				background: rgba(46, 160, 67, 0.05);
+				font-style: italic;
+				color: var(--text-primary);
+			}
+			.prose :global(code) {
+				background: var(--bg-secondary);
+				padding: 0.2em 0.4em;
+				border-radius: 4px;
+				font-family: var(--font-mono);
+				font-size: 0.9em;
+			}
+			.prose :global(pre) {
+				background: var(--bg-secondary);
+				padding: 1.5rem;
+				border-radius: 12px;
+				overflow-x: auto;
+				margin-bottom: 1.5rem;
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
+				margin-bottom: 2rem;
+				padding: 2rem 0;
 				text-align: center;
-				line-height: 1;
+				border-bottom: 1px solid var(--border-color);
 			}
 			.title h1 {
 				margin: 0 0 0.5em 0;
+				font-size: 2.5rem;
 			}
 			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
+				margin-bottom: 1rem;
+				color: var(--text-secondary);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
 			}
 			.last-updated-on {
 				font-style: italic;

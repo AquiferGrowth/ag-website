@@ -1,0 +1,338 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<Layout title="Managed AI for Ecommerce | AG-Website" description="We engineer and run your managed AI commerce operations, replacing manual roles with autonomous systems.">
+	<Header />
+	
+	<main class="container">
+		<!-- Hero Section -->
+		<section class="hero animate-fade-in">
+			<div class="badge">Ecommerce Industry</div>
+			<h1>
+				We Engineer and Run Your <span class="text-gradient">Managed AI Commerce Operations</span>
+			</h1>
+			
+			<div class="hero-pills">
+				<div class="body-pill">
+					Systemize Operations. <span class="bold">Unlock Durable Growth.</span>
+				</div>
+				<a href="/contact" class="use-cases-pill">
+					Let's Chat <span class="icon-dots">⁛</span>
+				</a>
+			</div>
+
+			<p class="hero-subtext">
+				We build and operate autonomous systems for brands moving too fast for spreadsheets but unwilling to justify slow, expensive enterprise tech bloat. Replacing fragmented tools with a single managed operations layer.
+			</p>
+		</section>
+
+		<!-- The Problem / Operations Decay Section -->
+		<section class="dark-block">
+			<div class="block-header">
+				<span class="sub-heading">The Scaling Problem</span>
+				<h2>Operations Decay and Quietly Break Down</h2>
+			</div>
+			
+			<div class="problem-grid">
+				<div class="problem-card">
+					<div class="status-indicator"></div>
+					<h3>Headcount Bloat</h3>
+					<p>Relying on manual execution means headcount increases without clear ownership or autonomous work.</p>
+				</div>
+				<div class="problem-card">
+					<div class="status-indicator"></div>
+					<h3>Execution Slowness</h3>
+					<p>Fixes require manual coordination and dependency on specific people, making updates take weeks instead of days.</p>
+				</div>
+				<div class="problem-card">
+					<div class="status-indicator"></div>
+					<h3>Data Drift</h3>
+					<p>Data standards drift away across Shopify and channels, leading to edge cases and fragmented systems.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pillars of Service -->
+		<section class="feature-section">
+			<div class="section-badge">How We Deliver</div>
+			<h2>Core Autonomous Infrastructure</h2>
+			
+			<div class="grid grid-3">
+				<div class="nolo-card">
+					<div class="card-icon">🏗️</div>
+					<h3>Managed Product Catalog</h3>
+					<p>Centralized AI-synced hierarchies that scale across your entire catalog, attributes, and variant groups.</p>
+				</div>
+				<div class="nolo-card">
+					<div class="card-icon">📦</div>
+					<h3>Autonomous Inventory</h3>
+					<p>A replenishment system that balances velocity, seasonality, and thresholds with auto-triggered POs.</p>
+				</div>
+				<div class="nolo-card">
+					<div class="card-icon">🚛</div>
+					<h3>Logistics Intelligence</h3>
+					<p>Proactive monitoring of inbound shipments and exceptions, maintaining ETAs without manual oversight.</p>
+				</div>
+				<div class="nolo-card">
+					<div class="card-icon">🔍</div>
+					<h3>Discoverability & SEO</h3>
+					<p>Crawlable taxonomies and intents engineered for natural language discovery and agentic commerce systems.</p>
+				</div>
+				<div class="nolo-card">
+					<div class="card-icon">⚡</div>
+					<h3>Managed Web Execution</h3>
+					<p>Ongoing optimization of collection logic, filters, and site structure directly from structured data.</p>
+				</div>
+				<div class="nolo-card">
+					<div class="card-icon">🧠</div>
+					<h3>Operational Support</h3>
+					<p>No single point of failure. Proactive fixes and system evolution as your ecommerce business grows.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Impact / Value Prop -->
+		<section class="impact-section">
+			<div class="impact-content">
+				<h2>One Unified System. Zero Fragmented Roles.</h2>
+				<p>We replace multiple operational roles with one streamlined autonomous system, bridging the gap from growth to enterprise scale.</p>
+				<div class="cta-wrap">
+					<a href="/contact" class="btn btn-primary">Start Building Now</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<style>
+		/* Hero Styles (inherited from index but refined) */
+		.hero {
+			padding: var(--space-xl) 0 4rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			background-image: radial-gradient(var(--border-muted) 1.2px, transparent 1.2px);
+			background-size: 30px 30px;
+			background-position: center;
+			min-height: 80vh;
+			justify-content: center;
+		}
+		
+		h1 {
+			font-size: clamp(2.5rem, 6vw, 4.5rem);
+			max-width: 1100px;
+			margin-bottom: 2rem;
+			text-transform: uppercase;
+			font-weight: 800;
+			line-height: 0.95;
+		}
+
+		.text-gradient {
+			color: var(--accent-primary);
+		}
+
+		.hero-subtext {
+			max-width: 800px;
+			font-size: 1.25rem;
+			line-height: 1.6;
+			color: var(--text-secondary);
+			margin-top: 1.5rem;
+			font-weight: 500;
+		}
+
+		.badge {
+			background: var(--bg-dark);
+			color: var(--text-on-dark);
+			padding: 0.5rem 1.25rem;
+			border-radius: var(--radius-pill);
+			font-size: 0.75rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.1em;
+			margin-bottom: 1.5rem;
+		}
+
+		/* Pill Styles */
+		.hero-pills {
+			display: flex;
+			gap: 1rem;
+			margin: 2rem 0;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		.body-pill {
+			background: #FFC2CE;
+			border: 2px solid #1A1A1A;
+			padding: 0.9rem 2.5rem;
+			border-radius: var(--radius-pill);
+			color: #1A1A1A;
+			font-size: 1.1rem;
+			font-weight: 500;
+			display: inline-flex;
+			align-items: center;
+			box-shadow: 4px 4px 0 #1A1A1A;
+		}
+		.body-pill .bold { font-weight: 800; margin-left: 5px; }
+		
+		.use-cases-pill {
+			background: #FFFFFF;
+			border: 2px solid #1A1A1A;
+			padding: 0.9rem 2.5rem;
+			border-radius: var(--radius-pill);
+			color: #1A1A1A;
+			font-size: 1.1rem;
+			font-weight: 700;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.75rem;
+			box-shadow: 4px 4px 0 #1A1A1A;
+			transition: all 0.2s ease;
+		}
+		.use-cases-pill:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #1A1A1A; }
+		.icon-dots { font-size: 0.9rem; opacity: 0.8; }
+
+		/* Dark Block (Scaling Problems) */
+		.dark-block {
+			background: #1A1A1A;
+			color: #FFFFFF;
+			padding: var(--space-xl) var(--space-md);
+			border-radius: var(--radius-lg);
+			margin: var(--space-lg) 0;
+			border: 2px solid #000;
+			box-shadow: 12px 12px 0 var(--accent-primary);
+		}
+		.block-header {
+			text-align: center;
+			margin-bottom: 4rem;
+		}
+		.block-header h2 {
+			color: #FFFFFF;
+			font-size: 2.5rem;
+			margin-top: 1rem;
+		}
+		.sub-heading {
+			color: var(--accent-primary);
+			text-transform: uppercase;
+			font-size: 0.85rem;
+			font-weight: 800;
+			letter-spacing: 0.15em;
+		}
+
+		.problem-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 3rem;
+		}
+		.problem-card {
+			padding: 2.5rem;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			border-radius: var(--radius-md);
+			background: rgba(255, 255, 255, 0.02);
+		}
+		.problem-card h3 {
+			color: #FFFFFF;
+			margin-bottom: 1rem;
+			font-size: 1.25rem;
+		}
+		.problem-card p {
+			color: rgba(255, 255, 255, 0.75);
+			font-size: 1rem;
+		}
+		.status-indicator {
+			width: 32px;
+			height: 32px;
+			background: var(--accent-primary);
+			border-radius: 4px;
+			margin-bottom: 1.5rem;
+			display: block;
+		}
+
+		/* Features Section */
+		.feature-section {
+			padding: var(--space-xl) 0;
+		}
+		.section-badge {
+			display: inline-block;
+			background: var(--accent-primary);
+			color: white;
+			padding: 0.4rem 1rem;
+			border-radius: var(--radius-pill);
+			font-size: 0.75rem;
+			font-weight: 800;
+			text-transform: uppercase;
+			margin-bottom: 1rem;
+		}
+		.feature-section h2 {
+			font-size: 3rem;
+			margin-bottom: 4rem;
+		}
+
+		/* Nolo Card styling */
+		.nolo-card {
+			padding: 3rem;
+			background: var(--bg-secondary);
+			border: 2px solid #1A1A1A;
+			border-radius: var(--radius-lg);
+			box-shadow: 4px 4px 0 #1A1A1A;
+			transition: all 0.2s ease;
+		}
+		.nolo-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #1A1A1A; }
+		.card-icon {
+			font-size: 2.5rem;
+			margin-bottom: 1.5rem;
+			display: block;
+		}
+		.nolo-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+		.nolo-card p { color: var(--text-secondary); }
+
+		/* Impact Section */
+		.impact-section {
+			padding: var(--space-xl) 0;
+			background: var(--bg-primary);
+			border-top: 2px solid #1A1A1A;
+			margin-top: 4rem;
+			text-align: center;
+		}
+		.impact-content h2 {
+			font-size: 3.5rem;
+			margin-bottom: 1.5rem;
+		}
+		.impact-content p {
+			font-size: 1.25rem;
+			max-width: 700px;
+			margin: 0 auto 3rem;
+			color: var(--text-secondary);
+		}
+
+		.btn {
+			padding: 1.25rem 3.5rem;
+			border-radius: var(--radius-pill);
+			font-weight: 800;
+			text-transform: uppercase;
+			font-size: 1rem;
+			transition: all 0.2s ease;
+			display: inline-block;
+			border: 3px solid #1A1A1A;
+			box-shadow: 4px 4px 0 #1A1A1A;
+		}
+		.btn-primary {
+			background: var(--accent-primary);
+			color: white;
+		}
+		.btn-primary:hover {
+            background: #1A1A1A;
+            color: white;
+			transform: translate(-3px, -3px);
+			box-shadow: 8px 8px 0 var(--accent-primary);
+		}
+
+		@media (max-width: 768px) {
+			h1 { font-size: 2.5rem; }
+			.hero-pills { flex-direction: column; }
+			.impact-content h2 { font-size: 2rem; }
+		}
+	</style>
+</Layout>
