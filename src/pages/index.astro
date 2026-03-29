@@ -33,9 +33,10 @@ const testimonials = (await getCollection('testimonials'))
 				</div>
 			</section>
 
-				<div class="use-case-categories">
+				<div class="use-case-categories pb-relative">
 					<button class="category-pill active" data-slide="0">Finance</button>
 					<button class="category-pill" data-slide="1">CRM</button>
+					<button class="category-pill" data-slide="2">E-commerce</button>
 				</div>
 				<section class="framework-banner pb-relative">
 		<div class="use-cases-wrapper" style="display: grid; grid-template-columns: 1fr;">
@@ -328,12 +329,13 @@ const testimonials = (await getCollection('testimonials'))
 							<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
 							<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
 							<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
 							<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
 						</svg>
 					</div>
 
 
-					<!-- Column 1: Source Systems -->
+					<!-- Column 1: Source Nodes -->
 					<div class="systems-column console-panel">
 						<div class="panel-header">
 							<span class="panel-tag">Source Nodes</span>
@@ -373,8 +375,6 @@ const testimonials = (await getCollection('testimonials'))
 								<div class="stream-anchor anchor-src4"></div>
 							</div>
 						</div>
-						
-
 					</div>
 
 					<!-- Column 2: Execution Logic -->
@@ -400,7 +400,7 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 								<div class="task-content">
 									<span class="task-label">Enrich Missing Data</span>
-									<span class="task-detail">Pulling contact info, company size, and industry from source tools</span>
+									<span class="task-detail">Pulling contact info from source tools</span>
 								</div>
 							</li>
 							<li class="task-item" data-step="3">
@@ -409,7 +409,7 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 								<div class="task-content">
 									<span class="task-label">Normalise Deal Stages</span>
-									<span class="task-detail">Aligning stage names and probabilities to pipeline rules</span>
+									<span class="task-detail">Aligning probabilities to pipeline rules</span>
 								</div>
 							</li>
 							<li class="task-item" data-step="4">
@@ -418,7 +418,7 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 								<div class="task-content">
 									<span class="task-label">Log Interaction History</span>
-									<span class="task-detail">Matching calls, emails, and meetings to the correct deal records</span>
+									<span class="task-detail">Matching calls and meetings to records</span>
 								</div>
 							</li>
 							<li class="task-item" data-step="5">
@@ -427,7 +427,7 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 								<div class="task-content">
 									<span class="task-label">Flag Exceptions</span>
-									<span class="task-detail">Deals missing owner, close date, or value flagged for rep review</span>
+									<span class="task-detail">Deals missing owner or value flagged</span>
 								</div>
 							</li>
 							<li class="task-item" data-step="6">
@@ -436,7 +436,7 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 								<div class="task-content">
 									<span class="task-label">Final Integrity Check</span>
-									<span class="task-detail">Pipeline value reconciled against forecast model</span>
+									<span class="task-detail">Reconciled against forecast model</span>
 								</div>
 							</li>
 						</ul>
@@ -515,7 +515,7 @@ const testimonials = (await getCollection('testimonials'))
 											<span class="crm-company">Luminary Co</span>
 											<span class="crm-contact">R. Okafor</span>
 											<span class="crm-source src-web">Web</span>
-											<span class="crm-stage stage-closed">Closed Won</span>
+											<span class="crm-stage stage-closed">Won</span>
 											<span class="crm-value">$95k</span>
 										</div>
 									</div>
@@ -544,30 +544,195 @@ const testimonials = (await getCollection('testimonials'))
 								</div>
 							</div>
 
-							<!-- Activity Feed -->
-							<div class="audit-log" style="margin-top:0.5rem; padding: 0 1.25rem;">
-								<div class="log-item">
-									<span class="log-time">14:02:11</span>
-									<span class="log-txt">HubSpot contact enriched via Apollo &mdash; Orbit SaaS</span>
-								</div>
-								<div class="log-item">
-									<span class="log-time">14:02:08</span>
-									<span class="log-txt">3 duplicate records auto-merged &mdash; Luminary Co</span>
-								</div>
-							</div>
-
 							<div class="dashboard-footer">
 								<div class="footer-meta">
 									<div class="meta-item">
 										<span class="m-label">Flagged</span>
-										<span class="m-val">1 record</span>
+										<span class="m-val">1 rec</span>
 									</div>
 									<div class="meta-item">
 										<span class="m-label">Pipeline</span>
 										<span class="m-val">$284k</span>
 									</div>
 								</div>
-								<button class="btn-approve-console">Review &amp; Sign Off</button>
+								<button class="btn-approve-console">Sign Off</button>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- /.framework-console -->
+        </div>
+
+        <!-- Slide 3: Order Fulfillment -->
+        <div class="use-case-slide inactive-slide" data-slide="2" style="grid-area: 1 / 1;">
+            <div class="banner-grid-overlay"></div>
+				
+				<div class="use-case-header">
+					<div>
+						<span class="uc-tag">Use case</span>
+						<h2 class="uc-title">Order Fulfillment</h2>
+					</div>
+					<div class="uc-nav-controls">
+						<button class="uc-nav-btn prev" data-dir="-1" title="Previous Use Case" aria-label="Previous Use Case">
+							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+						</button>
+						<button class="uc-nav-btn next" data-dir="1" title="Next Use Case" aria-label="Next Use Case">
+							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+						</button>
+					</div>
+				</div>
+
+				<div class="framework-console">
+
+					<!-- SVG Layer -->
+					<div class="stream-connections">
+						<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
+							<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+							<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
+						</svg>
+					</div>
+
+					<!-- Column 1: Source Nodes -->
+					<div class="systems-column console-panel">
+						<div class="panel-header">
+							<span class="panel-tag">Nodes</span>
+							<span class="panel-meta">5 Active</span>
+						</div>
+						<div class="systems-source-list">
+							<div class="source-item" data-source="src1">
+								<div class="source-indicator"></div>
+								<div class="source-label"><span>Shopify</span><span class="s-type">Order Feed</span></div>
+								<div class="stream-anchor anchor-src1"></div>
+							</div>
+							<div class="source-item" data-source="src2">
+								<div class="source-indicator"></div>
+								<div class="source-label"><span>Amazon Central</span><span class="s-type">FBA Logic</span></div>
+								<div class="stream-anchor anchor-src2"></div>
+							</div>
+							<div class="source-item" data-source="src3">
+								<div class="source-indicator"></div>
+								<div class="source-label"><span>ShipWire 3PL</span><span class="s-type">WMS Stream</span></div>
+								<div class="stream-anchor anchor-src3"></div>
+							</div>
+							<div class="source-item" data-source="src4">
+								<div class="source-indicator"></div>
+								<div class="source-label"><span>FedEx API</span><span class="s-type">Tracking</span></div>
+								<div class="stream-anchor anchor-src4"></div>
+							</div>
+							<div class="source-item" data-source="src5">
+								<div class="source-indicator"></div>
+								<div class="source-label"><span>QuickBooks</span><span class="s-type">Ledger Sync</span></div>
+								<div class="stream-anchor anchor-src5"></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Column 2: Process Layer -->
+					<div class="execution-column console-panel">
+						<div class="panel-header">
+							<span class="panel-tag">Process Layer</span>
+							<div class="status-pulse active"></div>
+						</div>
+						<ul class="task-checklist">
+							<li class="task-item" data-step="1">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Map Order Sources</span><span class="task-detail">Shopify, Amazon, & 3PL feeds mapped</span></div>
+							</li>
+							<li class="task-item" data-step="2">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Sync Inventory in Real Time</span><span class="task-detail">Stock levels updated on every order</span></div>
+							</li>
+							<li class="task-item" data-step="3">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Match Orders to Fulfillment</span><span class="task-detail">Reconciled against warehouse records</span></div>
+							</li>
+							<li class="task-item" data-step="4">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Track Supplier Updates</span><span class="task-detail">ETAs pulled, delays flagged</span></div>
+							</li>
+							<li class="task-item" data-step="5">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Analyze Stock Levels</span><span class="task-detail">Real-time inventory velocity calculated</span></div>
+							</li>
+							<li class="task-item" data-step="6">
+								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+								<div class="task-content"><span class="task-label">Generate POs</span><span class="task-detail">Purchasing recommendations ready for review</span></div>
+							</li>
+						</ul>
+						<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
+					</div>
+
+					<!-- Column 3: Oversight Dashboard -->
+					<div class="oversight-column" style="position: relative;">
+						<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
+						<div class="oversight-dashboard ecom-dashboard">
+							<div class="ecom-layout">
+								<!-- Sidebar -->
+								<div class="ecom-sidebar">
+									<div class="sidebar-item active"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>Inventory</div>
+									<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>Orders</div>
+									<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Logistics</div>
+								</div>
+								<!-- Main Content -->
+								<div class="ecom-main">
+									<div class="dashboard-header" style="background:transparent; padding:0 0 0.75rem 0; border:none;">
+										<div class="dash-id">
+											<span class="label">Fulfillment System</span>
+											<span class="val">OPS-CTRL-V3</span>
+										</div>
+										<div class="dash-status"><div class="status-dot" style="margin-left:0; margin-right:6px;"></div><span class="ready-tag">LIVE</span></div>
+									</div>
+
+									<div class="inventory-table">
+										<div class="table-head">
+											<span>Product</span>
+											<span>Stock</span>
+											<span>Status</span>
+										</div>
+										<div class="table-row">
+											<span>AQU-MESH-01</span>
+											<span>1,240</span>
+											<span class="status-ok">OPTIMAL</span>
+										</div>
+										<div class="table-row highlight">
+											<span>AQU-PRO-MAX</span>
+											<span>12</span>
+											<span class="status-warn">CRITICAL</span>
+										</div>
+										<div class="table-row">
+											<span>AQU-LITE-X</span>
+											<span>14,082</span>
+											<span class="status-ok">OPTIMAL</span>
+										</div>
+										<div class="table-row">
+											<span>AQU-ULTRA</span>
+											<span>854</span>
+											<span class="status-ok">OPTIMAL</span>
+										</div>
+										<div class="table-row highlight">
+											<span>AQU-PULSE</span>
+											<span>42</span>
+											<span class="status-warn">CRITICAL</span>
+										</div>
+										<div class="table-row">
+											<span>AQU-ELITE</span>
+											<span>2,190</span>
+											<span class="status-ok">OPTIMAL</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="dashboard-footer" style="margin-top:0.5rem;">
+								<div class="footer-meta">
+									<div class="meta-item"><span class="m-label">Shortages</span><span class="m-val">2 SKUs</span></div>
+									<div class="meta-item"><span class="m-label">Throughput</span><span class="m-val volume-val">$0</span></div>
+								</div>
+								<button class="btn-approve-console" style="padding: 6px 14px;">Review POs</button>
 							</div>
 						</div>
 					</div>
@@ -1684,6 +1849,117 @@ const testimonials = (await getCollection('testimonials'))
 	.crm-src-fill { height: 100%; border-radius: 10px; }
 	.crm-src-pct { color: #64748b; font-size: 0.55rem; width: 28px; text-align: right; flex-shrink: 0; }
 
+
+	/* ── Order Fulfillment Dashboard ──────────────────────── */
+	.ecom-dashboard .dashboard-grid { display: none; }
+	
+	.ecom-layout {
+		display: flex;
+		height: 290px;
+		background: rgba(255,255,255,0.02);
+		border-bottom: 1px solid rgba(255,255,255,0.05);
+	}
+
+	.ecom-sidebar {
+		width: 100px;
+		flex-shrink: 0;
+		border-right: 1px solid rgba(255,255,255,0.07);
+		background: rgba(0,0,0,0.2);
+		padding: 1rem 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+	}
+
+	.sidebar-item {
+		padding: 0.5rem 0.75rem;
+		font-size: 0.65rem;
+		font-weight: 600;
+		color: #64748b;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: all 0.2s;
+		cursor: pointer;
+	}
+
+	.sidebar-item svg { opacity: 0.6; }
+	.sidebar-item.active { color: #e2e8f0; background: rgba(255,255,255,0.04); }
+	.sidebar-item.active svg { color: var(--primary-accent); opacity: 1; }
+
+	.ecom-main {
+		flex: 1;
+		padding: 1.25rem;
+		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	.inventory-table {
+		background: rgba(0,0,0,0.3);
+		border: 1px solid rgba(255,255,255,0.07);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.inventory-table .table-head {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr;
+		padding: 0.5rem 0.75rem;
+		background: rgba(255,255,255,0.03);
+		border-bottom: 1px solid rgba(255,255,255,0.07);
+		font-size: 0.55rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #475569;
+	}
+
+	.inventory-table .table-row {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr 1fr;
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid rgba(255,255,255,0.04);
+		font-size: 0.65rem;
+		align-items: center;
+	}
+
+	.inventory-table .table-row:last-child { border-bottom: none; }
+	.inventory-table .table-row.highlight { background: rgba(239, 68, 68, 0.04); }
+
+	.status-ok { color: #10b981; font-weight: 700; font-size: 0.55rem; }
+	.status-warn { color: #ef4444; font-weight: 700; font-size: 0.55rem; animation: pulse-red 2s infinite; }
+
+	@keyframes pulse-red {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.6; }
+	}
+
+	.exception-card {
+		background: linear-gradient(to right, rgba(239, 68, 68, 0.08), transparent);
+		border: 1px solid rgba(239, 68, 68, 0.2);
+		border-radius: 10px;
+		padding: 0.75rem;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.exc-title {
+		display: block;
+		font-size: 0.6rem;
+		font-weight: 800;
+		color: #f87171;
+		letter-spacing: 0.05em;
+		margin-bottom: 2px;
+	}
+
+	.exc-meta {
+		display: block;
+		font-size: 0.65rem;
+		color: #94a3b8;
+	}
+
 	.mini-chart {
 		display: flex;
 		align-items: flex-end;
@@ -2538,14 +2814,14 @@ const testimonials = (await getCollection('testimonials'))
 				const targetX = checklistRect.left - containerRect.left;
 				const targetY = (checklistRect.top - containerRect.top) + (checklistRect.height / 2);
 
-				["src1", "src2", "src3", "src4"].forEach(id => {
+				["src1", "src2", "src3", "src4", "src5"].forEach(id => {
 					const anchor = slide.querySelector(`.anchor-${id}`);
 					const path = slide.querySelector(`.stream-${id}`);
 					if (!anchor || !path) return;
 					
 					const anchorRect = anchor.getBoundingClientRect();
 					const startX = (anchorRect.left - containerRect.left) + 1;
-					const startY = anchorRect.top - containerRect.top;
+					const startY = (anchorRect.top - containerRect.top) + (anchorRect.height / 2);
 					
 					const cp1x = startX + (targetX - startX) * 0.5;
 					const cp2x = startX + (targetX - startX) * 0.5;
@@ -2562,7 +2838,7 @@ const testimonials = (await getCollection('testimonials'))
 					const startX = apRect.right - containerRect.left;
 					const startY = apRect.top - containerRect.top + (apRect.height / 2);
 					const targetX = aoRect.left - containerRect.left;
-					const targetY = aoRect.top - containerRect.top + (aoRect.height / 2);
+					const targetY = (aoRect.top - containerRect.top) + (aoRect.height / 2);
 					
 					const cp1x = startX + (targetX - startX) * 0.5;
 					const cp2x = startX + (targetX - startX) * 0.5;
@@ -2583,12 +2859,15 @@ const testimonials = (await getCollection('testimonials'))
 
 			// Phase 1 (Data ingest visual)
 			tl.add(() => {
-				slide.querySelector(".source-item[data-source='src1']").classList.add('active');
-				slide.querySelector(".source-item[data-source='src2']").classList.add('active');
+				const s1 = slide.querySelector(".source-item[data-source='src1']");
+				const s2 = slide.querySelector(".source-item[data-source='src2']");
+				if (s1) s1.classList.add('active');
+				if (s2) s2.classList.add('active');
+				
 				const p1 = slide.querySelector(".stream-src1");
 				const p2 = slide.querySelector(".stream-src2");
-				gsap.set([p1, p2], { visibility: "visible" });
-				gsap.to([p1, p2], { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 });
+				if (p1) { gsap.set(p1, { visibility: "visible" }); gsap.to(p1, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
+				if (p2) { gsap.set(p2, { visibility: "visible" }); gsap.to(p2, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
 			});
 
 			tasks.forEach((task, index) => {
@@ -2600,39 +2879,45 @@ const testimonials = (await getCollection('testimonials'))
 				tl.to(task, {
 					onStart: () => {
 						task.classList.add('is-active');
-						gsap.to(slide.querySelector(".confidence-bar-fill"), { width: targetConf + "%", duration: 1.5 });
+						const confFill = slide.querySelector(".confidence-bar-fill");
+						if (confFill) gsap.to(confFill, { width: targetConf + "%", duration: 1.5 });
 						counter(".confidence-val", prevConf, targetConf, 1.5);
 
 						if (step === 2) {
-							// Phase 2 triggers (more sources)
-							slide.querySelector(".source-item[data-source='src3']").classList.add('active');
-							slide.querySelector(".source-item[data-source='src4']").classList.add('active');
-							const p1 = slide.querySelector(".stream-src3");
-							const p2 = slide.querySelector(".stream-src4");
-							gsap.set([p1, p2], { visibility: "visible" });
-							gsap.to([p1, p2], { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 });
-						}
-
-						if (step === phase3Step) {
-							// Phase 3 triggers (activity chart)
-							gsap.to(slide.querySelectorAll(".a-bar"), {
-								height: () => (30 + Math.random() * 65) + "%",
-								background: "rgba(59, 130, 246, 0.5)",
-								stagger: 0.04,
-								duration: 0.8,
-								ease: "power2.out"
-							});
-							const volObj = { val: 0 };
-							gsap.to(volObj, { val: 1420500, duration: 2, ease: "power1.inOut",
-								onUpdate: () => {
-									slide.querySelector(".volume-val").innerText = "$" + Math.round(volObj.val).toLocaleString();
+							// Phase 2 triggers (remaining sources)
+							const sources = ["src3", "src4", "src5"];
+							sources.forEach(sid => {
+								const s = slide.querySelector(`.source-item[data-source='${sid}']`);
+								const p = slide.querySelector(`.stream-${sid}`);
+								if (s) s.classList.add('active');
+								if (p) {
+									gsap.set(p, { visibility: "visible" });
+									gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 });
 								}
 							});
 						}
 
+						if (step === phase3Step) {
+							// Phase 3 triggers (activity/throughput)
+							const bars = slide.querySelectorAll(".a-bar");
+							if (bars.length) {
+								gsap.to(bars, {
+									height: () => (30 + Math.random() * 65) + "%",
+									background: "rgba(59, 130, 246, 0.5)",
+									stagger: 0.04, duration: 0.8, ease: "power2.out"
+								});
+							}
+							const volObj = { val: 0 };
+							const volEl = slide.querySelector(".volume-val");
+							if (volEl) {
+								gsap.to(volObj, { val: 1420500, duration: 2, ease: "power1.inOut",
+									onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); }
+								});
+							}
+						}
+
 						if (isLast) {
-							// Phase 4 triggers (ring fill, output line)
-							gsap.to(slide.querySelector(".ring-fill"), { strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut" });
+							// Phase 4 triggers (output line)
 							const pathOutput = slide.querySelector(".stream-output");
 							if (pathOutput) {
 								gsap.set(pathOutput, { visibility: "visible" });
