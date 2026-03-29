@@ -33,7 +33,11 @@ const testimonials = (await getCollection('testimonials'))
 				</div>
 			</section>
 
-	<section class="framework-banner pb-relative">
+				<div class="use-case-categories">
+					<button class="category-pill active" data-slide="0">Finance</button>
+					<button class="category-pill" data-slide="1">CRM</button>
+				</div>
+				<section class="framework-banner pb-relative">
 		<div class="use-cases-wrapper" style="display: grid; grid-template-columns: 1fr;">
         <!-- Slide 1 -->
         <div class="use-case-slide active-slide" data-slide="0" style="grid-area: 1 / 1;">
@@ -1124,6 +1128,43 @@ const testimonials = (await getCollection('testimonials'))
 	}
 
 	/* Framework Banner Refined Layout */
+	.use-case-categories {
+		display: flex;
+		justify-content: center;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		z-index: 10;
+		position: relative;
+	}
+
+	.category-pill {
+		background: rgba(255, 255, 255, 0.03);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		color: #94a3b8;
+		padding: 0.6rem 1.5rem;
+		border-radius: 999px;
+		font-family: var(--font-display);
+		font-size: 0.9rem;
+		font-weight: 500;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(8px);
+	}
+
+	.category-pill:hover {
+		background: rgba(255, 255, 255, 0.08);
+		color: #fff;
+		border-color: rgba(255, 255, 255, 0.2);
+	}
+
+	.category-pill.active {
+		background: #fff;
+		color: #000;
+		font-weight: 600;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		border-color: #fff;
+	}
+
 	.framework-banner {
 		background: #020617;
 		color: #FFFFFF;
@@ -2630,6 +2671,34 @@ const testimonials = (await getCollection('testimonials'))
 					playSlide(activeSlideIdx);
 				});
 			});
+
+			// Wire up Category Pills
+			const catsContainer = banner.previousElementSibling;
+			if (catsContainer && catsContainer.classList.contains('use-case-categories')) {
+				const pills = catsContainer.querySelectorAll('.category-pill');
+				
+				// Function to update pills' active state
+				const updatePills = (index) => {
+					pills.forEach((pill, i) => {
+						if (i === index) pill.classList.add('active');
+						else pill.classList.remove('active');
+					});
+				};
+
+				pills.forEach((pill, index) => {
+					pill.addEventListener('click', () => {
+						activeSlideIdx = index;
+						playSlide(activeSlideIdx);
+					});
+				});
+
+				// Inject state update into playSlide core
+				const originalPlaySlide = playSlide;
+				playSlide = (index) => {
+					updatePills(index);
+					originalPlaySlide(index);
+				};
+			}
 
 			ScrollTrigger.create({
 				trigger: banner,
