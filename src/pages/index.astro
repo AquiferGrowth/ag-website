@@ -2639,7 +2639,7 @@ const testimonials = (await getCollection('testimonials'))
 			// Initial states
 			gsap.set(slides, { autoAlpha: 0, zIndex: 1 });
 
-			const playSlide = (index) => {
+			let playSlide = (index) => {
 				// Clear any pending transitions/animations
 				if(currentSlideTl) currentSlideTl.kill();
 				if(timeoutId) clearTimeout(timeoutId);
