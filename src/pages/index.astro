@@ -741,9 +741,111 @@ const testimonials = (await getCollection('testimonials'))
         </div>
     </div>
 </section>
+		<!-- ── Process Section ──────────────────────── -->
+		<section class="process-section pb-relative" id="process">
+			<div class="container process-container">
+				
+				<!-- Left Column: Sticky Header -->
+				<div class="process-header">
+					<div class="sticky-content">
+						<span class="process-tag">The Path forward</span>
+						<h2 class="process-title">Redefining Business Solutions</h2>
+						<p class="process-desc">
+							Elimination of operational bottlenecks and deployment of systems that reduce manual work and prevent errors.
+						</p>
+						
+						<!-- Step indicator line (Success Path) -->
+						<div class="success-path-wrapper">
+							<div class="path-line">
+								<div class="path-fill"></div>
+							</div>
+							<div class="dots-list">
+								<div class="dot active"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+								<div class="dot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-		</div>
+				<!-- Right Column: Process Cards -->
+				<div class="process-steps">
+					
+					<!-- Step 1 -->
+					<div class="process-card" data-step="1">
+						<div class="card-num">01</div>
+						<div class="card-content">
+							<h3>Kickoff Form</h3>
+							<p>We begin with a short onboarding form to gather access, understand your goals, and capture the operational context we need to move fast.</p>
+							<ul class="step-features">
+								<li>Onboarding Survey</li>
+								<li>Access Permissions</li>
+								<li>Goal Alignment</li>
+							</ul>
+						</div>
+					</div>
 
+					<!-- Step 2 -->
+					<div class="process-card" data-step="2">
+						<div class="card-num">02</div>
+						<div class="card-content">
+							<h3>Deep Operations Audit</h3>
+							<p>We conduct a rigorous review of your catalog, workflows, fulfillment logic, inventory processes, COGS alignment, and full tech stack to deep dive.</p>
+							<ul class="step-features">
+								<li>Catalog Analysis</li>
+								<li>Workflow Stress-Test</li>
+								<li>COGS & Tech Audit</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Step 3 -->
+					<div class="process-card" data-step="3">
+						<div class="card-num">03</div>
+						<div class="card-content">
+							<h3>System Mapping</h3>
+							<p>We build detailed system diagrams, Miro boards, process maps, and PRDs to document how your operations currently run and where data breaks.</p>
+							<ul class="step-features">
+								<li>System Architecture</li>
+								<li>Miro Process Maps</li>
+								<li>PRD Documentation</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Step 4 -->
+					<div class="process-card" data-step="4">
+						<div class="card-num">04</div>
+						<div class="card-content">
+							<h3>Implementation</h3>
+							<p>We implement the fixes, build the automations, and deploy the engineered systems across your stack. Everything is set up and tested.</p>
+							<ul class="step-features">
+								<li>Automation Setup</li>
+								<li>System Deployment</li>
+								<li>QA & Live Testing</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- Step 5 -->
+					<div class="process-card" data-step="5">
+						<div class="card-num">05</div>
+						<div class="card-content">
+							<h3>Ongoing Ops Running</h3>
+							<p>We run your operations day-to-day—managing updates, resolving issues, optimizing processes, and ensuring nothing breaks.</p>
+							<ul class="step-features">
+								<li>Daily Ops Support</li>
+								<li>System Optimization</li>
+								<li>Issue Resolution</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section>
 
 		<section class="solution-roadmap-section animate-fade-in">
 			<div class="solution-card">
@@ -845,53 +947,60 @@ const testimonials = (await getCollection('testimonials'))
 		</section>
 
 		<section class="compare-section animate-fade-in">
-			<div class="section-header">
-				<h2>How We Compare</h2>
-				<p class="section-subtitle">We replace multiple operational roles with one streamlined system.</p>
-			</div>
-			
-			<div class="compare-table-wrapper">
-				<table class="compare-table">
-					<thead>
-						<tr>
-							<th>Skills & Capabilities</th>
-							<th class="highlight-col">AquiferGrowth Systemized Model</th>
-							<th>Manual or Existing Ops</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><strong>Data Integration</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> Centralized</td>
-							<td><span class="x-icon">✕</span> Fragmented</td>
-						</tr>
-						<tr>
-							<td><strong>System Ownership</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> System-owned</td>
-							<td><span class="x-icon">✕</span> Person-dependent</td>
-						</tr>
-						<tr>
-							<td><strong>Scalability</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> Non-linear growth</td>
-							<td><span class="x-icon">✕</span> Linear cost</td>
-						</tr>
-						<tr>
-							<td><strong>Workflow Automation</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> Event-driven</td>
-							<td><span class="x-icon">✕</span> Manual handoffs</td>
-						</tr>
-						<tr>
-							<td><strong>Team Views / Portals</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> Role-based</td>
-							<td><span class="x-icon">✕</span> One view fits all</td>
-						</tr>
-						<tr>
-							<td><strong>Operational Resilience</strong></td>
-							<td class="highlight-col"><span class="check-icon">✓</span> Redundant</td>
-							<td><span class="x-icon">✕</span> Fragile</td>
-						</tr>
-					</tbody>
-				</table>
+			<div class="container">
+				<div class="section-header text-center">
+					<h2>How we <span class="text-accent">compare</span></h2>
+					<p class="section-subtitle">We replace manual operations with one system that runs itself.</p>
+				</div>
+				
+				<div class="compare-table-wrapper">
+					<table class="compare-table">
+						<thead>
+							<tr>
+								<th class="col-cap">CAPABILITY</th>
+								<th class="col-ag highlight-col">AquiferGrowth Model</th>
+								<th class="col-manual">Manual / Spreadsheet Ops</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="cap-name">Data management</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Centralised & always live</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Fragmented & always stale</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">System ownership</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>System-owned & self-running</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Person-dependent & fragile</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">Scalability</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Scale without hiring</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Linear headcount cost</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">Execution layer</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Automated & event-driven</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Manual & reactive</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">Decision making</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Humans judge, systems execute</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Humans do both</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">Operational resilience</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Runs without key-person dependency</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Breaks when someone leaves</div></td>
+							</tr>
+							<tr>
+								<td class="cap-name">Reporting & visibility</td>
+								<td class="highlight-col"><div class="cell-content"><span class="icon-check"></span>Real-time & accurate</div></td>
+								<td class="manual-cell"><div class="cell-content"><span class="icon-cross"></span>Stale & manually built</div></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</section>
 
@@ -1253,62 +1362,160 @@ const testimonials = (await getCollection('testimonials'))
 		font-size: 1rem;
 	}
 
-	/* Compare Section */
+	/* Compare Section - Light Theme */
 	.compare-section {
-		padding-bottom: var(--space-xl);
+		padding: 8rem 0;
+		background: transparent;
 	}
-	.section-subtitle {
-		color: var(--text-secondary);
-		font-size: 1.1rem;
-		margin-top: 0.5rem;
+
+	.compare-section .section-header h2 {
+		color: #1A1A1A;
+		margin-bottom: 1rem;
 	}
+
+	.compare-section .text-accent {
+		color: var(--accent-primary);
+	}
+
+	.compare-section .section-subtitle {
+		color: #555555;
+		font-size: 1.25rem;
+		margin-bottom: 4rem;
+	}
+
 	.compare-table-wrapper {
-		background: var(--bg-secondary);
-		border: 1px solid var(--border-muted);
-		border-radius: var(--radius-lg);
+		background: #FFFFFF;
+		border: 1px solid #e5e7eb;
+		border-radius: 16px;
 		overflow: hidden;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 	}
+
 	.compare-table {
 		width: 100%;
 		border-collapse: collapse;
-		text-align: center;
+		table-layout: fixed;
 	}
-	.compare-table th, .compare-table td {
-		padding: 1.5rem 1rem;
-		border-bottom: 1px solid #F0F0F0;
+
+	.compare-table th, 
+	.compare-table td {
+		padding: 1.75rem 2rem;
+		border-bottom: 1px solid #e5e7eb;
+		text-align: left;
+		vertical-align: middle;
 	}
+
 	.compare-table tr:last-child td {
 		border-bottom: none;
 	}
+
 	.compare-table th {
-		font-family: var(--font-display);
+		font-size: 0.75rem;
 		font-weight: 800;
-		font-size: 1.1rem;
-		color: var(--text-primary);
+		letter-spacing: 0.1em;
+		color: #64748b;
+		text-transform: uppercase;
 		background: #FAFAFA;
 	}
-	.compare-table td:first-child, .compare-table th:first-child {
-		text-align: left;
-		padding-left: 2rem;
+
+	.cap-name {
+		font-weight: 800;
+		color: #1A1A1A;
 		font-size: 1.1rem;
-		width: 30%;
 	}
+
 	.highlight-col {
-		background: #FFF1E0; /* Light orange beige */
-		position: relative;
+		background: rgba(255, 77, 109, 0.02);
+		border-left: 1px solid #e5e7eb;
+		border-right: 1px solid #e5e7eb;
 	}
+
+	.compare-table th.col-ag, 
+	.compare-table th.col-manual {
+		text-transform: none !important;
+		letter-spacing: 0;
+		font-size: 0.95rem;
+	}
+
 	.compare-table th.highlight-col {
 		color: var(--accent-primary);
-		font-weight: 800;
-		background: #FFEAD2;
+		background: rgba(255, 77, 109, 0.04);
 	}
-	.compare-table td.highlight-col {
-		color: var(--text-primary);
+
+	.manual-cell {
+		color: #64748b;
 	}
-	td strong {
-		color: var(--text-primary);
-		font-weight: 800;
+
+	.cell-content {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		font-weight: 600;
+		color: #1A1A1A;
+	}
+
+	.manual-cell .cell-content {
+		color: #64748b;
+	}
+
+	/* Custom Icons */
+	.icon-check {
+		width: 1.25rem;
+		height: 1.25rem;
+		background: rgba(255, 77, 109, 0.1);
+		border-radius: 50%;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	.icon-check::after {
+		content: "";
+		width: 0.6rem;
+		height: 0.35rem;
+		border-left: 2px solid var(--accent-primary);
+		border-bottom: 2px solid var(--accent-primary);
+		transform: rotate(-45deg) translate(1px, -1px);
+	}
+
+	.icon-cross {
+		width: 1.25rem;
+		height: 1.25rem;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		flex-shrink: 0;
+	}
+
+	.icon-cross::before,
+	.icon-cross::after {
+		content: "";
+		position: absolute;
+		width: 12px;
+		height: 1.5px;
+		background: #94a3b8;
+	}
+
+	.icon-cross::before { transform: rotate(45deg); }
+	.icon-cross::after { transform: rotate(-45deg); }
+
+	.col-ag { width: 38%; }
+	.col-manual { width: 38%; }
+	.col-cap { width: 24%; }
+
+	@media (max-width: 768px) {
+		.compare-table {
+			display: block;
+			overflow-x: auto;
+		}
+		.compare-table th, .compare-table td {
+			padding: 1rem;
+			min-width: 200px;
+		}
+		.col-cap { min-width: 150px; }
 	}
 	.solution-footer a {
 		color: var(--blackish);
@@ -1848,6 +2055,193 @@ const testimonials = (await getCollection('testimonials'))
 	}
 	.crm-src-fill { height: 100%; border-radius: 10px; }
 	.crm-src-pct { color: #64748b; font-size: 0.55rem; width: 28px; text-align: right; flex-shrink: 0; }
+
+
+	/* ── Process Section ──────────────────────── */
+	.process-section {
+		padding: 8rem 0;
+		background: transparent;
+		overflow: visible;
+		position: relative;
+	}
+
+	.process-container {
+		display: grid;
+		grid-template-columns: 1fr 1.2fr;
+		gap: 4rem;
+		align-items: flex-start;
+	}
+
+	.process-header {
+		position: sticky;
+		top: 15vh;
+	}
+
+	.step-tag {
+		display: inline-flex;
+		padding: 0.5rem 1rem;
+		background: #FFFFFF;
+		border: 1px solid #e5e7eb;
+		border-radius: 99px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		color: #1A1A1A;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 2rem;
+	}
+
+	.process-title {
+		font-size: clamp(3rem, 8vw, 5rem);
+		line-height: 0.95;
+		color: #1A1A1A;
+		margin-bottom: 2rem;
+		font-weight: 800;
+	}
+
+	.process-desc {
+		font-size: 1.25rem;
+		color: #555555;
+		max-width: 480px;
+		line-height: 1.6;
+	}
+
+	/* Success Path Indicator */
+	.success-path-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 1.5rem;
+		margin-top: 2rem;
+		position: relative;
+	}
+
+	.path-line {
+		position: absolute;
+		left: 6px;
+		top: 40px;
+		bottom: 40px;
+		width: 2px;
+		background: #e5e7eb;
+		z-index: 0;
+	}
+
+	.dots-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+		z-index: 1;
+	}
+
+	.dot {
+		width: 14px;
+		height: 14px;
+		background: #FFFFFF;
+		border: 2px solid #e5e7eb;
+		border-radius: 50%;
+		position: relative;
+		z-index: 1;
+		transition: all 0.3s ease;
+	}
+
+	.dot.active {
+		background: var(--accent-primary);
+		border-color: var(--accent-primary);
+		box-shadow: 0 0 10px rgba(255, 77, 109, 0.4);
+	}
+
+	/* Process steps cards */
+	.process-steps {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+	}
+
+	.process-card {
+		background: #FFFFFF;
+		border: 1px solid #e5e7eb;
+		border-radius: 24px;
+		padding: 3rem;
+		position: relative;
+		overflow: hidden;
+		transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+	}
+
+	.process-card:hover {
+		background: #FFFFFF;
+		border-color: #d1d5db;
+		transform: translateY(-5px);
+	}
+
+	.card-num {
+		position: absolute;
+		top: -20px;
+		right: -10px;
+		font-size: 12rem;
+		font-weight: 900;
+		color: rgba(0, 0, 0, 0.03);
+		user-select: none;
+		pointer-events: none;
+		z-index: 0;
+	}
+
+	.card-content h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: #1A1A1A;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.step-desc {
+		font-size: 1.125rem;
+		color: #555555;
+		line-height: 1.6;
+		margin-bottom: 2.5rem;
+		position: relative;
+		z-index: 1;
+	}
+
+	.step-features {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		list-style: none;
+		padding: 0;
+		position: relative;
+		z-index: 1;
+	}
+
+	.step-features li {
+		background: #F9F7F2;
+		border: 1px solid #e5e7eb;
+		padding: 0.4rem 0.8rem;
+		border-radius: 100px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: #1A1A1A;
+	}
+
+	@media (max-width: 1024px) {
+		.process-container {
+			grid-template-columns: 1fr;
+			gap: 3rem;
+		}
+
+		.process-header {
+			position: relative;
+			top: 0;
+		}
+
+		.process-desc {
+			max-width: 100%;
+		}
+		
+		.card-num { font-size: 5rem; top: 0; right: 20px; }
+	}
 
 
 	/* ── Order Fulfillment Dashboard ──────────────────────── */
@@ -3032,6 +3426,46 @@ const testimonials = (await getCollection('testimonials'))
 		gsap.from(".roadmap-step", {
 			scrollTrigger: { trigger: ".roadmap-container", start: "top 80%" },
 			x: -30, opacity: 0, stagger: 0.3, duration: 1.2, ease: "power2.out"
+		});
+
+		// ── Process Section Animations ────────────────────────
+		const processCards = gsap.utils.toArray('.process-card');
+		const dots = gsap.utils.toArray('.dots-list .dot');
+		const pathFill = document.querySelector('.path-fill');
+
+		processCards.forEach((card, i) => {
+			gsap.to(card, {
+				scrollTrigger: {
+					trigger: card,
+					start: "top 85%",
+					toggleActions: "play none none reverse",
+					onEnter: () => {
+						// Update dots
+						dots.forEach(d => d.classList.remove('active'));
+						if (dots[i]) dots[i].classList.add('active');
+						// Update path fill (20% increments for 5 steps)
+						if (pathFill) {
+							gsap.to(pathFill, { height: ((i + 1) / processCards.length) * 100 + "%", duration: 0.6 });
+						}
+					},
+					onEnterBack: () => {
+						dots.forEach(d => d.classList.remove('active'));
+						if (dots[i]) dots[i].classList.add('active');
+						if (pathFill) {
+							gsap.to(pathFill, { height: ((i + 1) / processCards.length) * 100 + "%", duration: 0.6 });
+						}
+					}
+				},
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: "power2.out"
+			});
+		});
+
+		gsap.from(".process-header .sticky-content > *", {
+			scrollTrigger: { trigger: ".process-section", start: "top 70%" },
+			y: 30, opacity: 0, stagger: 0.2, duration: 1, ease: "power3.out"
 		});
 
 	});
