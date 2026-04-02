@@ -49,4 +49,34 @@ const testimonials = defineCollection({
 	}),
 });
 
-export const collections = { blog, team, categories, testimonials };
+const caseStudies = defineCollection({
+	type: 'content',
+	schema: z.object({
+		title: z.string(),
+		headline: z.string(),
+		description: z.string(),
+		roi: z.string(),
+		info: z.string(), // e.g., "$10k Saved/mo"
+		industry: z.string(),
+		platform: z.string(),
+		image: z.string(),
+		featured: z.boolean().default(false),
+		clientUrl: z.string().optional(),
+		logoText: z.string().optional(),
+		logoBrand: z.string().optional(),
+		
+		// Structured Content for the detail page
+		challenges: z.array(z.object({
+			title: z.string(),
+			body: z.string()
+		})).optional(),
+		solutions: z.array(z.object({
+			title: z.string(),
+			body: z.string()
+		})).optional(),
+		results: z.string().optional(),
+		pubDate: z.coerce.date(),
+	}),
+});
+
+export const collections = { blog, team, categories, testimonials, caseStudies };

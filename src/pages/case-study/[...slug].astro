@@ -1,0 +1,351 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+	const caseStudies = await getCollection('caseStudies');
+	return caseStudies.map(entry => ({
+		params: { slug: entry.slug }, props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, headline, description, roi, info, industry, platform, image, challenges, solutions, results } = entry.data;
+---
+
+<Layout title={`${title} | Case Study`} description={description}>
+	<Header />
+	
+	<main class="case-study-detail">
+		<!-- Hero Section -->
+		<section class="case-hero">
+			<div class="container">
+				<div class="badge">Case Study</div>
+				<h1 class="text-gradient">{title}</h1>
+				<p class="hero-headline">{headline}</p>
+			</div>
+		</section>
+
+		<!-- Overview Section -->
+		<section class="case-overview">
+			<div class="container">
+				<div class="overview-grid">
+					<div class="overview-content">
+						<h2>Overview</h2>
+						<p class="description-large">{description}</p>
+						
+						<div class="case-markdown">
+							<Content />
+						</div>
+					</div>
+					
+					<aside class="case-sidebar">
+						<div class="sticky-sidebar">
+							<div class="sidebar-card">
+								<h3>By the Numbers</h3>
+								<div class="sidebar-stats">
+									<div class="side-stat">
+										<span class="v">{roi}</span>
+										<span class="l">ROI / Result</span>
+									</div>
+									<div class="side-stat">
+										<span class="v">{info}</span>
+										<span class="l">Impact</span>
+									</div>
+								</div>
+								
+								<div class="sidebar-meta">
+									<div class="m-item">
+										<span class="m-label">Industry</span>
+										<span class="m-value">{industry}</span>
+									</div>
+									<div class="m-item">
+										<span class="m-label">Platform</span>
+										<span class="m-value">{platform}</span>
+									</div>
+								</div>
+
+								<a href="/book-consultation" class="btn-sidebar-cta">Book Consultation</a>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</section>
+
+		<!-- Problem / Solution Grid -->
+		{(challenges || solutions) && (
+			<section class="case-grid-content">
+				<div class="container">
+					<div class="grid-header">
+						<h2>The Approach</h2>
+						<p>How we identified problems and implemented long-term solutions.</p>
+					</div>
+					
+					<div class="approach-grid">
+						<div class="approach-col">
+							<h3 class="col-title text-red">The Challenge</h3>
+							{challenges?.map(c => (
+								<div class="approach-card challenge">
+									<h4>{c.title}</h4>
+									<p>{c.body}</p>
+								</div>
+							))}
+						</div>
+						
+						<div class="approach-col">
+							<h3 class="col-title text-green">The Solution</h3>
+							{solutions?.map(s => (
+								<div class="approach-card solution">
+									<h4>{s.title}</h4>
+									<p>{s.body}</p>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
+			</section>
+		)}
+
+		<!-- Results Section -->
+		{results && (
+			<section class="case-results">
+				<div class="container">
+					<div class="results-inner">
+						<h2>Final Impact</h2>
+						<p class="results-text">{results}</p>
+					</div>
+				</div>
+			</section>
+		)}
+
+		<!-- Visual Divider / Image -->
+		<section class="case-v-image">
+			<div class="container">
+				<div class="image-wrapper">
+					<img src={image} alt={title} />
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.case-study-detail {
+		padding-top: 4rem;
+	}
+	.case-hero {
+		padding: 4rem 0 2rem;
+		text-align: center;
+	}
+	.case-hero h1 {
+		font-size: clamp(3rem, 8vw, 5rem);
+		font-weight: 850;
+		letter-spacing: -0.05em;
+		margin: 1rem 0;
+	}
+	.hero-headline {
+		font-size: 1.5rem;
+		color: #555;
+		max-width: 800px;
+		margin: 0 auto;
+		font-weight: 500;
+	}
+
+	.case-overview {
+		padding: 4rem 0;
+	}
+	.overview-grid {
+		display: grid;
+		grid-template-columns: 1fr 350px;
+		gap: 4rem;
+	}
+	.description-large {
+		font-size: 1.4rem;
+		line-height: 1.5;
+		color: #1a1a1a;
+		font-weight: 500;
+		margin-bottom: 2.5rem;
+	}
+	.case-markdown {
+		font-size: 1.1rem;
+		line-height: 1.7;
+		color: #444;
+	}
+
+	/* Sidebar */
+	.sticky-sidebar {
+		position: sticky;
+		top: 100px;
+	}
+	.sidebar-card {
+		background: #fff;
+		border: 1px solid rgba(0,0,0,0.08);
+		border-radius: 24px;
+		padding: 2rem;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+	}
+	.sidebar-card h3 {
+		font-size: 0.9rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: #999;
+		margin-bottom: 2rem;
+	}
+	.sidebar-stats {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 2.5rem;
+	}
+	.side-stat .v {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 850;
+		color: #1a1a1a;
+		line-height: 1;
+	}
+	.side-stat .l {
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: #777;
+		margin-top: 0.25rem;
+	}
+	.sidebar-meta {
+		border-top: 1px solid #eee;
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	.m-item .m-label {
+		display: block;
+		font-size: 0.7rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #bbb;
+		margin-bottom: 0.25rem;
+	}
+	.m-item .m-value {
+		font-size: 1rem;
+		font-weight: 700;
+		color: #1a1a1a;
+	}
+	.btn-sidebar-cta {
+		display: block;
+		text-align: center;
+		background: #1a1a1a;
+		color: #fff;
+		padding: 1rem;
+		border-radius: 12px;
+		font-weight: 700;
+		text-decoration: none;
+		transition: transform 0.2s ease;
+	}
+	.btn-sidebar-cta:hover { transform: translateY(-2px); }
+
+	/* Approach Grid */
+	.case-grid-content {
+		padding: 6rem 0;
+		background: #fafafa;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+	.grid-header {
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	.grid-header h2 { font-size: 2.5rem; font-weight: 800; }
+	.grid-header p { color: #666; font-size: 1.1rem; }
+	
+	.approach-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3rem;
+	}
+	.col-title {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		font-weight: 800;
+		margin-bottom: 2rem;
+	}
+	.text-red { color: #ff5a5a; }
+	.text-green { color: #00c853; }
+	
+	.approach-card {
+		background: #fff;
+		padding: 2rem;
+		border-radius: 20px;
+		margin-bottom: 1.5rem;
+		border: 1px solid rgba(0,0,0,0.05);
+		box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+	}
+	.approach-card h4 {
+		font-size: 1.25rem;
+		font-weight: 800;
+		margin-bottom: 0.75rem;
+		color: #1a1a1a;
+	}
+	.approach-card p {
+		font-size: 0.95rem;
+		line-height: 1.6;
+		color: #555;
+	}
+
+	/* Results */
+	.case-results {
+		padding: 8rem 0;
+		background: #1a1a1a;
+		color: #fff;
+		text-align: center;
+	}
+	.results-inner h2 {
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2em;
+		color: #555;
+		margin-bottom: 2rem;
+	}
+	.results-text {
+		font-size: 2.5rem;
+		font-weight: 700;
+		line-height: 1.2;
+		max-width: 900px;
+		margin: 0 auto;
+		letter-spacing: -0.04em;
+	}
+
+	/* Image */
+	.case-v-image {
+		padding: 6rem 0;
+	}
+	.image-wrapper {
+		border-radius: 40px;
+		overflow: hidden;
+		box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+	}
+	.image-wrapper img {
+		width: 100%;
+		display: block;
+	}
+
+	@media (max-width: 992px) {
+		.overview-grid {
+			grid-template-columns: 1fr;
+		}
+		.approach-grid {
+			grid-template-columns: 1fr;
+		}
+		.results-text {
+			font-size: 1.8rem;
+		}
+	}
+</style>

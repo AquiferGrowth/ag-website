@@ -4,6 +4,8 @@ backend:
   branch: main
   base_url: https://ag-website-oauth.divjot-6b1.workers.dev
 
+local_backend: true
+
 publish_mode: editorial_workflow
 
 media_folder: "public/images/uploads"
@@ -87,3 +89,39 @@ collections:
           - { label: "⭐⭐⭐⭐", value: 4 }
           - { label: "⭐⭐⭐⭐⭐", value: 5 }
       - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+
+  - name: "case-studies"
+    label: "Case Studies"
+    folder: "src/content/caseStudies"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title (Internal)", name: "title", widget: "string"}
+      - {label: "Headline", name: "headline", widget: "string"}
+      - {label: "Description/Intro", name: "description", widget: "text"}
+      - {label: "ROI (e.g., 42x)", name: "roi", widget: "string"}
+      - {label: "Impact (e.g., $10k Saved/mo)", name: "info", widget: "string"}
+      - {label: "Industry", name: "industry", widget: "string"}
+      - {label: "Platform", name: "platform", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Featured on Homepage", name: "featured", widget: "boolean", default: false}
+      - {label: "Client URL", name: "clientUrl", widget: "string", required: false}
+      - {label: "Logo Text (e.g., LIVE)", name: "logoText", widget: "string", required: false}
+      - {label: "Logo Brand (e.g., HEALTHILLIE)", name: "logoBrand", widget: "string", required: false}
+      - label: "Challenges"
+        name: "challenges"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "text"}
+      - label: "Solutions"
+        name: "solutions"
+        widget: "list"
+        required: false
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "text"}
+      - {label: "Final Results Summary", name: "results", widget: "text", required: false}
+      - {label: "Publish Date", name: "pubDate", widget: "datetime"}
+      - {label: "Body content", name: "body", widget: "markdown", required: false}
