@@ -1,0 +1,269 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+
+const allCaseStudies = (await getCollection('caseStudies')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<Layout title="Case Studies | Aquifer Growth" description="See how we've helped brands scale smarter with AI-powered operations.">
+	<Header />
+
+	<main class="cs-listing-page">
+
+		<!-- Page Hero -->
+		<section class="cs-page-hero">
+			<div class="container">
+				<div class="badge">Case Studies</div>
+				<h1>Work That <span class="text-gradient">Speaks</span></h1>
+				<p class="cs-page-sub">Real results from real brands. See how we build, automate, and scale operations that compound.</p>
+			</div>
+		</section>
+
+		<!-- Grid -->
+		<section class="cs-listing-grid-section">
+			<div class="container">
+				<div class="cs-listing-grid">
+					{allCaseStudies.map(cs => (
+						<article class="cs-listing-card">
+							<!-- Image -->
+							<a href={`/case-study/${cs.slug}`} class="cs-listing-img-wrap">
+								<img src={cs.data.image} alt={cs.data.title} class="cs-listing-img" />
+								{cs.data.industry && (
+									<span class="cs-listing-tag">{cs.data.industry}</span>
+								)}
+							</a>
+
+							<!-- Content -->
+							<div class="cs-listing-content">
+								<p class="cs-listing-brand">{cs.data.logoBrand ?? cs.data.title.toUpperCase()}</p>
+								<h2 class="cs-listing-headline">{cs.data.headline}</h2>
+								<a href={`/case-study/${cs.slug}`} class="cs-listing-cta">
+									Read case study <span class="cs-cta-arrow">→</span>
+								</a>
+							</div>
+						</article>
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- Bottom CTA -->
+		<section class="cs-bottom-cta">
+			<div class="container">
+				<div class="cs-bottom-inner">
+					<h2>Ready to be next?</h2>
+					<p>Let's build the operations infrastructure your brand deserves.</p>
+					<a href="/contact" class="btn-cta-pink">Let's Chat →</a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+</Layout>
+
+<style>
+	.cs-listing-page {
+		padding-top: 4rem;
+	}
+
+	/* Hero */
+	.cs-page-hero {
+		text-align: center;
+		padding: 4rem 0 3rem;
+	}
+	.cs-page-hero .badge {
+		background: #1A1A1A;
+		color: #fff;
+		padding: 0.5rem 1.25rem;
+		border-radius: 999px;
+		font-size: 0.75rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		display: inline-block;
+		margin-bottom: 1.25rem;
+	}
+	.cs-page-hero h1 {
+		font-size: clamp(2.5rem, 6vw, 4.5rem);
+		font-weight: 850;
+		letter-spacing: -0.04em;
+		line-height: 1.05;
+		margin: 0 0 1rem;
+	}
+	.text-gradient {
+		color: #FF4D6D;
+	}
+	.cs-page-sub {
+		font-size: 1.15rem;
+		color: #555;
+		max-width: 600px;
+		margin: 0 auto;
+		line-height: 1.6;
+	}
+
+	/* Grid */
+	.cs-listing-grid-section {
+		padding: 3rem 0 6rem;
+	}
+	.cs-listing-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+	}
+
+	/* Card */
+	.cs-listing-card {
+		background: #fff;
+		border: 1.5px solid #e5e7eb;
+		border-radius: 20px;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+	}
+	.cs-listing-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+	}
+
+	/* Image */
+	.cs-listing-img-wrap {
+		display: block;
+		position: relative;
+		overflow: hidden;
+		aspect-ratio: 16 / 10;
+	}
+	.cs-listing-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		transition: transform 0.5s ease;
+	}
+	.cs-listing-card:hover .cs-listing-img {
+		transform: scale(1.04);
+	}
+	.cs-listing-tag {
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		background: #fff;
+		color: #1a1a1a;
+		font-size: 0.72rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		padding: 0.35rem 0.9rem;
+		border-radius: 999px;
+		border: 1.5px solid rgba(0,0,0,0.08);
+		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+	}
+
+	/* Content */
+	.cs-listing-content {
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		flex: 1;
+	}
+	.cs-listing-brand {
+		font-size: 0.8rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #888;
+		margin: 0;
+	}
+	.cs-listing-headline {
+		font-size: 1.15rem;
+		font-weight: 800;
+		color: #1a1a1a;
+		line-height: 1.3;
+		margin: 0;
+		letter-spacing: -0.02em;
+		flex: 1;
+	}
+	.cs-listing-cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		margin-top: 0.5rem;
+		padding: 0.6rem 1.25rem;
+		border: 1.5px solid #1a1a1a;
+		border-radius: 999px;
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		text-decoration: none;
+		width: fit-content;
+		transition: all 0.25s ease;
+	}
+	.cs-listing-cta:hover {
+		background: #1a1a1a;
+		color: #fff;
+	}
+	.cs-cta-arrow {
+		transition: transform 0.2s ease;
+	}
+	.cs-listing-cta:hover .cs-cta-arrow {
+		transform: translateX(3px);
+	}
+
+	/* Bottom CTA */
+	.cs-bottom-cta {
+		padding: 6rem 0;
+		background: #1a1a1a;
+	}
+	.cs-bottom-inner {
+		text-align: center;
+		color: #fff;
+	}
+	.cs-bottom-inner h2 {
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 850;
+		letter-spacing: -0.04em;
+		margin: 0 0 0.75rem;
+	}
+	.cs-bottom-inner p {
+		font-size: 1.1rem;
+		color: #aaa;
+		margin: 0 0 2rem;
+	}
+	.btn-cta-pink {
+		display: inline-block;
+		background: #FF7A7A;
+		color: #000;
+		font-weight: 800;
+		padding: 1rem 2.5rem;
+		border-radius: 999px;
+		border: 2px solid #fff;
+		box-shadow: 4px 4px 0 #fff;
+		font-size: 1rem;
+		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		text-decoration: none;
+	}
+	.btn-cta-pink:hover {
+		transform: translate(-4px, -4px);
+		box-shadow: 8px 8px 0 #fff;
+		background: #ff9d9d;
+	}
+
+	/* Responsive */
+	@media (max-width: 1024px) {
+		.cs-listing-grid {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 640px) {
+		.cs-listing-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

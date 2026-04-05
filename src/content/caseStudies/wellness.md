@@ -26,5 +26,5 @@ solutions:
     body: "Launched a new mega menu and filtering experience driven by SEO-informed categories."
   - title: "Automation and Consistency"
     body: "Implemented a managed system for tagging, eliminating manual work as the brand scaled."
-results: "Partnering with Aquifer Growth enabled Live Healthillie to structure over 20k product attributes, saving 10-15 hours of manual work each week and significantly improving organic traffic."
+results: "Partnering with Astro Operations enabled Live Healthillie to structure over 20k product attributes, saving 10-15 hours of manual work each week and significantly improving organic traffic."
 ---

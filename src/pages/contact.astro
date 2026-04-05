@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Book a Free AI Strategy Call | Astro Operations"
+  description="Book a free 30-minute strategy call with Astro Operations. Discover how AI-powered automation can replace manual ops and scale your business without adding headcount."
+>
+  <Header />
+
+  <main class="contact-main">
+
+    <!-- Top intro bar -->
+    <div class="contact-intro animate-fade-in">
+      <span class="eyebrow">AI Strategy Call</span>
+      <h1 class="contact-headline">
+        LET AI <span class="text-gradient">RUN YOUR</span> OPERATIONS.
+      </h1>
+      <p class="contact-subtext">
+        Book a 30-minute call. Find out exactly which parts of your business we can automate — and what that's worth to you.
+      </p>
+    </div>
+
+    <!-- Full-width Calendly widget -->
+    <div class="cal-wrapper">
+      <div
+        class="calendly-inline-widget"
+        data-url="https://calendly.com/divjot-aquifergrowth/30min?hide_gdpr_banner=1&primary_color=FF4D6D"
+      ></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Hides Calendly's Privacy Policy link (inside the iframe, covered via overlay) -->
+      <div class="privacy-mask" aria-hidden="true"></div>
+    </div>
+
+  </main>
+
+  <Footer />
+</Layout>
+
+
+<style>
+  .contact-main {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem 2rem;
+  }
+
+  /* ─── TOP INTRO ─────────────────────────────────── */
+  .contact-intro {
+    text-align: center;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    background: rgba(255, 77, 109, 0.08);
+    border: 1px solid rgba(255, 77, 109, 0.2);
+    padding: 0.3rem 0.85rem;
+    border-radius: 9999px;
+  }
+
+  .contact-headline {
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-family: var(--font-display);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .contact-subtext {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 500px;
+    margin: 0;
+  }
+
+  /* ─── CALENDLY WIDGET ───────────────────────────── */
+  /* Wide enough to trigger Calendly's native split layout */
+  .cal-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+  }
+
+  .calendly-inline-widget {
+    width: 100%;
+    min-width: 320px;
+    /* Tall enough so Calendly's content never scrolls internally */
+    height: 660px;
+  }
+
+  /* Covers the "Privacy Policy" link in the bottom-left of the iframe */
+  .privacy-mask {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 40px;
+    background: var(--bg-primary);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* ─── RESPONSIVE ─────────────────────────────── */
+  @media (max-width: 768px) {
+    .contact-main {
+      padding: 1.5rem 1rem 2rem;
+    }
+
+    .contact-headline {
+      font-size: clamp(1.6rem, 7vw, 2.2rem);
+    }
+
+    .calendly-inline-widget {
+      height: 800px; /* taller on mobile since it stacks vertically */
+    }
+  }
+</style>

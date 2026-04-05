@@ -1,338 +1,1530 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 ---
 
-<Layout title="Managed AI for Ecommerce | AG-Website" description="We engineer and run your managed AI commerce operations, replacing manual roles with autonomous systems.">
+<Layout title="AI-Managed Ecommerce Operations | Aquifer Growth" description="Aquifer Growth engineers and manages autonomous AI commerce operations for Shopify brands — replacing fragmented ops roles with a single AI-powered system that scales.">
 	<Header />
 	
-	<main class="container">
-		<!-- Hero Section -->
-		<section class="hero animate-fade-in">
-			<div class="badge">Ecommerce Industry</div>
-			<h1>
-				We Engineer and Run Your <span class="text-gradient">Managed AI Commerce Operations</span>
-			</h1>
-			
-			<div class="hero-pills">
-				<div class="body-pill">
-					Systemize Operations. <span class="bold">Unlock Durable Growth.</span>
-				</div>
-				<a href="/contact" class="use-cases-pill">
-					Let's Chat <span class="icon-dots">⁛</span>
-				</a>
-			</div>
+	<main>
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- HERO SECTION                               -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-hero">
+			<div class="ec-hero__bg-blur"></div>
+			<div class="ec-hero__bg-blur ec-hero__bg-blur--right"></div>
+			<div class="ec-hero__inner container">
+				<h1 class="ec-hero__title">
+					Focus on scaling your store.<br>
+					We'll handle the operations<br>
+					behind your catalog.
+				</h1>
+				<p class="ec-hero__subtitle">
+					Managing product operations, inventory, and catalog health is a full-time<br class="hide-mobile">
+					job — one that doesn't scale. We take over the operational layer so you can<br class="hide-mobile">
+					focus on growth, brand, and customer experience.
+				</p>
 
-			<p class="hero-subtext">
-				We build and operate autonomous systems for brands moving too fast for spreadsheets but unwilling to justify slow, expensive enterprise tech bloat. Replacing fragmented tools with a single managed operations layer.
-			</p>
+				<div class="ec-hero__cta-row">
+					<a href="/contact" class="ec-btn ec-btn--primary">See Our Process</a>
+					<a href="/contact" class="ec-btn ec-btn--outline">Book a Call</a>
+				</div>
+
+				<!-- Mock Product Table -->
+				<div class="ec-hero__table-wrap">
+					<div class="ec-table-mock">
+						<!-- Top Tabs -->
+						<div class="ec-table-mock__toolbar">
+							<div class="ec-table-mock__tabs">
+								<span class="ec-table-mock__tab active">Product Catalog Management</span>
+								<span class="ec-table-mock__tab">Collection Data Management</span>
+								<span class="ec-table-mock__tab">Inventory Management</span>
+								<span class="ec-table-mock__tab">Multi-channel Inventory Management</span>
+							</div>
+						</div>
+
+						<!-- Table Header -->
+						<div class="ec-table-mock__header">
+							<span class="col-pid">ProductID</span>
+							<span class="col-color-label">Color</span>
+							<span class="col-ptype">Product Type</span>
+							<span class="col-imgs">Images</span>
+							<span class="col-qty col-qty--sm">Received</span>
+							<span class="col-qty col-qty--sm">Sold</span>
+							<span class="col-qty col-qty--sm">In Stock</span>
+						</div>
+
+						<!-- Row 1 — highlighted (selected) -->
+						<div class="ec-table-mock__row ec-table-mock__row--highlight">
+							<span class="col-pid">TSHRT-001</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--white"></span>White</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--tshirt">T-shirt</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=80&fit=crop" alt="White T-shirt" /></span></span>
+							<span class="col-qty">751</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">785</span>
+						</div>
+
+						<!-- Row 2 -->
+						<div class="ec-table-mock__row ec-table-mock__row--highlight-alt">
+							<span class="col-pid">TSHRT-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--black"></span>Black</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--tshirt">T-shirt</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">296</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">978</span>
+						</div>
+
+						<!-- Row 3 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">JKT-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--purple"></span>Purple</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--jacket">Jacket</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">278</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">372</span>
+						</div>
+
+						<!-- Row 4 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">PNTS-001</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--blue"></span>Blue</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--pants">Pants</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">296</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">334</span>
+						</div>
+
+						<!-- Row 5 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">PNTS-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--red"></span>Red</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--pants">Pants</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">137</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">—</span>
+						</div>
+
+						<!-- Row 6 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">DRSS-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--purple"></span>Purple</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--dress">Dress</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">312</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">162</span>
+						</div>
+
+						<!-- Row 7 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">DRSS-001</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--blue"></span>Blue</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--dress">Dress</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">179</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">471</span>
+						</div>
+
+						<!-- Row 8 (partially visible) -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">SWTR-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--white"></span></span>
+							<span class="col-ptype"></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">813</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">893</span>
+						</div>
+
+						<!-- Row 9 -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">SKRT-001</span>
+							<span class="col-color-label"></span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--skirt">Skirt</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">—</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">279</span>
+						</div>
+
+						<!-- Rows 10-11 (bottom, partially covered) -->
+						<div class="ec-table-mock__row">
+							<span class="col-pid">HODI-002</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--green"></span>Green</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--hoodie">Hoodie</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">298</span>
+							<span class="col-qty">462</span>
+							<span class="col-qty">499</span>
+						</div>
+
+						<div class="ec-table-mock__row">
+							<span class="col-pid">HODI-003</span>
+							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--black"></span>Black</span>
+							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--hoodie">Hoodie</span></span>
+							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
+							<span class="col-qty">497</span>
+							<span class="col-qty"></span>
+							<span class="col-qty">413</span>
+						</div>
+
+						<!-- ─── Floating Product Detail Card ─── -->
+						<div class="ec-product-card">
+							<div class="ec-product-card__cursor">
+								<span class="ec-product-card__cursor-tag">You</span>
+							</div>
+							<div class="ec-product-card__img">
+								<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="White T-shirt" />
+							</div>
+							<div class="ec-product-card__details">
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">Product ID</span>
+									<span class="ec-product-card__value">TSHRT-001</span>
+								</div>
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">Color</span>
+									<span class="ec-product-card__value"><span class="ec-color-dot ec-color-dot--white" style="margin-right:4px;"></span>White</span>
+								</div>
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">Product Type</span>
+									<span class="ec-product-card__value"><span class="ec-type-badge ec-type-badge--tshirt" style="font-size:0.65rem;">T-shirt</span></span>
+								</div>
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">Received Quantity</span>
+									<span class="ec-product-card__value ec-product-card__value--blue">751</span>
+								</div>
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">Sold Quantity</span>
+									<span class="ec-product-card__value ec-product-card__value--blue">740</span>
+								</div>
+								<div class="ec-product-card__row">
+									<span class="ec-product-card__label">In Stock</span>
+									<span class="ec-product-card__value ec-product-card__value--blue">785</span>
+								</div>
+								<div class="ec-product-card__actions">
+									<button class="ec-product-card__btn">Receive Product</button>
+									<button class="ec-product-card__btn">Sell Product</button>
+								</div>
+							</div>
+						</div>
+
+						<!-- ─── "Saved hours" Toast ─── -->
+						<div class="ec-toast">
+							<span class="ec-toast__icon">✓</span>
+							<span class="ec-toast__text">Saved 5.35 hours by not Ctrl+C / Ctrl+V</span>
+						</div>
+
+						<!-- ─── Import Bar ─── -->
+						<div class="ec-import-bar">
+							<div class="ec-import-bar__file">
+								<span class="ec-import-bar__file-icon">📄</span>
+								<span class="ec-import-bar__file-info">
+									<strong>Inventory for Aug - Oct 2024, I guess?.csv</strong>
+									<span>Last edited 25 Nov 2024</span>
+								</span>
+							</div>
+							<button class="ec-import-bar__btn">Import from Sheets</button>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 
-		<!-- The Problem / Operations Decay Section -->
-		<section class="dark-block">
-			<div class="block-header">
-				<span class="sub-heading">The Scaling Problem</span>
-				<h2>Operations Decay and Quietly Break Down</h2>
-			</div>
-			
-			<div class="problem-grid">
-				<div class="problem-card">
-					<div class="status-indicator"></div>
-					<h3>Headcount Bloat</h3>
-					<p>Relying on manual execution means headcount increases without clear ownership or autonomous work.</p>
-				</div>
-				<div class="problem-card">
-					<div class="status-indicator"></div>
-					<h3>Execution Slowness</h3>
-					<p>Fixes require manual coordination and dependency on specific people, making updates take weeks instead of days.</p>
-				</div>
-				<div class="problem-card">
-					<div class="status-indicator"></div>
-					<h3>Data Drift</h3>
-					<p>Data standards drift away across Shopify and channels, leading to edge cases and fragmented systems.</p>
-				</div>
-			</div>
-		</section>
-
-		<!-- Pillars of Service -->
-		<section class="feature-section">
-			<div class="section-badge">How We Deliver</div>
-			<h2>Core Autonomous Infrastructure</h2>
-			
-			<div class="grid grid-3">
-				<div class="nolo-card">
-					<div class="card-icon">🏗️</div>
-					<h3>Managed Product Catalog</h3>
-					<p>Centralized AI-synced hierarchies that scale across your entire catalog, attributes, and variant groups.</p>
-				</div>
-				<div class="nolo-card">
-					<div class="card-icon">📦</div>
-					<h3>Autonomous Inventory</h3>
-					<p>A replenishment system that balances velocity, seasonality, and thresholds with auto-triggered POs.</p>
-				</div>
-				<div class="nolo-card">
-					<div class="card-icon">🚛</div>
-					<h3>Logistics Intelligence</h3>
-					<p>Proactive monitoring of inbound shipments and exceptions, maintaining ETAs without manual oversight.</p>
-				</div>
-				<div class="nolo-card">
-					<div class="card-icon">🔍</div>
-					<h3>Discoverability & SEO</h3>
-					<p>Crawlable taxonomies and intents engineered for natural language discovery and agentic commerce systems.</p>
-				</div>
-				<div class="nolo-card">
-					<div class="card-icon">⚡</div>
-					<h3>Managed Web Execution</h3>
-					<p>Ongoing optimization of collection logic, filters, and site structure directly from structured data.</p>
-				</div>
-				<div class="nolo-card">
-					<div class="card-icon">🧠</div>
-					<h3>Operational Support</h3>
-					<p>No single point of failure. Proactive fixes and system evolution as your ecommerce business grows.</p>
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- LOGO BAR                                   -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-logos">
+			<div class="container">
+				<div class="ec-logos__row">
+					<span class="ec-logo-item">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Shopify
+					</span>
+					<span class="ec-logo-item">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 17l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 12l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Asana
+					</span>
+					<span class="ec-logo-item">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#1A1A1A" stroke-width="1.5"/><path d="M9 9h6M9 12h6M9 15h3" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Framer
+					</span>
+					<span class="ec-logo-item">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M4 12h8v8" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Webflow
+					</span>
+					<span class="ec-logo-item">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Attentive
+					</span>
+					<span class="ec-logo-item">
+						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-9 4 18 3-9h4" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Klaviyo
+					</span>
 				</div>
 			</div>
 		</section>
 
-		<!-- Impact / Value Prop -->
-		<section class="impact-section">
-			<div class="impact-content">
-				<h2>One Unified System. Zero Fragmented Roles.</h2>
-				<p>We replace multiple operational roles with one streamlined autonomous system, bridging the gap from growth to enterprise scale.</p>
-				<div class="cta-wrap">
-					<a href="/contact" class="btn btn-primary">Start Building Now</a>
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- WHY WE'RE THE BEST                          -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-why">
+			<div class="container">
+				<div class="ec-why__grid">
+					<div class="ec-why__left">
+						<h2 class="ec-why__title">
+							Why are we the best<br>for the job
+						</h2>
+					</div>
+					<div class="ec-why__right">
+						<p class="ec-why__body">
+							We're not a SaaS tool. We're not a freelancer. We're an operations partner that builds and manages the systems your catalog needs — from taxonomy to fulfillment readiness. We embed into your stack, systematize what's broken, and keep it running.
+						</p>
+						<div class="ec-why__features">
+							<div class="ec-why__feature">
+								<span class="ec-why__feature-icon">⚡</span>
+								<div>
+									<strong>Built for Shopify Brands</strong>
+									<p>We specialize in the operational gaps that grow as your SKU count grows.</p>
+								</div>
+							</div>
+							<div class="ec-why__feature">
+								<span class="ec-why__feature-icon">🔁</span>
+								<div>
+									<strong>Managed, Not Just Built</strong>
+									<p>We don't hand you a tool and disappear. We run it for you, continuously.</p>
+								</div>
+							</div>
+							<div class="ec-why__feature">
+								<span class="ec-why__feature-icon">📊</span>
+								<div>
+									<strong>AI-Powered at the Core</strong>
+									<p>Every system we deploy uses AI to automate, classify, and surface insights.</p>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- THE STEP AWAY QUESTION                     -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-question">
+			<div class="container">
+				<div class="ec-question__badge">Managed Operations</div>
+				<h2 class="ec-question__title">
+					When was the last time you could actually step away<br class="hide-mobile">
+					from day-to-day operations?
+				</h2>
+				<p class="ec-question__body">
+					Most ecommerce brands hit a wall around 5,000 SKUs. Catalog quality drops, inventory errors compound, and the team is constantly firefighting. Sound familiar?
+				</p>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- SIMPLIFY OPERATIONS — DARK SECTION         -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-capabilities">
+			<div class="container">
+				<h2 class="ec-capabilities__title">Simplify Operations. Unlock Growth.</h2>
+				<div class="ec-capabilities__subtitle-row">
+					<a href="/contact" class="ec-btn ec-btn--pink-sm">See What We Manage →</a>
+				</div>
+
+				<div class="ec-capabilities__grid">
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">🏗️</div>
+						<h3>Product Catalog Management</h3>
+						<p>Centralized AI-synced hierarchies that scale across your entire catalog, attributes, and variant groups.</p>
+					</div>
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">📦</div>
+						<h3>Catalog Enrichment</h3>
+						<p>Automated title optimization, description generation, and attribute standardization across thousands of SKUs.</p>
+					</div>
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">⚡</div>
+						<h3>Increased Store Visibility</h3>
+						<p>AI-driven collection logic, tagging, and discoverability improvements that directly boost conversion.</p>
+					</div>
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">📈</div>
+						<h3>Intelligent Data Cleaning &amp; Sorting</h3>
+						<p>Rule-based and AI-powered deduplication, normalization, and cataloging that keeps your data pristine.</p>
+					</div>
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">🔍</div>
+						<h3>Effortless SEO Management</h3>
+						<p>Automated meta tags, structured data, and crawlable taxonomies engineered for search dominance.</p>
+					</div>
+					<div class="ec-cap-card">
+						<div class="ec-cap-card__icon">🧠</div>
+						<h3>Full-cycle BI Integration</h3>
+						<p>Real-time dashboards connecting catalog health, inventory velocity, and revenue impact in one view.</p>
+					</div>
+				</div>
+
+				<!-- Testimonial -->
+				<div class="ec-capabilities__testimonial">
+					<blockquote>
+						"I used Contractors/Freelancers/In-house staff, now time and mainly Aquifer has saved me time by auto-categorizing our full collection more accurately."
+					</blockquote>
+					<div class="ec-capabilities__testimonial-author">
+						<div class="ec-capabilities__testimonial-avatar"></div>
+						<div>
+							<strong>Sarah Chen</strong>
+							<span>Head of Operations • StyleVault</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- OUR PROCESS                                 -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-process">
+			<div class="container">
+				<h2 class="ec-process__title">
+					Our process makes it<br>
+					easier than ever before
+				</h2>
+
+				<div class="ec-process__steps">
+					<div class="ec-process__step">
+						<div class="ec-process__step-num">01</div>
+						<div class="ec-process__step-content">
+							<h3>Initial Consulting</h3>
+							<p>We audit your current catalog, inventory systems, and operational workflows to identify where AI can create immediate improvement.</p>
+						</div>
+					</div>
+					<div class="ec-process__step">
+						<div class="ec-process__step-num">02</div>
+						<div class="ec-process__step-content">
+							<h3>System Architecture</h3>
+							<p>We design and build the autonomous systems tailored to your specific brand operations — no cookie-cutter templates.</p>
+						</div>
+					</div>
+					<div class="ec-process__step">
+						<div class="ec-process__step-num">03</div>
+						<div class="ec-process__step-content">
+							<h3>Deployment &amp; Embedding</h3>
+							<p>We integrate directly into your Shopify stack, connect data sources, and deploy the managed operations layer.</p>
+						</div>
+					</div>
+					<div class="ec-process__step">
+						<div class="ec-process__step-num">04</div>
+						<div class="ec-process__step-content">
+							<h3>Ongoing Managed Operations</h3>
+							<p>We continuously monitor, optimize, and evolve your systems — you focus on growth, we handle the backend.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- STATS BAR                                  -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-stats">
+			<div class="container">
+				<div class="ec-stats__grid">
+					<div class="ec-stat">
+						<span class="ec-stat__number">130%</span>
+						<span class="ec-stat__label">Avg. catalog quality improvement</span>
+					</div>
+					<div class="ec-stat">
+						<span class="ec-stat__number">$358K</span>
+						<span class="ec-stat__label">Revenue recovered from data fixes</span>
+					</div>
+					<div class="ec-stat">
+						<span class="ec-stat__number">21,424</span>
+						<span class="ec-stat__label">Products managed autonomously</span>
+					</div>
+					<div class="ec-stat">
+						<span class="ec-stat__number">2,436 Hrs</span>
+						<span class="ec-stat__label">Manual work eliminated per year</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- TESTIMONIALS                                -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-testimonials">
+			<div class="container">
+				<h2 class="ec-testimonials__title">Hear From Our Customers</h2>
+				<div class="ec-testimonials__grid">
+					<div class="ec-testimonial-card">
+						<div class="ec-testimonial-card__stars">★★★★★</div>
+						<p>"Of course we use Aquifer. They replaced all the manual data cleanup our team was doing. Within 2 months, our catalog error rate went from 23% to near zero."</p>
+						<div class="ec-testimonial-card__author">
+							<div class="ec-testimonial-card__avatar ec-testimonial-card__avatar--1"></div>
+							<div>
+								<strong>James Rivera</strong>
+								<span>CEO, ModernGoods Co.</span>
+							</div>
+						</div>
+					</div>
+					<div class="ec-testimonial-card">
+						<div class="ec-testimonial-card__stars">★★★★★</div>
+						<p>"We went from 3 full-time catalog managers to 1 person overseeing the AI systems. The ROI was clear within the first quarter."</p>
+						<div class="ec-testimonial-card__author">
+							<div class="ec-testimonial-card__avatar ec-testimonial-card__avatar--2"></div>
+							<div>
+								<strong>Michelle Park</strong>
+								<span>VP Operations, UrbanThread</span>
+							</div>
+						</div>
+					</div>
+					<div class="ec-testimonial-card">
+						<div class="ec-testimonial-card__stars">★★★★★</div>
+						<p>"Aquifer does what 3 agencies used to do, at a fraction of the cost. Our SEO visibility increased 47% after they cleaned up our product data."</p>
+						<div class="ec-testimonial-card__author">
+							<div class="ec-testimonial-card__avatar ec-testimonial-card__avatar--3"></div>
+							<div>
+								<strong>Daniel Okorie</strong>
+								<span>Founder, Craft & Carry</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- CTA FOOTER                                 -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="ec-cta-footer">
+			<div class="container">
+				<div class="ec-cta-footer__inner">
+					<div class="ec-cta-footer__text">
+						<h2>Be the Business Owner,<br>Let us Handle the Operations</h2>
+						<p>Focus on what matters — growth, brand, and customers. We'll manage the <br class="hide-mobile"> operational complexity behind your store autonomously.</p>
+						<div class="ec-cta-footer__actions">
+							<a href="/contact" class="ec-btn ec-btn--primary">Get Started Today</a>
+							<a href="/contact" class="ec-btn ec-btn--outline">Book a Demo</a>
+						</div>
+					</div>
+					<div class="ec-cta-footer__visual">
+						<div class="ec-cta-footer__mock-dashboard">
+							<div class="ec-cta-dash__header">
+								<span class="ec-cta-dash__dot"></span>
+								<span class="ec-cta-dash__dot"></span>
+								<span class="ec-cta-dash__dot"></span>
+							</div>
+							<div class="ec-cta-dash__body">
+								<div class="ec-cta-dash__sidebar">
+									<div class="ec-cta-dash__nav-item active">Dashboard</div>
+									<div class="ec-cta-dash__nav-item">Products</div>
+									<div class="ec-cta-dash__nav-item">Inventory</div>
+									<div class="ec-cta-dash__nav-item">Analytics</div>
+								</div>
+								<div class="ec-cta-dash__main">
+									<div class="ec-cta-dash__stat-row">
+										<div class="ec-cta-dash__mini-stat">
+											<span class="ec-cta-dash__mini-label">Products</span>
+											<span class="ec-cta-dash__mini-value">21.4K</span>
+										</div>
+										<div class="ec-cta-dash__mini-stat">
+											<span class="ec-cta-dash__mini-label">Health</span>
+											<span class="ec-cta-dash__mini-value">97%</span>
+										</div>
+										<div class="ec-cta-dash__mini-stat">
+											<span class="ec-cta-dash__mini-label">Revenue</span>
+											<span class="ec-cta-dash__mini-value">↑ 34%</span>
+										</div>
+									</div>
+									<div class="ec-cta-dash__chart">
+										<svg viewBox="0 0 200 60" preserveAspectRatio="none">
+											<path d="M0 50 Q25 45, 50 35 T100 25 T150 15 T200 5" fill="none" stroke="var(--accent-primary)" stroke-width="2"/>
+											<path d="M0 50 Q25 45, 50 35 T100 25 T150 15 T200 5 V60 H0 Z" fill="url(#chartGrad)" opacity="0.2"/>
+											<defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent-primary)"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Large watermark text -->
+		<div class="ec-watermark">
+			<span>AQUIFER</span>
+		</div>
 	</main>
+	<Footer />
 
 	<style>
-		/* Hero Styles (inherited from index but refined) */
-		.hero {
-			padding: var(--space-xl) 0 4rem;
-			display: flex;
-			flex-direction: column;
+		/* ═══════════════════════════════════════════════ */
+		/* ECOMMERCE PAGE – GLOBAL                       */
+		/* ═══════════════════════════════════════════════ */
+		main {
+			overflow-x: hidden;
+		}
+		.hide-mobile { display: inline; }
+		@media (max-width: 768px) { .hide-mobile { display: none; } }
+
+		/* ═══════════════════════════════════════════════ */
+		/* BUTTONS                                        */
+		/* ═══════════════════════════════════════════════ */
+		.ec-btn {
+			display: inline-flex;
 			align-items: center;
-			text-align: center;
-			background-image: radial-gradient(var(--border-muted) 1.2px, transparent 1.2px);
-			background-size: 30px 30px;
-			background-position: center;
-			min-height: 80vh;
-			justify-content: center;
-		}
-		
-		h1 {
-			font-size: clamp(2.5rem, 6vw, 4.5rem);
-			max-width: 1100px;
-			margin-bottom: 2rem;
-			text-transform: uppercase;
-			font-weight: 800;
-			line-height: 0.95;
-		}
-
-		.text-gradient {
-			color: var(--accent-primary);
-		}
-
-		.hero-subtext {
-			max-width: 800px;
-			font-size: 1.25rem;
-			line-height: 1.6;
-			color: var(--text-secondary);
-			margin-top: 1.5rem;
-			font-weight: 500;
-		}
-
-		.badge {
-			background: var(--bg-dark);
-			color: var(--text-on-dark);
-			padding: 0.5rem 1.25rem;
+			gap: 0.5rem;
+			padding: 0.85rem 2rem;
 			border-radius: var(--radius-pill);
-			font-size: 0.75rem;
 			font-weight: 700;
-			text-transform: uppercase;
-			letter-spacing: 0.1em;
-			margin-bottom: 1.5rem;
+			font-size: 0.95rem;
+			transition: all 0.2s ease;
+			cursor: pointer;
+			border: 2px solid var(--border-color);
+			text-decoration: none;
+		}
+		.ec-btn--primary {
+			background: var(--accent-primary);
+			color: #fff;
+			border-color: var(--accent-primary);
+			box-shadow: 0 2px 12px rgba(255, 77, 109, 0.25);
+		}
+		.ec-btn--primary:hover {
+			background: #e8446a;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(255, 77, 109, 0.35);
+		}
+		.ec-btn--outline {
+			background: transparent;
+			color: var(--text-primary);
+			border-color: var(--border-muted);
+		}
+		.ec-btn--outline:hover {
+			border-color: var(--text-primary);
+			background: rgba(0,0,0,0.03);
+		}
+		.ec-btn--pink-sm {
+			background: var(--accent-primary);
+			color: #fff;
+			border: none;
+			padding: 0.6rem 1.5rem;
+			border-radius: var(--radius-pill);
+			font-size: 0.85rem;
+			font-weight: 700;
 		}
 
-		/* Pill Styles */
-		.hero-pills {
+		/* ═══════════════════════════════════════════════ */
+		/* HERO                                           */
+		/* ═══════════════════════════════════════════════ */
+		.ec-hero {
+			position: relative;
+			padding: 8rem 0 0;
+			text-align: center;
+			overflow: hidden;
+		}
+		.ec-hero__bg-blur {
+			position: absolute;
+			top: -100px;
+			left: -100px;
+			width: 500px;
+			height: 500px;
+			background: radial-gradient(circle, rgba(255, 182, 193, 0.4) 0%, transparent 70%);
+			border-radius: 50%;
+			z-index: 0;
+			pointer-events: none;
+		}
+		.ec-hero__bg-blur--right {
+			left: auto;
+			right: -100px;
+			top: -50px;
+			background: radial-gradient(circle, rgba(255, 200, 200, 0.3) 0%, transparent 70%);
+		}
+		.ec-hero__inner {
+			position: relative;
+			z-index: 1;
+		}
+		.ec-hero__title {
+			font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+			font-weight: 800;
+			line-height: 1.1;
+			letter-spacing: -0.03em;
+			margin-bottom: 1.5rem;
+			text-transform: none;
+		}
+		.ec-hero__subtitle {
+			font-size: 1.05rem;
+			line-height: 1.7;
+			color: var(--text-secondary);
+			margin-bottom: 2rem;
+			max-width: 700px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.ec-hero__cta-row {
 			display: flex;
 			gap: 1rem;
-			margin: 2rem 0;
 			justify-content: center;
+			margin-bottom: 4rem;
 			flex-wrap: wrap;
 		}
-		.body-pill {
-			background: #FFC2CE;
-			border: 2px solid #1A1A1A;
-			padding: 0.9rem 2.5rem;
-			border-radius: var(--radius-pill);
-			color: #1A1A1A;
-			font-size: 1.1rem;
-			font-weight: 500;
-			display: inline-flex;
-			align-items: center;
-			box-shadow: 4px 4px 0 #1A1A1A;
-		}
-		.body-pill .bold { font-weight: 800; margin-left: 5px; }
-		
-		.use-cases-pill {
-			background: #FFFFFF;
-			border: 2px solid #1A1A1A;
-			padding: 0.9rem 2.5rem;
-			border-radius: var(--radius-pill);
-			color: #1A1A1A;
-			font-size: 1.1rem;
-			font-weight: 700;
-			display: inline-flex;
-			align-items: center;
-			gap: 0.75rem;
-			box-shadow: 4px 4px 0 #1A1A1A;
-			transition: all 0.2s ease;
-		}
-		.use-cases-pill:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 #1A1A1A; }
-		.icon-dots { font-size: 0.9rem; opacity: 0.8; }
 
-		/* Dark Block (Scaling Problems) */
-		.dark-block {
-			background: #1A1A1A;
-			color: #FFFFFF;
-			padding: var(--space-xl) var(--space-md);
-			border-radius: var(--radius-lg);
-			margin: var(--space-lg) 0;
-			border: 2px solid #000;
-			box-shadow: 12px 12px 0 var(--accent-primary);
+		/* ─── Product Table Mock ──────────────────────── */
+		.ec-hero__table-wrap {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding-bottom: 4rem;
 		}
-		.block-header {
-			text-align: center;
-			margin-bottom: 4rem;
+		.ec-table-mock {
+			position: relative;
+			background: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 16px;
+			overflow: visible;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
+			text-align: left;
+			font-size: 0.78rem;
 		}
-		.block-header h2 {
-			color: #FFFFFF;
-			font-size: 2.5rem;
-			margin-top: 1rem;
+		.ec-table-mock__toolbar {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 0;
+			border-bottom: 1px solid #eee;
 		}
-		.sub-heading {
-			color: var(--accent-primary);
-			text-transform: uppercase;
-			font-size: 0.85rem;
-			font-weight: 800;
-			letter-spacing: 0.15em;
+		.ec-table-mock__tabs {
+			display: flex;
+			gap: 0;
+			width: 100%;
+		}
+		.ec-table-mock__tab {
+			padding: 0.7rem 1.1rem;
+			font-size: 0.72rem;
+			font-weight: 600;
+			color: #888;
+			cursor: pointer;
+			transition: all 0.2s;
+			border-bottom: 2px solid transparent;
+			white-space: nowrap;
+		}
+		.ec-table-mock__tab.active {
+			color: var(--text-primary);
+			border-bottom-color: var(--accent-primary);
+			background: transparent;
 		}
 
-		.problem-grid {
+		/* Table grid — 7 cols matching screenshot */
+		.ec-table-mock__header {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-			gap: 3rem;
+			grid-template-columns: 100px 90px 100px 80px 70px 60px 70px;
+			padding: 0.5rem 1rem;
+			background: #fafafa;
+			font-weight: 600;
+			font-size: 0.65rem;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: #aaa;
+			border-bottom: 1px solid #f0f0f0;
+			align-items: center;
 		}
-		.problem-card {
-			padding: 2.5rem;
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: var(--radius-md);
-			background: rgba(255, 255, 255, 0.02);
+		.ec-table-mock__row {
+			display: grid;
+			grid-template-columns: 100px 90px 100px 80px 70px 60px 70px;
+			padding: 0.45rem 1rem;
+			border-bottom: 1px solid #f5f5f5;
+			align-items: center;
+			transition: background 0.15s;
+			font-size: 0.75rem;
+			color: #555;
 		}
-		.problem-card h3 {
-			color: #FFFFFF;
-			margin-bottom: 1rem;
-			font-size: 1.25rem;
+		.ec-table-mock__row:hover {
+			background: #fafafa;
 		}
-		.problem-card p {
-			color: rgba(255, 255, 255, 0.75);
-			font-size: 1rem;
+		.ec-table-mock__row--highlight {
+			background: #fef2f2;
 		}
-		.status-indicator {
+		.ec-table-mock__row--highlight-alt {
+			background: #fef8f8;
+		}
+
+		/* Column cells */
+		.col-pid {
+			font-weight: 600;
+			color: var(--text-primary);
+			font-size: 0.72rem;
+		}
+		.col-color-label {
+			display: flex;
+			align-items: center;
+			gap: 0.35rem;
+			font-size: 0.72rem;
+			color: #666;
+		}
+		.col-ptype {
+			font-size: 0.72rem;
+		}
+		.col-imgs {
+			display: flex;
+			align-items: center;
+		}
+		.col-qty {
+			font-size: 0.72rem;
+			color: #777;
+			text-align: right;
+		}
+		.col-qty--sm {
+			font-size: 0.62rem;
+			text-transform: none;
+			letter-spacing: 0;
+		}
+
+		/* Color dots */
+		.ec-color-dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			display: inline-block;
+			flex-shrink: 0;
+			border: 1px solid #ddd;
+		}
+		.ec-color-dot--white { background: #fff; }
+		.ec-color-dot--black { background: #222; border-color: #333; }
+		.ec-color-dot--purple { background: #9b59b6; border-color: transparent; }
+		.ec-color-dot--blue { background: #3498db; border-color: transparent; }
+		.ec-color-dot--red { background: #e74c3c; border-color: transparent; }
+		.ec-color-dot--green { background: #27ae60; border-color: transparent; }
+
+		/* Type badges — color coded per category */
+		.ec-type-badge {
+			display: inline-block;
+			padding: 0.15rem 0.55rem;
+			border-radius: var(--radius-pill);
+			font-size: 0.68rem;
+			font-weight: 700;
+		}
+		.ec-type-badge--tshirt { background: #d4edda; color: #155724; }
+		.ec-type-badge--jacket { background: #ffe0b2; color: #e65100; }
+		.ec-type-badge--pants  { background: #bbdefb; color: #0d47a1; }
+		.ec-type-badge--dress  { background: #f8bbd0; color: #880e4f; }
+		.ec-type-badge--skirt  { background: #e1bee7; color: #6a1b9a; }
+		.ec-type-badge--hoodie { background: #ffcdd2; color: #b71c1c; }
+
+		/* Image thumbnails */
+		.ec-img-thumb {
 			width: 32px;
 			height: 32px;
-			background: var(--accent-primary);
-			border-radius: 4px;
-			margin-bottom: 1.5rem;
-			display: block;
+			border-radius: 6px;
+			overflow: hidden;
+			background: #f0f0f0;
+			flex-shrink: 0;
+		}
+		.ec-img-thumb img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 		}
 
-		/* Features Section */
-		.feature-section {
-			padding: var(--space-xl) 0;
+		/* ─── Floating Product Detail Card ─── */
+		.ec-product-card {
+			position: absolute;
+			top: 30px;
+			right: -40px;
+			width: 260px;
+			background: #fff;
+			border-radius: 12px;
+			box-shadow: 0 12px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+			z-index: 10;
+			overflow: hidden;
 		}
-		.section-badge {
+		.ec-product-card__cursor {
+			position: absolute;
+			top: 70px;
+			left: -10px;
+			z-index: 11;
+		}
+		.ec-product-card__cursor-tag {
 			display: inline-block;
 			background: var(--accent-primary);
-			color: white;
-			padding: 0.4rem 1rem;
+			color: #fff;
+			font-size: 0.6rem;
+			font-weight: 700;
+			padding: 0.15rem 0.45rem;
+			border-radius: 4px;
+			transform: rotate(-8deg);
+		}
+		.ec-product-card__img {
+			width: 100%;
+			height: 160px;
+			overflow: hidden;
+			background: #f5f5f5;
+		}
+		.ec-product-card__img img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.ec-product-card__details {
+			padding: 0.75rem 1rem;
+		}
+		.ec-product-card__row {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 0.3rem 0;
+			border-bottom: 1px solid #f5f5f5;
+		}
+		.ec-product-card__row:last-of-type {
+			border-bottom: none;
+		}
+		.ec-product-card__label {
+			font-size: 0.68rem;
+			color: #888;
+		}
+		.ec-product-card__value {
+			font-size: 0.72rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			display: flex;
+			align-items: center;
+		}
+		.ec-product-card__value--blue {
+			color: #2563eb;
+		}
+		.ec-product-card__actions {
+			display: flex;
+			gap: 0.5rem;
+			margin-top: 0.6rem;
+			padding-top: 0.6rem;
+			border-top: 1px solid #eee;
+		}
+		.ec-product-card__btn {
+			flex: 1;
+			padding: 0.4rem 0;
+			border: 1px solid #ddd;
+			border-radius: 6px;
+			background: #fff;
+			font-size: 0.65rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			cursor: pointer;
+			transition: background 0.15s;
+		}
+		.ec-product-card__btn:hover {
+			background: #f5f5f5;
+		}
+
+		/* ─── Toast notification ─── */
+		.ec-toast {
+			position: absolute;
+			bottom: 100px;
+			left: 40px;
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			padding: 0.55rem 1rem;
+			background: #fff;
 			border-radius: var(--radius-pill);
-			font-size: 0.75rem;
-			font-weight: 800;
-			text-transform: uppercase;
-			margin-bottom: 1rem;
+			box-shadow: 0 6px 24px rgba(0,0,0,0.1);
+			z-index: 10;
+			font-size: 0.72rem;
+			color: var(--text-primary);
+			font-weight: 500;
 		}
-		.feature-section h2 {
-			font-size: 3rem;
-			margin-bottom: 4rem;
+		.ec-toast__icon {
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background: #e8f5e9;
+			color: #2e7d32;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 0.65rem;
+			font-weight: 700;
 		}
 
-		/* Nolo Card styling */
-		.nolo-card {
-			padding: 3rem;
-			background: var(--bg-secondary);
-			border: 2px solid #1A1A1A;
-			border-radius: var(--radius-lg);
-			box-shadow: 4px 4px 0 #1A1A1A;
-			transition: all 0.2s ease;
+		/* ─── Import bar ─── */
+		.ec-import-bar {
+			position: absolute;
+			bottom: 40px;
+			left: 20px;
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+			padding: 0.5rem 0.75rem;
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+			z-index: 10;
 		}
-		.nolo-card:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 #1A1A1A; }
-		.card-icon {
-			font-size: 2.5rem;
-			margin-bottom: 1.5rem;
+		.ec-import-bar__file {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		.ec-import-bar__file-icon {
+			font-size: 1.1rem;
+		}
+		.ec-import-bar__file-info {
+			display: flex;
+			flex-direction: column;
+		}
+		.ec-import-bar__file-info strong {
+			font-size: 0.68rem;
+			color: var(--text-primary);
+		}
+		.ec-import-bar__file-info span {
+			font-size: 0.58rem;
+			color: #aaa;
+		}
+		.ec-import-bar__btn {
+			padding: 0.4rem 0.8rem;
+			background: #f5f5f5;
+			border: 1px solid #eee;
+			border-radius: 6px;
+			font-size: 0.65rem;
+			font-weight: 600;
+			color: var(--text-primary);
+			cursor: pointer;
+			white-space: nowrap;
+		}
+		.ec-import-bar__btn:hover {
+			background: #eee;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* LOGO BAR                                       */
+		/* ═══════════════════════════════════════════════ */
+		.ec-logos {
+			padding: 2.5rem 0;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+		}
+		.ec-logos__row {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 3rem;
+			flex-wrap: wrap;
+		}
+		.ec-logo-item {
+			display: inline-flex;
+			align-items: center;
+			gap: 0.5rem;
+			font-size: 0.95rem;
+			font-weight: 700;
+			color: #666;
+			opacity: 0.6;
+			transition: opacity 0.2s;
+		}
+		.ec-logo-item:hover { opacity: 1; }
+
+		/* ═══════════════════════════════════════════════ */
+		/* WHY WE'RE THE BEST                             */
+		/* ═══════════════════════════════════════════════ */
+		.ec-why {
+			padding: 6rem 0;
+		}
+		.ec-why__grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: start;
+		}
+		.ec-why__title {
+			font-size: clamp(2rem, 3.5vw, 3rem);
+			text-transform: none;
+			line-height: 1.15;
+		}
+		.ec-why__body {
+			font-size: 1.05rem;
+			line-height: 1.7;
+			color: var(--text-secondary);
+			margin-bottom: 2rem;
+		}
+		.ec-why__features {
+			display: flex;
+			flex-direction: column;
+			gap: 1.25rem;
+		}
+		.ec-why__feature {
+			display: flex;
+			gap: 1rem;
+			align-items: flex-start;
+		}
+		.ec-why__feature-icon {
+			font-size: 1.5rem;
+			flex-shrink: 0;
+			margin-top: 0.15rem;
+		}
+		.ec-why__feature strong {
 			display: block;
+			font-size: 0.95rem;
+			margin-bottom: 0.25rem;
 		}
-		.nolo-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-		.nolo-card p { color: var(--text-secondary); }
+		.ec-why__feature p {
+			font-size: 0.88rem;
+			color: var(--text-secondary);
+			line-height: 1.5;
+		}
 
-		/* Impact Section */
-		.impact-section {
-			padding: var(--space-xl) 0;
-			background: var(--bg-primary);
-			border-top: 2px solid #1A1A1A;
-			margin-top: 4rem;
+		/* ═══════════════════════════════════════════════ */
+		/* THE QUESTION                                    */
+		/* ═══════════════════════════════════════════════ */
+		.ec-question {
+			padding: 5rem 0;
 			text-align: center;
 		}
-		.impact-content h2 {
-			font-size: 3.5rem;
+		.ec-question__badge {
+			display: inline-block;
+			background: var(--accent-primary);
+			color: #fff;
+			padding: 0.4rem 1.2rem;
+			border-radius: var(--radius-pill);
+			font-size: 0.78rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.08em;
 			margin-bottom: 1.5rem;
 		}
-		.impact-content p {
-			font-size: 1.25rem;
-			max-width: 700px;
-			margin: 0 auto 3rem;
+		.ec-question__title {
+			font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+			text-transform: none;
+			line-height: 1.2;
+			margin-bottom: 1.5rem;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.ec-question__body {
+			font-size: 1.05rem;
+			color: var(--text-secondary);
+			max-width: 650px;
+			margin: 0 auto;
+			line-height: 1.7;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* CAPABILITIES DARK SECTION                      */
+		/* ═══════════════════════════════════════════════ */
+		.ec-capabilities {
+			background: #1A1A1A;
+			color: #fff;
+			padding: 5rem 0;
+			border-radius: 24px;
+			margin: 0 1rem;
+		}
+		.ec-capabilities__title {
+			color: #fff;
+			font-size: clamp(2rem, 3.5vw, 2.8rem);
+			text-align: center;
+			margin-bottom: 1rem;
+			text-transform: none;
+		}
+		.ec-capabilities__subtitle-row {
+			text-align: center;
+			margin-bottom: 3rem;
+		}
+		.ec-capabilities__grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+			margin-bottom: 3rem;
+		}
+		.ec-cap-card {
+			background: rgba(255,255,255,0.05);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 16px;
+			padding: 2rem;
+			transition: all 0.25s ease;
+		}
+		.ec-cap-card:hover {
+			background: rgba(255,255,255,0.08);
+			border-color: rgba(255,255,255,0.2);
+			transform: translateY(-3px);
+		}
+		.ec-cap-card__icon {
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+		}
+		.ec-cap-card h3 {
+			color: #fff;
+			font-size: 1.1rem;
+			margin-bottom: 0.75rem;
+			text-transform: none;
+			font-weight: 700;
+		}
+		.ec-cap-card p {
+			color: rgba(255,255,255,0.6);
+			font-size: 0.88rem;
+			line-height: 1.6;
+		}
+
+		/* Testimonial inside dark */
+		.ec-capabilities__testimonial {
+			background: rgba(255,255,255,0.05);
+			border: 1px solid rgba(255,255,255,0.1);
+			border-radius: 16px;
+			padding: 2rem 2.5rem;
+			max-width: 800px;
+			margin: 0 auto;
+		}
+		.ec-capabilities__testimonial blockquote {
+			font-size: 1rem;
+			line-height: 1.7;
+			color: rgba(255,255,255,0.85);
+			margin-bottom: 1.5rem;
+			font-style: italic;
+		}
+		.ec-capabilities__testimonial-author {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+		.ec-capabilities__testimonial-avatar {
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+			flex-shrink: 0;
+		}
+		.ec-capabilities__testimonial-author strong {
+			display: block;
+			color: #fff;
+			font-size: 0.9rem;
+		}
+		.ec-capabilities__testimonial-author span {
+			color: rgba(255,255,255,0.5);
+			font-size: 0.8rem;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* OUR PROCESS                                     */
+		/* ═══════════════════════════════════════════════ */
+		.ec-process {
+			padding: 6rem 0;
+		}
+		.ec-process__title {
+			font-size: clamp(2rem, 3.5vw, 3rem);
+			text-transform: none;
+			margin-bottom: 4rem;
+		}
+		.ec-process__steps {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
+		}
+		.ec-process__step {
+			position: relative;
+			padding: 2rem;
+			background: #fff;
+			border: 1px solid #eee;
+			border-radius: 16px;
+			transition: all 0.25s ease;
+		}
+		.ec-process__step:hover {
+			box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+			transform: translateY(-3px);
+		}
+		.ec-process__step-num {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 36px;
+			height: 36px;
+			border-radius: 50%;
+			background: var(--accent-primary);
+			color: #fff;
+			font-weight: 800;
+			font-size: 0.85rem;
+			margin-bottom: 1.25rem;
+		}
+		.ec-process__step h3 {
+			font-size: 1.05rem;
+			margin-bottom: 0.75rem;
+			text-transform: none;
+			font-weight: 700;
+		}
+		.ec-process__step p {
+			font-size: 0.88rem;
+			color: var(--text-secondary);
+			line-height: 1.6;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* STATS                                           */
+		/* ═══════════════════════════════════════════════ */
+		.ec-stats {
+			padding: 3rem 0;
+			border-top: 1px solid #eee;
+			border-bottom: 1px solid #eee;
+		}
+		.ec-stats__grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 2rem;
+			text-align: center;
+		}
+		.ec-stat__number {
+			display: block;
+			font-size: clamp(2rem, 3vw, 2.8rem);
+			font-weight: 800;
+			font-family: var(--font-display);
+			color: var(--accent-primary);
+			letter-spacing: -0.03em;
+			margin-bottom: 0.5rem;
+		}
+		.ec-stat__label {
+			font-size: 0.85rem;
+			color: var(--text-secondary);
+			line-height: 1.4;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* TESTIMONIALS                                    */
+		/* ═══════════════════════════════════════════════ */
+		.ec-testimonials {
+			padding: 6rem 0;
+		}
+		.ec-testimonials__title {
+			font-size: clamp(2rem, 3.5vw, 2.8rem);
+			text-align: center;
+			text-transform: none;
+			margin-bottom: 3rem;
+		}
+		.ec-testimonials__grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.5rem;
+		}
+		.ec-testimonial-card {
+			background: #fff;
+			border: 1px solid #eee;
+			border-radius: 16px;
+			padding: 2rem;
+			transition: all 0.25s ease;
+		}
+		.ec-testimonial-card:hover {
+			box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+			transform: translateY(-3px);
+		}
+		.ec-testimonial-card__stars {
+			color: #FBBF24;
+			font-size: 1rem;
+			margin-bottom: 1rem;
+			letter-spacing: 2px;
+		}
+		.ec-testimonial-card p {
+			font-size: 0.92rem;
+			line-height: 1.7;
+			color: var(--text-secondary);
+			margin-bottom: 1.5rem;
+		}
+		.ec-testimonial-card__author {
+			display: flex;
+			align-items: center;
+			gap: 0.75rem;
+		}
+		.ec-testimonial-card__avatar {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			flex-shrink: 0;
+		}
+		.ec-testimonial-card__avatar--1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+		.ec-testimonial-card__avatar--2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+		.ec-testimonial-card__avatar--3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+		.ec-testimonial-card__author strong {
+			display: block;
+			font-size: 0.88rem;
+		}
+		.ec-testimonial-card__author span {
+			font-size: 0.78rem;
 			color: var(--text-secondary);
 		}
 
-		.btn {
-			padding: 1.25rem 3.5rem;
-			border-radius: var(--radius-pill);
-			font-weight: 800;
-			text-transform: uppercase;
+		/* ═══════════════════════════════════════════════ */
+		/* CTA FOOTER                                      */
+		/* ═══════════════════════════════════════════════ */
+		.ec-cta-footer {
+			padding: 5rem 0;
+		}
+		.ec-cta-footer__inner {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+		}
+		.ec-cta-footer__text h2 {
+			font-size: clamp(2rem, 3.5vw, 2.8rem);
+			text-transform: none;
+			margin-bottom: 1.25rem;
+			line-height: 1.15;
+		}
+		.ec-cta-footer__text p {
 			font-size: 1rem;
-			transition: all 0.2s ease;
-			display: inline-block;
-			border: 3px solid #1A1A1A;
-			box-shadow: 4px 4px 0 #1A1A1A;
+			color: var(--text-secondary);
+			margin-bottom: 2rem;
+			line-height: 1.7;
 		}
-		.btn-primary {
+		.ec-cta-footer__actions {
+			display: flex;
+			gap: 1rem;
+			flex-wrap: wrap;
+		}
+
+		/* Mini Dashboard Mock */
+		.ec-cta-footer__mock-dashboard {
+			background: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 16px;
+			overflow: hidden;
+			box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+		}
+		.ec-cta-dash__header {
+			display: flex;
+			gap: 6px;
+			padding: 0.75rem 1rem;
+			border-bottom: 1px solid #f0f0f0;
+		}
+		.ec-cta-dash__dot {
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background: #e5e5e5;
+		}
+		.ec-cta-dash__dot:nth-child(1) { background: #FF5F56; }
+		.ec-cta-dash__dot:nth-child(2) { background: #FFBD2E; }
+		.ec-cta-dash__dot:nth-child(3) { background: #27CA3F; }
+		.ec-cta-dash__body {
+			display: grid;
+			grid-template-columns: 120px 1fr;
+			min-height: 200px;
+		}
+		.ec-cta-dash__sidebar {
+			background: #fafafa;
+			border-right: 1px solid #f0f0f0;
+			padding: 1rem 0.75rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+		.ec-cta-dash__nav-item {
+			padding: 0.4rem 0.6rem;
+			border-radius: 6px;
+			font-size: 0.72rem;
+			font-weight: 600;
+			color: #888;
+			cursor: pointer;
+		}
+		.ec-cta-dash__nav-item.active {
 			background: var(--accent-primary);
-			color: white;
+			color: #fff;
 		}
-		.btn-primary:hover {
-            background: #1A1A1A;
-            color: white;
-			transform: translate(-3px, -3px);
-			box-shadow: 8px 8px 0 var(--accent-primary);
+		.ec-cta-dash__main {
+			padding: 1.25rem;
+		}
+		.ec-cta-dash__stat-row {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 0.75rem;
+			margin-bottom: 1rem;
+		}
+		.ec-cta-dash__mini-stat {
+			background: #f9f9f9;
+			border-radius: 8px;
+			padding: 0.6rem;
+			text-align: center;
+		}
+		.ec-cta-dash__mini-label {
+			display: block;
+			font-size: 0.65rem;
+			color: #999;
+			font-weight: 600;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+		}
+		.ec-cta-dash__mini-value {
+			display: block;
+			font-size: 1.1rem;
+			font-weight: 800;
+			color: var(--text-primary);
+		}
+		.ec-cta-dash__chart {
+			border-radius: 8px;
+			overflow: hidden;
+			height: 60px;
+		}
+		.ec-cta-dash__chart svg {
+			width: 100%;
+			height: 100%;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* WATERMARK                                       */
+		/* ═══════════════════════════════════════════════ */
+		.ec-watermark {
+			text-align: center;
+			padding: 2rem 0 4rem;
+			overflow: hidden;
+		}
+		.ec-watermark span {
+			font-family: var(--font-display);
+			font-size: clamp(4rem, 12vw, 12rem);
+			font-weight: 800;
+			color: transparent;
+			-webkit-text-stroke: 2px #e5e5e5;
+			letter-spacing: 0.1em;
+			user-select: none;
+		}
+
+		/* ═══════════════════════════════════════════════ */
+		/* RESPONSIVE                                      */
+		/* ═══════════════════════════════════════════════ */
+		@media (max-width: 1024px) {
+			.ec-capabilities__grid { grid-template-columns: repeat(2, 1fr); }
+			.ec-process__steps { grid-template-columns: repeat(2, 1fr); }
+			.ec-cta-footer__inner { grid-template-columns: 1fr; }
+			.ec-stats__grid { grid-template-columns: repeat(2, 1fr); }
 		}
 
 		@media (max-width: 768px) {
-			h1 { font-size: 2.5rem; }
-			.hero-pills { flex-direction: column; }
-			.impact-content h2 { font-size: 2rem; }
+			.ec-hero { padding: 6rem 0 0; }
+			.ec-hero__title { font-size: 2rem; }
+			.ec-why__grid { grid-template-columns: 1fr; gap: 2rem; }
+			.ec-capabilities__grid { grid-template-columns: 1fr; }
+			.ec-capabilities { margin: 0 0.5rem; padding: 3rem 0; }
+			.ec-process__steps { grid-template-columns: 1fr; }
+			.ec-testimonials__grid { grid-template-columns: 1fr; }
+			.ec-stats__grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+			.ec-cta-footer__actions { flex-direction: column; }
+			.ec-table-mock__header,
+			.ec-table-mock__row {
+				grid-template-columns: 30px 1.5fr 70px 80px;
+			}
+			.col-inventory, .col-price, .col-health { display: none; }
+			.ec-logos__row { gap: 1.5rem; }
+		}
+
+		@media (max-width: 480px) {
+			.ec-hero__cta-row { flex-direction: column; align-items: center; }
+			.ec-stats__grid { grid-template-columns: 1fr; }
+			.ec-table-mock__header,
+			.ec-table-mock__row {
+				grid-template-columns: 1fr;
+				gap: 0.25rem;
+			}
+			.ec-table-mock__checkbox { display: none; }
 		}
 	</style>
 </Layout>

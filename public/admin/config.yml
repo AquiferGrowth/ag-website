@@ -6,8 +6,6 @@ backend:
 
 local_backend: true
 
-publish_mode: editorial_workflow
-
 media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
@@ -16,6 +14,7 @@ collections:
     label: "Blog"
     folder: "src/content/blog"
     create: true
+    delete: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
@@ -38,6 +37,7 @@ collections:
     label: "Team Members"
     folder: "src/content/team"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
@@ -52,6 +52,7 @@ collections:
     label: "Categories"
     folder: "src/content/categories"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
@@ -73,27 +74,24 @@ collections:
     label: "Testimonials"
     folder: "src/content/testimonials"
     create: true
+    delete: true
     slug: "{{slug}}"
+    summary: "{{author}} | {{company}}"
+    sortable_fields: ["order", "author"]
     fields:
       - {label: "Quote", name: "quote", widget: "text"}
       - {label: "Author Name", name: "author", widget: "string"}
       - {label: "Company", name: "company", widget: "string", required: false}
       - {label: "Role / Title", name: "role", widget: "string", required: false}
       - {label: "Avatar", name: "avatar", widget: "image", required: false}
-      - label: "Rating (1-5)"
-        name: "rating"
-        widget: "select"
-        required: false
-        options:
-          - { label: "⭐⭐⭐", value: 3 }
-          - { label: "⭐⭐⭐⭐", value: 4 }
-          - { label: "⭐⭐⭐⭐⭐", value: 5 }
       - {label: "Featured", name: "featured", widget: "boolean", default: false, required: false}
+      - {label: "Order", name: "order", widget: "number", default: 99, value_type: "int", min: 1, required: false, hint: "Lower numbers appear first on the homepage"}
 
   - name: "case-studies"
     label: "Case Studies"
     folder: "src/content/caseStudies"
     create: true
+    delete: true
     slug: "{{slug}}"
     fields:
       - {label: "Title (Internal)", name: "title", widget: "string"}

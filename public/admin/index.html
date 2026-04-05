@@ -3,11 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Content Manager | AG-Website</title>
-  <title>Content Manager | AG-Website</title>
+  <title>Content Manager | AquiferGrowth</title>
 </head>
 <body>
-  <!-- Include the script that builds the page and powers Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Patch: Auto-accept delete confirmation dialogs
+    // Decap CMS local_backend has a bug where window.confirm() glitches
+    const originalConfirm = window.confirm;
+    window.confirm = function(message) {
+      if (message && message.toLowerCase().includes('delete')) {
+        return true;
+      }
+      return originalConfirm.call(window, message);
+    };
+  </script>
 </body>
 </html>

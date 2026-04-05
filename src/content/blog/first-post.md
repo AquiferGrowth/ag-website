@@ -1,5 +1,5 @@
 ---
-title: "First Post on AG-Website"
+title: "First Post on Astro Operations"
 description: "Setting up the foundations of a high-performance Astro site."
 pubDate: "2026-03-22"
 heroImage: "/images/uploads/first-post.png"
@@ -8,7 +8,7 @@ category: "Dev"
 
 # The Future of Digital Growth
 
-Welcome to the new **Aquifer Growth** website. We are dedicated to building high-performance digital experiences that scale.
+Welcome to the new **Astro Operations** website. We are dedicated to building high-performance digital experiences that scale.
 
 ## Why Astro?
 
@@ -28,5 +28,5 @@ We believe in a "Performance First" philosophy. Every millisecond counts when it
 Check out our other blog posts to learn more about how we can help you grow your business using the latest in **Agentic AI** and modern web development.
 
 ```javascript
-console.log("Welcome to Aquifer Growth!");
+console.log("Welcome to Astro Operations!");
 ```

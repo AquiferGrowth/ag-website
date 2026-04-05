@@ -44,8 +44,8 @@ const testimonials = defineCollection({
 		company: z.string().optional(),
 		role: z.string().optional(),
 		avatar: z.string().optional(),
-		rating: z.number().optional(),
 		featured: z.boolean().optional().default(false),
+		order: z.number().optional().default(99),
 	}),
 });
 
