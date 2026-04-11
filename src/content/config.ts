@@ -75,6 +75,7 @@ const caseStudies = defineCollection({
 			body: z.string()
 		})).optional(),
 		results: z.string().optional(),
+		highlights: z.array(z.string()).optional(),
 		pubDate: z.coerce.date(),
 	}),
 });

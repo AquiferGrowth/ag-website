@@ -13,338 +13,358 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, headline, description, roi, info, industry, platform, image, challenges, solutions, results } = entry.data;
+const { title, headline, description, roi, info, industry, platform, image, challenges, solutions, results, highlights, clientUrl } = entry.data;
 ---
 
 <Layout title={`${title} | Case Study`} description={description}>
 	<Header />
 	
-	<main class="case-study-detail">
+	<main class="cs-page">
 		<!-- Hero Section -->
-		<section class="case-hero">
-			<div class="container">
-				<h1 class="text-gradient">{title}</h1>
-				<p class="hero-headline">{headline}</p>
-			</div>
-		</section>
+		<section class="cs-hero">
+			<div class="cs-container">
+				<div class="cs-hero-grid">
+					<div class="cs-hero-text">
+						<h1>{title} {headline}</h1>
+						<p class="cs-desc">{description}</p>
 
-		<!-- Overview Section -->
-		<section class="case-overview">
-			<div class="container">
-				<div class="overview-grid">
-					<div class="overview-content">
-						<h2>Overview</h2>
-						<p class="description-large">{description}</p>
-						
-						<div class="case-markdown">
-							<Content />
-						</div>
+						{highlights && highlights.length > 0 && (
+							<ul class="cs-highlights">
+								{highlights.map(h => (
+									<li>
+										<span class="cs-check">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+												<rect width="20" height="20" rx="4" fill="#E8364E"/>
+												<path d="M6 10l2.5 2.5L14 7.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>
+										</span>
+										<span>{h}</span>
+									</li>
+								))}
+							</ul>
+						)}
 					</div>
-					
-					<aside class="case-sidebar">
-						<div class="sticky-sidebar">
-							<div class="sidebar-card">
-								<h3>By the Numbers</h3>
-								<div class="sidebar-stats">
-									<div class="side-stat">
-										<span class="v">{roi}</span>
-										<span class="l">ROI / Result</span>
-									</div>
-									<div class="side-stat">
-										<span class="v">{info}</span>
-										<span class="l">Impact</span>
-									</div>
-								</div>
-								
-								<div class="sidebar-meta">
-									<div class="m-item">
-										<span class="m-label">Industry</span>
-										<span class="m-value">{industry}</span>
-									</div>
-									<div class="m-item">
-										<span class="m-label">Platform</span>
-										<span class="m-value">{platform}</span>
-									</div>
-								</div>
 
-								<a href="/contact" class="btn-sidebar-cta">Book Consultation</a>
+					<div class="cs-hero-card">
+						<div class="cs-card-inner">
+							<a href={clientUrl} target="_blank" rel="noopener" class="cs-card-img-link">
+								<img src={image} alt={title} />
+								<div class="cs-card-img-overlay">
+									<span>Visit Website ↗</span>
+								</div>
+							</a>
+							<div class="cs-card-meta">
+								<div class="cs-meta-row">
+									<div class="cs-meta-item">
+										<span class="cs-meta-label">Customer</span>
+										<span class="cs-meta-value">{title}</span>
+									</div>
+									<div class="cs-meta-item">
+										<span class="cs-meta-label">Industry</span>
+										<span class="cs-meta-value">{industry}</span>
+									</div>
+								</div>
 							</div>
 						</div>
-					</aside>
+					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Problem / Solution Grid -->
-		{(challenges || solutions) && (
-			<section class="case-grid-content">
-				<div class="container">
-					<div class="grid-header">
-						<h2>The Approach</h2>
-						<p>How we identified problems and implemented long-term solutions.</p>
-					</div>
-					
-					<div class="approach-grid">
-						<div class="approach-col">
-							<h3 class="col-title text-red">The Challenge</h3>
-							{challenges?.map(c => (
-								<div class="approach-card challenge">
-									<h4>{c.title}</h4>
-									<p>{c.body}</p>
+		<!-- Timeline Section -->
+		{(challenges || solutions || results) && (
+			<section class="cs-timeline">
+				<div class="cs-container">
+					<div class="cs-timeline-inner">
+						<!-- The Problem -->
+						{challenges && challenges.length > 0 && (
+							<div class="cs-tl-section">
+								<div class="cs-tl-marker"></div>
+								<div class="cs-tl-content">
+									<h2>The Problem</h2>
+									<p class="cs-tl-intro">
+										Before working with Aquifer Growth, {title} struggled to keep up with the operational demands of their catalog. Manual processes couldn't scale.
+									</p>
+									{challenges.map(c => (
+										<div class="cs-tl-item">
+											<h3>{c.title}</h3>
+											<p>{c.body}</p>
+										</div>
+									))}
 								</div>
-							))}
-						</div>
-						
-						<div class="approach-col">
-							<h3 class="col-title text-green">The Solution</h3>
-							{solutions?.map(s => (
-								<div class="approach-card solution">
-									<h4>{s.title}</h4>
-									<p>{s.body}</p>
+							</div>
+						)}
+
+						<!-- The Solution -->
+						{solutions && solutions.length > 0 && (
+							<div class="cs-tl-section">
+								<div class="cs-tl-marker"></div>
+								<div class="cs-tl-content">
+									<h2>The Solution</h2>
+									{solutions.map(s => (
+										<div class="cs-tl-item">
+											<h3>{s.title}</h3>
+											<p>{s.body}</p>
+										</div>
+									))}
 								</div>
-							))}
-						</div>
+							</div>
+						)}
+
+						<!-- The Results -->
+						{results && (
+							<div class="cs-tl-section">
+								<div class="cs-tl-marker"></div>
+								<div class="cs-tl-content">
+									<h2>The Results</h2>
+									<p class="cs-tl-results">{results}</p>
+								</div>
+							</div>
+						)}
 					</div>
 				</div>
 			</section>
 		)}
-
-		<!-- Results Section -->
-		{results && (
-			<section class="case-results">
-				<div class="container">
-					<div class="results-inner">
-						<h2>Final Impact</h2>
-						<p class="results-text">{results}</p>
-					</div>
-				</div>
-			</section>
-		)}
-
-		<!-- Visual Divider / Image -->
-		<section class="case-v-image">
-			<div class="container">
-				<div class="image-wrapper">
-					<img src={image} alt={title} />
-				</div>
-			</div>
-		</section>
-
 	</main>
 
 	<Footer />
 </Layout>
 
 <style>
-	.case-study-detail {
-		padding-top: 4rem;
-	}
-	.case-hero {
-		padding: 4rem 0 2rem;
-		text-align: center;
-	}
-	.case-hero h1 {
-		font-size: clamp(3rem, 8vw, 5rem);
-		font-weight: 850;
-		letter-spacing: -0.05em;
-		margin: 1rem 0;
-	}
-	.hero-headline {
-		font-size: 1.5rem;
-		color: #555;
-		max-width: 800px;
-		margin: 0 auto;
-		font-weight: 500;
-	}
-
-	.case-overview {
-		padding: 4rem 0;
-	}
-	.overview-grid {
-		display: grid;
-		grid-template-columns: 1fr 350px;
-		gap: 4rem;
-	}
-	.description-large {
-		font-size: 1.4rem;
-		line-height: 1.5;
-		color: #1a1a1a;
-		font-weight: 500;
-		margin-bottom: 2.5rem;
-	}
-	.case-markdown {
-		font-size: 1.1rem;
-		line-height: 1.7;
-		color: #444;
-	}
-
-	/* Sidebar */
-	.sticky-sidebar {
-		position: sticky;
-		top: 100px;
-	}
-	.sidebar-card {
-		background: #fff;
-		border: 1px solid rgba(0,0,0,0.08);
-		border-radius: 24px;
-		padding: 2rem;
-		box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-	}
-	.sidebar-card h3 {
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: #999;
-		margin-bottom: 2rem;
-	}
-	.sidebar-stats {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-		margin-bottom: 2.5rem;
-	}
-	.side-stat .v {
-		display: block;
-		font-size: 2.5rem;
-		font-weight: 850;
-		color: #1a1a1a;
-		line-height: 1;
-	}
-	.side-stat .l {
-		font-size: 0.85rem;
-		font-weight: 600;
-		color: #777;
-		margin-top: 0.25rem;
-	}
-	.sidebar-meta {
-		border-top: 1px solid #eee;
+	/* ─── Page ─── */
+	.cs-page {
 		padding-top: 2rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
+	}
+	/* Reset heavy global heading defaults for this page */
+	.cs-page h1, .cs-page h2, .cs-page h3 {
+		font-family: var(--font-sans);
+		text-transform: none;
+		letter-spacing: normal;
+		line-height: 1.3;
+	}
+	.cs-container {
+		max-width: 1100px;
+		margin: 0 auto;
+		padding: 0 2rem;
+	}
+
+	/* ─── Hero ─── */
+	.cs-hero {
+		padding: 3rem 0 4rem;
+		background: linear-gradient(180deg, #faf9f7 0%, #fff5f5 100%);
+	}
+
+	.cs-hero-grid {
+		display: grid;
+		grid-template-columns: 1fr 380px;
+		gap: 3rem;
+		align-items: start;
+	}
+
+	.cs-hero-text h1 {
+		font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		line-height: 1.3;
+		color: #1a1a1a;
+		margin-bottom: 1.5rem;
+	}
+
+	.cs-desc {
+		font-size: 0.9rem;
+		line-height: 1.75;
+		color: #555;
 		margin-bottom: 2rem;
 	}
-	.m-item .m-label {
+
+	/* Highlights (checkmark list) */
+	.cs-highlights {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.cs-highlights li {
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		font-size: 0.88rem;
+		font-weight: 400;
+		color: #333;
+		line-height: 1.4;
+	}
+	.cs-check {
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+	}
+
+	/* ─── Info Card ─── */
+	.cs-card-inner {
+		background: #fff;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+		border: 1px solid rgba(0,0,0,0.06);
+	}
+	.cs-card-img-link {
+		display: block;
+		height: 200px;
+		overflow: hidden;
+		position: relative;
+		text-decoration: none;
+	}
+	.cs-card-img-link img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.4s ease;
+	}
+	.cs-card-img-link:hover img {
+		transform: scale(1.05);
+	}
+	.cs-card-img-overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(0,0,0,0.45);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+	.cs-card-img-link:hover .cs-card-img-overlay {
+		opacity: 1;
+	}
+	.cs-card-img-overlay span {
+		color: #fff;
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.02em;
+	}
+	.cs-card-meta {
+		padding: 1.25rem 1.5rem 1.5rem;
+	}
+	.cs-meta-row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	.cs-meta-label {
 		display: block;
 		font-size: 0.7rem;
 		text-transform: uppercase;
-		font-weight: 700;
-		color: #bbb;
-		margin-bottom: 0.25rem;
+		letter-spacing: 0.05em;
+		font-weight: 600;
+		color: #999;
+		margin-bottom: 0.2rem;
 	}
-	.m-item .m-value {
-		font-size: 1rem;
+	.cs-meta-value {
+		display: block;
+		font-size: 0.9rem;
 		font-weight: 700;
 		color: #1a1a1a;
 	}
-	.btn-sidebar-cta {
-		display: block;
-		text-align: center;
-		background: #1a1a1a;
-		color: #fff;
-		padding: 1rem;
-		border-radius: 12px;
-		font-weight: 700;
-		text-decoration: none;
-		transition: transform 0.2s ease;
-	}
-	.btn-sidebar-cta:hover { transform: translateY(-2px); }
 
-	/* Approach Grid */
-	.case-grid-content {
-		padding: 6rem 0;
-		background: #fafafa;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee;
-	}
-	.grid-header {
-		text-align: center;
-		margin-bottom: 4rem;
-	}
-	.grid-header h2 { font-size: 2.5rem; font-weight: 800; }
-	.grid-header p { color: #666; font-size: 1.1rem; }
-	
-	.approach-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 3rem;
-	}
-	.col-title {
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		font-weight: 800;
-		margin-bottom: 2rem;
-	}
-	.text-red { color: #ff5a5a; }
-	.text-green { color: #00c853; }
-	
-	.approach-card {
+	/* ─── Timeline ─── */
+	.cs-timeline {
+		padding: 3rem 0 5rem;
 		background: #fff;
-		padding: 2rem;
-		border-radius: 20px;
-		margin-bottom: 1.5rem;
-		border: 1px solid rgba(0,0,0,0.05);
-		box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 	}
-	.approach-card h4 {
-		font-size: 1.25rem;
-		font-weight: 800;
-		margin-bottom: 0.75rem;
+
+	.cs-timeline-inner {
+		position: relative;
+		padding-left: 3rem;
+	}
+
+	/* Vertical line */
+	.cs-timeline-inner::before {
+		content: '';
+		position: absolute;
+		left: 8px;
+		top: 10px;
+		bottom: 10px;
+		width: 2px;
+		background: #e5e5e5;
+	}
+
+	.cs-tl-section {
+		position: relative;
+		margin-bottom: 3rem;
+	}
+	.cs-tl-section:last-child {
+		margin-bottom: 0;
+	}
+
+	/* Red dot marker */
+	.cs-tl-marker {
+		position: absolute;
+		left: -3rem;
+		top: 0.35rem;
+		width: 18px;
+		height: 18px;
+		border-radius: 50%;
+		background: #E8364E;
+		transform: translateX(-1px);
+	}
+
+	.cs-tl-content h2 {
+		font-size: 1.35rem;
+		font-weight: 600;
 		color: #1a1a1a;
+		margin-bottom: 1rem;
+		letter-spacing: -0.01em;
+		text-transform: none;
 	}
-	.approach-card p {
-		font-size: 0.95rem;
-		line-height: 1.6;
+
+	.cs-tl-intro {
+		font-size: 0.9rem;
+		line-height: 1.75;
+		color: #555;
+		margin-bottom: 1.75rem;
+	}
+
+	.cs-tl-item {
+		margin-bottom: 1.5rem;
+	}
+	.cs-tl-item:last-child {
+		margin-bottom: 0;
+	}
+	.cs-tl-item h3 {
+		font-size: 1rem;
+		font-weight: 650;
+		color: #1a1a1a;
+		margin-bottom: 0.35rem;
+		text-transform: none;
+		letter-spacing: normal;
+	}
+	.cs-tl-item p {
+		font-size: 0.9rem;
+		line-height: 1.75;
 		color: #555;
 	}
 
-	/* Results */
-	.case-results {
-		padding: 8rem 0;
-		background: #1a1a1a;
-		color: #fff;
-		text-align: center;
-	}
-	.results-inner h2 {
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.2em;
-		color: #555;
-		margin-bottom: 2rem;
-	}
-	.results-text {
-		font-size: 2.5rem;
-		font-weight: 700;
-		line-height: 1.2;
-		max-width: 900px;
-		margin: 0 auto;
-		letter-spacing: -0.04em;
+	.cs-tl-results {
+		font-size: 0.9rem;
+		line-height: 1.75;
+		color: #444;
 	}
 
-	/* Image */
-	.case-v-image {
-		padding: 6rem 0;
-	}
-	.image-wrapper {
-		border-radius: 40px;
-		overflow: hidden;
-		box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-	}
-	.image-wrapper img {
-		width: 100%;
-		display: block;
-	}
-
-	@media (max-width: 992px) {
-		.overview-grid {
+	/* ─── Responsive ─── */
+	@media (max-width: 768px) {
+		.cs-hero-grid {
 			grid-template-columns: 1fr;
 		}
-		.approach-grid {
-			grid-template-columns: 1fr;
+		.cs-hero-text h1 {
+			font-size: 1.5rem;
 		}
-		.results-text {
-			font-size: 1.8rem;
+		.cs-timeline-inner {
+			padding-left: 2.5rem;
+		}
+		.cs-tl-marker {
+			left: -2.5rem;
 		}
 	}
 </style>

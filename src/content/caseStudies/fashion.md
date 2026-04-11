@@ -22,5 +22,9 @@ solutions:
     body: "Custom API-based launch system that attributes 100+ SKUs in minutes."
   - title: "Data Integrity Engine"
     body: "Validation logic that prevents errors before they reach the storefront."
+highlights:
+  - "90% reduction in collection launch time"
+  - "10-15 hours saved weekly on data management"
+  - "100+ SKUs attributed in minutes per launch"
 results: "Reduced collection launch time by 90% and saved the internal team 15+ hours weekly on data management."
 ---

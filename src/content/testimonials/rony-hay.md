@@ -1,5 +1,5 @@
 ---
-quote: "AstraOps built us a full inventory management system from scratch,
+quote: "AquiferGrowth built us a full inventory management system from scratch,
   forecasting, product management, collections, and our PO workflow are all in
   one place now. Having everything centralized and synced means I always know
   exactly where we stand. This also allows us to embed ourselves into more

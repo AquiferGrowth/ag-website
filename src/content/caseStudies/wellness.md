@@ -26,5 +26,9 @@ solutions:
     body: "Launched a new mega menu and filtering experience driven by SEO-informed categories."
   - title: "Automation and Consistency"
     body: "Implemented a managed system for tagging, eliminating manual work as the brand scaled."
+highlights:
+  - "20k+ product attributes structured across 500+ SKUs"
+  - "10-15 hours of manual work eliminated each week"
+  - "Improved organic traffic through structured data"
 results: "Partnering with Astro Operations enabled Live Healthillie to structure over 20k product attributes, saving 10-15 hours of manual work each week and significantly improving organic traffic."
 ---

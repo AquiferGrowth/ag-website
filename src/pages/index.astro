@@ -29,7 +29,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</p>
 				<div class="cta-group">
 					<a href="/contact" class="btn btn-hero-pink">
-						Turn Your Operations Into Managed AI Systems &rarr; Let's Chat 
+						Let's Chat 
 						<span class="animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -956,7 +956,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</div>
 
 				<div class="comparison-cta">
-					<a href="/contact" class="btn btn-hero-pink">Replace Your Spreadsheets → Let's Talk
+					<a href="/contact" class="btn btn-hero-pink">Let's Chat
 						<span class="animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -6176,18 +6176,6 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			// Initial states
 			gsap.set(slides, { autoAlpha: 0, zIndex: 1 });
 
-			// Roadmap Scroll Intersection Observer
-			const roadmapObserver = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-visible');
-					}
-				});
-			}, { threshold: 0.15 });
-
-			document.querySelectorAll('.roadmap-step').forEach(step => {
-				roadmapObserver.observe(step);
-			});
 
 			let playSlide = (index) => {
 				// Clear any pending transitions/animations
@@ -6262,14 +6250,21 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			});
 		});
 
+		// Roadmap steps: standalone IntersectionObserver (independent of slide banners)
+		const roadmapObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('is-visible');
+				}
+			});
+		}, { threshold: 0.05, rootMargin: '0px 0px -50px 0px' });
+		document.querySelectorAll('.roadmap-step').forEach(step => {
+			roadmapObserver.observe(step);
+		});
+
 		gsap.from(".solution-header h2", {
 			scrollTrigger: { trigger: ".solution-header", start: "top 85%" },
 			y: 30, opacity: 0, duration: 1, ease: "power3.out"
-		});
-
-		gsap.from(".roadmap-step", {
-			scrollTrigger: { trigger: ".roadmap-container", start: "top 80%" },
-			x: -30, opacity: 0, stagger: 0.3, duration: 1.2, ease: "power2.out"
 		});
 
 		// ── Process Section Animations ────────────────────────
