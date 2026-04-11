@@ -29,7 +29,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</p>
 				<div class="cta-group">
 					<a href="/contact" class="btn btn-hero-pink">
-						Turn Your Operations Into Managed AI Systems &rarr; Let's Chat 
+						<span class="cta-full">Turn Your Operations Into Managed AI Systems &rarr; Let's Chat</span><span class="cta-mobile">Let's Chat</span>
 						<span class="animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -956,7 +956,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</div>
 
 				<div class="comparison-cta">
-					<a href="/contact" class="btn btn-hero-pink">Replace Your Spreadsheets → Let's Talk
+					<a href="/contact" class="btn btn-hero-pink"><span class="cta-full">Replace Your Spreadsheets → Let's Talk</span><span class="cta-mobile">Let's Talk</span>
 						<span class="animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -1788,6 +1788,12 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		transform: translate(0, 0);
 		box-shadow: 0 0 0 #000;
 	}
+	.cta-mobile { display: none; }
+	.cta-full { display: inline; }
+	@media (max-width: 640px) {
+		.cta-full { display: none; }
+		.cta-mobile { display: inline; }
+	}
 	.btn-hero-white {
 		background: #fff;
 		color: #000;
@@ -2019,6 +2025,9 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		margin-bottom: 1rem;
 		z-index: 10;
 		position: relative;
+	}
+	@media (max-width: 640px) {
+		.use-case-categories { display: none; }
 	}
 
 	.category-pill {
@@ -4199,6 +4208,35 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		.step-visual-card { padding: 2rem 1rem; }
 		.chart-box { gap: 1.5rem; }
 	}
+	@media (max-width: 640px) {
+		.roadmap-main-title { font-size: 1.75rem; }
+		.roadmap-main-subtitle { font-size: 0.95rem; margin-bottom: 1.5rem; }
+		.roadmap-outer-content { padding: 2rem 1rem !important; }
+		.solution-card { padding: 1.5rem 0.5rem; }
+		.intro-step .step-header-card { padding: 1.25rem 1rem; }
+		.step-header-card { padding: 1.25rem 1rem; border-radius: 16px; }
+		.step-header-card .step-title { font-size: 1rem; margin-bottom: 0.4rem; }
+		.step-header-card p { font-size: 0.85rem; }
+		.step-visual-card { padding: 1rem 0.75rem; }
+		.roadmap-brand-icon { margin-bottom: 1rem; }
+
+		/* Damage table — fit within mobile card */
+		.mapping-header,
+		.mapping-row {
+			grid-template-columns: 1fr 20px 1fr;
+			gap: 0.2rem;
+		}
+		.func-pill, .damage-pill {
+			white-space: nowrap;
+			font-size: 0.5rem;
+			padding: 0.25rem 0.4rem;
+			min-height: 26px;
+			text-align: center;
+		}
+		.header-label { font-size: 0.52rem; }
+		.mapping-arrow-spacer { width: 20px; }
+		.arrow-svg { width: 20px; height: 12px; }
+	}
 
 
 	/* Owner Section */
@@ -4295,6 +4333,47 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		}
 		.owner-sub-cards {
 			grid-template-columns: 1fr;
+		}
+	}
+	@media (max-width: 640px) {
+		.owner-section .roadmap-outer-content {
+			padding: 1.5rem 1rem !important;
+		}
+		.owner-main-card {
+			margin-bottom: 1.5rem !important;
+		}
+		.owner-main-left h2 {
+			white-space: normal !important;
+			font-size: 1.5rem !important;
+		}
+		.owner-main-left p {
+			font-size: 0.9rem !important;
+		}
+		.owner-tracker-box {
+			padding: 1.25rem 1rem;
+		}
+		.flow-pill {
+			font-size: 0.58rem;
+			padding: 0.3rem 0.5rem;
+			min-height: 28px;
+			white-space: nowrap;
+		}
+		.flow-row {
+			grid-template-columns: 1fr 24px 1fr !important;
+			gap: 0.25rem !important;
+		}
+		.owner-sub-cards {
+			grid-template-columns: 1fr;
+			gap: 0.75rem;
+		}
+		.owner-sub-card {
+			padding: 1rem 1rem;
+		}
+		.owner-sub-card h4 {
+			font-size: 0.85rem !important;
+		}
+		.owner-sub-card p {
+			font-size: 0.8rem !important;
 		}
 	}
 
@@ -5296,6 +5375,37 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			margin: 0;
 		}
 	}
+	@media (max-width: 640px) {
+		.impact-grid {
+			flex-direction: row;
+			gap: 0;
+			align-items: center;
+		}
+		.impact-divider {
+			width: 1px;
+			height: 48px;
+			margin: 0 0.5rem;
+		}
+		.impact-stat {
+			padding: 0 0.25rem;
+		}
+		.impact-number {
+			font-size: 1.1rem;
+		}
+		.impact-label {
+			font-size: 0.6rem;
+			white-space: normal;
+		}
+		.impact-header {
+			margin-bottom: 1.5rem;
+		}
+		.impact-header h2 {
+			font-size: 1.2rem;
+		}
+		.impact-header p {
+			font-size: 0.85rem;
+		}
+	}
 
 	/* Build, Launch, Iterate Section */
 	.build-launch-section {
@@ -5811,6 +5921,12 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		.build-cards-grid { grid-template-columns: 1fr; max-width: 450px; }
 		.build-title { font-size: 2.5rem; }
 		.build-card { height: 400px; }
+	}
+	@media (max-width: 640px) {
+		.build-title { font-size: 1.6rem; }
+		.build-subtitle { font-size: 0.95rem; margin-bottom: 1rem; }
+		.build-card { height: 280px; }
+		.build-cards-grid { gap: 0.75rem; }
 	}
 
 	/* Success Stories Section */
