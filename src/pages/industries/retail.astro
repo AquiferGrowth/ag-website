@@ -1,0 +1,2111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<Layout title="AI-Managed Retail Operations | AquiferGrowth" description="AquiferGrowth builds and manages AI-powered operating systems for retail businesses — replacing manual ops roles with autonomous systems that scale across every store function.">
+	<Header />
+
+	<main>
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- HERO SECTION                               -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-hero">
+			<div class="rt-hero__bg-blur"></div>
+			<div class="rt-hero__bg-blur rt-hero__bg-blur--right"></div>
+			<div class="rt-hero__inner container">
+				<h1 class="rt-hero__title">
+					Automate retail operations
+				</h1>
+				<p class="rt-hero__subtitle">
+					AquiferGrowth builds and manages the AI operating layer behind your retail business —<br class="hide-mobile">
+					so you can focus on growing, not managing spreadsheets and chasing down tasks.
+				</p>
+
+				<div class="rt-hero__cta-row">
+					<a href="/contact" class="rt-btn rt-btn--primary">Book a Demo</a>
+					<a href="/contact" class="rt-btn rt-btn--outline">See Our Process</a>
+				</div>
+
+				<!-- Problem → Centralization → Solution -->
+				<div class="rt-hero__visual-wrap">
+					<div class="rt-flow">
+
+						<!-- ── COL 1: PROBLEM ── -->
+						<div class="rt-flow__col">
+							<div class="rt-flow__label rt-flow__label--problem">The Problem</div>
+							<div class="rt-flow__panel rt-flow__panel--chaos">
+								<!-- Stacked messy spreadsheets -->
+								<div class="rt-sheets-stack">
+									<div class="rt-sheet rt-sheet--back">
+										<div class="rt-sheet__titlebar">
+											<span class="rt-sheet__icon rt-sheet__icon--excel"></span>
+											Inventory for July 2025, I guess7.csv
+											<span class="rt-sheet__close">✕</span>
+										</div>
+										<table class="rt-sheet__table">
+											<thead><tr><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+											<tbody>
+												<tr><td>1</td><td>Product</td><td>Color</td><td>SKU</td></tr>
+												<tr><td>2</td><td>Jacket</td><td></td><td>SKU12345</td></tr>
+												<tr><td>3</td><td>Trendy Pants</td><td>Blue</td><td>SKU67890</td></tr>
+												<tr><td>4</td><td></td><td></td><td><span class="rt-err-x">✕</span></td></tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="rt-sheet rt-sheet--front">
+										<div class="rt-sheet__titlebar">
+											<span class="rt-sheet__icon rt-sheet__icon--excel"></span>
+											Untitled.xlsx
+											<span class="rt-sheet__close">✕</span>
+										</div>
+										<table class="rt-sheet__table">
+											<thead><tr><th>A</th><th>B</th><th>C</th><th>D</th></tr></thead>
+											<tbody>
+												<tr><td>1</td><td>Product</td><td>Color</td><td>SKU</td></tr>
+												<tr><td>2</td><td>Stylish Jacket</td><td>Red</td><td></td></tr>
+												<tr><td>3</td><td>Trendy Pants</td><td></td><td><span class="rt-err-x">✕</span></td></tr>
+												<tr><td>4</td><td>Chic Blouse</td><td>Green</td><td>SKU11223</td></tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<!-- Problem badges -->
+								<div class="rt-flow__badges">
+									<div class="rt-warn-badge"><span class="rt-warn-badge__icon">⚠</span>Inaccurate Product Data from Manual Updates</div>
+									<div class="rt-warn-badge"><span class="rt-warn-badge__icon">⚠</span>Lack of Alignment — No Single Source of Truth</div>
+									<div class="rt-warn-badge"><span class="rt-warn-badge__icon">⚠</span>Unreliable Tagging from Manual Management</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- ── ARROW ── -->
+						<div class="rt-flow__arrow">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</div>
+
+						<!-- ── COL 2: AQUIFERGROWTH AI HUB ── -->
+						<div class="rt-flow__col rt-flow__col--center">
+							<div class="rt-flow__label rt-flow__label--center">AquiferGrowth AI</div>
+							<div class="rt-flow__panel rt-flow__panel--hub">
+								<!-- AI Execution Layer: 3 blocks -->
+								<div class="rt-hub">
+
+									<!-- Block 1: Sources -->
+									<div class="rt-hub__block">
+										<div class="rt-hub__block-label">Sources</div>
+										<div class="rt-hub__chips">
+											<div class="rt-hub__chip">
+												<span class="rt-hub__chip-dot" style="background:#96bf48"></span>
+												Shopify
+											</div>
+											<div class="rt-hub__chip">
+												<span class="rt-hub__chip-dot" style="background:#0f9d58"></span>
+												Google Sheets
+											</div>
+											<div class="rt-hub__chip">
+												<span class="rt-hub__chip-dot" style="background:#217346"></span>
+												Excel / CSV
+											</div>
+										</div>
+									</div>
+
+									<!-- Down arrow -->
+									<div class="rt-hub__down-arrow">
+										<svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v16M2 12l6 6 6-6" stroke="var(--accent-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+									</div>
+
+									<!-- Block 2: Centralized table -->
+									<div class="rt-hub__block rt-hub__block--center">
+										<div class="rt-hub__block-label">Centralised</div>
+										<table class="rt-hub__table">
+											<thead>
+												<tr>
+													<th>SKU</th>
+													<th>Product</th>
+													<th>Type</th>
+													<th>Stock</th>
+													<th></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="rt-hub__td-mono">TSHRT-001</td>
+													<td>Oversized Tee</td>
+													<td><span class="rt-type-badge rt-type-badge--tshirt">T-shirt</span></td>
+													<td>100</td>
+													<td><span class="rt-hub__synced">✓</span></td>
+												</tr>
+												<tr>
+													<td class="rt-hub__td-mono">JKT-002</td>
+													<td>Slim Jacket</td>
+													<td><span class="rt-type-badge rt-type-badge--jacket">Jacket</span></td>
+													<td>278</td>
+													<td><span class="rt-hub__synced">✓</span></td>
+												</tr>
+												<tr>
+													<td class="rt-hub__td-mono">PNTS-001</td>
+													<td>Chic Trousers</td>
+													<td><span class="rt-type-badge rt-type-badge--pants">Pants</span></td>
+													<td>334</td>
+													<td><span class="rt-hub__synced">✓</span></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- Down arrow -->
+									<div class="rt-hub__down-arrow">
+										<svg width="16" height="20" viewBox="0 0 16 20" fill="none"><path d="M8 1v16M2 12l6 6 6-6" stroke="var(--accent-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+									</div>
+
+									<!-- Block 3: Execution -->
+									<div class="rt-hub__block rt-hub__block--exec">
+										<div class="rt-hub__block-label">Execution</div>
+										<div class="rt-hub__exec-rows">
+											<div class="rt-hub__exec-row rt-hub__exec-row--done">
+												<span class="rt-hub__exec-dot rt-hub__exec-dot--green"></span>
+												Synced 1,204 SKUs
+											</div>
+											<div class="rt-hub__exec-row rt-hub__exec-row--done">
+												<span class="rt-hub__exec-dot rt-hub__exec-dot--green"></span>
+												Tags normalised
+											</div>
+											<div class="rt-hub__exec-row rt-hub__exec-row--active">
+												<span class="rt-hub__exec-dot rt-hub__exec-dot--pulse"></span>
+												Pushing to Shopify…
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- ── ARROW ── -->
+						<div class="rt-flow__arrow">
+							<svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="var(--accent-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</div>
+
+						<!-- ── COL 3: THE RESULT ── -->
+						<div class="rt-flow__col">
+							<div class="rt-flow__label rt-flow__label--solution">The Result</div>
+							<div class="rt-flow__panel rt-flow__panel--clean">
+								<!-- Product listings with checkmarks -->
+								<div class="rt-result-listings">
+									<div class="rt-result-item">
+										<span class="rt-result-check">✓</span>
+										<div class="rt-result-img rt-result-img--black"></div>
+										<div class="rt-result-info">
+											<div class="rt-result-name">Oversized Tee — Black</div>
+											<div class="rt-result-meta"><span class="rt-type-badge rt-type-badge--tshirt">T-shirt</span> <span class="rt-result-sku">TSHRT-001</span></div>
+											<div class="rt-result-stock rt-result-stock--ok">✓ 100 in stock</div>
+										</div>
+										<div class="rt-result-price">$30.00</div>
+									</div>
+									<div class="rt-result-item">
+										<span class="rt-result-check">✓</span>
+										<div class="rt-result-img rt-result-img--denim"></div>
+										<div class="rt-result-info">
+											<div class="rt-result-name">Slim Jacket — Purple</div>
+											<div class="rt-result-meta"><span class="rt-type-badge rt-type-badge--jacket">Jacket</span> <span class="rt-result-sku">JKT-002</span></div>
+											<div class="rt-result-stock rt-result-stock--ok">✓ 278 in stock</div>
+										</div>
+										<div class="rt-result-price">$89.00</div>
+									</div>
+									<div class="rt-result-item">
+										<span class="rt-result-check">✓</span>
+										<div class="rt-result-img rt-result-img--white"></div>
+										<div class="rt-result-info">
+											<div class="rt-result-name">Chic Trousers — Blue</div>
+											<div class="rt-result-meta"><span class="rt-type-badge rt-type-badge--pants">Pants</span> <span class="rt-result-sku">PNTS-001</span></div>
+											<div class="rt-result-stock rt-result-stock--ok">✓ 334 in stock</div>
+										</div>
+										<div class="rt-result-price">$55.00</div>
+									</div>
+									<div class="rt-result-item">
+										<span class="rt-result-check">✓</span>
+										<div class="rt-result-img rt-result-img--red"></div>
+										<div class="rt-result-info">
+											<div class="rt-result-name">Classic Hoodie — Beige</div>
+											<div class="rt-result-meta"><span class="rt-type-badge rt-type-badge--jacket">Hoodie</span> <span class="rt-result-sku">HOOD-001</span></div>
+											<div class="rt-result-stock rt-result-stock--ok">✓ 499 in stock</div>
+										</div>
+										<div class="rt-result-price">$65.00</div>
+									</div>
+								</div>
+								<!-- Success badges -->
+								<div class="rt-flow__badges">
+									<div class="rt-success-badge"><span class="rt-success-badge__icon">✓</span>Accurate, Centralised Product Data</div>
+									<div class="rt-success-badge"><span class="rt-success-badge__icon">✓</span>Real-time Inventory Sync Across All Channels</div>
+									<div class="rt-success-badge"><span class="rt-success-badge__icon">✓</span>Reliable Tagging with Systematic Governance</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- LOGO BAR                                   -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-logos">
+			<div class="container">
+				<div class="rt-logos__row">
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="#1A1A1A"/></svg>
+						loops
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="#1A1A1A" stroke-width="1.5"/><circle cx="12" cy="10" r="3" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						CARTO
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#1A1A1A" stroke-width="1.5"/><path d="M9 9h6M9 12h6M9 15h3" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Framer
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M4 12h8v8" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						WebFlow
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Shopify
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 17l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 12l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Asana
+					</span>
+					<span class="rt-logo-item">
+						<svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-9 4 18 3-9h4" stroke="#1A1A1A" stroke-width="1.5"/></svg>
+						Klaviyo
+					</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- FEATURES BENTO GRID                        -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-features">
+			<div class="container">
+				<div class="rt-features__header">
+					<h2 class="rt-features__title">Retail Runs Better with<br>Automated Operations</h2>
+					<p class="rt-features__subtitle">From store ops to finance, we build and run the AI systems that keep every part of your retail business moving.</p>
+					<a href="/contact" class="rt-btn rt-btn--pink-sm">Book a Demo →</a>
+				</div>
+
+				<div class="rt-bento">
+					<!-- Card 1: Store Operations (large, top-left) -->
+					<div class="rt-bento-card rt-bento-card--lg rt-bento-card--1">
+						<div class="rt-bento-card__content">
+							<div class="rt-bento-card__icon">🏪</div>
+							<h3>Store Operations Management</h3>
+							<p>Centralize and automate your store's daily workflows — from scheduling to task management — with AI that keeps everything on track.</p>
+						</div>
+						<div class="rt-bento-card__visual">
+							<div class="rt-mini-dash">
+								<div class="rt-mini-dash__row rt-mini-dash__row--header">
+									<span>Task</span><span>Status</span><span>Due</span>
+								</div>
+								<div class="rt-mini-dash__row rt-mini-dash__row--done">
+									<span>Floor restock</span><span class="rt-badge rt-badge--green">Done</span><span>9am</span>
+								</div>
+								<div class="rt-mini-dash__row rt-mini-dash__row--active">
+									<span>EOD reporting</span><span class="rt-badge rt-badge--pink">Live</span><span>5pm</span>
+								</div>
+								<div class="rt-mini-dash__row">
+									<span>Supplier follow-up</span><span class="rt-badge rt-badge--gray">Queued</span><span>Fri</span>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 2: Inventory (large, top-right) -->
+					<div class="rt-bento-card rt-bento-card--lg rt-bento-card--2">
+						<div class="rt-bento-card__content">
+							<div class="rt-bento-card__icon">📦</div>
+							<h3>Inventory Management</h3>
+							<p>Real-time stock tracking, automated reorder triggers, and AI-driven demand forecasting — no more stockouts or overbuying.</p>
+						</div>
+						<div class="rt-bento-card__visual">
+							<div class="rt-inv-chart">
+								<div class="rt-inv-chart__label">Stock Levels — Top SKUs</div>
+								<div class="rt-inv-bar-group">
+									<div class="rt-inv-bar-wrap">
+										<div class="rt-inv-bar rt-inv-bar--full" style="height: 60px;"></div>
+										<span>SKU-001</span>
+									</div>
+									<div class="rt-inv-bar-wrap">
+										<div class="rt-inv-bar rt-inv-bar--mid" style="height: 40px;"></div>
+										<span>SKU-002</span>
+									</div>
+									<div class="rt-inv-bar-wrap">
+										<div class="rt-inv-bar rt-inv-bar--low" style="height: 18px;"></div>
+										<span>SKU-003</span>
+									</div>
+									<div class="rt-inv-bar-wrap">
+										<div class="rt-inv-bar rt-inv-bar--full" style="height: 52px;"></div>
+										<span>SKU-004</span>
+									</div>
+									<div class="rt-inv-bar-wrap">
+										<div class="rt-inv-bar rt-inv-bar--mid" style="height: 35px;"></div>
+										<span>SKU-005</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Card 3: Marketing (medium) -->
+					<div class="rt-bento-card rt-bento-card--md rt-bento-card--3">
+						<div class="rt-bento-card__icon">📣</div>
+						<h3>Marketing Operations</h3>
+						<p>AI-managed campaigns, promotions, and customer communications — launched and optimized automatically.</p>
+					</div>
+
+					<!-- Card 4: PBs & Admin (medium) -->
+					<div class="rt-bento-card rt-bento-card--md rt-bento-card--4">
+						<div class="rt-bento-card__icon">🗂️</div>
+						<h3>PBs &amp; Admin Operations</h3>
+						<p>Playbooks, SOPs, and admin workflows managed by AI — so nothing falls through the cracks as you scale.</p>
+					</div>
+
+					<!-- Card 5: Finance (medium) -->
+					<div class="rt-bento-card rt-bento-card--md rt-bento-card--5">
+						<div class="rt-bento-card__icon">💰</div>
+						<h3>Finance</h3>
+						<p>Automated reconciliation, spend tracking, and financial reporting — visibility without the manual grind.</p>
+					</div>
+
+					<!-- Card 6: Testimonial -->
+					<div class="rt-bento-card rt-bento-card--testimonial rt-bento-card--6">
+						<blockquote class="rt-bento-quote">
+							"I used Contractors/Freelancers and an in-house team — now AquiferGrowth has saved me time by auto-categorizing our transactions more accurately."
+						</blockquote>
+						<div class="rt-bento-quote__author">
+							<div class="rt-bento-quote__avatar"></div>
+							<div>
+								<strong>Sarah Chen</strong>
+								<span>Head of Operations • RetailCore</span>
+							</div>
+							<svg class="rt-bento-quote__logo" width="80" height="20" viewBox="0 0 80 20"><text x="0" y="15" font-size="12" fill="#ccc" font-family="sans-serif">AquiferGrowth</text></svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- OUR PROCESS                                -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-process">
+			<div class="container">
+				<div class="rt-process__layout">
+					<div class="rt-process__left">
+						<h2 class="rt-process__title">
+							Our process makes it<br>
+							easier than ever before
+						</h2>
+
+						<div class="rt-process__steps">
+							<div class="rt-process__step">
+								<div class="rt-process__step-header">
+									<span class="rt-process__step-dot rt-process__step-dot--active"></span>
+									<h3>Data Centrality</h3>
+								</div>
+								<p>We consolidate all your retail data — inventory, sales, ops, finance — into a single source of truth that AI can act on in real time.</p>
+							</div>
+							<div class="rt-process__step">
+								<div class="rt-process__step-header">
+									<span class="rt-process__step-dot"></span>
+									<h3>Goal Communication</h3>
+								</div>
+								<p>We align with your business objectives and configure autonomous systems to optimize toward the outcomes that matter most to you.</p>
+							</div>
+							<div class="rt-process__step">
+								<div class="rt-process__step-header">
+									<span class="rt-process__step-dot"></span>
+									<h3>Build Operations</h3>
+								</div>
+								<p>We deploy, manage, and continuously improve your AI-powered operations — handling every function from store ops to finance on autopilot.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="rt-process__right">
+						<div class="rt-process__mock">
+							<div class="rt-process__mock-header">
+								<div class="rt-dash__dots">
+									<span class="rt-dash__dot rt-dash__dot--red"></span>
+									<span class="rt-dash__dot rt-dash__dot--yellow"></span>
+									<span class="rt-dash__dot rt-dash__dot--green"></span>
+								</div>
+							</div>
+							<div class="rt-process__mock-body">
+								<div class="rt-process-mock__row">
+									<span class="rt-process-mock__label">Data Sources</span>
+									<div class="rt-process-mock__tags">
+										<span class="rt-tag rt-tag--active">Shopify</span>
+										<span class="rt-tag">Asana</span>
+										<span class="rt-tag">Sheets</span>
+									</div>
+								</div>
+								<div class="rt-process-mock__divider"></div>
+								<div class="rt-process-mock__row">
+									<span class="rt-process-mock__label">Goals Set</span>
+									<div class="rt-process-mock__tags">
+										<span class="rt-tag rt-tag--active">↑ Revenue</span>
+										<span class="rt-tag rt-tag--active">↓ Ops Hrs</span>
+									</div>
+								</div>
+								<div class="rt-process-mock__divider"></div>
+								<div class="rt-process-mock__row">
+									<span class="rt-process-mock__label">Systems Live</span>
+									<div class="rt-process-mock__tags">
+										<span class="rt-tag rt-tag--green">Store Ops ✓</span>
+										<span class="rt-tag rt-tag--green">Inventory ✓</span>
+									</div>
+								</div>
+								<div class="rt-process-mock__divider"></div>
+								<div class="rt-process-mock__stat-row">
+									<div class="rt-process-mock__stat">
+										<span>Hrs Recovered</span>
+										<strong>2,436</strong>
+									</div>
+									<div class="rt-process-mock__stat">
+										<span>Revenue Up</span>
+										<strong>+34%</strong>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- STATS BAR                                  -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-stats">
+			<div class="container">
+				<div class="rt-stats__grid">
+					<div class="rt-stat">
+						<span class="rt-stat__number">130%</span>
+						<span class="rt-stat__label">Avg. ops quality improvement</span>
+					</div>
+					<div class="rt-stat">
+						<span class="rt-stat__number">$358K</span>
+						<span class="rt-stat__label">Revenue recovered from inefficiencies</span>
+					</div>
+					<div class="rt-stat">
+						<span class="rt-stat__number">21,424</span>
+						<span class="rt-stat__label">Operations managed autonomously</span>
+					</div>
+					<div class="rt-stat">
+						<span class="rt-stat__number">2,436 Hrs</span>
+						<span class="rt-stat__label">Manual work eliminated per year</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- TESTIMONIALS                                -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-testimonials">
+			<div class="container">
+				<h2 class="rt-testimonials__title">Hear From Our Customers</h2>
+				<div class="rt-testimonials__grid">
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"Of course we use AquiferGrowth. They replaced all the manual data cleanup our team was doing. Within 2 months, our ops error rate went from 23% to near zero."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--1"></div>
+							<div>
+								<strong>James Rivera</strong>
+								<span>CEO, ModernGoods Co.</span>
+							</div>
+						</div>
+					</div>
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"We went from 3 full-time ops managers to 1 person overseeing the AI systems. The ROI was clear within the first quarter."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--2"></div>
+							<div>
+								<strong>Michelle Park</strong>
+								<span>VP Operations, UrbanThread</span>
+							</div>
+						</div>
+					</div>
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"AquiferGrowth does what 3 agencies used to do, at a fraction of the cost. Our team now focuses entirely on growth instead of firefighting operations."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--3"></div>
+							<div>
+								<strong>Daniel Okorie</strong>
+								<span>Founder, Craft &amp; Carry</span>
+							</div>
+						</div>
+					</div>
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"The inventory system alone saved us over $200K in overstock. Having AI proactively reorder and report means we never miss a beat in-store."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--4"></div>
+							<div>
+								<strong>Priya Nair</strong>
+								<span>Director of Retail, BrightSpace</span>
+							</div>
+						</div>
+					</div>
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"Within 6 weeks of onboarding, our weekly reporting went from 12 hours to fully automated. It's like having a CFO and COO working 24/7."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--5"></div>
+							<div>
+								<strong>Tom Bakker</strong>
+								<span>COO, NordHaus Retail</span>
+							</div>
+						</div>
+					</div>
+					<div class="rt-testimonial-card">
+						<div class="rt-testimonial-card__stars">★★★★★</div>
+						<p>"I was skeptical about handing over operations to an AI system, but AquiferGrowth made it seamless. The transition took a week and the results were immediate."</p>
+						<div class="rt-testimonial-card__author">
+							<div class="rt-testimonial-card__avatar rt-testimonial-card__avatar--6"></div>
+							<div>
+								<strong>Lisa Monroe</strong>
+								<span>Owner, Bloom &amp; Co.</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- CTA FOOTER                                 -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="rt-cta-footer">
+			<div class="container">
+				<div class="rt-cta-footer__inner">
+					<div class="rt-cta-footer__text">
+						<h2>Be the Business Owner,<br>Let us Handle the Operations</h2>
+						<p>Focus on what matters — growth, brand, and customers. We'll manage the<br class="hide-mobile"> operational complexity behind your retail business autonomously.</p>
+						<div class="rt-cta-footer__actions">
+							<a href="/contact" class="rt-btn rt-btn--primary">Get Started Today</a>
+						</div>
+					</div>
+					<div class="rt-cta-footer__visual">
+						<div class="rt-cta-footer__mock">
+							<div class="rt-cta-footer__mock-header">
+								<div class="rt-dash__dots">
+									<span class="rt-dash__dot rt-dash__dot--red"></span>
+									<span class="rt-dash__dot rt-dash__dot--yellow"></span>
+									<span class="rt-dash__dot rt-dash__dot--green"></span>
+								</div>
+							</div>
+							<div class="rt-cta-footer__mock-body">
+								<div class="rt-cta-footer__mock-sidebar">
+									<div class="rt-cta-dash-nav active">Dashboard</div>
+									<div class="rt-cta-dash-nav">Store Ops</div>
+									<div class="rt-cta-dash-nav">Inventory</div>
+									<div class="rt-cta-dash-nav">Finance</div>
+								</div>
+								<div class="rt-cta-footer__mock-main">
+									<div class="rt-cta-footer__stat-row">
+										<div class="rt-cta-footer__mini-stat">
+											<span>Revenue</span>
+											<strong>$2.4M</strong>
+										</div>
+										<div class="rt-cta-footer__mini-stat">
+											<span>Ops Health</span>
+											<strong>97%</strong>
+										</div>
+										<div class="rt-cta-footer__mini-stat">
+											<span>Hrs Saved</span>
+											<strong>2,436</strong>
+										</div>
+									</div>
+									<div class="rt-cta-footer__chart">
+										<svg viewBox="0 0 200 60" preserveAspectRatio="none">
+											<path d="M0 50 Q25 45, 50 35 T100 25 T150 15 T200 5" fill="none" stroke="var(--accent-primary)" stroke-width="2"/>
+											<path d="M0 50 Q25 45, 50 35 T100 25 T150 15 T200 5 V60 H0 Z" fill="url(#rtCtaGrad)" opacity="0.2"/>
+											<defs><linearGradient id="rtCtaGrad" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="var(--accent-primary)"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Large watermark text -->
+		<div class="rt-watermark">
+			<span>AQUIFER</span>
+		</div>
+	</main>
+	<Footer />
+</Layout>
+
+<style>
+	/* ═══════════════════════════════════════════════ */
+	/* RETAIL PAGE – GLOBAL                          */
+	/* ═══════════════════════════════════════════════ */
+	main {
+		overflow-x: hidden;
+	}
+	.hide-mobile { display: inline; }
+	@media (max-width: 768px) { .hide-mobile { display: none; } }
+
+	/* ═══════════════════════════════════════════════ */
+	/* BUTTONS                                        */
+	/* ═══════════════════════════════════════════════ */
+	.rt-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.85rem 2rem;
+		border-radius: var(--radius-pill);
+		font-weight: 700;
+		font-size: 0.95rem;
+		transition: all 0.2s ease;
+		cursor: pointer;
+		border: 2px solid transparent;
+		text-decoration: none;
+	}
+	.rt-btn--primary {
+		background: var(--accent-primary);
+		color: #fff;
+		border-color: var(--accent-primary);
+		box-shadow: 0 2px 12px rgba(255, 77, 109, 0.25);
+	}
+	.rt-btn--primary:hover {
+		background: #e8446a;
+		transform: translateY(-2px);
+		box-shadow: 0 6px 20px rgba(255, 77, 109, 0.35);
+	}
+	.rt-btn--outline {
+		background: transparent;
+		color: var(--text-primary);
+		border-color: var(--border-muted);
+	}
+	.rt-btn--outline:hover {
+		border-color: var(--text-primary);
+		background: rgba(0,0,0,0.03);
+	}
+	.rt-btn--pink-sm {
+		background: var(--accent-primary);
+		color: #fff;
+		border: none;
+		padding: 0.6rem 1.5rem;
+		border-radius: var(--radius-pill);
+		font-size: 0.85rem;
+		font-weight: 700;
+		text-decoration: none;
+		transition: all 0.2s ease;
+	}
+	.rt-btn--pink-sm:hover {
+		background: #e8446a;
+		transform: translateY(-1px);
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* HERO                                           */
+	/* ═══════════════════════════════════════════════ */
+	.rt-hero {
+		position: relative;
+		padding: 8rem 0 0;
+		text-align: center;
+		overflow: hidden;
+	}
+	.rt-hero__bg-blur {
+		position: absolute;
+		top: -100px;
+		left: -100px;
+		width: 600px;
+		height: 600px;
+		background: radial-gradient(circle, rgba(255, 182, 193, 0.35) 0%, transparent 70%);
+		border-radius: 50%;
+		z-index: 0;
+		pointer-events: none;
+	}
+	.rt-hero__bg-blur--right {
+		left: auto;
+		right: -100px;
+		top: -50px;
+		background: radial-gradient(circle, rgba(255, 200, 200, 0.25) 0%, transparent 70%);
+	}
+	.rt-hero__inner {
+		position: relative;
+		z-index: 1;
+	}
+	.rt-hero__title {
+		font-size: clamp(2.4rem, 5vw, 4rem);
+		font-weight: 800;
+		line-height: 1.1;
+		letter-spacing: -0.04em;
+		margin-bottom: 1.25rem;
+	}
+	.rt-hero__subtitle {
+		font-size: 1.05rem;
+		line-height: 1.7;
+		color: var(--text-secondary);
+		margin-bottom: 2.5rem;
+		max-width: 640px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.rt-hero__cta-row {
+		display: flex;
+		gap: 1rem;
+		justify-content: center;
+		margin-bottom: 4rem;
+		flex-wrap: wrap;
+	}
+
+	/* ─── 3-Column Flow Visual ─────────────────────── */
+	.rt-hero__visual-wrap {
+		max-width: 1140px;
+		margin: 0 auto;
+		padding-bottom: 2rem;
+	}
+
+	.rt-flow {
+		display: grid;
+		grid-template-columns: 1fr 40px 1fr 40px 1fr;
+		gap: 0;
+		align-items: start;
+	}
+
+	.rt-flow__col {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.rt-flow__label {
+		font-size: 0.7rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0.3rem 0.75rem;
+		border-radius: 20px;
+		align-self: center;
+	}
+	.rt-flow__label--problem {
+		background: #fff7ed;
+		color: #c2410c;
+		border: 1px solid #fed7aa;
+	}
+	.rt-flow__label--center {
+		background: rgba(255,77,109,0.08);
+		color: var(--accent-primary);
+		border: 1px solid rgba(255,77,109,0.2);
+	}
+	.rt-flow__label--solution {
+		background: #f0fdf4;
+		color: #166534;
+		border: 1px solid #bbf7d0;
+	}
+
+	.rt-flow__panel {
+		border-radius: 14px;
+		overflow: hidden;
+		padding: 1rem;
+		flex: 1;
+	}
+	.rt-flow__panel--chaos {
+		background: #fffbf5;
+		border: 1.5px solid #fed7aa;
+	}
+	.rt-flow__panel--hub {
+		background: #fff;
+		border: 1.5px solid rgba(255,77,109,0.25);
+		box-shadow: 0 0 0 4px rgba(255,77,109,0.06);
+		padding: 0.75rem;
+	}
+	.rt-flow__panel--clean {
+		background: #f7fef9;
+		border: 1.5px solid #bbf7d0;
+		padding: 0.75rem;
+		overflow: visible;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.rt-flow__panel--clean .rt-sys-win {
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.rt-flow__arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+		padding-top: 2rem;
+	}
+
+	.rt-flow__badges {
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+		margin-top: 0.75rem;
+	}
+
+	/* Stacked sheets */
+	.rt-sheets-stack {
+		position: relative;
+		height: 160px;
+	}
+	.rt-sheet--back {
+		position: absolute;
+		top: 8px;
+		left: 8px;
+		right: -8px;
+		transform: rotate(2deg);
+		z-index: 1;
+	}
+	.rt-sheet--front {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		transform: rotate(-1deg);
+	}
+
+	/* Central store mockup (shared) */
+	.rt-chaos__store {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 5;
+		width: 240px;
+	}
+	.rt-store-mock {
+		background: #fff;
+		border: 1.5px solid #e0e0e0;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+		font-size: 0.7rem;
+	}
+	.rt-store-mock--clean {
+		border-color: rgba(255,77,109,0.3);
+		box-shadow: 0 8px 30px rgba(255,77,109,0.12), 0 0 0 2px rgba(255,77,109,0.08);
+	}
+	.rt-store-mock__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.4rem 0.6rem;
+		border-bottom: 1px solid #f0f0f0;
+		background: #fafafa;
+	}
+	.rt-store-mock__logo {
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #222;
+	}
+	.rt-store-mock__icons {
+		display: flex;
+		gap: 0.4rem;
+		opacity: 0.6;
+	}
+	.rt-store-mock__product {
+		display: flex;
+		gap: 0.5rem;
+		padding: 0.6rem;
+	}
+	.rt-store-mock__img {
+		width: 60px;
+		flex-shrink: 0;
+	}
+	.rt-store-mock__img-placeholder {
+		width: 60px;
+		height: 75px;
+		background: #f5f5f5;
+		border-radius: 6px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.rt-store-mock__img-placeholder--clean {
+		background: #1a1a1a;
+	}
+	.rt-store-mock__info {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+	.rt-store-mock__breadcrumb {
+		font-size: 0.48rem;
+		color: #aaa;
+		text-transform: uppercase;
+		letter-spacing: 0.03em;
+	}
+	.rt-store-mock__title {
+		font-size: 0.62rem;
+		font-weight: 700;
+		color: #111;
+		margin-bottom: 1px;
+	}
+	.rt-store-mock__price {
+		font-size: 0.6rem;
+		color: #555;
+	}
+	.rt-store-mock__price strong { color: #111; }
+	.rt-store-mock__price s { color: #aaa; }
+	.rt-store-mock__alert {
+		font-size: 0.5rem;
+		color: #e67e22;
+		margin: 2px 0;
+	}
+	.rt-store-mock__stock--ok {
+		font-size: 0.5rem;
+		color: #22c55e;
+		margin: 2px 0;
+	}
+	.rt-store-mock__colors {
+		display: flex;
+		gap: 3px;
+		margin-top: 3px;
+	}
+	.rt-color-swatch {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		border: 1px solid #ddd;
+	}
+	.rt-color-swatch--black { background: #111; }
+	.rt-color-swatch--gray { background: #888; }
+	.rt-color-swatch--brown { background: #8b4513; }
+	.rt-color-swatch--active { border-color: var(--accent-primary); box-shadow: 0 0 0 1px var(--accent-primary); }
+	.rt-store-mock__sizes {
+		display: flex;
+		gap: 2px;
+		margin-top: 3px;
+	}
+	.rt-size-btn {
+		font-size: 0.48rem;
+		font-weight: 600;
+		padding: 1px 4px;
+		border: 1px solid #ddd;
+		border-radius: 3px;
+		color: #555;
+	}
+	.rt-size-btn--active {
+		border-color: #111;
+		background: #111;
+		color: #fff;
+	}
+
+	/* Floating spreadsheet windows */
+	.rt-sheet {
+		position: absolute;
+		background: #fff;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+		overflow: hidden;
+		font-size: 0.62rem;
+		z-index: 3;
+		min-width: 200px;
+	}
+	.rt-sheet--1 { left: 2%; top: 5%; transform: rotate(-2deg); z-index: 2; }
+	.rt-sheet--2 { left: 14%; top: 28%; transform: rotate(1deg); z-index: 4; }
+	.rt-sheet--3 { right: 3%; top: 5%; transform: rotate(2deg); z-index: 2; }
+	.rt-sheet--4 { right: 12%; top: 30%; transform: rotate(-1.5deg); z-index: 4; }
+	.rt-sheet__titlebar {
+		display: flex;
+		align-items: center;
+		gap: 0.35rem;
+		padding: 0.35rem 0.6rem;
+		background: #f7f7f7;
+		border-bottom: 1px solid #eee;
+		font-size: 0.6rem;
+		font-weight: 600;
+		color: #444;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.rt-sheet__icon--excel {
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		background: #1e7e34;
+		border-radius: 2px;
+		flex-shrink: 0;
+	}
+	.rt-sheet__close {
+		margin-left: auto;
+		color: #aaa;
+		font-size: 0.6rem;
+		cursor: pointer;
+	}
+	.rt-sheet__table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.58rem;
+	}
+	.rt-sheet__table th {
+		background: #f5f5f5;
+		border: 1px solid #eee;
+		padding: 2px 6px;
+		color: #888;
+		font-weight: 600;
+		text-align: left;
+	}
+	.rt-sheet__table td {
+		border: 1px solid #eee;
+		padding: 2px 6px;
+		color: #444;
+		white-space: nowrap;
+	}
+	.rt-sheet__table tr:hover td { background: #fafafa; }
+	.rt-sheet__table--clean th { background: #fafafa; }
+	.rt-err-x {
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: #fee2e2;
+		color: #dc2626;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 14px;
+		font-size: 0.5rem;
+		font-weight: 700;
+	}
+
+	/* Warning badges — inline in flow */
+	.rt-warn-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		background: #fff;
+		border: 1px solid #fbbf24;
+		border-radius: 20px;
+		padding: 0.3rem 0.7rem;
+		font-size: 0.6rem;
+		font-weight: 600;
+		color: #92400e;
+		box-shadow: 0 2px 8px rgba(251,191,36,0.15);
+	}
+	.rt-warn-badge__icon { font-size: 0.72rem; flex-shrink: 0; }
+
+	/* ── AI Execution Layer Hub ── */
+	.rt-hub {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 0;
+	}
+
+	.rt-hub__block {
+		background: #fff;
+		border: 1px solid #e8e8e8;
+		border-radius: 10px;
+		padding: 0.65rem 0.75rem;
+	}
+	.rt-hub__block--center {
+		background: rgba(255,77,109,0.04);
+		border-color: rgba(255,77,109,0.2);
+	}
+	.rt-hub__block--exec {
+		background: #0f0f0f;
+	}
+
+	.rt-hub__block-label {
+		font-size: 0.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: #999;
+		margin-bottom: 0.45rem;
+	}
+	.rt-hub__block--exec .rt-hub__block-label { color: #555; }
+
+	/* Block 1 chips */
+	.rt-hub__chips {
+		display: flex;
+		flex-direction: column;
+		gap: 0.3rem;
+	}
+	.rt-hub__chip {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		background: #f7f7f7;
+		border: 1px solid #e8e8e8;
+		border-radius: 8px;
+		padding: 0.3rem 0.55rem;
+		font-size: 0.6rem;
+		font-weight: 600;
+		color: #333;
+	}
+	.rt-hub__chip-dot {
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+
+	/* Down arrow between blocks */
+	.rt-hub__down-arrow {
+		display: flex;
+		justify-content: center;
+		padding: 0.2rem 0;
+		color: var(--accent-primary);
+		opacity: 0.6;
+	}
+
+	/* Block 2: Centralised table */
+	.rt-hub__table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.56rem;
+	}
+	.rt-hub__table thead tr {
+		border-bottom: 1px solid rgba(255,77,109,0.15);
+	}
+	.rt-hub__table th {
+		text-align: left;
+		font-weight: 700;
+		color: #aaa;
+		padding: 0 0.3rem 0.3rem;
+		font-size: 0.48rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	.rt-hub__table td {
+		padding: 0.28rem 0.3rem;
+		color: #333;
+		border-bottom: 1px solid rgba(0,0,0,0.04);
+		vertical-align: middle;
+	}
+	.rt-hub__table tbody tr:last-child td { border-bottom: none; }
+	.rt-hub__td-mono {
+		font-family: monospace;
+		font-size: 0.52rem;
+		color: #888;
+	}
+	.rt-hub__synced {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 14px;
+		height: 14px;
+		background: #dcfce7;
+		color: #166534;
+		border-radius: 50%;
+		font-size: 0.5rem;
+		font-weight: 800;
+	}
+
+	/* Block 3: Execution rows */
+	.rt-hub__exec-rows {
+		display: flex;
+		flex-direction: column;
+		gap: 0.32rem;
+	}
+	.rt-hub__exec-row {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.58rem;
+		color: #666;
+		font-family: monospace;
+	}
+	.rt-hub__exec-row--done { color: #aaa; }
+	.rt-hub__exec-row--active { color: #e2e8f0; }
+	.rt-hub__exec-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+	.rt-hub__exec-dot--green { background: #22c55e; }
+	.rt-hub__exec-dot--pulse {
+		background: var(--accent-primary);
+		animation: rt-blink 1s ease-in-out infinite;
+	}
+	@keyframes rt-blink {
+		0%, 100% { opacity: 1; }
+		50% { opacity: 0.2; }
+	}
+
+	/* ── Result listings ── */
+	.rt-result-listings {
+		background: #fff;
+		border-radius: 10px;
+		overflow: hidden;
+		border: 1px solid #e8e8e8;
+	}
+	.rt-result-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.55rem 0.65rem;
+		border-bottom: 1px solid #f2f2f2;
+		font-size: 0.62rem;
+	}
+	.rt-result-item:last-child { border-bottom: none; }
+	.rt-result-check {
+		width: 16px;
+		height: 16px;
+		background: #22c55e;
+		color: #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.5rem;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+	.rt-result-img {
+		width: 28px;
+		height: 28px;
+		border-radius: 5px;
+		flex-shrink: 0;
+	}
+	.rt-result-img--black { background: #1a1a1a; }
+	.rt-result-img--denim { background: #3a5a8c; }
+	.rt-result-img--white { background: #d4c5b2; }
+	.rt-result-img--red   { background: #f5e6d3; }
+	.rt-result-info { flex: 1; min-width: 0; }
+	.rt-result-name { font-weight: 600; color: #222; font-size: 0.6rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	.rt-result-meta { display: flex; align-items: center; gap: 0.3rem; margin-top: 1px; }
+	.rt-result-sku { color: #aaa; font-size: 0.52rem; font-family: monospace; }
+	.rt-result-stock { font-size: 0.52rem; margin-top: 1px; }
+	.rt-result-stock--ok { color: #22c55e; }
+	.rt-result-price { font-weight: 700; color: #111; font-size: 0.65rem; flex-shrink: 0; }
+
+	/* ── System state ── */
+	.rt-system {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr auto 1fr;
+		gap: 0;
+		align-items: center;
+	}
+	.rt-sys-win {
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+		position: relative;
+	}
+	.rt-sys-win__header {
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid #f0f0f0;
+		font-size: 0.68rem;
+		font-weight: 700;
+		color: #222;
+		background: #fafafa;
+	}
+	.rt-sys-row--active td { background: rgba(255,77,109,0.04); }
+
+	/* connectors */
+	.rt-sys__connectors {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+		padding: 0 0.25rem;
+	}
+	.rt-sys__connector-line {
+		width: 1px;
+		height: 30px;
+		background: #ddd;
+	}
+	.rt-sys__check {
+		width: 22px;
+		height: 22px;
+		background: #22c55e;
+		color: #fff;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.65rem;
+		font-weight: 700;
+		flex-shrink: 0;
+		box-shadow: 0 2px 8px rgba(34,197,94,0.3);
+	}
+
+	/* Success badges — inline in flow */
+	.rt-success-badge {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		background: #f0fdf4;
+		border: 1px solid #bbf7d0;
+		border-radius: 20px;
+		padding: 0.3rem 0.7rem;
+		font-size: 0.6rem;
+		font-weight: 600;
+		color: #166534;
+		box-shadow: 0 2px 8px rgba(34,197,94,0.1);
+	}
+	.rt-success-badge__icon {
+		display: inline-flex;
+		width: 14px;
+		height: 14px;
+		background: #22c55e;
+		color: #fff;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+		font-size: 0.55rem;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+	/* tag cards */
+	.rt-sys-win--tags {
+		padding-top: 1.25rem;
+	}
+	.rt-tag-cards {
+		display: flex;
+		gap: 0.5rem;
+		padding: 0.5rem;
+	}
+	.rt-tag-card {
+		flex: 1;
+		background: #fafafa;
+		border: 1px solid #ebebeb;
+		border-radius: 8px;
+		overflow: hidden;
+		font-size: 0.58rem;
+	}
+	.rt-tag-card--mid {
+		opacity: 0.75;
+		transform: scale(0.97);
+	}
+	.rt-tag-card__img {
+		height: 42px;
+		background: #eee;
+	}
+	.rt-tag-card__img--black { background: #1a1a1a; }
+	.rt-tag-card__img--white { background: #f5f0e8; }
+	.rt-tag-card__img--denim { background: #3a5a8c; }
+	.rt-tag-card__meta { padding: 0.35rem 0.4rem; display: flex; flex-direction: column; gap: 2px; }
+	.rt-tag-card__row { display: flex; align-items: center; justify-content: space-between; gap: 0.25rem; }
+	.rt-tag-card__label { color: #aaa; font-size: 0.52rem; }
+	.rt-tag-card__val { color: #333; font-weight: 500; font-size: 0.55rem; }
+	.rt-tag-card__val--code { color: #888; font-family: monospace; }
+	.rt-tag-badge {
+		font-size: 0.5rem;
+		font-weight: 600;
+		padding: 1px 5px;
+		border-radius: 10px;
+	}
+	.rt-tag-badge--tshirt { background: #fce7f3; color: #9d174d; }
+	.rt-tag-badge--hoodie { background: #ede9fe; color: #5b21b6; }
+	.rt-tag-badge--denim  { background: #dbeafe; color: #1e40af; }
+
+	/* Color dots in catalog */
+	.rt-color-dot {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		border: 1px solid #ddd;
+		vertical-align: middle;
+	}
+	.rt-color-dot--white { background: #fff; }
+	.rt-color-dot--black { background: #111; border-color: #999; }
+	.rt-color-dot--purple { background: #7c3aed; }
+	.rt-color-dot--blue { background: #2563eb; }
+	.rt-color-dot--red { background: #dc2626; }
+
+	/* Type badges */
+	.rt-type-badge {
+		display: inline-block;
+		font-size: 0.55rem;
+		font-weight: 600;
+		padding: 1px 6px;
+		border-radius: 10px;
+	}
+	.rt-type-badge--tshirt { background: #fce7f3; color: #9d174d; }
+	.rt-type-badge--jacket { background: #ede9fe; color: #5b21b6; }
+	.rt-type-badge--pants  { background: #dbeafe; color: #1e40af; }
+
+	/* Img thumb */
+	.rt-img-thumb {
+		display: inline-block;
+		width: 18px;
+		height: 18px;
+		background: #f0f0f0;
+		border-radius: 3px;
+		border: 1px solid #e5e5e5;
+	}
+
+	@media (max-width: 900px) {
+		.rt-flow {
+			grid-template-columns: 1fr 28px 1fr;
+		}
+		/* hide 4th and 5th children (2nd arrow + result col) */
+		.rt-flow > *:nth-child(4),
+		.rt-flow > *:nth-child(5) { display: none; }
+	}
+	@media (max-width: 600px) {
+		.rt-flow {
+			grid-template-columns: 1fr;
+		}
+		.rt-flow__arrow { display: none; }
+		.rt-flow > *:nth-child(4),
+		.rt-flow > *:nth-child(5) { display: none; }
+		.rt-sheets-stack { height: 130px; }
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* LOGO BAR                                       */
+	/* ═══════════════════════════════════════════════ */
+	.rt-logos {
+		padding: 3.5rem 0;
+		border-top: 1px solid var(--border-muted);
+		border-bottom: 1px solid var(--border-muted);
+		margin-top: 4rem;
+	}
+	.rt-logos__row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2.5rem;
+		flex-wrap: wrap;
+	}
+	.rt-logo-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: #666;
+		opacity: 0.7;
+		transition: opacity 0.2s;
+	}
+	.rt-logo-item:hover { opacity: 1; }
+
+	/* ═══════════════════════════════════════════════ */
+	/* FEATURES BENTO GRID                            */
+	/* ═══════════════════════════════════════════════ */
+	.rt-features {
+		padding: 6rem 0;
+	}
+	.rt-features__header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.rt-features__title {
+		font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
+		margin-bottom: 0.75rem;
+	}
+	.rt-features__subtitle {
+		font-size: 1rem;
+		color: var(--text-secondary);
+		max-width: 520px;
+		margin: 0 auto 1.5rem;
+		line-height: 1.6;
+	}
+
+	/* Bento grid */
+	.rt-bento {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto auto auto;
+		gap: 1rem;
+	}
+	.rt-bento-card {
+		background: #fff;
+		border: 1px solid #ebebeb;
+		border-radius: 20px;
+		padding: 1.75rem;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+		overflow: hidden;
+	}
+	.rt-bento-card:hover {
+		box-shadow: 0 8px 40px rgba(0,0,0,0.07);
+		transform: translateY(-2px);
+	}
+	.rt-bento-card--lg {
+		grid-column: span 1;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+	.rt-bento-card--1 { grid-column: 1 / 2; grid-row: 1; }
+	.rt-bento-card--2 { grid-column: 2 / 3; grid-row: 1; }
+	.rt-bento-card--3 { grid-column: 3 / 4; grid-row: 1 / 3; }
+	.rt-bento-card--4 { grid-column: 1 / 2; grid-row: 2; }
+	.rt-bento-card--5 { grid-column: 2 / 3; grid-row: 2; }
+	.rt-bento-card--6 {
+		grid-column: 1 / 4;
+		grid-row: 3;
+		background: linear-gradient(135deg, #fff8f9 0%, #fff 100%);
+	}
+	.rt-bento-card--md {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.rt-bento-card__icon {
+		font-size: 1.5rem;
+		margin-bottom: 0.25rem;
+	}
+	.rt-bento-card h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		letter-spacing: -0.02em;
+		color: var(--text-primary);
+	}
+	.rt-bento-card p {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		line-height: 1.6;
+	}
+	.rt-bento-card__content {
+		flex-shrink: 0;
+	}
+	.rt-bento-card__visual {
+		flex: 1;
+		display: flex;
+		align-items: flex-end;
+	}
+
+	/* Mini task list dashboard */
+	.rt-mini-dash {
+		background: #fafafa;
+		border: 1px solid #f0f0f0;
+		border-radius: 10px;
+		overflow: hidden;
+		font-size: 0.68rem;
+		width: 100%;
+	}
+	.rt-mini-dash__row {
+		display: grid;
+		grid-template-columns: 1fr auto auto;
+		gap: 0.5rem;
+		padding: 0.5rem 0.75rem;
+		align-items: center;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.rt-mini-dash__row:last-child { border-bottom: none; }
+	.rt-mini-dash__row--header {
+		background: #f5f5f5;
+		font-weight: 600;
+		color: #999;
+		font-size: 0.62rem;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+	}
+	.rt-mini-dash__row--active { background: rgba(255,77,109,0.03); }
+	.rt-badge {
+		font-size: 0.6rem;
+		font-weight: 600;
+		padding: 2px 7px;
+		border-radius: 20px;
+		white-space: nowrap;
+	}
+	.rt-badge--green { background: #dcfce7; color: #16a34a; }
+	.rt-badge--pink { background: rgba(255,77,109,0.1); color: var(--accent-primary); }
+	.rt-badge--gray { background: #f3f4f6; color: #888; }
+
+	/* Inventory bar chart */
+	.rt-inv-chart {
+		width: 100%;
+	}
+	.rt-inv-chart__label {
+		font-size: 0.65rem;
+		color: #999;
+		font-weight: 500;
+		margin-bottom: 0.75rem;
+	}
+	.rt-inv-bar-group {
+		display: flex;
+		align-items: flex-end;
+		gap: 8px;
+		height: 80px;
+	}
+	.rt-inv-bar-wrap {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 4px;
+		height: 100%;
+		justify-content: flex-end;
+	}
+	.rt-inv-bar-wrap span {
+		font-size: 0.55rem;
+		color: #bbb;
+		white-space: nowrap;
+	}
+	.rt-inv-bar {
+		width: 100%;
+		border-radius: 4px 4px 0 0;
+	}
+	.rt-inv-bar--full { background: var(--accent-primary); opacity: 0.85; }
+	.rt-inv-bar--mid { background: var(--accent-primary); opacity: 0.5; }
+	.rt-inv-bar--low { background: #ffb3c0; opacity: 0.6; }
+
+	/* Testimonial bento card */
+	.rt-bento-card--testimonial {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+	.rt-bento-quote {
+		font-size: 1.05rem;
+		font-style: italic;
+		color: var(--text-primary);
+		line-height: 1.6;
+		font-weight: 500;
+		margin: 0;
+	}
+	.rt-bento-quote__author {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-top: auto;
+	}
+	.rt-bento-quote__avatar {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		background: linear-gradient(135deg, var(--accent-primary), #ff8fa3);
+		flex-shrink: 0;
+	}
+	.rt-bento-quote__author strong {
+		display: block;
+		font-size: 0.85rem;
+		font-weight: 700;
+	}
+	.rt-bento-quote__author span {
+		font-size: 0.75rem;
+		color: var(--text-secondary);
+	}
+	.rt-bento-quote__logo {
+		margin-left: auto;
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* PROCESS SECTION                                */
+	/* ═══════════════════════════════════════════════ */
+	.rt-process {
+		padding: 6rem 0;
+		background: #fafafa;
+		border-top: 1px solid var(--border-muted);
+		border-bottom: 1px solid var(--border-muted);
+	}
+	.rt-process__layout {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+		align-items: center;
+	}
+	.rt-process__title {
+		font-size: clamp(1.8rem, 3vw, 2.5rem);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
+		margin-bottom: 2.5rem;
+	}
+	.rt-process__steps {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	.rt-process__step {
+		padding-bottom: 1.75rem;
+		padding-left: 1.5rem;
+		border-left: 2px solid #eee;
+		position: relative;
+		margin-left: 0.5rem;
+	}
+	.rt-process__step:last-child {
+		padding-bottom: 0;
+		border-left-color: transparent;
+	}
+	.rt-process__step-header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 0.5rem;
+	}
+	.rt-process__step-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #ddd;
+		flex-shrink: 0;
+		position: absolute;
+		left: -6px;
+		top: 4px;
+	}
+	.rt-process__step-dot--active {
+		background: var(--accent-primary);
+		box-shadow: 0 0 0 3px rgba(255,77,109,0.2);
+	}
+	.rt-process__step h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+	.rt-process__step p {
+		font-size: 0.88rem;
+		color: var(--text-secondary);
+		line-height: 1.65;
+	}
+
+	/* Process mock */
+	.rt-process__mock {
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 12px 40px rgba(0,0,0,0.07);
+	}
+	.rt-process__mock-header {
+		padding: 0.65rem 1rem;
+		background: #fafafa;
+		border-bottom: 1px solid #eeeeee;
+	}
+	.rt-process__mock-body {
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	.rt-process-mock__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.75rem 0;
+	}
+	.rt-process-mock__label {
+		font-size: 0.75rem;
+		font-weight: 600;
+		color: var(--text-secondary);
+	}
+	.rt-process-mock__tags {
+		display: flex;
+		gap: 0.4rem;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	}
+	.rt-tag {
+		font-size: 0.65rem;
+		font-weight: 600;
+		padding: 3px 8px;
+		border-radius: 20px;
+		background: #f3f4f6;
+		color: #888;
+	}
+	.rt-tag--active {
+		background: rgba(255,77,109,0.1);
+		color: var(--accent-primary);
+	}
+	.rt-tag--green {
+		background: #dcfce7;
+		color: #16a34a;
+	}
+	.rt-process-mock__divider {
+		height: 1px;
+		background: #f0f0f0;
+	}
+	.rt-process-mock__stat-row {
+		display: flex;
+		gap: 1.5rem;
+		padding-top: 1rem;
+	}
+	.rt-process-mock__stat {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.rt-process-mock__stat span {
+		font-size: 0.65rem;
+		color: #999;
+	}
+	.rt-process-mock__stat strong {
+		font-size: 1.2rem;
+		font-weight: 800;
+		color: var(--accent-primary);
+		letter-spacing: -0.02em;
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* STATS BAR                                      */
+	/* ═══════════════════════════════════════════════ */
+	.rt-stats {
+		padding: 5rem 0;
+	}
+	.rt-stats__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 2rem;
+	}
+	.rt-stat {
+		text-align: center;
+	}
+	.rt-stat__number {
+		display: block;
+		font-size: clamp(2rem, 4vw, 3rem);
+		font-weight: 800;
+		letter-spacing: -0.04em;
+		color: var(--accent-primary);
+		margin-bottom: 0.5rem;
+	}
+	.rt-stat__label {
+		font-size: 0.85rem;
+		color: var(--text-secondary);
+		line-height: 1.4;
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* TESTIMONIALS                                   */
+	/* ═══════════════════════════════════════════════ */
+	.rt-testimonials {
+		padding: 6rem 0;
+		background: #fafafa;
+		border-top: 1px solid var(--border-muted);
+	}
+	.rt-testimonials__title {
+		font-size: clamp(1.8rem, 3vw, 2.4rem);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.rt-testimonials__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.25rem;
+	}
+	.rt-testimonial-card {
+		background: #fff;
+		border: 1px solid #ebebeb;
+		border-radius: 16px;
+		padding: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		transition: box-shadow 0.2s;
+	}
+	.rt-testimonial-card:hover {
+		box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+	}
+	.rt-testimonial-card__stars {
+		color: #fbbf24;
+		font-size: 0.9rem;
+		letter-spacing: 2px;
+	}
+	.rt-testimonial-card p {
+		font-size: 0.88rem;
+		color: var(--text-secondary);
+		line-height: 1.65;
+		flex: 1;
+	}
+	.rt-testimonial-card__author {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-top: 0.25rem;
+	}
+	.rt-testimonial-card__avatar {
+		width: 34px;
+		height: 34px;
+		border-radius: 50%;
+		flex-shrink: 0;
+	}
+	.rt-testimonial-card__avatar--1 { background: linear-gradient(135deg, #667eea, #764ba2); }
+	.rt-testimonial-card__avatar--2 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+	.rt-testimonial-card__avatar--3 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+	.rt-testimonial-card__avatar--4 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+	.rt-testimonial-card__avatar--5 { background: linear-gradient(135deg, #fa709a, #fee140); }
+	.rt-testimonial-card__avatar--6 { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+	.rt-testimonial-card__author strong {
+		display: block;
+		font-size: 0.82rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+	.rt-testimonial-card__author span {
+		font-size: 0.72rem;
+		color: var(--text-secondary);
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* CTA FOOTER                                     */
+	/* ═══════════════════════════════════════════════ */
+	.rt-cta-footer {
+		padding: 6rem 0 4rem;
+	}
+	.rt-cta-footer__inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5rem;
+		align-items: center;
+	}
+	.rt-cta-footer__text h2 {
+		font-size: clamp(2rem, 3.5vw, 2.8rem);
+		font-weight: 800;
+		letter-spacing: -0.03em;
+		line-height: 1.15;
+		margin-bottom: 1rem;
+	}
+	.rt-cta-footer__text p {
+		font-size: 1rem;
+		color: var(--text-secondary);
+		line-height: 1.7;
+		margin-bottom: 2rem;
+	}
+	.rt-cta-footer__actions {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+	.rt-cta-footer__mock {
+		background: #fff;
+		border: 1px solid #e5e5e5;
+		border-radius: 16px;
+		overflow: hidden;
+		box-shadow: 0 16px 50px rgba(0,0,0,0.08);
+	}
+	.rt-cta-footer__mock-header {
+		padding: 0.65rem 1rem;
+		background: #fafafa;
+		border-bottom: 1px solid #eee;
+	}
+	.rt-cta-footer__mock-body {
+		display: flex;
+	}
+	.rt-cta-footer__mock-sidebar {
+		width: 120px;
+		border-right: 1px solid #f0f0f0;
+		padding: 0.75rem 0;
+		display: flex;
+		flex-direction: column;
+	}
+	.rt-cta-dash-nav {
+		padding: 0.45rem 1rem;
+		font-size: 0.68rem;
+		color: #aaa;
+		cursor: pointer;
+	}
+	.rt-cta-dash-nav.active {
+		color: var(--accent-primary);
+		font-weight: 600;
+		background: rgba(255,77,109,0.06);
+	}
+	.rt-cta-footer__mock-main {
+		flex: 1;
+		padding: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+	.rt-cta-footer__stat-row {
+		display: flex;
+		gap: 0.75rem;
+	}
+	.rt-cta-footer__mini-stat {
+		flex: 1;
+		background: #fafafa;
+		border: 1px solid #f0f0f0;
+		border-radius: 8px;
+		padding: 0.6rem 0.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.rt-cta-footer__mini-stat span {
+		font-size: 0.6rem;
+		color: #aaa;
+	}
+	.rt-cta-footer__mini-stat strong {
+		font-size: 0.95rem;
+		font-weight: 700;
+		color: var(--text-primary);
+	}
+	.rt-cta-footer__chart {
+		background: #fafafa;
+		border: 1px solid #f0f0f0;
+		border-radius: 8px;
+		padding: 0.75rem;
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* WATERMARK                                      */
+	/* ═══════════════════════════════════════════════ */
+	.rt-watermark {
+		text-align: center;
+		padding: 1rem 0 3rem;
+		overflow: hidden;
+	}
+	.rt-watermark span {
+		font-size: clamp(4rem, 18vw, 14rem);
+		font-weight: 900;
+		letter-spacing: -0.05em;
+		color: transparent;
+		-webkit-text-stroke: 1px rgba(0,0,0,0.06);
+		line-height: 1;
+		display: block;
+		user-select: none;
+	}
+
+	/* ═══════════════════════════════════════════════ */
+	/* RESPONSIVE                                     */
+	/* ═══════════════════════════════════════════════ */
+	@media (max-width: 960px) {
+		.rt-bento {
+			grid-template-columns: 1fr 1fr;
+		}
+		.rt-bento-card--1 { grid-column: 1; grid-row: auto; }
+		.rt-bento-card--2 { grid-column: 2; grid-row: auto; }
+		.rt-bento-card--3 { grid-column: 1; grid-row: auto; }
+		.rt-bento-card--4 { grid-column: 2; grid-row: auto; }
+		.rt-bento-card--5 { grid-column: 1; grid-row: auto; }
+		.rt-bento-card--6 { grid-column: 1 / 3; grid-row: auto; }
+		.rt-process__layout { grid-template-columns: 1fr; gap: 3rem; }
+		.rt-cta-footer__inner { grid-template-columns: 1fr; gap: 3rem; }
+		.rt-stats__grid { grid-template-columns: repeat(2, 1fr); }
+	}
+	@media (max-width: 640px) {
+		.rt-hero__title { font-size: 2.2rem; }
+		.rt-dashboard-mock__body { height: auto; flex-direction: column; }
+		.rt-dash__sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; border-right: none; border-bottom: 1px solid #f0f0f0; }
+		.rt-dash__kpi-row { grid-template-columns: repeat(2, 1fr); }
+		.rt-bento { grid-template-columns: 1fr; }
+		.rt-bento-card--1,
+		.rt-bento-card--2,
+		.rt-bento-card--3,
+		.rt-bento-card--4,
+		.rt-bento-card--5,
+		.rt-bento-card--6 { grid-column: 1; grid-row: auto; }
+		.rt-testimonials__grid { grid-template-columns: 1fr; }
+		.rt-stats__grid { grid-template-columns: repeat(2, 1fr); }
+		.rt-insight-card { display: none; }
+	}
+</style>

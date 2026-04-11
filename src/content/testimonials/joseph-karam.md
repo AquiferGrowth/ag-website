@@ -1,5 +1,5 @@
 ---
-quote: AstraOps took full ownership of our design and development, and it
+quote: AquiferGrowth took full ownership of our design and development, and it
   showed. Every decision was tied back to one goal, driving sales, and the
   results speak for themselves. Having a team that owns the entire process end
   to end makes everything move faster and come out better.
