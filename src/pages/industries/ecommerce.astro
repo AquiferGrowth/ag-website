@@ -5,7 +5,7 @@ import Footer from '../../components/Footer.astro';
 import { SITE_TITLE } from '../../consts';
 ---
 
-<Layout title="AI-Managed Ecommerce Operations | Aquifer Growth" description="Aquifer Growth engineers and manages autonomous AI commerce operations for Shopify brands — replacing fragmented ops roles with a single AI-powered system that scales.">
+<Layout title="AI-Managed Ecommerce Operations | Aquifer Growth" description="Aquifer Growth engineers and manages autonomous AI commerce operations for Shopify brands replacing fragmented ops roles with a single AI-powered system that scales.">
 	<Header />
 	
 	<main>
@@ -17,296 +17,652 @@ import { SITE_TITLE } from '../../consts';
 			<div class="ec-hero__bg-blur ec-hero__bg-blur--right"></div>
 			<div class="ec-hero__inner container">
 				<h1 class="ec-hero__title">
-					Focus on scaling your store.<br>
-					We'll handle the operations<br>
-					behind your catalog.
+					FOCUS ON SCALING YOUR STORE.<br>
+					WE'LL HANDLE THE <span class="ec-hero__title-accent">OPERATIONS.</span>
 				</h1>
 				<p class="ec-hero__subtitle">
 					Managing product operations, inventory, and catalog health is a full-time<br class="hide-mobile">
-					job — one that doesn't scale. We take over the operational layer so you can<br class="hide-mobile">
+					job, one that doesn't scale. We take over the operational layer so you can<br class="hide-mobile">
 					focus on growth, brand, and customer experience.
 				</p>
 
 				<div class="ec-hero__cta-row">
-					<a href="/contact" class="ec-btn ec-btn--primary">See Our Process</a>
-					<a href="/contact" class="ec-btn ec-btn--outline">Book a Call</a>
+					<a href="/contact" class="ec-btn ec-btn--hero">
+						<span class="ec-cta-full">Scale Your Ecommerce Operations &rarr; Let's Chat</span>
+						<span class="ec-cta-mobile">Let's Chat</span>
+						<span class="ec-animated-dots">
+							<span></span><span></span><span></span><span></span>
+						</span>
+					</a>
 				</div>
 
-				<!-- Mock Product Table -->
-				<div class="ec-hero__table-wrap">
-					<div class="ec-table-mock">
-						<!-- Top Tabs -->
-						<div class="ec-table-mock__toolbar">
-							<div class="ec-table-mock__tabs">
-								<span class="ec-table-mock__tab active">Product Catalog Management</span>
-								<span class="ec-table-mock__tab">Collection Data Management</span>
-								<span class="ec-table-mock__tab">Inventory Management</span>
-								<span class="ec-table-mock__tab">Multi-channel Inventory Management</span>
+				<!-- System Demo Tabs -->
+				<div class="ec-demo-wrap">
+
+					<!-- Tab Nav -->
+					<div class="ec-demo-tabs">
+						<button class="ec-demo-tab active" data-tab="catalog">Catalog Management</button>
+						<button class="ec-demo-tab" data-tab="inventory">Inventory Management</button>
+						<button class="ec-demo-tab" data-tab="forecasting">Inventory Forecasting</button>
+						<button class="ec-demo-tab" data-tab="po">PO Management</button>
+						<button class="ec-demo-tab" data-tab="warehouse">Warehouse Stock</button>
+						<button class="ec-demo-tab" data-tab="cogs">COGS</button>
+						<button class="ec-demo-tab" data-tab="supplier">Supplier</button>
+					</div>
+
+					<!-- TAB 1: Catalog Management -->
+					<!-- TAB 1: Catalog Management -->
+					<!-- TAB 1: Catalog Management -->
+					<div class="ec-demo-panel active" data-panel="catalog">
+						<div class="ec-pipeline">
+							<!-- Source -->
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#0f9d58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+									catalog_FINAL_v3_USE_THIS_ONE.xlsx
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--catalog">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Product ID</span><span>Name</span><span>Category</span><span>Price</span><span>Status</span></div>
+									<div class="ec-ss-row ec-ss-err"><span class="ec-src-id">TSHRT-001</span><span>Classic Tee</span><span class="ec-src-err">#REF!</span><span>$24</span><span class="ec-src-warn">ASK JOHN</span></div>
+									<div class="ec-ss-row"><span class="ec-src-id">jkt002</span><span class="ec-src-warn">puffer jacket BLACK</span><span>Outerwear</span><span class="ec-src-err">#VALUE!</span><span></span></div>
+									<div class="ec-ss-row ec-ss-err"><span class="ec-src-id">DRSS-001</span><span class="ec-src-warn">which dress??</span><span class="ec-src-err">DUPLICATE?</span><span>$78</span><span>Draft</span></div>
+									<div class="ec-ss-row"><span class="ec-src-id">PNTS-002</span><span>Cargo Pants</span><span>Bottoms</span><span class="ec-src-warn">see sheet 2</span><span></span></div>
+									<div class="ec-ss-row ec-ss-err"><span class="ec-src-id">SWTR-001</span><span>Chunky Knit</span><span class="ec-src-err">#REF!</span><span>$55</span><span class="ec-src-warn">fix later</span></div>
+									<div class="ec-ss-row ec-ss-fade"><span class="ec-src-id">HODI-003</span><span class="ec-src-warn">hoodie (which one)</span><span>Tops</span><span>$42</span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">catalog_v2</span><span>FINAL</span><span>FINAL_USE_THIS</span><span>archive</span></div>
 							</div>
-						</div>
-
-						<!-- Table Header -->
-						<div class="ec-table-mock__header">
-							<span class="col-pid">ProductID</span>
-							<span class="col-color-label">Color</span>
-							<span class="col-ptype">Product Type</span>
-							<span class="col-imgs">Images</span>
-							<span class="col-qty col-qty--sm">Received</span>
-							<span class="col-qty col-qty--sm">Sold</span>
-							<span class="col-qty col-qty--sm">In Stock</span>
-						</div>
-
-						<!-- Row 1 — highlighted (selected) -->
-						<div class="ec-table-mock__row ec-table-mock__row--highlight">
-							<span class="col-pid">TSHRT-001</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--white"></span>White</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--tshirt">T-shirt</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=80&h=80&fit=crop" alt="White T-shirt" /></span></span>
-							<span class="col-qty">751</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">785</span>
-						</div>
-
-						<!-- Row 2 -->
-						<div class="ec-table-mock__row ec-table-mock__row--highlight-alt">
-							<span class="col-pid">TSHRT-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--black"></span>Black</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--tshirt">T-shirt</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">296</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">978</span>
-						</div>
-
-						<!-- Row 3 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">JKT-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--purple"></span>Purple</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--jacket">Jacket</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">278</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">372</span>
-						</div>
-
-						<!-- Row 4 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">PNTS-001</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--blue"></span>Blue</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--pants">Pants</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">296</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">334</span>
-						</div>
-
-						<!-- Row 5 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">PNTS-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--red"></span>Red</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--pants">Pants</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">137</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">—</span>
-						</div>
-
-						<!-- Row 6 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">DRSS-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--purple"></span>Purple</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--dress">Dress</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">312</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">162</span>
-						</div>
-
-						<!-- Row 7 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">DRSS-001</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--blue"></span>Blue</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--dress">Dress</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">179</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">471</span>
-						</div>
-
-						<!-- Row 8 (partially visible) -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">SWTR-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--white"></span></span>
-							<span class="col-ptype"></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">813</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">893</span>
-						</div>
-
-						<!-- Row 9 -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">SKRT-001</span>
-							<span class="col-color-label"></span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--skirt">Skirt</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">—</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">279</span>
-						</div>
-
-						<!-- Rows 10-11 (bottom, partially covered) -->
-						<div class="ec-table-mock__row">
-							<span class="col-pid">HODI-002</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--green"></span>Green</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--hoodie">Hoodie</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">298</span>
-							<span class="col-qty">462</span>
-							<span class="col-qty">499</span>
-						</div>
-
-						<div class="ec-table-mock__row">
-							<span class="col-pid">HODI-003</span>
-							<span class="col-color-label"><span class="ec-color-dot ec-color-dot--black"></span>Black</span>
-							<span class="col-ptype"><span class="ec-type-badge ec-type-badge--hoodie">Hoodie</span></span>
-							<span class="col-imgs"><span class="ec-img-thumb"></span></span>
-							<span class="col-qty">497</span>
-							<span class="col-qty"></span>
-							<span class="col-qty">413</span>
-						</div>
-
-						<!-- ─── Floating Product Detail Card ─── -->
-						<div class="ec-product-card">
-							<div class="ec-product-card__cursor">
-								<span class="ec-product-card__cursor-tag">You</span>
-							</div>
-							<div class="ec-product-card__img">
-								<img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop" alt="White T-shirt" />
-							</div>
-							<div class="ec-product-card__details">
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">Product ID</span>
-									<span class="ec-product-card__value">TSHRT-001</span>
+							<!-- Engine -->
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Syncing &amp; cleaning</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0s"></div>
+									<div class="ec-packet" style="animation-delay:0.7s"></div>
+									<div class="ec-packet" style="animation-delay:1.4s"></div>
+									<div class="ec-packet" style="animation-delay:2.1s"></div>
+									<div class="ec-packet" style="animation-delay:2.8s"></div>
 								</div>
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">Color</span>
-									<span class="ec-product-card__value"><span class="ec-color-dot ec-color-dot--white" style="margin-right:4px;"></span>White</span>
-								</div>
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">Product Type</span>
-									<span class="ec-product-card__value"><span class="ec-type-badge ec-type-badge--tshirt" style="font-size:0.65rem;">T-shirt</span></span>
-								</div>
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">Received Quantity</span>
-									<span class="ec-product-card__value ec-product-card__value--blue">751</span>
-								</div>
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">Sold Quantity</span>
-									<span class="ec-product-card__value ec-product-card__value--blue">740</span>
-								</div>
-								<div class="ec-product-card__row">
-									<span class="ec-product-card__label">In Stock</span>
-									<span class="ec-product-card__value ec-product-card__value--blue">785</span>
-								</div>
-								<div class="ec-product-card__actions">
-									<button class="ec-product-card__btn">Receive Product</button>
-									<button class="ec-product-card__btn">Sell Product</button>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Deduplicated</div>
+									<div class="ec-step ec-step--done">✓ Standardised IDs</div>
+									<div class="ec-step ec-step--active">⟳ Syncing Shopify</div>
 								</div>
 							</div>
-						</div>
-
-						<!-- ─── "Saved hours" Toast ─── -->
-						<div class="ec-toast">
-							<span class="ec-toast__icon">✓</span>
-							<span class="ec-toast__text">Saved 5.35 hours by not Ctrl+C / Ctrl+V</span>
-						</div>
-
-						<!-- ─── Import Bar ─── -->
-						<div class="ec-import-bar">
-							<div class="ec-import-bar__file">
-								<span class="ec-import-bar__file-icon">📄</span>
-								<span class="ec-import-bar__file-info">
-									<strong>Inventory for Aug - Oct 2024, I guess?.csv</strong>
-									<span>Last edited 25 Nov 2024</span>
-								</span>
+							<!-- Output: Shopify -->
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									Shopify · Products
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--output">
+									<div class="ec-ss-head"><span>Product</span><span>Category</span><span>SKUs</span><span>Price</span><span>Status</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Classic Tee</span>
+										<span>Tops</span><span>4</span><span>$24.00</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Puffer Jacket</span>
+										<span>Outerwear</span><span>3</span><span>$89.00</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Wrap Dress</span>
+										<span>Dresses</span><span>6</span><span>$78.00</span>
+										<span><em class="ec-badge ec-badge--yellow">Draft</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Cargo Pants</span>
+										<span>Bottoms</span><span>5</span><span>$62.00</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Chunky Knit</span>
+										<span>Knitwear</span><span>2</span><span>$55.00</span>
+										<span><em class="ec-badge ec-badge--red">Archived</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>Zip Hoodie</span>
+										<span>Tops</span><span>3</span><span>$42.00</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync">↻ Last synced 2 min ago · 142 products</div>
 							</div>
-							<button class="ec-import-bar__btn">Import from Sheets</button>
 						</div>
 					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- ═══════════════════════════════════════════ -->
-		<!-- LOGO BAR                                   -->
-		<!-- ═══════════════════════════════════════════ -->
-		<section class="ec-logos">
-			<div class="container">
-				<div class="ec-logos__row">
-					<span class="ec-logo-item">
-						<svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Shopify
-					</span>
-					<span class="ec-logo-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 17l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/><path d="M2 12l10 5 10-5" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Asana
-					</span>
-					<span class="ec-logo-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="3" stroke="#1A1A1A" stroke-width="1.5"/><path d="M9 9h6M9 12h6M9 15h3" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Framer
-					</span>
-					<span class="ec-logo-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="#1A1A1A" stroke-width="1.5"/><path d="M4 12h8v8" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Webflow
-					</span>
-					<span class="ec-logo-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#1A1A1A" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Attentive
-					</span>
-					<span class="ec-logo-item">
-						<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-9 4 18 3-9h4" stroke="#1A1A1A" stroke-width="1.5"/></svg>
-						Klaviyo
-					</span>
+					<!-- TAB 2: Inventory Management -->
+					<div class="ec-demo-panel" data-panel="inventory">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#0f9d58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+									Stock_Check_Monday_REAL.xlsx
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--inv">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Product</span><span>In Stock</span><span>Reserved</span><span>Available</span><span>Notes</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Wrap Dress</span><span class="ec-src-err">42?? or 24</span><span>10</span><span class="ec-src-err">#REF!</span><span class="ec-src-warn">check WH</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Puffer Jacket</span><span>17</span><span class="ec-src-warn">idk</span><span class="ec-src-err">#VALUE!</span><span class="ec-src-warn">sold some?</span></div>
+									<div class="ec-ss-row"><span>Classic Tee</span><span>785</span><span class="ec-src-strike">32</span><span class="ec-src-warn">Mike updated</span><span></span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Cargo Pants</span><span class="ec-src-err">334 or 343</span><span>18</span><span>316</span><span class="ec-src-warn">two versions?</span></div>
+									<div class="ec-ss-row"><span>Zip Hoodie</span><span>413</span><span>24</span><span class="ec-src-warn">see WH B</span><span></span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>Chunky Knit</span><span class="ec-src-err">#REF!</span><span>0</span><span class="ec-src-err">#REF!</span><span class="ec-src-warn">fix later</span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">Stock_Mon</span><span>Stock_Tue</span><span>OLD DO NOT USE</span><span>WH B</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Reconciling stock</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.2s"></div>
+									<div class="ec-packet" style="animation-delay:0.9s"></div>
+									<div class="ec-packet" style="animation-delay:1.6s"></div>
+									<div class="ec-packet" style="animation-delay:2.3s"></div>
+									<div class="ec-packet" style="animation-delay:3.0s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Merged 3 sheets</div>
+									<div class="ec-step ec-step--done">✓ Resolved conflicts</div>
+									<div class="ec-step ec-step--active">⟳ Updating Shopify</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									Shopify · Inventory
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--inv-out">
+									<div class="ec-ss-head"><span>Product</span><span>Stock</span><span>Reserved</span><span>Available</span><span>Status</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Classic Tee</span>
+										<span>785</span><span>32</span><span>753</span>
+										<span><em class="ec-badge ec-badge--green">Healthy</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Cargo Pants</span>
+										<span>334</span><span>18</span><span>316</span>
+										<span><em class="ec-badge ec-badge--green">Healthy</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>Zip Hoodie</span>
+										<span>413</span><span>24</span><span>389</span>
+										<span><em class="ec-badge ec-badge--green">Healthy</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Wrap Dress</span>
+										<span class="ec-val--red">42</span><span>10</span><span class="ec-val--red">32</span>
+										<span><em class="ec-badge ec-badge--red">Low Stock</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Puffer Jacket</span>
+										<span class="ec-val--red">17</span><span>5</span><span class="ec-val--red">12</span>
+										<span><em class="ec-badge ec-badge--red">Low Stock</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Chunky Knit</span>
+										<span>219</span><span>0</span><span>219</span>
+										<span><em class="ec-badge ec-badge--green">Healthy</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync ec-out-sync--warn">⚠ 2 items below threshold POs auto-drafted</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB 3: Inventory Forecasting -->
+					<div class="ec-demo-panel" data-panel="forecasting">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#0f9d58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+									Forecast_Q4_guesses.xlsx
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--fc">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Product</span><span>Last Month</span><span>Next Guess</span><span>Order?</span><span>Who decides</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Wrap Dress</span><span>180</span><span class="ec-src-warn">maybe 200?</span><span class="ec-src-err">YES URGENT</span><span class="ec-src-warn">Sarah</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Puffer Jacket</span><span class="ec-src-strike">90</span><span class="ec-src-warn">100 or 50 idk</span><span class="ec-src-err">ASAP!!!</span><span class="ec-src-warn">ask Mike</span></div>
+									<div class="ec-ss-row"><span>Classic Tee</span><span>340</span><span>~350</span><span class="ec-src-warn">probably fine</span><span></span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Zip Hoodie</span><span class="ec-src-err">#REF!</span><span class="ec-src-err">#REF!</span><span class="ec-src-warn">broken formula</span><span class="ec-src-warn">fix later</span></div>
+									<div class="ec-ss-row"><span>Cargo Pants</span><span>150</span><span>~180</span><span class="ec-src-warn">ask Mike</span><span></span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>Chunky Knit</span><span>60</span><span class="ec-src-warn">70 maybe?</span><span></span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">Forecast</span><span>Q3 (old)</span><span>Mike's version</span><span>DO NOT TOUCH</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Calculating forecasts</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.1s"></div>
+									<div class="ec-packet" style="animation-delay:0.8s"></div>
+									<div class="ec-packet" style="animation-delay:1.5s"></div>
+									<div class="ec-packet" style="animation-delay:2.2s"></div>
+									<div class="ec-packet" style="animation-delay:2.9s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Pulled sales data</div>
+									<div class="ec-step ec-step--done">✓ Modelled demand</div>
+									<div class="ec-step ec-step--active">⟳ Generating alerts</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									Forecast Dashboard
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--fc-out">
+									<div class="ec-ss-head"><span>Product</span><span>Trend</span><span>Days Left</span><span>Avg/Day</span><span>Action</span></div>
+									<div class="ec-ss-row ec-out-row--in ec-ss-err">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Wrap Dress</span>
+										<div class="ec-fc-mini"><div style="width:8%;background:#e74c3c"></div></div>
+										<span class="ec-val--red">5d ⚠</span><span>8/day</span>
+										<span><em class="ec-badge ec-badge--red">Order Now</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in ec-ss-err" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Puffer Jacket</span>
+										<div class="ec-fc-mini"><div style="width:4%;background:#e74c3c"></div></div>
+										<span class="ec-val--red">3d ⚠</span><span>5/day</span>
+										<span><em class="ec-badge ec-badge--red">Order Now</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>Zip Hoodie</span>
+										<div class="ec-fc-mini"><div style="width:56%;background:#f39c12"></div></div>
+										<span style="color:#f39c12">45d</span><span>9/day</span>
+										<span><em class="ec-badge ec-badge--blue">Order Soon</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Cargo Pants</span>
+										<div class="ec-fc-mini"><div style="width:68%;background:#27ae60"></div></div>
+										<span class="ec-val--green">55d</span><span>6/day</span>
+										<span><em class="ec-badge ec-badge--green">On Track</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Classic Tee</span>
+										<div class="ec-fc-mini"><div style="width:82%;background:#27ae60"></div></div>
+										<span class="ec-val--green">65d</span><span>12/day</span>
+										<span><em class="ec-badge ec-badge--green">On Track</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Chunky Knit</span>
+										<div class="ec-fc-mini"><div style="width:90%;background:#27ae60"></div></div>
+										<span class="ec-val--green">73d</span><span>3/day</span>
+										<span><em class="ec-badge ec-badge--green">On Track</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync ec-out-sync--warn">⚠ 2 POs auto-drafted · Restock alerts sent</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB 4: PO Management -->
+					<div class="ec-demo-panel" data-panel="po">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<span style="font-size:0.85rem">📧</span>
+									WhatsApp + Email + Sheets
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--po">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Supplier</span><span>Items</span><span>Confirmed?</span><span>ETA</span><span>Status</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Sunrise Textiles</span><span>Wrap Dress ×200</span><span class="ec-src-warn">WhatsApp??</span><span class="ec-src-err">Jan 28 or Feb?</span><span class="ec-src-warn">check email</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Atlas Mfg.</span><span>Puffer ×150</span><span class="ec-src-err">NO REPLY</span><span class="ec-src-warn">Feb 3 (maybe)</span><span class="ec-src-strike">Sent</span></div>
+									<div class="ec-ss-row"><span>Bolt Denim Co.</span><span>Cargo ×300</span><span>✓ email</span><span>Jan 19</span><span class="ec-src-warn">ask warehouse</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Sunrise Textiles</span><span class="ec-src-warn">Classic Tee – how many?</span><span class="ec-src-err">#REF!</span><span class="ec-src-warn">see Jan sheet</span><span></span></div>
+									<div class="ec-ss-row"><span>Atlas Mfg.</span><span>Zip Hoodie ×250</span><span class="ec-src-warn">in notebook</span><span>Feb 10</span><span></span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>Bolt Denim Co.</span><span>Chunky ×100</span><span class="ec-src-warn">maybe confirmed</span><span></span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">POs Jan</span><span>POs Dec</span><span>WhatsApp log</span><span>Emails paste</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Creating POs</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.3s"></div>
+									<div class="ec-packet" style="animation-delay:1.0s"></div>
+									<div class="ec-packet" style="animation-delay:1.7s"></div>
+									<div class="ec-packet" style="animation-delay:2.4s"></div>
+									<div class="ec-packet" style="animation-delay:3.1s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ POs generated</div>
+									<div class="ec-step ec-step--done">✓ PDFs created</div>
+									<div class="ec-step ec-step--active">⟳ Emailing suppliers</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									PO Tracker
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--po-out">
+									<div class="ec-ss-head"><span>PO #</span><span>Supplier</span><span>Items</span><span>Total</span><span>Status</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-src-id">PO-041</span><span>Sunrise Textiles</span><span>Wrap Dress ×200</span><span>$4,800</span>
+										<span><em class="ec-badge ec-badge--blue">Confirmed</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-src-id">PO-040</span><span>Atlas Mfg.</span><span>Puffer Jacket ×150</span><span>$9,750</span>
+										<span><em class="ec-badge ec-badge--yellow">Sent</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-src-id">PO-039</span><span>Sunrise Textiles</span><span>Classic Tee ×500</span><span>$6,250</span>
+										<span><em class="ec-badge ec-badge--green">Received</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-src-id">PO-038</span><span>Bolt Denim Co.</span><span>Cargo Pants ×300</span><span>$11,400</span>
+										<span><em class="ec-badge ec-badge--green">Received</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-src-id">PO-037</span><span>Atlas Mfg.</span><span>Zip Hoodie ×250</span><span>$7,500</span>
+										<span><em class="ec-badge ec-badge--yellow">Sent</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-src-id">PO-036</span><span>Bolt Denim Co.</span><span>Chunky Knit ×100</span><span>$3,200</span>
+										<span><em class="ec-badge ec-badge--blue">Confirmed</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync">✓ PDFs sent · Suppliers notified automatically</div>
+							</div>
+						</div>
+					</div>
+
+
+					<!-- TAB 5: Warehouse Stock -->
+					<div class="ec-demo-panel" data-panel="warehouse">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<span style="font-size:0.85rem">📦</span>
+									Warehouse_Count_DAVE.xlsx + clipboard notes
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--wh">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Product</span><span>Bin</span><span>Manual Count</span><span>Last Counted</span><span>By</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Classic Tee / White</span><span class="ec-src-warn">A3? or A4</span><span class="ec-src-err">785 or 783</span><span>Mon morning</span><span class="ec-src-warn">Dave</span></div>
+									<div class="ec-ss-row"><span>Cargo Pants / Blue</span><span>C7</span><span>334</span><span class="ec-src-warn">last week</span><span>Sarah</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Wrap Dress / Purple</span><span class="ec-src-err">?? can't find</span><span class="ec-src-err">42 or 24</span><span class="ec-src-warn">3 days ago</span><span class="ec-src-warn">recount?</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Puffer Jacket / Black</span><span>B2</span><span class="ec-src-err">17 (damaged 3)</span><span>Yesterday</span><span class="ec-src-warn">check notes</span></div>
+									<div class="ec-ss-row"><span>Zip Hoodie / Black</span><span>A9</span><span>413</span><span>Today</span><span>Mike</span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>Chunky Knit / Grey</span><span class="ec-src-warn">moved from D1</span><span>219</span><span class="ec-src-warn">not sure</span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">WH Count</span><span>Dave's notes</span><span>Old Count</span><span>Damaged</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Reconciling stock</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.15s"></div>
+									<div class="ec-packet" style="animation-delay:0.85s"></div>
+									<div class="ec-packet" style="animation-delay:1.55s"></div>
+									<div class="ec-packet" style="animation-delay:2.25s"></div>
+									<div class="ec-packet" style="animation-delay:2.95s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Mapped bin locations</div>
+									<div class="ec-step ec-step--done">✓ Resolved discrepancies</div>
+									<div class="ec-step ec-step--active">⟳ Syncing to system</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									Warehouse Dashboard
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--wh-out">
+									<div class="ec-ss-head"><span>Product</span><span>Bin</span><span>Qty</span><span>Condition</span><span>Status</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Classic Tee / White</span>
+										<span>A-03</span><span>785</span><span>Good</span>
+										<span><em class="ec-badge ec-badge--green">Verified</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Cargo Pants / Blue</span>
+										<span>C-07</span><span>334</span><span>Good</span>
+										<span><em class="ec-badge ec-badge--green">Verified</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>Zip Hoodie / Black</span>
+										<span>A-09</span><span>413</span><span>Good</span>
+										<span><em class="ec-badge ec-badge--green">Verified</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Wrap Dress / Purple</span>
+										<span>B-05</span><span>42</span><span>Good</span>
+										<span><em class="ec-badge ec-badge--yellow">Recount</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Puffer Jacket / Black</span>
+										<span>B-02</span><span>14</span><span class="ec-val--red">3 damaged</span>
+										<span><em class="ec-badge ec-badge--red">Flag</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Chunky Knit / Grey</span>
+										<span>D-01</span><span>219</span><span>Good</span>
+										<span><em class="ec-badge ec-badge--green">Verified</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync">↻ Live sync · 3 damaged items flagged for review</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB 6: COGS -->
+					<div class="ec-demo-panel" data-panel="cogs">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#0f9d58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+									COGS_Finance_v2_FINAL.xlsx
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--cogs">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Product</span><span>Unit Cost</span><span>Units Sold</span><span>Total COGS</span><span>Margin</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Classic Tee</span><span class="ec-src-warn">$8 or $9.50??</span><span>740</span><span class="ec-src-err">#REF!</span><span class="ec-src-warn">ask finance</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Puffer Jacket</span><span>$38</span><span class="ec-src-err">idk – check WH</span><span class="ec-src-err">#VALUE!</span><span class="ec-src-warn">wrong formula</span></div>
+									<div class="ec-ss-row"><span>Wrap Dress</span><span>$22</span><span>148</span><span class="ec-src-warn">=D4*C4 (broken)</span><span class="ec-src-err">#REF!</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Cargo Pants</span><span class="ec-src-strike">$18</span><span>$21</span><span>282</span><span class="ec-src-warn">two cost versions</span></div>
+									<div class="ec-ss-row"><span>Zip Hoodie</span><span>$16</span><span>389</span><span class="ec-src-warn">$6,224?</span><span class="ec-src-warn">check again</span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>Chunky Knit</span><span>$24</span><span class="ec-src-err">#REF!</span><span class="ec-src-err">#VALUE!</span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">COGS Jan</span><span>COGS Dec</span><span>Finance copy</span><span>DO NOT EDIT</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Calculating COGS</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.05s"></div>
+									<div class="ec-packet" style="animation-delay:0.75s"></div>
+									<div class="ec-packet" style="animation-delay:1.45s"></div>
+									<div class="ec-packet" style="animation-delay:2.15s"></div>
+									<div class="ec-packet" style="animation-delay:2.85s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Verified unit costs</div>
+									<div class="ec-step ec-step--done">✓ Pulled actual sales</div>
+									<div class="ec-step ec-step--active">⟳ Computing margins</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									COGS Dashboard
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--cogs-out">
+									<div class="ec-ss-head"><span>Product</span><span>Unit Cost</span><span>Units Sold</span><span>Total COGS</span><span>Margin %</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Classic Tee</span>
+										<span>$9.50</span><span>740</span><span>$7,030</span>
+										<span class="ec-val--green">60.4%</span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Cargo Pants</span>
+										<span>$21.00</span><span>282</span><span>$5,922</span>
+										<span class="ec-val--green">66.1%</span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>Zip Hoodie</span>
+										<span>$16.00</span><span>389</span><span>$6,224</span>
+										<span class="ec-val--green">61.9%</span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Wrap Dress</span>
+										<span>$22.00</span><span>148</span><span>$3,256</span>
+										<span class="ec-val--green">71.8%</span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Puffer Jacket</span>
+										<span>$38.00</span><span>133</span><span>$5,054</span>
+										<span style="color:#f39c12">57.3%</span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Chunky Knit</span>
+										<span>$24.00</span><span>81</span><span>$1,944</span>
+										<span class="ec-val--green">56.4%</span>
+									</div>
+								</div>
+								<div class="ec-out-sync">↻ Auto-calculated from live sales + verified unit costs</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- TAB 7: Supplier Management -->
+					<div class="ec-demo-panel" data-panel="supplier">
+						<div class="ec-pipeline">
+							<div class="ec-pipe-col ec-pipe-col--source">
+								<div class="ec-pipe-header">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#0f9d58"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/><path d="M7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z" fill="#fff"/></svg>
+									Suppliers_contacts_2022.xlsx + emails
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--sup">
+									<div class="ec-ss-head"><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+									<div class="ec-ss-subhead"><span>Supplier</span><span>Contact</span><span>Lead Time</span><span>MOQ</span><span>Terms</span></div>
+									<div class="ec-ss-row"><span>Sunrise Textiles</span><span class="ec-src-warn">raj@… (old email?)</span><span class="ec-src-err">30 or 45 days</span><span>200</span><span class="ec-src-warn">30 net (check)</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Atlas Mfg.</span><span class="ec-src-err">LEFT COMPANY</span><span>21 days</span><span class="ec-src-warn">50? 100?</span><span class="ec-src-warn">ask Mike</span></div>
+									<div class="ec-ss-row"><span>Bolt Denim Co.</span><span>james@bolt…</span><span>14 days</span><span>100</span><span>Net 60</span></div>
+									<div class="ec-ss-row ec-ss-err"><span>Korea Knits</span><span class="ec-src-warn">WeChat only</span><span class="ec-src-err">#REF!</span><span class="ec-src-err">unknown</span><span class="ec-src-warn">wire transfer?</span></div>
+									<div class="ec-ss-row"><span>Mumbai Mills</span><span class="ec-src-warn">see email chain</span><span>60 days</span><span>500</span><span class="ec-src-warn">COD I think</span></div>
+									<div class="ec-ss-row ec-ss-fade"><span>EcoFabrics Ltd</span><span>hello@eco…</span><span class="ec-src-warn">varies</span><span>150</span><span></span></div>
+								</div>
+								<div class="ec-src-tabs"><span class="a">Suppliers</span><span>Old contacts</span><span>Email threads</span><span>WeChat</span></div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--engine">
+								<div class="ec-engine-badge"><span class="ec-engine-pulse"></span>AQ</div>
+								<div class="ec-engine-label">Syncing suppliers</div>
+								<div class="ec-packets">
+									<div class="ec-packet" style="animation-delay:0.25s"></div>
+									<div class="ec-packet" style="animation-delay:0.95s"></div>
+									<div class="ec-packet" style="animation-delay:1.65s"></div>
+									<div class="ec-packet" style="animation-delay:2.35s"></div>
+									<div class="ec-packet" style="animation-delay:3.05s"></div>
+								</div>
+								<div class="ec-engine-steps">
+									<div class="ec-step ec-step--done">✓ Verified contacts</div>
+									<div class="ec-step ec-step--done">✓ Mapped lead times</div>
+									<div class="ec-step ec-step--active">⟳ Building profiles</div>
+								</div>
+							</div>
+							<div class="ec-pipe-col ec-pipe-col--output">
+								<div class="ec-pipe-header ec-pipe-header--shopify">
+									<svg width="13" height="13" viewBox="0 0 24 24" fill="#96bf48"><path d="M20.9 6.6c0-.1-.1-.2-.2-.2l-2-.2-1.5-1.5c-.1-.1-.4-.1-.5 0L15.3 5c-.3-.9-.8-1.8-1.7-2.5C12.7 1.8 11.9 1.5 11 1.5c-.3 0-.5 0-.8.1-.2-.3-.5-.5-.9-.7C8.6.4 7.6.7 6.8 1.8 6.2 2.7 5.9 3.8 5.9 4.9l-1.6.5c-.5.2-.5.2-.6.6L2 18.9l14.2 2.1 6.8-1.5S20.9 6.7 20.9 6.6z"/></svg>
+									Supplier Directory
+								</div>
+								<div class="ec-ss-grid ec-ss-grid--sup-out">
+									<div class="ec-ss-head"><span>Supplier</span><span>Contact</span><span>Lead Time</span><span>MOQ</span><span>Status</span></div>
+									<div class="ec-ss-row ec-out-row--in">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#80cbc4"></span>Sunrise Textiles</span>
+										<span>raj@sunrise.com</span><span>30 days</span><span>200 units</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.2s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#b39ddb"></span>Atlas Mfg.</span>
+										<span>sales@atlas.com</span><span>21 days</span><span>100 units</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.4s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#8ecef9"></span>Bolt Denim Co.</span>
+										<span>james@bolt.com</span><span>14 days</span><span>100 units</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.6s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#ffcc80"></span>Korea Knits</span>
+										<span>kr.knits@gmail.com</span><span>35 days</span><span>200 units</span>
+										<span><em class="ec-badge ec-badge--yellow">Verify</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:0.8s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#f48fb1"></span>Mumbai Mills</span>
+										<span>orders@mumbai.com</span><span>60 days</span><span>500 units</span>
+										<span><em class="ec-badge ec-badge--blue">Long Lead</em></span>
+									</div>
+									<div class="ec-ss-row ec-out-row--in" style="animation-delay:1s">
+										<span class="ec-out-prod"><span class="ec-out-dot" style="background:#a5d6a7"></span>EcoFabrics Ltd</span>
+										<span>hello@ecofabrics.com</span><span>28 days</span><span>150 units</span>
+										<span><em class="ec-badge ec-badge--green">Active</em></span>
+									</div>
+								</div>
+								<div class="ec-out-sync">✓ 6 suppliers verified · Lead times mapped to PO system</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
-			</div>
-		</section>
+			</section>
+
 
 		<!-- ═══════════════════════════════════════════ -->
 		<!-- WHY WE'RE THE BEST                          -->
 		<!-- ═══════════════════════════════════════════ -->
 		<section class="ec-why">
 			<div class="container">
-				<div class="ec-why__grid">
-					<div class="ec-why__left">
-						<h2 class="ec-why__title">
-							Why are we the best<br>for the job
-						</h2>
-					</div>
-					<div class="ec-why__right">
-						<p class="ec-why__body">
-							We're not a SaaS tool. We're not a freelancer. We're an operations partner that builds and manages the systems your catalog needs — from taxonomy to fulfillment readiness. We embed into your stack, systematize what's broken, and keep it running.
-						</p>
-						<div class="ec-why__features">
-							<div class="ec-why__feature">
-								<span class="ec-why__feature-icon">⚡</span>
-								<div>
-									<strong>Built for Shopify Brands</strong>
-									<p>We specialize in the operational gaps that grow as your SKU count grows.</p>
+				<div class="ec-why__card">
+					<div class="ec-why__grid">
+						<div class="ec-why__left">
+							<h2 class="ec-why__title">
+								WHY AQUIFERGROWTH<br>FOR ECOMMERCE
+							</h2>
+							<p class="ec-why__sub">We provide a tool and an operations partner that builds and manages the systems your store needs, from catalog to fulfillment. We embed into your stack, systematize what's broken, and keep it running.</p>
+						</div>
+						<div class="ec-why__right">
+							<div class="ec-why__features">
+								<div class="ec-why__feature">
+									<div class="ec-why__feature-icon">
+										<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+									</div>
+									<div>
+										<strong>Built for Shopify Brands</strong>
+										<p>We specialize in the operational gaps that grow as your SKU count grows.</p>
+									</div>
 								</div>
-							</div>
-							<div class="ec-why__feature">
-								<span class="ec-why__feature-icon">🔁</span>
-								<div>
-									<strong>Managed, Not Just Built</strong>
-									<p>We don't hand you a tool and disappear. We run it for you, continuously.</p>
+								<div class="ec-why__feature">
+									<div class="ec-why__feature-icon">
+										<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+									</div>
+									<div>
+										<strong>Managed, Not Just Built</strong>
+										<p>We don't hand you a tool and disappear. We run it for you, continuously.</p>
+									</div>
 								</div>
-							</div>
-							<div class="ec-why__feature">
-								<span class="ec-why__feature-icon">📊</span>
-								<div>
-									<strong>AI-Powered at the Core</strong>
-									<p>Every system we deploy uses AI to automate, classify, and surface insights.</p>
+								<div class="ec-why__feature">
+									<div class="ec-why__feature-icon">
+										<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+									</div>
+									<div>
+										<strong>AI-Powered at the Core</strong>
+										<p>Every system we deploy uses AI to automate, classify, and surface insights.</p>
+									</div>
+								</div>
+								<div class="ec-why__feature">
+									<div class="ec-why__feature-icon">
+										<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+									</div>
+									<div>
+										<strong>One System, All Channels</strong>
+										<p>Shopify, wholesale, marketplaces, one centralized operational layer that keeps everything in sync.</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -320,140 +676,211 @@ import { SITE_TITLE } from '../../consts';
 		<!-- ═══════════════════════════════════════════ -->
 		<section class="ec-question">
 			<div class="container">
-				<div class="ec-question__badge">Managed Operations</div>
-				<h2 class="ec-question__title">
-					When was the last time you could actually step away<br class="hide-mobile">
-					from day-to-day operations?
-				</h2>
-				<p class="ec-question__body">
-					Most ecommerce brands hit a wall around 5,000 SKUs. Catalog quality drops, inventory errors compound, and the team is constantly firefighting. Sound familiar?
-				</p>
+				<div class="ec-question__inner">
+					<div class="ec-question__badge">Managed Operations</div>
+					<h2 class="ec-question__title">
+						WHEN WAS THE LAST TIME YOU COULD ACTUALLY STEP AWAY FROM DAY-TO-DAY OPERATIONS?
+					</h2>
+					<p class="ec-question__body">
+						Most ecommerce brands hit a wall faster than they expect. Catalog quality drops, inventory errors compound, and the team is constantly firefighting. Sound familiar?
+					</p>
+				</div>
 			</div>
 		</section>
 
 		<!-- ═══════════════════════════════════════════ -->
-		<!-- SIMPLIFY OPERATIONS — DARK SECTION         -->
+		<!-- SIMPLIFY OPERATIONS DARK SECTION         -->
 		<!-- ═══════════════════════════════════════════ -->
 		<section class="ec-capabilities">
 			<div class="container">
-				<h2 class="ec-capabilities__title">Simplify Operations. Unlock Growth.</h2>
-				<div class="ec-capabilities__subtitle-row">
+				<div class="ec-capabilities__header">
+					<h2 class="ec-capabilities__title">SIMPLIFY OPERATIONS.<br>UNLOCK GROWTH.</h2>
 					<a href="/contact" class="ec-btn ec-btn--pink-sm">See What We Manage →</a>
 				</div>
 
 				<div class="ec-capabilities__grid">
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">🏗️</div>
-						<h3>Product Catalog Management</h3>
-						<p>Centralized AI-synced hierarchies that scale across your entire catalog, attributes, and variant groups.</p>
-					</div>
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">📦</div>
-						<h3>Catalog Enrichment</h3>
-						<p>Automated title optimization, description generation, and attribute standardization across thousands of SKUs.</p>
-					</div>
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">⚡</div>
-						<h3>Increased Store Visibility</h3>
-						<p>AI-driven collection logic, tagging, and discoverability improvements that directly boost conversion.</p>
-					</div>
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">📈</div>
-						<h3>Intelligent Data Cleaning &amp; Sorting</h3>
-						<p>Rule-based and AI-powered deduplication, normalization, and cataloging that keeps your data pristine.</p>
-					</div>
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">🔍</div>
-						<h3>Effortless SEO Management</h3>
-						<p>Automated meta tags, structured data, and crawlable taxonomies engineered for search dominance.</p>
-					</div>
-					<div class="ec-cap-card">
-						<div class="ec-cap-card__icon">🧠</div>
-						<h3>Full-cycle BI Integration</h3>
-						<p>Real-time dashboards connecting catalog health, inventory velocity, and revenue impact in one view.</p>
-					</div>
-				</div>
 
-				<!-- Testimonial -->
-				<div class="ec-capabilities__testimonial">
-					<blockquote>
-						"I used Contractors/Freelancers/In-house staff, now time and mainly Aquifer has saved me time by auto-categorizing our full collection more accurately."
-					</blockquote>
-					<div class="ec-capabilities__testimonial-author">
-						<div class="ec-capabilities__testimonial-avatar"></div>
-						<div>
-							<strong>Sarah Chen</strong>
-							<span>Head of Operations • StyleVault</span>
+					<!-- 1. Catalog Management -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--catalog">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Products · Shopify</span></div>
+							<div class="ec-mock-table">
+								<div class="ec-mock-thead"><span>SKU</span><span>Title</span><span>Category</span><span>Status</span></div>
+								<div class="ec-mock-row"><span>P-001</span><span>White Tee</span><span>Tops</span><span class="ec-mock-tag ec-mock-tag--green">Live</span></div>
+								<div class="ec-mock-row"><span>P-002</span><span>Slim Jeans</span><span>Bottoms</span><span class="ec-mock-tag ec-mock-tag--green">Live</span></div>
+								<div class="ec-mock-row"><span>P-003</span><span>Canvas Sneaker</span><span>Shoes</span><span class="ec-mock-tag ec-mock-tag--yellow">Review</span></div>
+								<div class="ec-mock-row"><span>P-004</span><span>Linen Shirt</span><span>Tops</span><span class="ec-mock-tag ec-mock-tag--green">Live</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="5" rx="1"/><rect x="2" y="10" width="20" height="5" rx="1"/><rect x="2" y="17" width="20" height="5" rx="1"/></svg></div>
+							<h3>Catalog Management</h3>
+							<p>Centralized product data across your entire catalog, attributes, variants, and collections kept clean and in sync.</p>
 						</div>
 					</div>
+
+					<!-- 2. Inventory Management -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--inventory">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Inventory · Live</span></div>
+							<div class="ec-mock-table">
+								<div class="ec-mock-thead"><span>Product</span><span>In Stock</span><span>Threshold</span><span>Alert</span></div>
+								<div class="ec-mock-row"><span>White Tee</span><span>234</span><span>50</span><span class="ec-mock-tag ec-mock-tag--green">OK</span></div>
+								<div class="ec-mock-row"><span>Slim Jeans</span><span>12</span><span>50</span><span class="ec-mock-tag ec-mock-tag--red">Low</span></div>
+								<div class="ec-mock-row"><span>Sneakers</span><span>0</span><span>20</span><span class="ec-mock-tag ec-mock-tag--red">Out</span></div>
+								<div class="ec-mock-row"><span>Linen Shirt</span><span>89</span><span>30</span><span class="ec-mock-tag ec-mock-tag--green">OK</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+							<h3>Inventory Management</h3>
+							<p>Real-time stock levels, low-stock alerts, and multi-location inventory tracked and managed automatically.</p>
+						</div>
+					</div>
+
+					<!-- 3. Inventory Forecasting -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--forecast">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Demand Forecast · 90 days</span></div>
+							<div class="ec-mock-chart">
+								<div class="ec-mock-chart__bars">
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill" style="height:45%"></div><span>Jan</span></div>
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill" style="height:60%"></div><span>Feb</span></div>
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill" style="height:52%"></div><span>Mar</span></div>
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill ec-mock-bar-fill--projected" style="height:72%"></div><span>Apr</span></div>
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill ec-mock-bar-fill--projected" style="height:85%"></div><span>May</span></div>
+									<div class="ec-mock-chart__col"><div class="ec-mock-bar-fill ec-mock-bar-fill--projected" style="height:78%"></div><span>Jun</span></div>
+								</div>
+								<div class="ec-mock-chart__legend"><span class="ec-mock-legend--actual">Actual</span><span class="ec-mock-legend--projected">Projected</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+							<h3>Inventory Forecasting</h3>
+							<p>AI-driven demand signals that predict what to stock, when to reorder, and how much to keep on hand.</p>
+						</div>
+					</div>
+
+					<!-- 4. PO Management -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--po">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Purchase Orders</span></div>
+							<div class="ec-mock-table">
+								<div class="ec-mock-thead"><span>PO #</span><span>Supplier</span><span>Units</span><span>Status</span></div>
+								<div class="ec-mock-row"><span>PO-041</span><span>Factory A</span><span>500</span><span class="ec-mock-tag ec-mock-tag--yellow">Pending</span></div>
+								<div class="ec-mock-row"><span>PO-040</span><span>Factory B</span><span>200</span><span class="ec-mock-tag ec-mock-tag--blue">Shipped</span></div>
+								<div class="ec-mock-row"><span>PO-039</span><span>Factory A</span><span>750</span><span class="ec-mock-tag ec-mock-tag--green">Received</span></div>
+								<div class="ec-mock-row"><span>PO-038</span><span>Factory C</span><span>120</span><span class="ec-mock-tag ec-mock-tag--green">Received</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+							<h3>PO Management</h3>
+							<p>Purchase orders created, tracked, and reconciled automatically. No spreadsheet juggling between supplier and warehouse.</p>
+						</div>
+					</div>
+
+					<!-- 5. Warehouse Stock -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--warehouse">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Warehouse · Manual Stock</span></div>
+							<div class="ec-mock-zones">
+								<div class="ec-mock-zone-row">
+									<span class="ec-mock-zone-label">Zone A</span>
+									<div class="ec-mock-bins">
+										<div class="ec-mock-bin ec-mock-bin--full">A1<br><b>45</b></div>
+										<div class="ec-mock-bin ec-mock-bin--mid">A2<br><b>23</b></div>
+										<div class="ec-mock-bin ec-mock-bin--empty">A3<br><b>0</b></div>
+									</div>
+								</div>
+								<div class="ec-mock-zone-row">
+									<span class="ec-mock-zone-label">Zone B</span>
+									<div class="ec-mock-bins">
+										<div class="ec-mock-bin ec-mock-bin--mid">B1<br><b>12</b></div>
+										<div class="ec-mock-bin ec-mock-bin--full">B2<br><b>67</b></div>
+										<div class="ec-mock-bin ec-mock-bin--full">B3<br><b>89</b></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+							<h3>Warehouse Stock</h3>
+							<p>Manual warehouse counts digitized and synced. Know exactly what's in which bin, zone, or location at all times.</p>
+						</div>
+					</div>
+
+					<!-- 6. COGS -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--cogs">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">COGS Tracker</span></div>
+							<div class="ec-mock-table">
+								<div class="ec-mock-thead"><span>Product</span><span>Cost</span><span>Price</span><span>Margin</span></div>
+								<div class="ec-mock-row"><span>White Tee</span><span>$8.50</span><span>$29.99</span><span class="ec-mock-tag ec-mock-tag--green">72%</span></div>
+								<div class="ec-mock-row"><span>Slim Jeans</span><span>$22.00</span><span>$79.99</span><span class="ec-mock-tag ec-mock-tag--green">72%</span></div>
+								<div class="ec-mock-row"><span>Sneakers</span><span>$34.00</span><span>$99.99</span><span class="ec-mock-tag ec-mock-tag--yellow">66%</span></div>
+								<div class="ec-mock-row"><span>Linen Shirt</span><span>$14.00</span><span>$44.99</span><span class="ec-mock-tag ec-mock-tag--green">69%</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+							<h3>COGS</h3>
+							<p>Cost of goods tracked per SKU, updated with every landed cost change so your margins are always accurate.</p>
+						</div>
+					</div>
+
+					<!-- 7. Supplier Management -->
+					<div class="ec-cap-card">
+						<div class="ec-cap-mock ec-cap-mock--supplier">
+							<div class="ec-mock-bar"><span class="ec-mock-dot"></span><span class="ec-mock-dot"></span><span class="ec-mock-label">Suppliers</span></div>
+							<div class="ec-mock-table">
+								<div class="ec-mock-thead"><span>Supplier</span><span>Lead Time</span><span>MOQ</span><span>Status</span></div>
+								<div class="ec-mock-row"><span>Factory A</span><span>14 days</span><span>500</span><span class="ec-mock-tag ec-mock-tag--green">Active</span></div>
+								<div class="ec-mock-row"><span>Factory B</span><span>21 days</span><span>1,000</span><span class="ec-mock-tag ec-mock-tag--green">Active</span></div>
+								<div class="ec-mock-row"><span>Factory C</span><span>30 days</span><span>250</span><span class="ec-mock-tag ec-mock-tag--yellow">Review</span></div>
+								<div class="ec-mock-row"><span>Factory D</span><span>10 days</span><span>2,000</span><span class="ec-mock-tag ec-mock-tag--green">Active</span></div>
+							</div>
+						</div>
+						<div class="ec-cap-card__body">
+							<div class="ec-cap-card__icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+							<h3>Supplier Management</h3>
+							<p>All supplier relationships, lead times, MOQs, and performance history in one place, not scattered across emails.</p>
+						</div>
+					</div>
+
 				</div>
+
 			</div>
 		</section>
 
 		<!-- ═══════════════════════════════════════════ -->
 		<!-- OUR PROCESS                                 -->
 		<!-- ═══════════════════════════════════════════ -->
-		<section class="ec-process">
-			<div class="container">
-				<h2 class="ec-process__title">
-					Our process makes it<br>
-					easier than ever before
-				</h2>
-
-				<div class="ec-process__steps">
-					<div class="ec-process__step">
-						<div class="ec-process__step-num">01</div>
-						<div class="ec-process__step-content">
-							<h3>Initial Consulting</h3>
-							<p>We audit your current catalog, inventory systems, and operational workflows to identify where AI can create immediate improvement.</p>
-						</div>
-					</div>
-					<div class="ec-process__step">
-						<div class="ec-process__step-num">02</div>
-						<div class="ec-process__step-content">
-							<h3>System Architecture</h3>
-							<p>We design and build the autonomous systems tailored to your specific brand operations — no cookie-cutter templates.</p>
-						</div>
-					</div>
-					<div class="ec-process__step">
-						<div class="ec-process__step-num">03</div>
-						<div class="ec-process__step-content">
-							<h3>Deployment &amp; Embedding</h3>
-							<p>We integrate directly into your Shopify stack, connect data sources, and deploy the managed operations layer.</p>
-						</div>
-					</div>
-					<div class="ec-process__step">
-						<div class="ec-process__step-num">04</div>
-						<div class="ec-process__step-content">
-							<h3>Ongoing Managed Operations</h3>
-							<p>We continuously monitor, optimize, and evolve your systems — you focus on growth, we handle the backend.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
 		<!-- ═══════════════════════════════════════════ -->
-		<!-- STATS BAR                                  -->
+		<!-- IMPACT STATS                               -->
 		<!-- ═══════════════════════════════════════════ -->
-		<section class="ec-stats">
-			<div class="container">
-				<div class="ec-stats__grid">
-					<div class="ec-stat">
-						<span class="ec-stat__number">130%</span>
-						<span class="ec-stat__label">Avg. catalog quality improvement</span>
+		<section class="ec-impact-section">
+			<div class="container" style="display:flex; justify-content:center;">
+				<div class="ec-impact-card">
+					<div class="ec-impact-header">
+						<h2>MODERN OPERATIONS IN ACTION</h2>
+						<p>Measured, monitored, and delivered at scale.</p>
 					</div>
-					<div class="ec-stat">
-						<span class="ec-stat__number">$358K</span>
-						<span class="ec-stat__label">Revenue recovered from data fixes</span>
-					</div>
-					<div class="ec-stat">
-						<span class="ec-stat__number">21,424</span>
-						<span class="ec-stat__label">Products managed autonomously</span>
-					</div>
-					<div class="ec-stat">
-						<span class="ec-stat__number">2,436 Hrs</span>
-						<span class="ec-stat__label">Manual work eliminated per year</span>
+					<div class="ec-impact-grid">
+						<div class="ec-impact-stat">
+							<div class="ec-impact-number">3,000</div>
+							<div class="ec-impact-label">Hours Saved</div>
+						</div>
+						<div class="ec-impact-divider"></div>
+						<div class="ec-impact-stat">
+							<div class="ec-impact-number">2–2.5x</div>
+							<div class="ec-impact-label">Increased Revenue per FTE</div>
+						</div>
+						<div class="ec-impact-divider"></div>
+						<div class="ec-impact-stat">
+							<div class="ec-impact-number">30%</div>
+							<div class="ec-impact-label">Faster Launch Cycle</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -464,7 +891,7 @@ import { SITE_TITLE } from '../../consts';
 		<!-- ═══════════════════════════════════════════ -->
 		<section class="ec-testimonials">
 			<div class="container">
-				<h2 class="ec-testimonials__title">Hear From Our Customers</h2>
+				<h2 class="ec-testimonials__title">HEAR FROM OUR CUSTOMERS</h2>
 				<div class="ec-testimonials__grid">
 					<div class="ec-testimonial-card">
 						<div class="ec-testimonial-card__stars">★★★★★</div>
@@ -510,8 +937,8 @@ import { SITE_TITLE } from '../../consts';
 			<div class="container">
 				<div class="ec-cta-footer__inner">
 					<div class="ec-cta-footer__text">
-						<h2>Be the Business Owner,<br>Let us Handle the Operations</h2>
-						<p>Focus on what matters — growth, brand, and customers. We'll manage the <br class="hide-mobile"> operational complexity behind your store autonomously.</p>
+						<h2>BE THE BUSINESS OWNER.<br>LET US HANDLE THE OPERATIONS.</h2>
+						<p>Focus on what matters growth, brand, and customers. We'll manage the <br class="hide-mobile"> operational complexity behind your store autonomously.</p>
 						<div class="ec-cta-footer__actions">
 							<a href="/contact" class="ec-btn ec-btn--primary">Get Started Today</a>
 							<a href="/contact" class="ec-btn ec-btn--outline">Book a Demo</a>
@@ -614,6 +1041,59 @@ import { SITE_TITLE } from '../../consts';
 			border-color: var(--text-primary);
 			background: rgba(0,0,0,0.03);
 		}
+		.ec-btn--hero {
+			background: #FF7A7A;
+			color: #000;
+			border: 2px solid #000;
+			box-shadow: 4px 4px 0 #000;
+			padding: 1.25rem 2.5rem;
+			font-size: 1.15rem;
+			border-radius: var(--radius-pill);
+			text-transform: none;
+			font-weight: 700;
+			transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			display: inline-flex;
+			align-items: center;
+			gap: 0.75rem;
+			position: relative;
+			overflow: hidden;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.ec-btn--hero:hover {
+			transform: translate(-4px, -4px);
+			box-shadow: 8px 8px 0 #000;
+			background: #ff9d9d;
+		}
+		.ec-btn--hero:active {
+			transform: translate(0, 0);
+			box-shadow: 0 0 0 #000;
+		}
+		.ec-cta-mobile { display: none; }
+		.ec-cta-full { display: inline; }
+		@media (max-width: 640px) {
+			.ec-cta-full { display: none; }
+			.ec-cta-mobile { display: inline; }
+		}
+		.ec-animated-dots {
+			display: inline-flex;
+			gap: 3px;
+			align-items: center;
+		}
+		.ec-animated-dots span {
+			width: 5px;
+			height: 5px;
+			background: #000;
+			border-radius: 50%;
+			animation: ec-dot-bounce 1.2s infinite ease-in-out;
+		}
+		.ec-animated-dots span:nth-child(2) { animation-delay: 0.2s; }
+		.ec-animated-dots span:nth-child(3) { animation-delay: 0.4s; }
+		.ec-animated-dots span:nth-child(4) { animation-delay: 0.6s; }
+		@keyframes ec-dot-bounce {
+			0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+			40% { transform: scale(1); opacity: 1; }
+		}
 		.ec-btn--pink-sm {
 			background: var(--accent-primary);
 			color: #fff;
@@ -655,12 +1135,15 @@ import { SITE_TITLE } from '../../consts';
 			z-index: 1;
 		}
 		.ec-hero__title {
-			font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+			font-size: clamp(2rem, 6vw, 3.8rem);
 			font-weight: 800;
 			line-height: 1.1;
 			letter-spacing: -0.03em;
 			margin-bottom: 1.5rem;
-			text-transform: none;
+			text-transform: uppercase;
+		}
+		.ec-hero__title-accent {
+			color: var(--accent-primary);
 		}
 		.ec-hero__subtitle {
 			font-size: 1.05rem;
@@ -679,327 +1162,385 @@ import { SITE_TITLE } from '../../consts';
 			flex-wrap: wrap;
 		}
 
-		/* ─── Product Table Mock ──────────────────────── */
-		.ec-hero__table-wrap {
+
+		/* ─── Demo Tabs ──────────────────────────────── */
+		.ec-demo-wrap {
 			max-width: 1000px;
-			margin: 0 auto;
-			padding-bottom: 4rem;
-		}
-		.ec-table-mock {
-			position: relative;
-			background: #fff;
-			border: 1px solid #e5e5e5;
+			margin: 2.5rem auto 0;
 			border-radius: 16px;
-			overflow: visible;
-			box-shadow: 0 20px 60px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.06);
-			text-align: left;
+			overflow: hidden;
+			border: 1.5px solid rgba(0,0,0,0.1);
+			box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+			background: #fff;
+		}
+		.ec-demo-tabs {
+			display: flex;
+			border-bottom: 1.5px solid rgba(0,0,0,0.08);
+			background: #fafafa;
+			overflow-x: auto;
+			scrollbar-width: none;
+		}
+		.ec-demo-tabs::-webkit-scrollbar { display: none; }
+		.ec-demo-tab {
+			padding: 0.75rem 1.25rem;
 			font-size: 0.78rem;
-		}
-		.ec-table-mock__toolbar {
-			display: flex;
-			justify-content: flex-start;
-			align-items: center;
-			padding: 0;
-			border-bottom: 1px solid #eee;
-		}
-		.ec-table-mock__tabs {
-			display: flex;
-			gap: 0;
-			width: 100%;
-		}
-		.ec-table-mock__tab {
-			padding: 0.7rem 1.1rem;
-			font-size: 0.72rem;
 			font-weight: 600;
 			color: #888;
+			border: none;
+			background: none;
 			cursor: pointer;
-			transition: all 0.2s;
-			border-bottom: 2px solid transparent;
 			white-space: nowrap;
+			border-bottom: 2px solid transparent;
+			transition: all 0.2s ease;
+			font-family: var(--font-body);
 		}
-		.ec-table-mock__tab.active {
-			color: var(--text-primary);
+		.ec-demo-tab:hover { color: #333; }
+		.ec-demo-tab.active {
+			color: var(--accent-primary);
 			border-bottom-color: var(--accent-primary);
-			background: transparent;
+			background: #fff;
 		}
-
-		/* Table grid — 7 cols matching screenshot */
-		.ec-table-mock__header {
-			display: grid;
-			grid-template-columns: 100px 90px 100px 80px 70px 60px 70px;
-			padding: 0.5rem 1rem;
-			background: #fafafa;
-			font-weight: 600;
-			font-size: 0.65rem;
+		.ec-demo-panel {
+			display: none;
+			padding: 0;
+		}
+		.ec-demo-panel.active { display: block; }
+		.ec-demo-chaos-bar {
+			display: flex;
+			align-items: center;
+			gap: 0.6rem;
+			padding: 0.6rem 1.25rem;
+			background: #fff8f0;
+			border-bottom: 1px solid #ffe5cc;
+			font-size: 0.72rem;
+			color: #a05000;
+		}
+		.ec-chaos-icon { font-size: 0.9rem; }
+		.ec-chaos-text em { font-style: normal; font-weight: 600; }
+		.ec-sys-label {
+			padding: 0.4rem 1.25rem;
+			font-size: 0.7rem;
+			font-weight: 700;
+			letter-spacing: 0.05em;
 			text-transform: uppercase;
-			letter-spacing: 0.04em;
-			color: #aaa;
+			color: #27ae60;
+			background: #f0fff4;
+			border-bottom: 1px solid #c3f0d0;
+		}
+		.ec-mock-table {
+			width: 100%;
+			font-size: 0.76rem;
+		}
+		.ec-mock-thead {
+			display: grid;
+			grid-template-columns: 1.2fr 1.2fr 1fr 0.6fr 1fr 1fr;
+			padding: 0.5rem 1.25rem;
+			background: #f7f7f7;
+			border-bottom: 1px solid #eee;
+			font-weight: 700;
+			font-size: 0.68rem;
+			text-transform: uppercase;
+			letter-spacing: 0.05em;
+			color: #999;
+			gap: 0.5rem;
+		}
+		.ec-mock-row {
+			display: grid;
+			grid-template-columns: 1.2fr 1.2fr 1fr 0.6fr 1fr 1fr;
+			padding: 0.55rem 1.25rem;
 			border-bottom: 1px solid #f0f0f0;
 			align-items: center;
-		}
-		.ec-table-mock__row {
-			display: grid;
-			grid-template-columns: 100px 90px 100px 80px 70px 60px 70px;
-			padding: 0.45rem 1rem;
-			border-bottom: 1px solid #f5f5f5;
-			align-items: center;
+			gap: 0.5rem;
 			transition: background 0.15s;
-			font-size: 0.75rem;
-			color: #555;
+			color: #333;
 		}
-		.ec-table-mock__row:hover {
-			background: #fafafa;
+		.ec-mock-row:hover { background: #fafafa; }
+		.ec-mock-row--hl { background: #fff8f5; }
+		.ec-mock-row--warn { background: #fff5f5; }
+		.ec-mock-row--fade { opacity: 0.55; }
+		.ec-mock-row span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+		.ec-muted { color: #aaa; font-size: 0.7rem; }
+		.ec-val--green { color: #27ae60; font-weight: 600; }
+		.ec-val--red { color: #e74c3c; font-weight: 600; }
+		.ec-badge {
+			display: inline-block;
+			padding: 0.15rem 0.55rem;
+			border-radius: 20px;
+			font-size: 0.68rem;
+			font-weight: 700;
+			font-style: normal;
 		}
-		.ec-table-mock__row--highlight {
-			background: #fef2f2;
+		.ec-badge--green { background: #d4edda; color: #155724; }
+		.ec-badge--red { background: #fde8e8; color: #c0392b; }
+		.ec-badge--yellow { background: #fff3cd; color: #856404; }
+		.ec-badge--blue { background: #dbeafe; color: #1e40af; }
+		.ec-demo-toast {
+			padding: 0.65rem 1.25rem;
+			font-size: 0.72rem;
+			font-weight: 600;
+			color: #155724;
+			background: #f0fff4;
+			border-top: 1px solid #c3f0d0;
 		}
-		.ec-table-mock__row--highlight-alt {
-			background: #fef8f8;
+		.ec-demo-toast--warn {
+			color: #92400e;
+			background: #fffbeb;
+			border-top-color: #fde68a;
 		}
 
-		/* Column cells */
-		.col-pid {
-			font-weight: 600;
-			color: var(--text-primary);
-			font-size: 0.72rem;
+
+		/* ─── Pipeline Layout ───────────────────────── */
+		.ec-pipeline {
+			display: grid;
+			grid-template-columns: 1fr 0.55fr 1fr;
+			min-height: 280px;
 		}
-		.col-color-label {
+		.ec-pipe-col { display: flex; flex-direction: column; overflow: hidden; }
+		.ec-pipe-col--source { border-right: 1px solid #ececec; background: #fff9f9; }
+		.ec-pipe-col--engine { background: #f8f8ff; border-right: 1px solid #ececec; align-items: center; justify-content: center; gap: 0.5rem; padding: 1rem 0.4rem; }
+		.ec-pipe-col--output { background: #f9fff9; }
+		.ec-pipe-header { display: flex; align-items: center; gap: 0.4rem; padding: 0.5rem 0.75rem; background: #f1f3f4; border-bottom: 1px solid #dadce0; font-size: 0.68rem; font-weight: 700; color: #444; white-space: nowrap; overflow: hidden; }
+		.ec-pipe-header--shopify { background: #f4f8f0; border-bottom-color: #d4e8c4; color: #2d6a1e; }
+		.ec-src-row { display: flex; align-items: center; justify-content: space-between; padding: 0.28rem 0.75rem; border-bottom: 1px solid #f5f5f5; gap: 0.3rem; font-size: 0.66rem; }
+		.ec-src-row--err { background: #fff5f5; }
+		.ec-src-id { font-weight: 600; color: #1a73e8; white-space: nowrap; flex-shrink: 0; }
+		.ec-src-err { color: #c0392b; font-weight: 700; font-size: 0.61rem; white-space: nowrap; }
+		.ec-src-warn { color: #d68910; font-style: italic; font-size: 0.61rem; text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+		.ec-src-tabs { display: flex; margin-top: auto; border-top: 1px solid #e8e8e8; background: #f8f9fa; }
+		.ec-src-tabs span { padding: 0.28rem 0.5rem; font-size: 0.58rem; color: #888; border-right: 1px solid #e8e8e8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 75px; }
+		.ec-src-tabs span.a { color: #0f9d58; font-weight: 700; border-top: 2px solid #0f9d58; background: #fff; }
+		.ec-engine-badge { position: relative; width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), #ff9a8b); display: flex; align-items: center; justify-content: center; font-size: 0.68rem; font-weight: 900; color: #fff; box-shadow: 0 2px 12px rgba(255,77,109,0.35); flex-shrink: 0; }
+		.ec-engine-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--accent-primary); opacity: 0; animation: ec-pulse 2s ease-out infinite; }
+		@keyframes ec-pulse { 0% { transform: scale(1); opacity: 0.7; } 100% { transform: scale(1.6); opacity: 0; } }
+		.ec-engine-label { font-size: 0.58rem; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.06em; text-align: center; }
+		.ec-packets { display: flex; flex-direction: column; gap: 5px; width: 100%; padding: 0 0.4rem; overflow: hidden; }
+		.ec-packet { height: 5px; border-radius: 3px; background: linear-gradient(to right, #e74c3c, var(--accent-primary), #27ae60); animation: ec-packet-flow 3.6s ease-in-out infinite; transform: translateX(-110%); opacity: 0; }
+		@keyframes ec-packet-flow { 0% { transform: translateX(-110%); opacity: 0; } 5% { opacity: 1; } 95% { opacity: 1; } 100% { transform: translateX(110%); opacity: 0; } }
+		.ec-engine-steps { display: flex; flex-direction: column; gap: 0.2rem; width: 100%; padding: 0 0.3rem; }
+		.ec-step { font-size: 0.58rem; font-weight: 600; padding: 0.18rem 0.35rem; border-radius: 4px; text-align: center; }
+		.ec-step--done { color: #27ae60; background: #f0fff4; }
+		.ec-step--active { color: var(--accent-primary); background: #fff0f2; animation: ec-blink 1.5s ease-in-out infinite; }
+		@keyframes ec-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+		.ec-out-row { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.75rem; border-bottom: 1px solid #f0f0f0; font-size: 0.68rem; }
+		.ec-out-row--in { animation: ec-slide-in 0.4s ease-out both; }
+		@keyframes ec-slide-in { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: translateX(0); } }
+		.ec-out-img { width: 26px; height: 26px; border-radius: 4px; background: #ddd; flex-shrink: 0; }
+		.ec-out-img--2 { background: linear-gradient(135deg, #667eea, #764ba2); }
+		.ec-out-img--3 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+		.ec-out-img--4 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+		.ec-out-name { flex: 1; font-weight: 600; color: #222; display: flex; flex-direction: column; font-size: 0.66rem; overflow: hidden; }
+		.ec-out-var { font-weight: 400; color: #aaa; font-size: 0.58rem; }
+		.ec-out-sync { margin-top: auto; padding: 0.4rem 0.75rem; font-size: 0.62rem; font-weight: 600; color: #27ae60; background: #f0fff4; border-top: 1px solid #c3f0d0; }
+		.ec-out-sync--warn { color: #92400e; background: #fffbeb; border-top-color: #fde68a; }
+		.ec-inv-row { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; border-bottom: 1px solid #f0f0f0; }
+		.ec-inv-name { font-weight: 600; color: #333; width: 72px; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.62rem; }
+		.ec-inv-bar { flex: 1; height: 7px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+		.ec-inv-fill { height: 100%; border-radius: 4px; }
+		.ec-inv-qty { font-weight: 700; font-size: 0.65rem; width: 28px; text-align: right; flex-shrink: 0; }
+		.ec-forecast-chart { display: flex; flex-direction: column; }
+		.ec-fc-row { display: flex; align-items: center; gap: 0.4rem; padding: 0.35rem 0.75rem; border-bottom: 1px solid #f0f0f0; }
+		.ec-fc-label { width: 68px; font-weight: 600; color: #333; flex-shrink: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.61rem; }
+		.ec-fc-bar-wrap { flex: 1; height: 7px; background: #f0f0f0; border-radius: 4px; overflow: hidden; }
+		.ec-fc-bar { height: 100%; border-radius: 4px; }
+		.ec-fc-days { font-weight: 700; font-size: 0.62rem; width: 34px; text-align: right; flex-shrink: 0; }
+		.ec-po-info { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+		.ec-po-num { font-weight: 700; color: #333; font-size: 0.66rem; }
+		.ec-po-sup { color: #999; font-size: 0.58rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+		@media (max-width: 640px) {
+			.ec-pipeline { grid-template-columns: 1fr; }
+			.ec-pipe-col--engine { flex-direction: row; flex-wrap: wrap; padding: 0.6rem; justify-content: flex-start; }
+			.ec-engine-badge { width: 34px; height: 34px; font-size: 0.6rem; }
+			.ec-packets { flex-direction: row; height: 16px; padding: 0; }
+			.ec-engine-steps { flex-direction: row; flex-wrap: wrap; gap: 0.2rem; }
+		}
+
+		
+		/* ─── Spreadsheet grid ───────────────────────── */
+		.ec-ss-grid { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+		.ec-ss-head {
+			display: grid; padding: 0.22rem 0.75rem;
+			background: #f0f0f0; border-bottom: 1px solid #ddd;
+			font-size: 0.58rem; font-weight: 800; color: #888; text-transform: uppercase; letter-spacing: 0.05em; gap: 0.3rem;
+		}
+		.ec-ss-subhead {
+			display: grid; padding: 0.25rem 0.75rem;
+			background: #f7f7f7; border-bottom: 1px solid #e8e8e8;
+			font-size: 0.6rem; font-weight: 700; color: #555; gap: 0.3rem;
+		}
+		.ec-ss-row {
+			display: grid; padding: 0.28rem 0.75rem; border-bottom: 1px solid #f2f2f2;
+			font-size: 0.64rem; color: #333; gap: 0.3rem; align-items: center;
+		}
+		.ec-ss-row:hover { background: rgba(0,0,0,0.02); }
+		.ec-ss-err { background: #fff5f5; }
+		.ec-ss-fade { opacity: 0.5; }
+		/* Per-tab column counts */
+		.ec-ss-grid--catalog .ec-ss-head,
+		.ec-ss-grid--catalog .ec-ss-subhead,
+		.ec-ss-grid--catalog .ec-ss-row { grid-template-columns: 0.8fr 1fr 0.8fr 0.5fr 0.7fr; }
+		.ec-ss-grid--inv .ec-ss-head,
+		.ec-ss-grid--inv .ec-ss-subhead,
+		.ec-ss-grid--inv .ec-ss-row { grid-template-columns: 0.9fr 0.7fr 0.7fr 0.7fr 1fr; }
+		.ec-ss-grid--fc .ec-ss-head,
+		.ec-ss-grid--fc .ec-ss-subhead,
+		.ec-ss-grid--fc .ec-ss-row { grid-template-columns: 0.9fr 0.7fr 0.8fr 0.7fr 0.8fr; }
+		.ec-ss-grid--po .ec-ss-head,
+		.ec-ss-grid--po .ec-ss-subhead,
+		.ec-ss-grid--po .ec-ss-row { grid-template-columns: 0.9fr 1fr 0.7fr 0.6fr 0.6fr; }
+		/* Output grids */
+		.ec-ss-grid--output .ec-ss-head,
+		.ec-ss-grid--output .ec-ss-row { grid-template-columns: 1.2fr 0.8fr 0.4fr 0.6fr 0.7fr; }
+		.ec-ss-grid--inv-out .ec-ss-head,
+		.ec-ss-grid--inv-out .ec-ss-row { grid-template-columns: 1.1fr 0.5fr 0.6fr 0.6fr 0.8fr; }
+		.ec-ss-grid--fc-out .ec-ss-head,
+		.ec-ss-grid--fc-out .ec-ss-row { grid-template-columns: 1.1fr 0.7fr 0.5fr 0.5fr 0.8fr; }
+		.ec-ss-grid--po-out .ec-ss-head,
+		.ec-ss-grid--po-out .ec-ss-row { grid-template-columns: 0.6fr 1fr 1fr 0.7fr 0.8fr; }
+		.ec-ss-grid--wh .ec-ss-head,
+		.ec-ss-grid--wh .ec-ss-subhead,
+		.ec-ss-grid--wh .ec-ss-row { grid-template-columns: 1.1fr 0.6fr 0.8fr 0.7fr 0.7fr; }
+		.ec-ss-grid--cogs .ec-ss-head,
+		.ec-ss-grid--cogs .ec-ss-subhead,
+		.ec-ss-grid--cogs .ec-ss-row { grid-template-columns: 0.9fr 0.7fr 0.7fr 0.9fr 0.7fr; }
+		.ec-ss-grid--sup .ec-ss-head,
+		.ec-ss-grid--sup .ec-ss-subhead,
+		.ec-ss-grid--sup .ec-ss-row { grid-template-columns: 0.9fr 1fr 0.7fr 0.5fr 0.7fr; }
+		.ec-ss-grid--wh-out .ec-ss-head,
+		.ec-ss-grid--wh-out .ec-ss-row { grid-template-columns: 1.2fr 0.5fr 0.5fr 0.8fr 0.8fr; }
+		.ec-ss-grid--cogs-out .ec-ss-head,
+		.ec-ss-grid--cogs-out .ec-ss-row { grid-template-columns: 1.1fr 0.6fr 0.7fr 0.8fr 0.7fr; }
+		.ec-ss-grid--sup-out .ec-ss-head,
+		.ec-ss-grid--sup-out .ec-ss-row { grid-template-columns: 1fr 1.1fr 0.6fr 0.7fr 0.7fr; }
+		
+		/* Shared source util classes */
+		.ec-src-strike { text-decoration: line-through; color: #bbb; }
+		/* Product dot + name */
+		.ec-out-prod { display: flex; align-items: center; gap: 0.35rem; font-weight: 600; color: #222; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.63rem; }
+		.ec-out-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+		/* Forecast mini bar in grid */
+		.ec-fc-mini { height: 6px; background: #f0f0f0; border-radius: 3px; overflow: hidden; }
+		.ec-fc-mini div { height: 100%; border-radius: 3px; }
+
+				/* ─── Google Sheets Chaos ────────────────────── */
+		.ec-sheets-wrap {
+			background: #fff;
+			border-bottom: 1.5px solid #e8e8e8;
+		}
+		.ec-sheets-chrome {
+			display: flex;
+			align-items: center;
+			gap: 0.6rem;
+			padding: 0.5rem 1rem;
+			background: #f1f3f4;
+			border-bottom: 1px solid #dadce0;
+		}
+		.ec-sheets-chrome__dots {
+			display: flex;
+			gap: 4px;
+		}
+		.ec-sheets-chrome__dots span {
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: #dadce0;
+		}
+		.ec-sheets-chrome__dots span:nth-child(1) { background: #ff5f57; }
+		.ec-sheets-chrome__dots span:nth-child(2) { background: #febc2e; }
+		.ec-sheets-chrome__dots span:nth-child(3) { background: #28c840; }
+		.ec-sheets-chrome__title {
 			display: flex;
 			align-items: center;
 			gap: 0.35rem;
 			font-size: 0.72rem;
-			color: #666;
-		}
-		.col-ptype {
-			font-size: 0.72rem;
-		}
-		.col-imgs {
-			display: flex;
-			align-items: center;
-		}
-		.col-qty {
-			font-size: 0.72rem;
-			color: #777;
-			text-align: right;
-		}
-		.col-qty--sm {
-			font-size: 0.62rem;
-			text-transform: none;
-			letter-spacing: 0;
-		}
-
-		/* Color dots */
-		.ec-color-dot {
-			width: 12px;
-			height: 12px;
-			border-radius: 50%;
-			display: inline-block;
-			flex-shrink: 0;
-			border: 1px solid #ddd;
-		}
-		.ec-color-dot--white { background: #fff; }
-		.ec-color-dot--black { background: #222; border-color: #333; }
-		.ec-color-dot--purple { background: #9b59b6; border-color: transparent; }
-		.ec-color-dot--blue { background: #3498db; border-color: transparent; }
-		.ec-color-dot--red { background: #e74c3c; border-color: transparent; }
-		.ec-color-dot--green { background: #27ae60; border-color: transparent; }
-
-		/* Type badges — color coded per category */
-		.ec-type-badge {
-			display: inline-block;
-			padding: 0.15rem 0.55rem;
-			border-radius: var(--radius-pill);
-			font-size: 0.68rem;
-			font-weight: 700;
-		}
-		.ec-type-badge--tshirt { background: #d4edda; color: #155724; }
-		.ec-type-badge--jacket { background: #ffe0b2; color: #e65100; }
-		.ec-type-badge--pants  { background: #bbdefb; color: #0d47a1; }
-		.ec-type-badge--dress  { background: #f8bbd0; color: #880e4f; }
-		.ec-type-badge--skirt  { background: #e1bee7; color: #6a1b9a; }
-		.ec-type-badge--hoodie { background: #ffcdd2; color: #b71c1c; }
-
-		/* Image thumbnails */
-		.ec-img-thumb {
-			width: 32px;
-			height: 32px;
-			border-radius: 6px;
-			overflow: hidden;
-			background: #f0f0f0;
-			flex-shrink: 0;
-		}
-		.ec-img-thumb img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		/* ─── Floating Product Detail Card ─── */
-		.ec-product-card {
-			position: absolute;
-			top: 30px;
-			right: -40px;
-			width: 260px;
-			background: #fff;
-			border-radius: 12px;
-			box-shadow: 0 12px 40px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
-			z-index: 10;
-			overflow: hidden;
-		}
-		.ec-product-card__cursor {
-			position: absolute;
-			top: 70px;
-			left: -10px;
-			z-index: 11;
-		}
-		.ec-product-card__cursor-tag {
-			display: inline-block;
-			background: var(--accent-primary);
-			color: #fff;
-			font-size: 0.6rem;
-			font-weight: 700;
-			padding: 0.15rem 0.45rem;
-			border-radius: 4px;
-			transform: rotate(-8deg);
-		}
-		.ec-product-card__img {
-			width: 100%;
-			height: 160px;
-			overflow: hidden;
-			background: #f5f5f5;
-		}
-		.ec-product-card__img img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-		.ec-product-card__details {
-			padding: 0.75rem 1rem;
-		}
-		.ec-product-card__row {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 0.3rem 0;
-			border-bottom: 1px solid #f5f5f5;
-		}
-		.ec-product-card__row:last-of-type {
-			border-bottom: none;
-		}
-		.ec-product-card__label {
-			font-size: 0.68rem;
-			color: #888;
-		}
-		.ec-product-card__value {
-			font-size: 0.72rem;
-			font-weight: 600;
-			color: var(--text-primary);
-			display: flex;
-			align-items: center;
-		}
-		.ec-product-card__value--blue {
-			color: #2563eb;
-		}
-		.ec-product-card__actions {
-			display: flex;
-			gap: 0.5rem;
-			margin-top: 0.6rem;
-			padding-top: 0.6rem;
-			border-top: 1px solid #eee;
-		}
-		.ec-product-card__btn {
-			flex: 1;
-			padding: 0.4rem 0;
-			border: 1px solid #ddd;
-			border-radius: 6px;
-			background: #fff;
-			font-size: 0.65rem;
-			font-weight: 600;
-			color: var(--text-primary);
-			cursor: pointer;
-			transition: background 0.15s;
-		}
-		.ec-product-card__btn:hover {
-			background: #f5f5f5;
-		}
-
-		/* ─── Toast notification ─── */
-		.ec-toast {
-			position: absolute;
-			bottom: 100px;
-			left: 40px;
-			display: inline-flex;
-			align-items: center;
-			gap: 0.5rem;
-			padding: 0.55rem 1rem;
-			background: #fff;
-			border-radius: var(--radius-pill);
-			box-shadow: 0 6px 24px rgba(0,0,0,0.1);
-			z-index: 10;
-			font-size: 0.72rem;
-			color: var(--text-primary);
+			color: #5f6368;
 			font-weight: 500;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
 		}
-		.ec-toast__icon {
-			width: 20px;
-			height: 20px;
-			border-radius: 50%;
-			background: #e8f5e9;
-			color: #2e7d32;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 0.65rem;
-			font-weight: 700;
-		}
-
-		/* ─── Import bar ─── */
-		.ec-import-bar {
-			position: absolute;
-			bottom: 40px;
-			left: 20px;
-			display: flex;
-			align-items: center;
-			gap: 0.75rem;
-			padding: 0.5rem 0.75rem;
-			background: #fff;
-			border-radius: 10px;
-			box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-			z-index: 10;
-		}
-		.ec-import-bar__file {
-			display: flex;
-			align-items: center;
+		.ec-sheets-header {
+			display: grid;
+			grid-template-columns: 1.4fr 1.2fr 1fr 1fr 1fr;
+			padding: 0.35rem 1rem;
+			background: #f8f9fa;
+			border-bottom: 1px solid #e0e0e0;
 			gap: 0.5rem;
 		}
-		.ec-import-bar__file-icon {
-			font-size: 1.1rem;
-		}
-		.ec-import-bar__file-info {
-			display: flex;
-			flex-direction: column;
-		}
-		.ec-import-bar__file-info strong {
-			font-size: 0.68rem;
-			color: var(--text-primary);
-		}
-		.ec-import-bar__file-info span {
-			font-size: 0.58rem;
-			color: #aaa;
-		}
-		.ec-import-bar__btn {
-			padding: 0.4rem 0.8rem;
-			background: #f5f5f5;
-			border: 1px solid #eee;
-			border-radius: 6px;
+		.ec-sh {
 			font-size: 0.65rem;
-			font-weight: 600;
-			color: var(--text-primary);
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			color: #888;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.ec-sheets-row {
+			display: grid;
+			grid-template-columns: 1.4fr 1.2fr 1fr 1fr 1fr;
+			padding: 0.35rem 1rem;
+			border-bottom: 1px solid #f0f0f0;
+			gap: 0.5rem;
+			align-items: center;
+		}
+		.ec-sheets-row--hl { background: #e8f0fe; }
+		.ec-sheets-row--err { background: #fff0f0; }
+		.ec-sc {
+			font-size: 0.72rem;
+			color: #333;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+		.ec-sc--id { font-weight: 600; color: #1a73e8; }
+		.ec-sc--err { color: #c0392b; font-weight: 600; font-size: 0.68rem; }
+		.ec-sc--note { color: #f39c12; font-style: italic; font-size: 0.68rem; }
+		.ec-sc--strike { text-decoration: line-through; color: #999; }
+		.ec-sheets-tabs {
+			display: flex;
+			gap: 0;
+			padding: 0 0.75rem;
+			background: #f8f9fa;
+			border-top: 1px solid #e0e0e0;
+		}
+		.ec-sheets-tabs span {
+			padding: 0.3rem 0.75rem;
+			font-size: 0.65rem;
+			color: #666;
+			border-right: 1px solid #e0e0e0;
 			cursor: pointer;
 			white-space: nowrap;
 		}
-		.ec-import-bar__btn:hover {
-			background: #eee;
+		.ec-sheets-tabs span.active {
+			background: #fff;
+			color: #0f9d58;
+			font-weight: 700;
+			border-top: 2px solid #0f9d58;
+		}
+		/* ─── Integration Arrow ──────────────────────── */
+		.ec-integration-arrow {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding: 0.6rem 1rem;
+			background: linear-gradient(to bottom, #fff0f0, #f0fff4);
+			border-bottom: 1px solid #e8f5e9;
+			gap: 0.3rem;
+		}
+		.ec-integration-arrow__line {
+			width: 2px;
+			height: 10px;
+			background: linear-gradient(to bottom, #e74c3c, #27ae60);
+			border-radius: 2px;
+		}
+		.ec-integration-arrow__label {
+			display: flex;
+			align-items: center;
+			gap: 0.4rem;
+			font-size: 0.7rem;
+			font-weight: 600;
+			color: #27ae60;
 		}
 
 		/* ═══════════════════════════════════════════════ */
@@ -1033,7 +1574,14 @@ import { SITE_TITLE } from '../../consts';
 		/* WHY WE'RE THE BEST                             */
 		/* ═══════════════════════════════════════════════ */
 		.ec-why {
-			padding: 6rem 0;
+			padding: 4rem 0;
+		}
+		.ec-why__card {
+			background: #fdfcf9;
+			border-radius: 32px;
+			padding: 3.5rem 3rem;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+			border: 1px solid rgba(0,0,0,0.05);
 		}
 		.ec-why__grid {
 			display: grid;
@@ -1042,20 +1590,22 @@ import { SITE_TITLE } from '../../consts';
 			align-items: start;
 		}
 		.ec-why__title {
-			font-size: clamp(2rem, 3.5vw, 3rem);
-			text-transform: none;
-			line-height: 1.15;
+			font-size: clamp(1.8rem, 3vw, 2.8rem);
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: -0.03em;
+			line-height: 1.1;
+			margin-bottom: 1.25rem;
 		}
-		.ec-why__body {
-			font-size: 1.05rem;
+		.ec-why__sub {
+			font-size: 1rem;
 			line-height: 1.7;
 			color: var(--text-secondary);
-			margin-bottom: 2rem;
 		}
 		.ec-why__features {
 			display: flex;
 			flex-direction: column;
-			gap: 1.25rem;
+			gap: 1.5rem;
 		}
 		.ec-why__feature {
 			display: flex;
@@ -1063,27 +1613,48 @@ import { SITE_TITLE } from '../../consts';
 			align-items: flex-start;
 		}
 		.ec-why__feature-icon {
-			font-size: 1.5rem;
+			width: 38px;
+			height: 38px;
+			border-radius: 10px;
+			background: #1a1a1a;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			flex-shrink: 0;
-			margin-top: 0.15rem;
 		}
 		.ec-why__feature strong {
 			display: block;
 			font-size: 0.95rem;
-			margin-bottom: 0.25rem;
+			font-weight: 700;
+			margin-bottom: 0.2rem;
+			color: #1a1a1a;
 		}
 		.ec-why__feature p {
-			font-size: 0.88rem;
+			font-size: 0.85rem;
 			color: var(--text-secondary);
-			line-height: 1.5;
+			line-height: 1.55;
+			margin: 0;
+		}
+		@media (max-width: 640px) {
+			.ec-why__card { padding: 2rem 1.5rem; border-radius: 20px; }
 		}
 
 		/* ═══════════════════════════════════════════════ */
 		/* THE QUESTION                                    */
 		/* ═══════════════════════════════════════════════ */
 		.ec-question {
-			padding: 5rem 0;
+			padding: 3rem 0;
 			text-align: center;
+		}
+		.ec-question__inner {
+			background: #fdfcf9;
+			border-radius: 32px;
+			padding: 3.5rem 3rem;
+			box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+			border: 1px solid rgba(0,0,0,0.05);
+			max-width: 860px;
+			margin: 0 auto;
 		}
 		.ec-question__badge {
 			display: inline-block;
@@ -1099,8 +1670,10 @@ import { SITE_TITLE } from '../../consts';
 		}
 		.ec-question__title {
 			font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-			text-transform: none;
-			line-height: 1.2;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: -0.03em;
+			line-height: 1.15;
 			margin-bottom: 1.5rem;
 			max-width: 800px;
 			margin-left: auto;
@@ -1118,71 +1691,246 @@ import { SITE_TITLE } from '../../consts';
 		/* CAPABILITIES DARK SECTION                      */
 		/* ═══════════════════════════════════════════════ */
 		.ec-capabilities {
-			background: #1A1A1A;
-			color: #fff;
 			padding: 5rem 0;
-			border-radius: 24px;
-			margin: 0 1rem;
+		}
+		.ec-capabilities__header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 1.5rem;
+			margin-bottom: 3rem;
 		}
 		.ec-capabilities__title {
-			color: #fff;
 			font-size: clamp(2rem, 3.5vw, 2.8rem);
-			text-align: center;
-			margin-bottom: 1rem;
-			text-transform: none;
-		}
-		.ec-capabilities__subtitle-row {
-			text-align: center;
-			margin-bottom: 3rem;
+			font-weight: 800;
+			text-transform: uppercase;
+			letter-spacing: -0.03em;
+			line-height: 1.1;
+			margin: 0;
 		}
 		.ec-capabilities__grid {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
-			gap: 1.5rem;
-			margin-bottom: 3rem;
+			gap: 1.25rem;
+			margin-bottom: 2.5rem;
 		}
 		.ec-cap-card {
-			background: rgba(255,255,255,0.05);
-			border: 1px solid rgba(255,255,255,0.1);
-			border-radius: 16px;
-			padding: 2rem;
+			background: #fdfcf9;
+			border: 1px solid rgba(0,0,0,0.06);
+			border-radius: 20px;
+			overflow: hidden;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 			transition: all 0.25s ease;
 		}
 		.ec-cap-card:hover {
-			background: rgba(255,255,255,0.08);
-			border-color: rgba(255,255,255,0.2);
+			box-shadow: 0 8px 30px rgba(0,0,0,0.08);
 			transform: translateY(-3px);
 		}
+		.ec-cap-card__body {
+			padding: 1.25rem 1.5rem 1.5rem;
+		}
 		.ec-cap-card__icon {
-			font-size: 1.8rem;
-			margin-bottom: 1rem;
+			width: 32px;
+			height: 32px;
+			border-radius: 8px;
+			background: #1a1a1a;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 0.75rem;
+			flex-shrink: 0;
 		}
 		.ec-cap-card h3 {
-			color: #fff;
-			font-size: 1.1rem;
-			margin-bottom: 0.75rem;
-			text-transform: none;
+			font-size: 0.95rem;
+			margin-bottom: 0.4rem;
 			font-weight: 700;
 		}
 		.ec-cap-card p {
-			color: rgba(255,255,255,0.6);
-			font-size: 0.88rem;
-			line-height: 1.6;
+			color: var(--text-secondary);
+			font-size: 0.82rem;
+			line-height: 1.55;
 		}
 
-		/* Testimonial inside dark */
+		/* ── Mock visuals ── */
+		.ec-cap-mock {
+			background: #f4f4f6;
+			border-bottom: 1px solid rgba(0,0,0,0.06);
+			padding: 0.75rem;
+			overflow: hidden;
+		}
+		.ec-mock-bar {
+			display: flex;
+			align-items: center;
+			gap: 0.35rem;
+			margin-bottom: 0.6rem;
+		}
+		.ec-mock-dot {
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background: #d0d0d0;
+		}
+		.ec-mock-label {
+			font-size: 0.62rem;
+			color: #888;
+			font-weight: 600;
+			letter-spacing: 0.02em;
+			margin-left: 0.2rem;
+		}
+		/* Table mock */
+		.ec-mock-table {
+			background: #fff;
+			border-radius: 8px;
+			overflow: hidden;
+			border: 1px solid #ebebeb;
+			font-size: 0.6rem;
+		}
+		.ec-mock-thead {
+			display: grid;
+			grid-template-columns: 1fr 1.4fr 1fr 0.8fr;
+			padding: 0.3rem 0.5rem;
+			background: #f7f7f7;
+			font-weight: 700;
+			color: #aaa;
+			text-transform: uppercase;
+			letter-spacing: 0.04em;
+			gap: 0.25rem;
+		}
+		.ec-mock-row {
+			display: grid;
+			grid-template-columns: 1fr 1.4fr 1fr 0.8fr;
+			padding: 0.28rem 0.5rem;
+			border-top: 1px solid #f2f2f2;
+			gap: 0.25rem;
+			align-items: center;
+			color: #444;
+		}
+		.ec-mock-tag {
+			display: inline-block;
+			padding: 0.1rem 0.4rem;
+			border-radius: 4px;
+			font-weight: 700;
+			font-size: 0.58rem;
+		}
+		.ec-mock-tag--green { background: #e6f9ee; color: #1a9e52; }
+		.ec-mock-tag--yellow { background: #fff8e6; color: #b07d00; }
+		.ec-mock-tag--red { background: #ffeaea; color: #d63030; }
+		.ec-mock-tag--blue { background: #e8f0ff; color: #2956d6; }
+
+		/* Chart mock */
+		.ec-mock-chart {
+			background: #fff;
+			border-radius: 8px;
+			border: 1px solid #ebebeb;
+			padding: 0.6rem 0.5rem 0.4rem;
+		}
+		.ec-mock-chart__bars {
+			display: flex;
+			align-items: flex-end;
+			gap: 0.3rem;
+			height: 56px;
+		}
+		.ec-mock-chart__col {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.2rem;
+			height: 100%;
+			justify-content: flex-end;
+		}
+		.ec-mock-chart__col span {
+			font-size: 0.55rem;
+			color: #aaa;
+		}
+		.ec-mock-bar-fill {
+			width: 100%;
+			background: #1a1a1a;
+			border-radius: 3px 3px 0 0;
+			min-height: 4px;
+		}
+		.ec-mock-bar-fill--projected {
+			background: #FF7A7A;
+			opacity: 0.7;
+		}
+		.ec-mock-chart__legend {
+			display: flex;
+			gap: 0.75rem;
+			margin-top: 0.4rem;
+			font-size: 0.58rem;
+		}
+		.ec-mock-legend--actual::before,
+		.ec-mock-legend--projected::before {
+			content: '';
+			display: inline-block;
+			width: 8px;
+			height: 8px;
+			border-radius: 2px;
+			margin-right: 0.25rem;
+			vertical-align: middle;
+		}
+		.ec-mock-legend--actual { color: #666; }
+		.ec-mock-legend--actual::before { background: #1a1a1a; }
+		.ec-mock-legend--projected { color: #666; }
+		.ec-mock-legend--projected::before { background: #FF7A7A; opacity: 0.8; }
+
+		/* Warehouse zones */
+		.ec-mock-zones {
+			background: #fff;
+			border-radius: 8px;
+			border: 1px solid #ebebeb;
+			padding: 0.5rem;
+			display: flex;
+			flex-direction: column;
+			gap: 0.4rem;
+		}
+		.ec-mock-zone-row {
+			display: flex;
+			align-items: center;
+			gap: 0.5rem;
+		}
+		.ec-mock-zone-label {
+			font-size: 0.58rem;
+			font-weight: 700;
+			color: #888;
+			width: 38px;
+			flex-shrink: 0;
+		}
+		.ec-mock-bins {
+			display: flex;
+			gap: 0.3rem;
+			flex: 1;
+		}
+		.ec-mock-bin {
+			flex: 1;
+			border-radius: 5px;
+			padding: 0.3rem 0.2rem;
+			text-align: center;
+			font-size: 0.55rem;
+			line-height: 1.4;
+			color: #555;
+		}
+		.ec-mock-bin b { display: block; font-size: 0.65rem; }
+		.ec-mock-bin--full { background: #e6f9ee; color: #1a9e52; }
+		.ec-mock-bin--mid { background: #fff8e6; color: #b07d00; }
+		.ec-mock-bin--empty { background: #ffeaea; color: #d63030; }
+
+		/* Testimonial */
 		.ec-capabilities__testimonial {
-			background: rgba(255,255,255,0.05);
-			border: 1px solid rgba(255,255,255,0.1);
-			border-radius: 16px;
+			background: #fdfcf9;
+			border: 1px solid rgba(0,0,0,0.05);
+			border-radius: 20px;
 			padding: 2rem 2.5rem;
 			max-width: 800px;
 			margin: 0 auto;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 		}
 		.ec-capabilities__testimonial blockquote {
 			font-size: 1rem;
 			line-height: 1.7;
-			color: rgba(255,255,255,0.85);
+			color: var(--text-primary);
 			margin-bottom: 1.5rem;
 			font-style: italic;
 		}
@@ -1200,11 +1948,11 @@ import { SITE_TITLE } from '../../consts';
 		}
 		.ec-capabilities__testimonial-author strong {
 			display: block;
-			color: #fff;
+			color: var(--text-primary);
 			font-size: 0.9rem;
 		}
 		.ec-capabilities__testimonial-author span {
-			color: rgba(255,255,255,0.5);
+			color: var(--text-secondary);
 			font-size: 0.8rem;
 		}
 
@@ -1216,7 +1964,9 @@ import { SITE_TITLE } from '../../consts';
 		}
 		.ec-process__title {
 			font-size: clamp(2rem, 3.5vw, 3rem);
-			text-transform: none;
+			text-transform: uppercase;
+			font-weight: 800;
+			letter-spacing: -0.03em;
 			margin-bottom: 4rem;
 		}
 		.ec-process__steps {
@@ -1299,7 +2049,9 @@ import { SITE_TITLE } from '../../consts';
 		.ec-testimonials__title {
 			font-size: clamp(2rem, 3.5vw, 2.8rem);
 			text-align: center;
-			text-transform: none;
+			text-transform: uppercase;
+			font-weight: 800;
+			letter-spacing: -0.03em;
 			margin-bottom: 3rem;
 		}
 		.ec-testimonials__grid {
@@ -1367,7 +2119,9 @@ import { SITE_TITLE } from '../../consts';
 		}
 		.ec-cta-footer__text h2 {
 			font-size: clamp(2rem, 3.5vw, 2.8rem);
-			text-transform: none;
+			text-transform: uppercase;
+			font-weight: 800;
+			letter-spacing: -0.03em;
 			margin-bottom: 1.25rem;
 			line-height: 1.15;
 		}
@@ -1508,23 +2262,38 @@ import { SITE_TITLE } from '../../consts';
 			.ec-testimonials__grid { grid-template-columns: 1fr; }
 			.ec-stats__grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
 			.ec-cta-footer__actions { flex-direction: column; }
-			.ec-table-mock__header,
-			.ec-table-mock__row {
-				grid-template-columns: 30px 1.5fr 70px 80px;
-			}
-			.col-inventory, .col-price, .col-health { display: none; }
 			.ec-logos__row { gap: 1.5rem; }
+			.ec-mock-thead, .ec-mock-row {
+				grid-template-columns: 1.5fr 1fr 1fr;
+			}
+			.ec-mock-thead span:nth-child(n+4),
+			.ec-mock-row span:nth-child(n+4) { display: none; }
 		}
 
 		@media (max-width: 480px) {
 			.ec-hero__cta-row { flex-direction: column; align-items: center; }
 			.ec-stats__grid { grid-template-columns: 1fr; }
-			.ec-table-mock__header,
-			.ec-table-mock__row {
-				grid-template-columns: 1fr;
-				gap: 0.25rem;
+			.ec-mock-thead, .ec-mock-row {
+				grid-template-columns: 1.5fr 1fr;
 			}
-			.ec-table-mock__checkbox { display: none; }
+			.ec-mock-thead span:nth-child(n+3),
+			.ec-mock-row span:nth-child(n+3) { display: none; }
 		}
 	</style>
 </Layout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const tabs = document.querySelectorAll('.ec-demo-tab');
+		const panels = document.querySelectorAll('.ec-demo-panel');
+		tabs.forEach(tab => {
+			tab.addEventListener('click', () => {
+				tabs.forEach(t => t.classList.remove('active'));
+				panels.forEach(p => p.classList.remove('active'));
+				tab.classList.add('active');
+				const target = tab.dataset.tab;
+				document.querySelector(`.ec-demo-panel[data-panel="${target}"]`)?.classList.add('active');
+			});
+		});
+	});
+</script>
