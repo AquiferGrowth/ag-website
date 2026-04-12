@@ -12,6 +12,18 @@ import { SITE_TITLE } from '../consts';
 		<!-- Desktop links -->
 		<div class="links">
 			<HeaderLink href="/">Home</HeaderLink>
+			<div class="nav-dropdown">
+				<button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
+					Industries
+					<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</button>
+				<div class="nav-dropdown__menu" role="menu">
+					<a href="/industries/ecommerce" class="nav-dropdown__item" role="menuitem">
+						<span class="nav-dropdown__item-icon">🛒</span>
+						<span>E-commerce</span>
+					</a>
+				</div>
+			</div>
 			<HeaderLink href="/case-studies">Case Studies</HeaderLink>
 			<HeaderLink href="/contact">Contact</HeaderLink>
 		</div>
@@ -28,6 +40,15 @@ import { SITE_TITLE } from '../consts';
 <!-- Mobile drawer -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
 	<a href="/" class="mobile-menu__link">Home</a>
+	<div class="mobile-menu__group">
+		<button class="mobile-menu__link mobile-menu__group-trigger" id="mobileIndustriesToggle" aria-expanded="false">
+			Industries
+			<svg width="12" height="12" viewBox="0 0 10 10" fill="none" class="mobile-menu__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</button>
+		<div class="mobile-menu__submenu" id="mobileIndustriesMenu">
+			<a href="/industries/ecommerce" class="mobile-menu__sublink">E-commerce</a>
+		</div>
+	</div>
 	<a href="/case-studies" class="mobile-menu__link">Case Studies</a>
 	<a href="/contact" class="mobile-menu__link">Contact</a>
 </div>
@@ -78,6 +99,112 @@ import { SITE_TITLE } from '../consts';
 		letter-spacing: 0.05em;
 		align-items: center;
 	}
+
+	/* ── Dropdown ── */
+	.nav-dropdown {
+		position: relative;
+	}
+	.nav-dropdown__trigger {
+		display: flex;
+		align-items: center;
+		gap: 0.3rem;
+		background: none;
+		border: none;
+		cursor: pointer;
+		font-family: var(--font-display);
+		font-weight: 700;
+		font-size: 0.85rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--text-primary);
+		padding: 0;
+		transition: color 0.15s ease;
+	}
+	.nav-dropdown__trigger:hover { color: var(--accent-primary); }
+	.nav-dropdown__caret {
+		transition: transform 0.2s ease;
+	}
+	.nav-dropdown:hover .nav-dropdown__caret,
+	.nav-dropdown.is-open .nav-dropdown__caret {
+		transform: rotate(180deg);
+	}
+	.nav-dropdown__menu {
+		position: absolute;
+		top: calc(100% + 0.75rem);
+		left: 50%;
+		transform: translateX(-50%);
+		background: var(--bg-secondary);
+		border: 1px solid var(--border-color);
+		border-radius: 14px;
+		padding: 0.5rem;
+		min-width: 180px;
+		box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+		opacity: 0;
+		pointer-events: none;
+		transform: translateX(-50%) translateY(-6px);
+		transition: opacity 0.18s ease, transform 0.18s ease;
+	}
+	.nav-dropdown:hover .nav-dropdown__menu,
+	.nav-dropdown.is-open .nav-dropdown__menu {
+		opacity: 1;
+		pointer-events: auto;
+		transform: translateX(-50%) translateY(0);
+	}
+	.nav-dropdown__item {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.6rem 0.85rem;
+		border-radius: 9px;
+		font-size: 0.85rem;
+		font-weight: 600;
+		color: var(--text-primary);
+		text-decoration: none;
+		transition: background 0.15s ease, color 0.15s ease;
+		white-space: nowrap;
+	}
+	.nav-dropdown__item:hover {
+		background: rgba(0,0,0,0.04);
+		color: var(--accent-primary);
+	}
+	.nav-dropdown__item-icon { font-size: 1rem; }
+
+	/* ── Mobile submenu ── */
+	.mobile-menu__group { display: flex; flex-direction: column; }
+	.mobile-menu__group-trigger {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		background: none;
+		border: none;
+		border-bottom: 1px solid var(--border-muted);
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+	}
+	.mobile-menu__group-trigger[aria-expanded="true"] .mobile-menu__caret {
+		transform: rotate(180deg);
+	}
+	.mobile-menu__caret { transition: transform 0.2s ease; flex-shrink: 0; }
+	.mobile-menu__submenu {
+		display: none;
+		flex-direction: column;
+		padding-left: 1rem;
+		border-bottom: 1px solid var(--border-muted);
+	}
+	.mobile-menu__submenu.is-open { display: flex; }
+	.mobile-menu__sublink {
+		font-family: var(--font-display);
+		font-size: 1.1rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: -0.02em;
+		color: var(--text-secondary);
+		text-decoration: none;
+		padding: 0.6rem 0;
+		transition: color 0.15s ease;
+	}
+	.mobile-menu__sublink:hover { color: var(--accent-primary); }
 
 	/* ── Hamburger ── */
 	.hamburger {
@@ -220,5 +347,13 @@ import { SITE_TITLE } from '../consts';
 	// Close on nav link click
 	mobileMenu?.querySelectorAll('a').forEach(link => {
 		link.addEventListener('click', closeMenu);
+	});
+
+	// Mobile industries toggle
+	const industriesToggle = document.getElementById('mobileIndustriesToggle');
+	const industriesMenu = document.getElementById('mobileIndustriesMenu');
+	industriesToggle?.addEventListener('click', () => {
+		const isOpen = industriesMenu?.classList.toggle('is-open');
+		industriesToggle.setAttribute('aria-expanded', String(isOpen));
 	});
 </script>
