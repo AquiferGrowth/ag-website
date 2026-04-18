@@ -39,202 +39,159 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 				<!-- Three-Act Build Banner -->
 				<section class="three-act-banner animate-fade-in">
-					<div class="banner-grid-overlay"></div>
 
-					<div class="ta-banner-header">
-						<div class="act-badge">
-							<span class="act-dot"></span>
-							<span class="act-phase-label">PLUG IN</span>
+					<!-- Act Phase Label -->
+					<div class="tab-act-header">
+						<div class="tab-act-pill">
+							<span class="tab-act-dot"></span>
+							<span class="tab-act-text">PLUG IN</span>
 						</div>
 					</div>
 
-					<div class="framework-console">
+					<!-- 3-column grid: Sources | Process | Dashboard -->
+					<div class="tab-grid">
 
-						<!-- SVG Layer -->
-						<div class="stream-connections">
-							<svg width="100%" height="100%" preserveAspectRatio="none" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible;">
-								<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
-								<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245,158,11,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
-								<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
-								<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99,179,246,0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
-								<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16,185,129,0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden"/>
+						<!-- Column 1: Source Tools -->
+						<div class="tab-sources">
+							<div class="tab-col-label">Source Nodes <span class="tab-node-count">0 / 4</span></div>
+							<div class="tab-source-list">
+								<div class="tab-src" data-src="s1" style="opacity:0;transform:translateX(-12px)">
+									<div class="tab-src-dot s1"></div>
+									<div class="tab-src-info"><span>HubSpot CRM</span><span class="tab-src-type">API Sync</span></div>
+								</div>
+								<div class="tab-src" data-src="s2" style="opacity:0;transform:translateX(-12px)">
+									<div class="tab-src-dot s2"></div>
+									<div class="tab-src-info"><span>Website Forms</span><span class="tab-src-type">Webhook</span></div>
+								</div>
+								<div class="tab-src" data-src="s3" style="opacity:0;transform:translateX(-12px)">
+									<div class="tab-src-dot s3"></div>
+									<div class="tab-src-info"><span>LinkedIn</span><span class="tab-src-type">Scraper Feed</span></div>
+								</div>
+								<div class="tab-src" data-src="s4" style="opacity:0;transform:translateX(-12px)">
+									<div class="tab-src-dot s4"></div>
+									<div class="tab-src-info"><span>Apollo.io</span><span class="tab-src-type">Enrichment API</span></div>
+								</div>
+							</div>
+							<!-- Connector lines drawn by JS/SVG -->
+							<svg class="tab-src-svg" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:5;">
+								<line class="tab-line tab-line-s1" x1="0" y1="0" x2="0" y2="0" stroke="rgba(99,102,241,0.5)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
+								<line class="tab-line tab-line-s2" x1="0" y1="0" x2="0" y2="0" stroke="rgba(245,158,11,0.5)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
+								<line class="tab-line tab-line-s3" x1="0" y1="0" x2="0" y2="0" stroke="rgba(99,102,241,0.5)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
+								<line class="tab-line tab-line-s4" x1="0" y1="0" x2="0" y2="0" stroke="rgba(245,158,11,0.5)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0"/>
 							</svg>
 						</div>
 
-						<!-- Column 1: Source Nodes -->
-						<div class="systems-column console-panel">
-							<div class="panel-header">
-								<span class="panel-tag">Source Nodes</span>
-								<span class="panel-meta node-count-label">0 Connected</span>
+						<!-- Central hub -->
+						<div class="tab-hub">
+							<div class="tab-hub-node">
+								<div class="tab-hub-inner"></div>
 							</div>
-							<div class="systems-source-list">
-								<div class="source-item ta-source" data-source="src1" style="opacity:0;transform:translateX(-10px)">
-									<div class="source-indicator"></div>
-									<div class="source-label"><span>HubSpot CRM</span><span class="s-type">API Sync</span></div>
-									<div class="stream-anchor anchor-src1"></div>
-								</div>
-								<div class="source-item ta-source" data-source="src2" style="opacity:0;transform:translateX(-10px)">
-									<div class="source-indicator"></div>
-									<div class="source-label"><span>Website Forms</span><span class="s-type">Webhook Stream</span></div>
-									<div class="stream-anchor anchor-src2"></div>
-								</div>
-								<div class="source-item ta-source" data-source="src3" style="opacity:0;transform:translateX(-10px)">
-									<div class="source-indicator"></div>
-									<div class="source-label"><span>LinkedIn Data</span><span class="s-type">Scraper Feed</span></div>
-									<div class="stream-anchor anchor-src3"></div>
-								</div>
-								<div class="source-item ta-source" data-source="src4" style="opacity:0;transform:translateX(-10px)">
-									<div class="source-indicator"></div>
-									<div class="source-label"><span>Apollo.io</span><span class="s-type">Enrichment API</span></div>
-									<div class="stream-anchor anchor-src4"></div>
-								</div>
-							</div>
+							<div class="tab-hub-line"></div>
 						</div>
 
 						<!-- Column 2: Process Layer -->
-						<div class="execution-column console-panel">
-							<div class="panel-header">
-								<span class="panel-tag">Process Layer</span>
-								<div class="status-pulse active"></div>
-							</div>
-							<ul class="task-checklist">
-								<li class="task-item" data-step="1">
-									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-									<div class="task-content">
-										<div class="task-label-row"><span class="task-label">Identify Stale Records</span><span class="step-tag tag-automation">AUTOMATION</span></div>
-										<span class="task-detail">Scanning deals with no activity in 14+ days</span>
+						<div class="tab-process">
+							<div class="tab-col-label">Process Layer</div>
+							<ul class="tab-step-list">
+								<li class="tab-step" data-step="1" style="opacity:0;transform:translateY(8px)">
+									<div class="tab-step-check"></div>
+									<div class="tab-step-body">
+										<div class="tab-step-row">
+											<span class="tab-step-name">Identify Stale Records</span>
+											<span class="tab-tag tab-tag-auto" style="opacity:0">AUTOMATION</span>
+										</div>
+										<span class="tab-step-detail">Scanning deals with no activity in 14+ days</span>
 									</div>
 								</li>
-								<li class="task-item" data-step="2">
-									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-									<div class="task-content">
-										<div class="task-label-row"><span class="task-label">Enrich Missing Data</span><span class="step-tag tag-ai">AI AGENT</span></div>
-										<span class="task-detail">Pulling contact info from source tools</span>
+								<li class="tab-step" data-step="2" style="opacity:0;transform:translateY(8px)">
+									<div class="tab-step-check"></div>
+									<div class="tab-step-body">
+										<div class="tab-step-row">
+											<span class="tab-step-name">Enrich Missing Data</span>
+											<span class="tab-tag tab-tag-ai" style="opacity:0">AI AGENT</span>
+										</div>
+										<span class="tab-step-detail">Pulling contact info from source tools</span>
 									</div>
 								</li>
-								<li class="task-item" data-step="3">
-									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-									<div class="task-content">
-										<div class="task-label-row"><span class="task-label">Normalise Deal Stages</span><span class="step-tag tag-integration">INTEGRATION</span></div>
-										<span class="task-detail">Aligning probabilities to pipeline rules</span>
+								<li class="tab-step" data-step="3" style="opacity:0;transform:translateY(8px)">
+									<div class="tab-step-check"></div>
+									<div class="tab-step-body">
+										<div class="tab-step-row">
+											<span class="tab-step-name">Normalise Deal Stages</span>
+											<span class="tab-tag tab-tag-int" style="opacity:0">INTEGRATION</span>
+										</div>
+										<span class="tab-step-detail">Aligning probabilities to pipeline rules</span>
 									</div>
 								</li>
-								<li class="task-item" data-step="4">
-									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-									<div class="task-content">
-										<div class="task-label-row"><span class="task-label">Flag Exceptions</span><span class="step-tag tag-ai">AI AGENT</span></div>
-										<span class="task-detail">Deals missing owner or value flagged</span>
+								<li class="tab-step" data-step="4" style="opacity:0;transform:translateY(8px)">
+									<div class="tab-step-check"></div>
+									<div class="tab-step-body">
+										<div class="tab-step-row">
+											<span class="tab-step-name">Flag Exceptions</span>
+											<span class="tab-tag tab-tag-ai" style="opacity:0">AI AGENT</span>
+										</div>
+										<span class="tab-step-detail">Deals missing owner or value flagged</span>
 									</div>
 								</li>
-								<li class="task-item" data-step="5">
-									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-									<div class="task-content">
-										<div class="task-label-row"><span class="task-label">Final Integrity Check</span><span class="step-tag tag-team">OUR TEAM</span></div>
-										<span class="task-detail">Reconciled against forecast model</span>
+								<li class="tab-step" data-step="5" style="opacity:0;transform:translateY(8px)">
+									<div class="tab-step-check"></div>
+									<div class="tab-step-body">
+										<div class="tab-step-row">
+											<span class="tab-step-name">Final Integrity Check</span>
+											<span class="tab-tag tab-tag-team" style="opacity:0">OUR TEAM</span>
+										</div>
+										<span class="tab-step-detail">Reconciled against forecast model</span>
 									</div>
 								</li>
 							</ul>
-							<div class="stream-anchor anchor-process" style="position:absolute;right:0;top:30%;"></div>
 						</div>
 
 						<!-- Column 3: CRM Dashboard -->
-						<div class="oversight-column" style="position:relative;">
-							<div class="stream-anchor anchor-oversight" style="position:absolute;left:0;top:20%;"></div>
-							<div class="oversight-dashboard crm-dashboard">
+						<div class="tab-dashboard">
+							<!-- Managed badge (Act 3) -->
+							<div class="tab-managed-badge" style="opacity:0">
+								<span class="tab-managed-dot"></span>MANAGED OPS — LIVE
+							</div>
 
-								<div class="managed-ops-badge" style="opacity:0;margin-bottom:0.5rem;">
-									<span class="mob-dot"></span>MANAGED OPS — LIVE
-								</div>
+							<!-- Stats bar — each tile animates in separately -->
+							<div class="tab-stats">
+								<div class="tab-stat" style="opacity:0"><span class="tab-stat-val tab-pipeline" style="color:#3b82f6">$284k</span><span class="tab-stat-lbl">Pipeline</span></div>
+								<div class="tab-stat" style="opacity:0"><span class="tab-stat-val tab-contacts" style="color:#8b5cf6">147</span><span class="tab-stat-lbl">Contacts</span></div>
+								<div class="tab-stat" style="opacity:0"><span class="tab-stat-val tab-flagged" style="color:#f59e0b">2</span><span class="tab-stat-lbl">Flagged</span></div>
+								<div class="tab-stat" style="opacity:0"><span class="tab-stat-val" style="color:#10b981">94%</span><span class="tab-stat-lbl">Coverage</span></div>
+							</div>
 
-								<div class="dashboard-header">
-									<div class="dash-id">
-										<span class="label">INSTANCE</span>
-										<span class="val">SLS-992-CRM</span>
-									</div>
-									<div class="dash-status">
-										<span class="ready-tag">RUNNING ON SCHEDULE</span>
-										<div class="status-dot"></div>
-									</div>
+							<!-- Contact records table — rows appear one by one -->
+							<div class="tab-table-wrap" style="opacity:0">
+								<div class="tab-table-label">Contact Records <span class="tab-live-chip">LIVE</span></div>
+								<div class="tab-table">
+									<div class="tab-table-head"><span>Company</span><span>Stage</span><span>Value</span></div>
+									<div class="tab-row tab-row-1" style="opacity:0"><span>Acme Corp</span><span class="tab-stage-q">Qualified</span><span class="tab-val">$48k</span></div>
+									<div class="tab-row tab-row-2" style="opacity:0"><span>Vertex AI</span><span class="tab-stage-p">Proposal</span><span class="tab-val">$112k</span></div>
+									<div class="tab-row tab-row-flag" style="opacity:0"><span>Orbit SaaS</span><span class="tab-stage-f">⚑ No Owner</span><span class="tab-val">$29k</span></div>
+									<div class="tab-row tab-row-new" style="opacity:0"><span>Luminary Co</span><span class="tab-stage-w">Won</span><span class="tab-val">$95k</span></div>
 								</div>
+							</div>
 
-								<div class="crm-stats-row">
-									<div class="crm-stat">
-										<span class="crm-stat-val ta-pipeline" style="color:#3b82f6;">$284k</span>
-										<span class="crm-stat-label">Pipeline</span>
-									</div>
-									<div class="crm-stat">
-										<span class="crm-stat-val ta-contacts" style="color:#a5b4fc;">147</span>
-										<span class="crm-stat-label">Contacts</span>
-									</div>
-									<div class="crm-stat">
-										<span class="crm-stat-val ta-flagged" style="color:#f59e0b;">2</span>
-										<span class="crm-stat-label">Flagged</span>
-									</div>
-									<div class="crm-stat">
-										<span class="crm-stat-val" style="color:#10b981;">94%</span>
-										<span class="crm-stat-label">Coverage</span>
-									</div>
-								</div>
+							<!-- Lead source bars — grow from 0 -->
+							<div class="tab-bars-wrap" style="opacity:0">
+								<div class="tab-bars-label">Lead Sources</div>
+								<div class="tab-bar-row"><span class="tab-bar-name">Web Form</span><div class="tab-bar-track"><div class="tab-bar-fill" data-pct="52" style="width:0%;background:#3b82f6"></div></div><span class="tab-bar-pct">52%</span></div>
+								<div class="tab-bar-row"><span class="tab-bar-name">LinkedIn</span><div class="tab-bar-track"><div class="tab-bar-fill" data-pct="28" style="width:0%;background:#8b5cf6"></div></div><span class="tab-bar-pct">28%</span></div>
+								<div class="tab-bar-row"><span class="tab-bar-name">Apollo.io</span><div class="tab-bar-track"><div class="tab-bar-fill" data-pct="20" style="width:0%;background:#f59e0b"></div></div><span class="tab-bar-pct">20%</span></div>
+							</div>
 
-								<div class="crm-table-section">
-									<div class="crm-table-label">Contact Records <span class="crm-badge">Live</span></div>
-									<div class="crm-table-wrapper">
-										<div class="crm-table-head">
-											<span>Company</span><span>Contact</span><span>Source</span><span>Stage</span><span>Value</span>
-										</div>
-										<div class="crm-table-body">
-											<div class="crm-row crm-row--new">
-												<span class="crm-company">Acme Corp</span>
-												<span class="crm-contact">J. Harrington</span>
-												<span class="crm-source src-web">Web</span>
-												<span class="crm-stage stage-qualified">Qualified</span>
-												<span class="crm-value">$48k</span>
-											</div>
-											<div class="crm-row">
-												<span class="crm-company">Vertex AI</span>
-												<span class="crm-contact">S. Mehta</span>
-												<span class="crm-source src-li">LinkedIn</span>
-												<span class="crm-stage stage-proposal">Proposal</span>
-												<span class="crm-value">$112k</span>
-											</div>
-											<div class="crm-row crm-row--flag">
-												<span class="crm-company">Orbit SaaS</span>
-												<span class="crm-contact">T. Andersen</span>
-												<span class="crm-source src-apollo">Apollo</span>
-												<span class="crm-stage stage-flag">&#9873; No Owner</span>
-												<span class="crm-value">$29k</span>
-											</div>
-											<div class="crm-row ta-new-row" style="opacity:0;">
-												<span class="crm-company">Luminary Co</span>
-												<span class="crm-contact">R. Okafor</span>
-												<span class="crm-source src-web">Web</span>
-												<span class="crm-stage stage-closed">Won</span>
-												<span class="crm-value">$95k</span>
-											</div>
-										</div>
-									</div>
-								</div>
-
-								<div class="crm-sources-section">
-									<div class="crm-table-label">Lead Sources</div>
-									<div class="crm-source-bars">
-										<div class="crm-src-row"><span class="crm-src-name">Web Form</span><div class="crm-src-track"><div class="crm-src-fill" style="width:52%;background:#3b82f6;"></div></div><span class="crm-src-pct">52%</span></div>
-										<div class="crm-src-row"><span class="crm-src-name">LinkedIn</span><div class="crm-src-track"><div class="crm-src-fill" style="width:28%;background:#8b5cf6;"></div></div><span class="crm-src-pct">28%</span></div>
-										<div class="crm-src-row"><span class="crm-src-name">Apollo.io</span><div class="crm-src-track"><div class="crm-src-fill" style="width:20%;background:#f59e0b;"></div></div><span class="crm-src-pct">20%</span></div>
-									</div>
-								</div>
-
-								<div class="dashboard-footer">
-									<div class="footer-meta">
-										<div class="meta-item"><span class="m-label">Flagged</span><span class="m-val ta-flagged-footer">2 rec</span></div>
-										<div class="meta-item"><span class="m-label">Pipeline</span><span class="m-val ta-pipeline-footer">$284k</span></div>
-									</div>
-								</div>
+							<!-- Footer (Act 3) -->
+							<div class="tab-dash-footer" style="opacity:0">
+								<div class="tab-footer-item"><span class="tab-footer-lbl">Flagged</span><span class="tab-footer-val tab-footer-flagged">2 rec</span></div>
+								<div class="tab-footer-item"><span class="tab-footer-lbl">Pipeline</span><span class="tab-footer-val tab-footer-pipeline">$284k</span></div>
+								<div class="tab-running-chip">RUNNING ON SCHEDULE</div>
 							</div>
 						</div>
 
-					</div><!-- /.framework-console -->
+					</div><!-- /.tab-grid -->
 				</section>
+
 		<section class="convergence-section animate-fade-in">
 			<div class="convergence-outer section-white-card">
 				<div class="convergence-header">
@@ -1608,1956 +1565,317 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		max-width: 1200px;
 	}
 
-	/* Three-Act Banner (replaces old tabs section) */
+	/* Three-Act Banner — full rebuild */
 	.three-act-banner {
 		background: transparent;
-		color: #1a1a1a;
-		padding: 2rem 0;
-		position: relative;
+		padding: 2rem 0 3rem;
 		width: 100%;
 		max-width: 1200px;
-	}
-	/* Hide the dark dot-grid overlay */
-	.three-act-banner .banner-grid-overlay { display: none; }
-
-	/* Panels — white cards on the light page bg */
-	.three-act-banner .console-panel {
-		background: #ffffff;
-		border: 1px solid rgba(0,0,0,0.07);
-		backdrop-filter: none;
-		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-	}
-	.three-act-banner .panel-tag { color: #888; }
-	.three-act-banner .panel-meta { color: #555; }
-	.three-act-banner .source-label span:first-child { color: #1a1a1a; }
-	.three-act-banner .source-item.active .source-label span:first-child { color: #0f172a; }
-	.three-act-banner .s-type { color: #999; }
-	.three-act-banner .source-item { border-color: rgba(0,0,0,0.05); }
-	.three-act-banner .source-item.active { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.2); }
-	.three-act-banner .task-label { color: #1a1a1a; }
-	.three-act-banner .task-detail { color: #999; }
-	.three-act-banner .checkbox-box { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.1); }
-	.three-act-banner .task-item.is-done .checkbox-box { background: #10b981; border-color: #10b981; }
-
-	/* Oversight dashboard */
-	.three-act-banner .oversight-dashboard {
-		background: #ffffff;
-		border: 1px solid rgba(0,0,0,0.07);
-		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-	}
-	.three-act-banner .dashboard-header { border-color: rgba(0,0,0,0.06); }
-	.three-act-banner .dash-id .label { color: #aaa; }
-	.three-act-banner .dash-id .val { color: #555; }
-	.three-act-banner .ready-tag { color: #888; border-color: rgba(0,0,0,0.1); background: rgba(0,0,0,0.04); }
-	.three-act-banner .crm-stat-label { color: #aaa; }
-	.three-act-banner .crm-table-label { color: #888; }
-	.three-act-banner .crm-table-wrapper { border-color: rgba(0,0,0,0.07); }
-	.three-act-banner .crm-table-head { background: rgba(0,0,0,0.03); color: #999; }
-	.three-act-banner .crm-row { border-color: rgba(0,0,0,0.05); color: #333; }
-	.three-act-banner .crm-row--flag { background: rgba(245,158,11,0.06); }
-	.three-act-banner .crm-src-name { color: #666; }
-	.three-act-banner .crm-src-pct { color: #888; }
-	.three-act-banner .crm-src-track { background: rgba(0,0,0,0.06); }
-	.three-act-banner .m-label { color: #aaa; }
-	.three-act-banner .m-val { color: #333; }
-	.three-act-banner .dashboard-footer { border-color: rgba(0,0,0,0.06); }
-	.three-act-banner .btn-approve-console { background: rgba(0,0,0,0.06); color: #555; border-color: rgba(0,0,0,0.1); }
-	.three-act-banner .oversight-dashboard.active .btn-approve-console { background: #f74c7c; color: #fff; border-color: transparent; }
-
-	/* Act badge — dark pill on light bg */
-	.three-act-banner .act-badge {
-		background: rgba(0,0,0,0.06);
-		border-color: rgba(0,0,0,0.1);
-		color: #333;
-	}
-	/* Shrink status-pulse to a tiny dot — big pulsing circle looks wrong on white */
-	.three-act-banner .status-pulse {
-		width: 8px;
-		height: 8px;
-		background: #10b981;
-		border-radius: 50%;
-		animation: act-pulse 1.4s ease-in-out infinite;
-	}
-	.three-act-banner .status-pulse::after { display: none; }
-	/* Managed ops badge readable on light bg */
-	.three-act-banner .managed-ops-badge { color: #10b981; }
-	/* RUNNING ON SCHEDULE tag */
-	.three-act-banner .ready-tag {
-		font-size: 0.55rem;
-		color: #666;
-		background: rgba(0,0,0,0.04);
-		border: 1px solid rgba(0,0,0,0.08);
-		border-radius: 4px;
-		padding: 2px 6px;
-		letter-spacing: 0.08em;
-	}
-	.ta-banner-header {
-		margin-bottom: 1.75rem;
-	}
-	.ta-use-case-info {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 0.6rem;
-	}
-
-	.inactive-slide {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	header {
-		position: sticky;
-		top: 1.25rem;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0);
-		background-size: 24px 24px;
-		pointer-events: none;
-	}
-
-	.use-case-header {
-		margin-bottom: 2rem;
 		position: relative;
-		z-index: 2;
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-end;
 	}
+	@media (max-width: 800px) { .three-act-banner { display: none; } }
 
-	@media (max-width: 768px) {
-		.use-case-header {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 1rem;
-		}
-	}
-
-	.uc-nav-controls {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-	}
-
-	.uc-nav-btn {
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		color: #94a3b8;
-		border-radius: 50%;
-		width: 48px;
-		height: 48px;
+	/* Act phase pill */
+	.tab-act-header { margin-bottom: 1.5rem; }
+	.tab-act-pill {
 		display: inline-flex;
 		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-		z-index: 10000 !important;
-		position: relative;
-        pointer-events: auto !important;
-	}
-
-	.uc-nav-btn:hover {
-		color: #FFFFFF !important;
-		background: #3b82f6 !important;
-		border-color: #3b82f6 !important;
-		transform: scale(1.1) translateY(-2px);
-		box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
-	}
-
-	.uc-nav-btn svg {
-		transition: transform 0.2s;
-		pointer-events: none;
-	}
-
-	.uc-nav-btn.next:hover svg {
-		transform: translateX(3px);
-	}
-
-	.uc-nav-btn.prev:hover svg {
-		transform: translateX(-3px);
-	}
-	.uc-tag {
-		font-size: 0.7rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: #94a3b8;
-		background: rgba(255, 255, 255, 0.05);
-		padding: 4px 10px;
-		border-radius: 4px;
-		display: inline-block;
-		margin-bottom: 0.75rem;
-	}
-	.uc-title {
-		font-size: 2rem;
-		font-family: inherit;
-		font-weight: 500;
-		line-height: 1.1;
-		color: #f8fafc;
-		margin: 0;
-	}
-
-
-	.framework-console {
-		display: grid;
-		grid-template-columns: 220px 280px 1.4fr;
-		gap: 0.75rem;
-		align-items: start;
-		position: relative;
-		z-index: 2;
-	}
-
-	.stream-connections {
-		position: absolute;
-		inset: 0;
-		pointer-events: none;
-		z-index: 10;
-	}
-
-	.console-panel {
-		background: rgba(15, 23, 42, 0.4);
-		backdrop-filter: blur(8px);
-		border: 1px solid rgba(255, 255, 255, 0.06);
-		border-radius: 12px;
-		padding: 1rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-
-	.panel-header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding-bottom: 0.75rem;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.03);
-	}
-
-	.panel-tag {
-		font-size: 0.6rem;
-		font-weight: 800;
-		color: #64748b;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-	}
-
-	.panel-meta {
-		font-size: 0.5rem;
-		color: #475569;
-		font-family: var(--font-mono, monospace);
-	}
-
-	/* Systems Source List */
-	.systems-source-list {
-		display: flex;
-		flex-direction: column;
-		gap: 0.6rem;
-	}
-
-	.source-item {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		padding: 0.75rem;
-		background: rgba(255, 255, 255, 0.02);
-		border: 1px solid rgba(255, 255, 255, 0.04);
-		border-radius: 10px;
-		position: relative;
-		transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-	}
-
-	.source-item.active {
-		background: rgba(59, 130, 246, 0.05);
-		border-color: rgba(59, 130, 246, 0.2);
-	}
-
-	.source-indicator {
-		width: 6px;
-		height: 6px;
-		background: #1e293b;
-		border-radius: 50%;
-		flex-shrink: 0;
-		transition: all 0.3s ease;
-	}
-
-	.source-item.active .source-indicator {
-		background: #3b82f6;
-		box-shadow: 0 0 8px #3b82f6;
-	}
-
-	.source-label {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-
-	.source-label span:first-child {
-		font-size: 0.65rem;
-		font-weight: 700;
-		color: #94a3b8;
-	}
-
-	.source-item.active .source-label span:first-child { color: #f8fafc; }
-
-	.s-type {
-		font-size: 0.5rem;
-		color: #475569;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-
-	.stream-anchor {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		width: 1px;
-		height: 1px;
-	}
-
-	.source-metrics {
-		margin-top: auto;
-		background: rgba(0,0,0,0.2);
-		border-radius: 10px;
-		padding: 0.75rem;
-	}
-
-	.mini-trend {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.mt-label { font-size: 0.5rem; color: #64748b; text-transform: uppercase; }
-	.mt-footer { display: flex; justify-content: space-between; align-items: center; }
-	.mt-val { font-family: var(--font-mono, monospace); font-size: 0.6rem; color: #3b82f6; }
-	.mt-status { font-size: 0.5rem; color: #10b981; opacity: 0.8; }
-
-	/* Execution Engine */
-	.task-checklist {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.9rem;
-	}
-
-	.task-item {
-		display: flex;
-		gap: 1rem;
-		opacity: 0.15;
-		transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-		transform: translateX(-5px);
-	}
-
-	.task-item.is-active { opacity: 1; transform: translateX(0); }
-	.task-item.is-done { opacity: 0.5; transform: translateX(0); }
-
-	.checkbox-box {
-		width: 16px;
-		height: 16px;
-		border: 1.5px solid rgba(255, 255, 255, 0.15);
-		border-radius: 4px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		transition: all 0.3s ease;
-	}
-
-	.task-item.is-done .checkbox-box {
-		background: #3b82f6;
-		border-color: #3b82f6;
-	}
-
-	.checkbox-box svg { opacity: 0; transform: scale(0.6); transition: all 0.3s ease; }
-	.task-item.is-done .checkbox-box svg { opacity: 1; transform: scale(1); }
-
-	.task-label { font-size: 0.75rem; font-weight: 700; color: #f1f5f9; display: block; margin-bottom: 2px; }
-	.task-detail { font-size: 0.6rem; color: #64748b; line-height: 1.3; }
-
-	.oversight-column {
-		display: flex;
-		flex-direction: column;
-		min-width: 0;
-	}
-
-	.oversight-dashboard {
-		height: 100%;
-		background: rgba(10, 15, 30, 0.9);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-top: 1px solid rgba(255, 255, 255, 0.25);
-		border-radius: 16px;
-		display: flex;
-		flex-direction: column;
-		overflow: hidden;
-		transform-origin: center;
-		transition: all 0.5s ease;
-	}
-
-	.oversight-dashboard.active {
-		border-color: rgba(16, 185, 129, 0.3);
-		box-shadow: 0 30px 60px -15px rgba(0, 185, 129, 0.1);
-	}
-
-	.dashboard-header {
-		padding: 1rem 1.5rem;
-		background: rgba(255,255,255,0.03);
-		border-bottom: 1px solid rgba(255,255,255,0.06);
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.dash-id { display: flex; flex-direction: column; }
-	.dash-id .label { font-size: 0.5rem; color: #475569; letter-spacing: 0.05em; }
-	.dash-id .val { font-family: var(--font-mono, monospace); font-size: 0.6rem; color: #94a3b8; }
-
-	.dash-status { display: flex; align-items: center; gap: 0.75rem; }
-	.ready-tag { font-size: 0.6rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 0.1em; }
-	.status-dot { width: 6px; height: 6px; background: #334155; border-radius: 50%; transition: all 0.5s ease; }
-	.oversight-dashboard.active .status-dot { background: #10b981; box-shadow: 0 0 10px #10b981; }
-
-	.dashboard-grid {
-		padding: 1.5rem;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: auto 1fr;
-		gap: 1.5rem;
-		flex: 1;
-	}
-
-	.dash-main-chart { grid-column: span 2; display: flex; flex-direction: column; gap: 0.75rem; }
-	.chart-header { display: flex; justify-content: space-between; align-items: flex-end; }
-	.c-label { font-size: 0.6rem; color: #64748b; text-transform: uppercase; font-weight: 800; }
-	.c-val { font-size: 1.2rem; font-weight: 800; color: #fff; font-family: var(--font-mono, monospace); }
-
-	.confidence-bar { height: 6px; background: rgba(255,255,255,0.05); border-radius: 3px; overflow: hidden; }
-	.confidence-bar-fill { width: 0%; height: 100%; background: linear-gradient(90deg, #3b82f6, #60a5fa); }
-	.chart-axis { display: flex; justify-content: space-between; font-size: 0.5rem; color: #334155; padding-top: 4px; }
-
-	.dash-stats { display: flex; align-items: center; justify-content: center; }
-	.stat-circle { position: relative; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; }
-	.stat-inner { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-	.stat-inner .s-val { font-family: var(--font-mono, monospace); font-size: 0.85rem; font-weight: 700; color: #fff; display: block; }
-	.stat-inner .s-label { font-size: 0.4rem; color: #64748b; letter-spacing: 0.1em; font-weight: 800; }
-
-	.stat-circle .ring-fill { transition: stroke-dashoffset 1s ease; }
-
-	.dash-ledger { display: flex; flex-direction: column; gap: 0.5rem; }
-	.dash-ledger .ledger-header { display: grid; grid-template-columns: 1fr 1fr 1fr; font-size: 0.5rem; color: #475569; font-weight: 800; text-transform: uppercase; padding-bottom: 4px; border-bottom: 1px solid rgba(255,255,255,0.04); }
-	.ledger-rows { display: flex; flex-direction: column; gap: 2px; }
-	.l-row { display: grid; grid-template-columns: 1fr 1fr 1fr; align-items: center; padding: 4px 0; font-size: 0.55rem; color: #94a3b8; }
-	.l-row .l-status { font-weight: 700; color: #10b981; }
-	.l-row.warn .l-status.highlight { color: #f59e0b; }
-
-	.dash-activity { grid-column: span 1; }
-	.activity-label { font-size: 0.5rem; color: #475569; text-transform: uppercase; font-weight: 800; margin-bottom: 6px; }
-	.activity-viz { display: flex; align-items: flex-end; gap: 4px; height: 30px; }
-	.a-bar { flex: 1; background: rgba(59, 130, 246, 0.1); border-radius: 1px; transition: all 0.3s ease; }
-
-	.dash-details { grid-column: span 1; }
-	.quality-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
-	.q-item { background: rgba(255, 255, 255, 0.02); padding: 0.4rem; border-radius: 6px; border: 1px solid rgba(255, 255, 255, 0.04); text-align: center; }
-	.q-label { display: block; font-size: 0.35rem; color: #475569; text-transform: uppercase; margin-bottom: 2px; }
-	.q-val { font-size: 0.6rem; font-weight: 700; color: #94a3b8; font-family: var(--font-mono, monospace); }
-
-	.dash-audit { grid-column: span 2; }
-	.audit-log { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; border-top: 1px solid rgba(255,255,255,0.03); }
-	.log-item { display: flex; gap: 8px; font-size: 0.5rem; color: #475569; }
-	.log-time { color: #3b82f6; font-family: var(--font-mono, monospace); opacity: 0.6; }
-	.log-txt { font-weight: 500; }
-
-	.dashboard-footer { padding: 1rem 1.5rem; background: rgba(0,0,0,0.2); display: flex; justify-content: space-between; align-items: center; }
-	.footer-meta { display: flex; gap: 1.5rem; }
-	.meta-item { display: flex; flex-direction: column; }
-	.m-label { font-size: 0.5rem; color: #475569; text-transform: uppercase; }
-	.m-val { font-family: var(--font-mono, monospace); font-size: 0.8rem; font-weight: 700; color: #f8fafc; }
-
-	.btn-approve-console {
-		background: #3b82f6;
-		color: #fff;
-		border: none;
-		padding: 0.75rem 1.25rem;
-		border-radius: 8px;
-		font-size: 0.65rem;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		opacity: 0.1;
-		transition: all 0.4s ease;
-	}
-
-	.oversight-dashboard.active .btn-approve-console {
-		opacity: 1;
-		box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
-	}
-
-	/* ── CRM Dashboard ────────────────────────────── */
-	.crm-dashboard .dashboard-grid { display: none; } /* hide financial grid */
-
-	.crm-stats-row {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 0.5rem;
-		margin-bottom: 0.75rem;
-		padding: 0.75rem 1.25rem 0;
-	}
-	.crm-stat {
-		background: rgba(255,255,255,0.04);
-		border: 1px solid rgba(255,255,255,0.07);
-		border-radius: 8px;
-		padding: 0.5rem 0.6rem;
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-	}
-	.crm-stat-val { font-size: 1rem; font-weight: 700; line-height: 1.2; }
-	.crm-stat-label { font-size: 0.55rem; text-transform: uppercase; letter-spacing: 0.06em; color: #64748b; }
-
-	.crm-table-section { margin-bottom: 0.6rem; padding: 0 1.25rem; }
-	.crm-table-label {
-		font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em;
-		color: #64748b; margin-bottom: 0.4rem;
-		display: flex; align-items: center; gap: 0.4rem;
-	}
-	.crm-badge {
-		font-size: 0.5rem; background: rgba(59,130,246,0.15);
-		color: #60a5fa; border: 1px solid rgba(59,130,246,0.3);
-		border-radius: 4px; padding: 1px 5px; text-transform: uppercase;
-	}
-	.crm-table-wrapper { border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden; }
-	.crm-table-head {
-		display: grid;
-		grid-template-columns: 1.4fr 1.2fr 0.9fr 1.3fr 0.7fr;
-		padding: 0.35rem 0.6rem;
-		background: rgba(255,255,255,0.04);
-		border-bottom: 1px solid rgba(255,255,255,0.07);
-		font-size: 0.52rem; text-transform: uppercase; letter-spacing: 0.06em; color: #475569;
-	}
-	.crm-table-body { display: flex; flex-direction: column; }
-	.crm-row {
-		display: grid;
-		grid-template-columns: 1.4fr 1.2fr 0.9fr 1.3fr 0.7fr;
-		padding: 0.4rem 0.6rem;
-		border-bottom: 1px solid rgba(255,255,255,0.05);
-		font-size: 0.62rem; align-items: center;
-		transition: background 0.2s;
-	}
-	.crm-row:last-child { border-bottom: none; }
-	.crm-row--new { background: rgba(59,130,246,0.05); }
-	.crm-row--flag { background: rgba(245,158,11,0.05); }
-	.crm-company { color: #e2e8f0; font-weight: 600; }
-	.crm-contact { color: #94a3b8; }
-	.crm-value { color: #a5b4fc; font-weight: 600; text-align: right; }
-
-	.crm-source {
-		font-size: 0.52rem; padding: 2px 6px; border-radius: 4px;
-		font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em;
-		display: inline-block; width: fit-content;
-	}
-	.src-web  { background: rgba(59,130,246,0.15); color: #60a5fa; }
-	.src-li   { background: rgba(139,92,246,0.15); color: #a78bfa; }
-	.src-apollo { background: rgba(245,158,11,0.15); color: #fbbf24; }
-
-	.crm-stage {
-		font-size: 0.55rem; padding: 2px 7px; border-radius: 20px;
-		font-weight: 600; display: inline-block; width: fit-content;
-	}
-	.stage-qualified { background: rgba(59,130,246,0.15); color: #60a5fa; }
-	.stage-proposal  { background: rgba(139,92,246,0.15); color: #a78bfa; }
-	.stage-closed    { background: rgba(16,185,129,0.15); color: #34d399; }
-	.stage-flag      { background: rgba(245,158,11,0.15); color: #fbbf24; }
-
-	.crm-sources-section { margin-bottom: 0.6rem; padding: 0 1.25rem; }
-	.crm-source-bars { display: flex; flex-direction: column; gap: 0.35rem; }
-	.crm-src-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.6rem; }
-	.crm-src-name { color: #94a3b8; width: 60px; flex-shrink: 0; }
-	.crm-src-track {
-		flex: 1; height: 5px; background: rgba(255,255,255,0.07);
-		border-radius: 10px; overflow: hidden;
-	}
-	.crm-src-fill { height: 100%; border-radius: 10px; }
-	.crm-src-pct { color: #64748b; font-size: 0.55rem; width: 28px; text-align: right; flex-shrink: 0; }
-
-
-	/* ── Process Section ──────────────────────── */
-	.process-section {
-		padding: 8rem 0;
-		background: transparent;
-		overflow: visible;
-		position: relative;
-	}
-
-	.process-container {
-		display: grid;
-		grid-template-columns: 1fr 1.2fr;
-		gap: 4rem;
-		align-items: flex-start;
-	}
-
-	.process-header {
-		position: sticky;
-		top: 15vh;
-	}
-
-	.step-tag {
-		display: inline-flex;
-		padding: 0.5rem 1rem;
-		background: #FFFFFF;
-		border: 1px solid #e5e7eb;
-		border-radius: 99px;
-		font-size: 0.75rem;
-		font-weight: 700;
-		color: #1A1A1A;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin-bottom: 2rem;
-	}
-
-	.process-title {
-		font-size: clamp(3rem, 8vw, 5rem);
-		line-height: 0.95;
-		color: #1A1A1A;
-		margin-bottom: 2rem;
-		font-weight: 800;
-	}
-
-	.process-desc {
-		font-size: 1.25rem;
-		color: #555555;
-		max-width: 480px;
-		line-height: 1.6;
-	}
-
-	/* Success Path Indicator */
-	.success-path-wrapper {
-		display: flex;
-		align-items: center;
-		gap: 1.5rem;
-		margin-top: 2rem;
-		position: relative;
-	}
-
-	.path-line {
-		position: absolute;
-		left: 6px;
-		top: 40px;
-		bottom: 40px;
-		width: 2px;
-		background: #e5e7eb;
-		z-index: 0;
-	}
-
-	.dots-list {
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-		z-index: 1;
-	}
-
-	.dot {
-		width: 14px;
-		height: 14px;
-		background: #FFFFFF;
-		border: 2px solid #e5e7eb;
-		border-radius: 50%;
-		position: relative;
-		z-index: 1;
-		transition: all 0.3s ease;
-	}
-
-	.dot.active {
-		background: var(--accent-primary);
-		border-color: var(--accent-primary);
-		box-shadow: 0 0 10px rgba(255, 77, 109, 0.4);
-	}
-
-	/* Process steps cards */
-	.process-steps {
-		display: flex;
-		flex-direction: column;
-		gap: 2rem;
-	}
-
-	.process-card {
-		background: #FFFFFF;
-		border: 1px solid #e5e7eb;
-		border-radius: 24px;
-		padding: 3rem;
-		position: relative;
-		overflow: hidden;
-		transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-	}
-
-	.process-card:hover {
-		background: #FFFFFF;
-		border-color: #d1d5db;
-		transform: translateY(-5px);
-	}
-
-	.card-num {
-		position: absolute;
-		top: -20px;
-		right: -10px;
-		font-size: 12rem;
-		font-weight: 900;
-		color: rgba(0, 0, 0, 0.03);
-		user-select: none;
-		pointer-events: none;
-		z-index: 0;
-	}
-
-	.card-content h3 {
-		font-size: 1.5rem;
-		margin-bottom: 1rem;
-		color: #1A1A1A;
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		position: relative;
-		z-index: 1;
-	}
-
-	.step-desc {
-		font-size: 1.125rem;
-		color: #555555;
-		line-height: 1.6;
-		margin-bottom: 2.5rem;
-		position: relative;
-		z-index: 1;
-	}
-
-	.step-features {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem;
-		list-style: none;
-		padding: 0;
-		position: relative;
-		z-index: 1;
-	}
-
-	.step-features li {
-		background: #F9F7F2;
-		border: 1px solid #e5e7eb;
-		padding: 0.4rem 0.8rem;
-		border-radius: 100px;
-		font-size: 0.75rem;
-		font-weight: 600;
-		color: #1A1A1A;
-	}
-
-	@media (max-width: 1024px) {
-		.process-container {
-			grid-template-columns: 1fr;
-			gap: 3rem;
-		}
-
-		.process-header {
-			position: relative;
-			top: 0;
-		}
-
-		.process-desc {
-			max-width: 100%;
-		}
-		
-		.card-num { font-size: 5rem; top: 0; right: 20px; }
-	}
-
-
-	/* ── Order Fulfillment Dashboard ──────────────────────── */
-	.ecom-dashboard .dashboard-grid { display: none; }
-	
-	.ecom-layout {
-		display: flex;
-		height: 290px;
-		background: rgba(255,255,255,0.02);
-		border-bottom: 1px solid rgba(255,255,255,0.05);
-	}
-
-	.ecom-sidebar {
-		width: 100px;
-		flex-shrink: 0;
-		border-right: 1px solid rgba(255,255,255,0.07);
-		background: rgba(0,0,0,0.2);
-		padding: 1rem 0;
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.sidebar-item {
-		padding: 0.5rem 0.75rem;
-		font-size: 0.65rem;
-		font-weight: 600;
-		color: #64748b;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		transition: all 0.2s;
-		cursor: pointer;
-	}
-
-	.sidebar-item svg { opacity: 0.6; }
-	.sidebar-item.active { color: #e2e8f0; background: rgba(255,255,255,0.04); }
-	.sidebar-item.active svg { color: var(--primary-accent); opacity: 1; }
-
-	.ecom-main {
-		flex: 1;
-		padding: 1.25rem;
-		overflow-y: auto;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-	}
-
-	.inventory-table {
-		background: rgba(0,0,0,0.3);
-		border: 1px solid rgba(255,255,255,0.07);
-		border-radius: 10px;
-		overflow: hidden;
-	}
-
-	.inventory-table .table-head {
-		display: grid;
-		grid-template-columns: 1.5fr 1fr 1fr;
-		padding: 0.5rem 0.75rem;
-		background: rgba(255,255,255,0.03);
-		border-bottom: 1px solid rgba(255,255,255,0.07);
-		font-size: 0.55rem;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		color: #475569;
-	}
-
-	.inventory-table .table-row {
-		display: grid;
-		grid-template-columns: 1.5fr 1fr 1fr;
-		padding: 0.5rem 0.75rem;
-		border-bottom: 1px solid rgba(255,255,255,0.04);
-		font-size: 0.65rem;
-		align-items: center;
-	}
-
-	.inventory-table .table-row:last-child { border-bottom: none; }
-	.inventory-table .table-row.highlight { background: rgba(239, 68, 68, 0.04); }
-
-	.status-ok { color: #10b981; font-weight: 700; font-size: 0.55rem; }
-	.status-warn { color: #ef4444; font-weight: 700; font-size: 0.55rem; animation: pulse-red 2s infinite; }
-
-	@keyframes pulse-red {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.6; }
-	}
-
-	.exception-card {
-		background: linear-gradient(to right, rgba(239, 68, 68, 0.08), transparent);
-		border: 1px solid rgba(239, 68, 68, 0.2);
-		border-radius: 10px;
-		padding: 0.75rem;
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-	}
-
-	.exc-title {
-		display: block;
-		font-size: 0.6rem;
-		font-weight: 800;
-		color: #f87171;
-		letter-spacing: 0.05em;
-		margin-bottom: 2px;
-	}
-
-	.exc-meta {
-		display: block;
-		font-size: 0.65rem;
-		color: #94a3b8;
-	}
-
-	.mini-chart {
-		display: flex;
-		align-items: flex-end;
-		gap: 8px;
-		height: 60px;
-		padding: 0 1rem;
-	}
-
-	.mini-chart .bar {
-		flex: 1;
-		background: rgba(59, 130, 246, 0.4);
-		border-radius: 4px 4px 0 0;
-	}
-
-	.stats-row {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
-	}
-
-	.s-box {
-		background: rgba(255, 255, 255, 0.03);
-		padding: 1rem;
-		border-radius: 12px;
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.s-label {
-		font-size: 0.7rem;
-		color: #64748b;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-
-	.s-val {
-		font-size: 1.1rem;
-		font-weight: 700;
-		color: #fff;
-	}
-
-	.progress-list {
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: flex;
-		flex-direction: column;
-		gap: 1.5rem;
-	}
-
-	.progress-item {
-		display: flex;
-		gap: 1.25rem;
-		opacity: 0.3;
-		transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-		transform: translateX(-10px);
-	}
-
-	.progress-item.active {
-		opacity: 1;
-		transform: translateX(0);
-	}
-
-	.progress-item.done {
-		opacity: 0.6;
-		transform: translateX(0);
-	}
-
-	.step-icon {
-		width: 40px;
-		height: 40px;
-		background: rgba(255, 255, 255, 0.05);
-		border: 1px solid rgba(255, 255, 255, 0.1);
-		border-radius: 10px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: #94a3b8;
-		flex-shrink: 0;
-		transition: all 0.4s ease;
-	}
-
-	.progress-item.active .step-icon {
-		background: rgba(255, 77, 109, 0.1);
-		border-color: var(--accent-primary);
-		color: var(--accent-primary);
-		box-shadow: 0 0 20px rgba(255, 77, 109, 0.2);
-	}
-
-	.progress-item.done .step-icon {
-		background: rgba(255, 255, 255, 0.1);
-		color: #FFFFFF;
-	}
-
-	.step-title {
-		font-size: 0.8rem;
-		font-weight: 700;
-		color: #94a3b8;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin-bottom: 0.25rem;
-		display: block;
-	}
-
-	/* Failure Mapping Visual Styles */
-	.failure-mapping-diagram {
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-
-	.mapping-header {
-		display: grid;
-		grid-template-columns: 1fr 40px 1.2fr;
-		width: 100%;
-		padding: 0;
-		margin-bottom: 0.5rem;
-	}
-
-	.header-label {
-		font-size: 0.7rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
-		color: #9ca3af;
-		text-align: center; /* Center within grid column */
-	}
-
-	.header-label.color-damage {
-		color: #f47b56;
-	}
-
-	.mapping-grid {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-
-	.mapping-row {
-		display: grid;
-		grid-template-columns: 1fr 40px 1.2fr;
-		align-items: center;
-		gap: 0.5rem;
-		opacity: 0;
-		transform: translateX(-10px);
-	}
-
-	/* Compact Execution Layer Styles */
-	.compact-dashboard {
-		width: 100%;
-		padding: 0.5rem;
-	}
-
-	.dashboard-rows {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-		margin-bottom: 1.25rem;
-	}
-
-	.compact-item {
-		display: flex;
-		gap: 0.75rem;
-		padding: 0.75rem;
-		background: rgba(255, 255, 255, 0.5);
-		border-radius: 8px;
-		border: 1px solid rgba(0, 0, 0, 0.05);
-		opacity: 0;
-		transform: translateY(10px);
-	}
-
-	.roadmap-step.is-visible .compact-item {
-		animation: compactReveal 0.6s ease forwards;
-	}
-
-	.roadmap-step.is-visible .compact-item:nth-child(2) { animation-delay: 0.2s; }
-	.roadmap-step.is-visible .compact-item:nth-child(3) { animation-delay: 0.4s; }
-
-	@keyframes compactReveal {
-		to { opacity: 1; transform: translateY(0); }
-	}
-
-	.status-dot {
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		margin-top: 4px;
-		flex-shrink: 0;
-	}
-
-	.status-dot.green { background: #10b981; }
-	.status-dot.orange { background: #f97316; }
-
-	.status-dot.pulse {
-		box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
-		animation: dotPulse 2s infinite;
-	}
-
-	@keyframes dotPulse {
-		0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-		70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
-		100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-	}
-
-	.compact-label {
-		display: block;
-		font-size: 0.65rem;
-		font-weight: 700;
-		color: #64748b;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-		margin-bottom: 0.15rem;
-	}
-
-	/* Step 3 Sleek Pills - Simple Connected System */
-	.outcome-pills-container {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1rem 1.75rem; /* Slightly tighter gap */
-		justify-content: center;
-		width: 100%;
-		max-width: 650px; /* Narrower container */
-		margin: 0 auto;
-		padding: 1rem 0.5rem; /* Significantly tighter padding */
-		position: relative;
-	}
-
-	.outcome-pill-item {
-		display: flex;
-		align-items: center;
-		padding: 0.45rem 1rem; /* Back to sleek smaller size */
-		background: #ffffff;
-		border-radius: 100px;
-		border: 1px solid rgba(15, 23, 42, 0.15);
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-		opacity: 0;
-		transform: translateY(10px);
-		transition: all 0.3s ease;
-		position: relative;
-		z-index: 2;
-	}
-
-	/* Simple horizontal connector line after each pill */
-	.outcome-pill-item::after {
-		content: "";
-		position: absolute;
-		left: 100%;
-		top: 50%;
-		width: 1.75rem;
-		height: 1px;
-		background: rgba(15, 23, 42, 0.1);
-		z-index: 1;
-	}
-
-	.outcome-pill-item:last-child::after {
-		display: none;
-	}
-
-	.outcome-pill-item:hover {
-		border-color: #0f172a;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-	}
-
-	.roadmap-step.is-visible .outcome-pill-item {
-		animation: pillReveal 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-	}
-
-	.roadmap-step.is-visible .outcome-pill-item:nth-child(1) { animation-delay: 0.1s; }
-	.roadmap-step.is-visible .outcome-pill-item:nth-child(2) { animation-delay: 0.2s; }
-	.roadmap-step.is-visible .outcome-pill-item:nth-child(3) { animation-delay: 0.3s; }
-	.roadmap-step.is-visible .outcome-pill-item:nth-child(4) { animation-delay: 0.4s; }
-	.roadmap-step.is-visible .outcome-pill-item:nth-child(5) { animation-delay: 0.5s; }
-
-	@keyframes pillReveal {
-		to { opacity: 1; transform: translateY(0); }
-	}
-
-	.outcome-pill-item span {
-		font-size: 0.725rem; /* Sleek smaller font restored */
-		font-weight: 700;
-		color: #0f172a;
-		white-space: nowrap;
-	}
-
-	@media (max-width: 640px) {
-		.outcome-pill-item::after {
-			display: none;
-		}
-		.outcome-pills-container {
-			gap: 0.75rem;
-		}
-	}
-
-	.compact-title {
-		font-size: 0.75rem;
-		font-weight: 700;
-		color: #1e293b;
-		margin: 0 !important;
-	}
-
-	.compact-sub {
-		font-size: 0.75rem;
-		color: #64748b;
-		line-height: 1.3;
-	}
-
-	.mini-rows {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.mini-rows p {
-		font-size: 0.8rem;
-		font-weight: 600;
-		color: #334155;
-		margin: 0 !important;
-	}
-
-	.compact-outcomes {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 0.5rem;
-		opacity: 0;
-	}
-
-	.roadmap-step.is-visible .compact-outcomes {
-		animation: compactReveal 0.6s ease forwards 0.8s;
-	}
-
-	.outcome-pill {
-		background: #0f172a;
-		color: #ffffff;
-		font-size: 0.7rem;
-		font-weight: 700;
-		padding: 0.4rem 0.6rem;
-		border-radius: 4px;
-		text-align: center;
-		white-space: nowrap;
-	}
-
-	.roadmap-step.is-visible .mapping-row {
-		animation: rowSlideIn 0.5s ease-out forwards;
-	}
-
-	/* Staggered Row Entry */
-	.roadmap-step.is-visible .mapping-row:nth-child(1) { animation-delay: 0.4s; }
-	.roadmap-step.is-visible .mapping-row:nth-child(2) { animation-delay: 0.6s; }
-	.roadmap-step.is-visible .mapping-row:nth-child(3) { animation-delay: 0.8s; }
-	.roadmap-step.is-visible .mapping-row:nth-child(4) { animation-delay: 1.0s; }
-	.roadmap-step.is-visible .mapping-row:nth-child(5) { animation-delay: 1.2s; }
-
-	@keyframes rowSlideIn {
-		to { opacity: 1; transform: translateX(0); }
-	}
-
-	.func-pill, .damage-pill {
-		padding: 0.45rem 0.75rem;
-		border-radius: 100px;
-		font-size: 0.68rem; /* Further reduced to fit smaller card width */
-		font-weight: 800;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		text-align: center;
-		min-height: 36px;
-		white-space: nowrap;
-	}
-
-	.func-pill {
-		background: #ffffff;
-		border: 1.5px solid #e5e7eb;
-		color: #111827;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-	}
-
-	.damage-pill {
-		background: #fff7ed;
-		border: 1.5px solid #fed7aa;
-		color: #9a3412;
-	}
-
-	.progress-item.active .step-title {
-		color: var(--accent-primary);
-	}
-
-	.step-text {
-		font-size: 0.95rem;
-		color: #cbd5e1;
-		line-height: 1.5;
-	}
-
-	/* Liability Stack Visual Styles */
-	.liability-stack-diagram.messy-mode {
-		position: relative;
-		overflow: hidden;
-	}
-
-	.fragmented-lines {
-		position: absolute;
-		top: 0; left: 0; width: 100%; height: 100%;
-		z-index: 0;
-		pointer-events: none;
-		opacity: 0.15;
-	}
-
-	.f-line {
-		fill: none;
-		stroke: #f47b56;
-		stroke-width: 1.5;
-		stroke-dasharray: 4, 6;
-		animation: lineDash 12s linear infinite, lineFlicker 3s infinite;
-	}
-
-	@keyframes lineFlicker {
-		0%, 100% { opacity: 0.15; }
-		50% { opacity: 0.05; }
-		55% { opacity: 0.25; }
-		60% { opacity: 0.15; }
-	}
-
-	@keyframes lineDash {
-		to { stroke-dashoffset: -100; }
-	}
-
-	.liability-stack-diagram {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1.25rem;
-		padding: 1rem;
-		width: 100%;
-		position: relative;
-		z-index: 1;
-	}
-
-	.operational-pills, .liability-pills {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: 0.6rem;
-		width: 100%;
-	}
-
-	.op-pill, .li-pill {
-		padding: 0.5rem 1rem;
-		border-radius: 100px;
-		font-size: 0.85rem;
-		font-weight: 500;
-		white-space: nowrap;
-		transition: all 0.3s ease;
-		position: relative;
-	}
-
-	.op-pill {
-		background: #f8fafc;
-		border: 1px solid #e2e8f0;
-		color: #475569;
-		opacity: 0;
-	}
-
-	.roadmap-step.is-visible .op-pill {
-		animation: fadeInSlideUp 0.6s ease-out forwards, driftPill 6s ease-in-out infinite;
-	}
-
-	.li-pill {
-		background: #fef2f2;
-		border: 1px solid #fee2e2;
-		color: #b91c1c;
-		opacity: 0;
-	}
-
-	.roadmap-step.is-visible .li-pill {
-		animation: fadeInSlideUp 0.6s ease-out 0.8s forwards, jitterPill 4s ease-in-out infinite 1.2s;
-	}
-
-	/* Chaotic Animations */
-	@keyframes driftPill {
-		0%, 100% { transform: translateY(0) translateX(0); }
-		33% { transform: translateY(-3px) translateX(2px); }
-		66% { transform: translateY(2px) translateX(-4px); }
-	}
-
-	@keyframes jitterPill {
-		0%, 100% { transform: scale(1) rotate(0); }
-		10%, 20% { transform: scale(0.98) rotate(-1deg); }
-		15% { transform: scale(1.02) rotate(1deg); }
-		50% { transform: scale(1.01) rotate(0.5deg); }
-	}
-
-	.icon-error { color: #f43f5e; margin-right: 0.4rem; font-size: 0.8rem; }
-	.icon-warning { color: #f59e0b; margin-right: 0.4rem; font-size: 0.8rem; }
-	.icon-bolt { color: #b91c1c; margin-left: 0.4rem; font-size: 0.8rem; animation: flicker 2s infinite; }
-
-	.blink-dot {
-		display: inline-block;
-		width: 6px;
-		height: 6px;
-		background: #ef4444;
-		border-radius: 50%;
-		margin-left: 0.5rem;
-		box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
-		animation: pulseRed 1.5s infinite;
-	}
-
-	@keyframes flicker {
-		0%, 100% { opacity: 1; }
-		50% { opacity: 0.4; }
-	}
-
-	@keyframes pulseRed {
-		0% { transform: scale(1); opacity: 1; }
-		50% { transform: scale(1.4); opacity: 0.5; }
-		100% { transform: scale(1); opacity: 1; }
-	}
-
-	.result-divider {
-		display: flex;
-		align-items: center;
-		width: 100%;
-		gap: 1rem;
-		margin: 0.25rem 0;
-		opacity: 0;
-	}
-
-	.roadmap-step.is-visible .result-divider {
-		animation: expandWidth 0.8s ease-out 0.4s forwards;
-	}
-
-	.divider-line {
-		flex: 1;
-		height: 1px;
-		background: linear-gradient(to right, transparent, #fee2e2, transparent);
-	}
-
-	.divider-text {
-		color: #94a3b8;
-		font-size: 0.75rem;
-		font-weight: 700;
-		letter-spacing: 0.1em;
-		white-space: nowrap;
-	}
-
-	@keyframes fadeInSlideUp {
-		from { opacity: 0; transform: translateY(10px); }
-		to { opacity: 1; transform: translateY(0); }
-	}
-
-	@keyframes expandWidth {
-		from { opacity: 0; transform: scaleX(0.5); }
-		to { opacity: 1; transform: scaleX(1); }
-	}
-
-	/* Sequential Delays for Pills */
-	.op-pill:nth-child(2) { animation-delay: 0.1s; }
-	.op-pill:nth-child(3) { animation-delay: 0.2s; }
-	.op-pill:nth-child(4) { animation-delay: 0.3s; }
-	.op-pill:nth-child(5) { animation-delay: 0.4s; }
-
-	.li-pill:nth-child(1) { animation-delay: 0.8s; }
-	.li-pill:nth-child(2) { animation-delay: 0.9s; }
-	.li-pill:nth-child(3) { animation-delay: 1.0s; }
-	.li-pill:nth-child(4) { animation-delay: 1.1s; }
-	.li-pill:nth-child(5) { animation-delay: 1.2s; }
-
-	/* Chart Styles */
-	.outcome-card {
-		background: linear-gradient(135deg, rgba(255, 77, 109, 0.1) 0%, rgba(15, 23, 42, 0.6) 100%);
-		border-top: 2px solid var(--accent-primary);
-		opacity: 0;
-		transform: translateY(20px);
-	}
-
-	.outcome-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 1.5rem;
-	}
-
-	.outcome-tag {
-		background: var(--accent-primary);
-		color: #FFFFFF;
-		font-size: 0.6rem;
-		font-weight: 800;
-		text-transform: uppercase;
-		padding: 0.25rem 0.6rem;
-		border-radius: 100px;
-	}
-
-	.outcome-grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5rem;
-		margin-bottom: 2rem;
-	}
-
-	.outcome-metric {
-		display: flex;
-		flex-direction: column;
-		gap: 0.25rem;
-	}
-
-	.metric-value {
-		font-size: 1.5rem;
-		font-weight: 800;
-		color: #FFFFFF;
-	}
-
-	.metric-label {
-		font-size: 0.7rem;
-		color: #94a3b8;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-
-	.outcome-summary {
-		font-size: 1.1rem;
-		line-height: 1.4;
-		color: #cbd5e1;
-		font-style: italic;
-	}
-
-	/* Context Card Tooling */
-	.context-tools {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 1rem;
-		margin: 1.5rem 0 2rem;
-	}
-
-	.tool-icon {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		background: rgba(255, 255, 255, 0.03);
-		padding: 0.75rem 1rem;
-		border-radius: 12px;
-		border: 1px solid rgba(255, 255, 255, 0.05);
-	}
-
-	.tool-icon span {
-		font-size: 0.85rem;
-		color: #94a3b8;
-	}
-
-	.workflow-summary h4 {
-		font-size: 1.1rem;
-		margin-bottom: 0.75rem;
-		color: #FFFFFF;
-	}
-
-	.workflow-summary p {
-		font-size: 0.9rem;
-		color: #94a3b8;
-		line-height: 1.6;
-	}
-
-	.status-indicator {
-		width: 12px;
-		height: 12px;
-		border: 2px solid rgba(255, 255, 255, 0.2);
-		border-radius: 50%;
-		flex-shrink: 0;
-		position: relative;
-		transition: all 0.4s ease;
-	}
-
-	.progress-item.active .status-indicator {
-		border-color: var(--accent-primary);
-		background: rgba(255, 77, 109, 0.2);
-	}
-
-	.progress-item.done .status-indicator {
-		background: #10b981;
-		border-color: #10b981;
-		box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
-	}
-
-	.progress-item.done .status-indicator::after {
-		content: '✓';
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 8px;
-		color: white;
-		font-weight: 900;
-	}
-
-	.result-card {
-		align-self: flex-end;
-		text-align: right;
-		min-width: 260px;
-		background: linear-gradient(135deg, rgba(255, 77, 109, 0.25) 0%, rgba(15, 23, 42, 0.95) 100%);
-		border: 1px solid rgba(255, 77, 109, 0.4);
-		opacity: 0;
-		transform: translateY(40px);
-		box-shadow: 0 0 30px rgba(0,0,0,0.5);
-	}
-
-	.result-value {
-		font-size: 3.5rem;
-		font-weight: 900;
-		color: #fff;
-		line-height: 1;
-		letter-spacing: -0.04em;
-		text-shadow: 0 0 30px rgba(255, 77, 109, 0.4);
-	}
-
-	.result-desc {
-		font-size: 0.9rem;
-		color: #94a3b8;
-		font-weight: 600;
-		margin-top: 0.5rem;
-	}
-
-	.outcome-badge {
-		display: inline-block;
-		margin-top: 2rem;
-		padding: 0.6rem 1.25rem;
-		background: rgba(255, 77, 109, 0.1);
-		color: var(--accent-primary);
-		border-radius: var(--radius-pill);
-		font-size: 0.75rem;
-		font-weight: 800;
-		text-transform: uppercase;
-		letter-spacing: 0.15em;
-		border: 1px solid rgba(255, 77, 109, 0.2);
-	}
-
-	.framework-text h3 {
-		font-size: 2.5rem;
-		margin-bottom: 1.5rem;
-		color: #fff;
-		line-height: 1.1;
-	}
-
-	.framework-text p {
-		font-size: 1.3rem;
-		color: #94a3b8;
-		line-height: 1.6;
-	}
-
-	.framework-text h3 {
-		color: #fff;
-		margin-bottom: 0.5rem;
-		font-size: 1.5rem;
-	}
-
-	.framework-text p {
-		color: #94a3b8;
-		font-size: 1rem;
-		line-height: 1.5;
-	}
-		right: 0;
-		height: 1px;
-		background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-	}
-
-	.framework-content p {
-		font-size: 1.25rem;
-		line-height: 1.8;
-		max-width: 800px;
-		margin: 0 auto 2.5rem;
-		color: #cbd5e1;
-	}
-
-	.framework-content strong {
-		color: #ffffff;
-		display: inline-block;
-		margin: 0.5rem 0;
-	}
-
-	.partner-badge {
-		display: inline-flex;
-		flex-direction: column;
-		align-items: center;
-		background: #ffffff;
-		padding: 0.5rem;
-		border-radius: 8px;
-		color: #0D1117;
-		font-family: var(--font-display);
-		gap: 0.25rem;
-	}
-
-	.badge-label {
-		font-size: 0.6rem;
-		font-weight: 800;
-		letter-spacing: 0.05em;
-		opacity: 0.6;
-	}
-
-	.badge-logos {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		padding: 0.25rem 0.5rem;
-	}
-
-	.logo-text {
-		font-weight: 800;
-		font-size: 0.9rem;
-		text-transform: uppercase;
-		letter-spacing: -0.02em;
-	}
-	
-	.logo-text.secondary {
-		font-weight: 500;
-		font-size: 0.8rem;
-		color: #64748b;
-	}
-
-	.logo-divider {
-		width: 1px;
-		height: 20px;
-		background: #e2e8f0;
-	}
-
-	@media (max-width: 768px) {
-		.framework-content p { font-size: 1.1rem; }
-
-		/* Hide the use-case visualisation on mobile — focus on CTA */
-		.framework-banner { display: none; }
-		.three-act-banner { display: none; }
-	}
-
-
-	.check-icon {
-		color: white;
-		background: #10B981; /* Green */
-		border-radius: 50%;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: 18px;
-		height: 18px;
-		font-size: 0.7rem;
-		margin-right: 0.5rem;
-		vertical-align: middle;
-	}
-	.x-icon {
-		color: #EF4444; /* Red cross */
-		font-weight: 900;
-		margin-right: 0.5rem;
-		font-size: 1rem;
-		vertical-align: middle;
-	}
-	
-	@media (max-width: 768px) {
-		.compare-table th, .compare-table td {
-			padding: 1rem 0.5rem;
-			font-size: 0.9rem;
-		}
-		.compare-table td:first-child, .compare-table th:first-child {
-			padding-left: 1rem;
-		}
-	}
-
-	/* Testimonials */
-	.testimonials-section {
-		padding: 4rem 0;
-	}
-	.section-header {
-		text-align: center;
-		margin-bottom: var(--space-lg);
-	}
-	.section-header h2 {
-		font-size: clamp(2rem, 5vw, 3.5rem);
-		margin: 0.5rem 0 0;
-	}
-	.testimonials-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		gap: 1.5rem;
-		align-items: start;
-	}
-	.testimonial-card {
-		background: var(--bg-secondary);
-		border: 2px solid var(--border-color);
-		border-radius: var(--radius-lg);
-		padding: 1.75rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1rem;
-		transition: var(--transition-fast);
-	}
-	.testimonial-card:hover {
-		border-color: var(--accent-primary);
-		transform: translateY(-4px);
-	}
-	blockquote {
-		font-size: 1rem;
-		line-height: 1.6;
-		color: var(--text-primary);
-		margin: 0;
-		font-style: italic;
-	}
-	.quote-toggle-btn {
-		background: none;
-		border: none;
-		color: var(--accent-primary, #FF7A7A);
-		font-size: 0.82rem;
-		font-weight: 700;
-		cursor: pointer;
-		padding: 0;
-		margin-top: -0.25rem;
-		transition: color 0.2s, opacity 0.2s;
-		opacity: 0.85;
-		align-self: flex-start;
-	}
-	.quote-toggle-btn:hover {
-		opacity: 1;
-		text-decoration: underline;
-	}
-	.testimonial-author {
-		display: flex;
-		align-items: center;
-		gap: 0.75rem;
-		padding-top: 0.5rem;
-		border-top: 1px solid var(--border-color);
-	}
-	.author-avatar {
-		width: 44px;
-		height: 44px;
-		border-radius: 50%;
-		object-fit: cover;
-		border: 2px solid var(--accent-primary);
-	}
-	.author-info {
-		display: flex;
-		flex-direction: column;
-		gap: 0.1rem;
-	}
-	.author-info strong {
-		font-size: 0.9rem;
-		font-weight: 800;
-	}
-	.author-info span {
-		font-size: 0.8rem;
-		color: var(--text-secondary);
-	}
-
-	/* Testimonials expand arrow */
-	.testimonial-extra {
-		display: none;
-	}
-	.testimonial-extra.visible {
-		display: flex;
-	}
-	.testimonials-expand-wrap {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 0.35rem;
-		margin-top: 2rem;
-		cursor: pointer;
-	}
-	.testimonials-expand-btn {
-		width: 44px;
-		height: 44px;
-		border-radius: 50%;
-		border: 2px solid var(--border-color);
-		background: var(--bg-secondary);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		cursor: pointer;
-		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		animation: bounce-arrow 2s ease-in-out infinite;
-		color: var(--text-primary);
-	}
-	.testimonials-expand-btn:hover {
-		background: #FF7A7A;
-		border-color: #000;
-		box-shadow: 3px 3px 0 #000;
-		transform: translateY(-2px);
-		animation: none;
-	}
-	.testimonials-expand-btn.expanded {
-		animation: none;
-		transform: rotate(180deg);
-		background: #FF7A7A;
-		border-color: #000;
-		box-shadow: 3px 3px 0 #000;
-	}
-	.expand-label {
-		font-size: 0.72rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.08em;
-		color: var(--text-secondary);
-		transition: color 0.2s;
-	}
-	.testimonials-expand-wrap:hover .expand-label {
-		color: var(--text-primary);
-	}
-	@keyframes bounce-arrow {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(5px); }
-	}
-
-	/* Three-Act Animation Elements */
-	.act-badge {
-		display: flex;
-		align-items: center;
-		gap: 6px;
-		background: rgba(255,255,255,0.08);
-		border: 1px solid rgba(255,255,255,0.15);
+		gap: 7px;
+		background: #1a1a1a;
 		border-radius: 20px;
-		padding: 4px 12px 4px 8px;
+		padding: 5px 14px 5px 9px;
 		font-size: 0.65rem;
-		font-weight: 700;
-		letter-spacing: 0.1em;
-		color: rgba(255,255,255,0.9);
-		transition: all 0.4s ease;
-		white-space: nowrap;
+		font-weight: 800;
+		letter-spacing: 0.12em;
+		color: #fff;
+		transition: background 0.3s ease;
 	}
-	.act-dot {
-		width: 6px;
-		height: 6px;
+	.tab-act-dot {
+		width: 7px; height: 7px;
 		border-radius: 50%;
 		background: #f74c7c;
-		animation: act-pulse 1.2s ease-in-out infinite;
+		animation: tab-pulse 1.2s ease-in-out infinite;
 		flex-shrink: 0;
 	}
-	@keyframes act-pulse {
-		0%, 100% { opacity: 1; transform: scale(1); }
-		50% { opacity: 0.5; transform: scale(0.7); }
+	.tab-act-text { transition: opacity 0.25s ease; }
+	@keyframes tab-pulse {
+		0%,100% { opacity:1; transform:scale(1); }
+		50% { opacity:0.4; transform:scale(0.65); }
 	}
-	.act-phase-label { transition: opacity 0.3s ease; }
 
-	.task-label-row {
+	/* 3-column grid */
+	.tab-grid {
+		display: grid;
+		grid-template-columns: 200px 48px 260px 1fr;
+		gap: 0;
+		align-items: start;
+		position: relative;
+	}
+	.tab-col-label {
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #aaa;
+		margin-bottom: 0.75rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.tab-node-count {
+		background: rgba(0,0,0,0.07);
+		border-radius: 8px;
+		padding: 1px 7px;
+		color: #666;
+		font-weight: 600;
+		transition: all 0.3s;
+	}
+
+	/* Source column */
+	.tab-sources {
+		position: relative;
+		padding: 0 0.5rem 0 0;
+	}
+	.tab-source-list { display: flex; flex-direction: column; gap: 0.5rem; }
+	.tab-src {
 		display: flex;
 		align-items: center;
-		gap: 6px;
-		flex-wrap: wrap;
+		gap: 0.6rem;
+		background: #fff;
+		border: 1px solid rgba(0,0,0,0.07);
+		border-radius: 10px;
+		padding: 0.55rem 0.75rem;
+		transition: border-color 0.3s, box-shadow 0.3s;
 	}
-	.step-tag {
-		font-size: 0.55rem;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		padding: 2px 6px;
-		border-radius: 4px;
-		opacity: 0;
-		transform: scale(0.8);
-		transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
-		white-space: nowrap;
+	.tab-src.connected {
+		border-color: rgba(99,102,241,0.3);
+		box-shadow: 0 2px 12px rgba(99,102,241,0.08);
+	}
+	.tab-src-dot {
+		width: 8px; height: 8px;
+		border-radius: 50%;
 		flex-shrink: 0;
 	}
-	.task-item.is-active .step-tag,
-	.task-item.is-done .step-tag { opacity: 1; transform: scale(1); }
-	.tag-integration { background: rgba(99,102,241,0.12); color: #4338ca; }
-	.tag-automation   { background: rgba(217,119,6,0.12);  color: #b45309; }
-	.tag-ai           { background: rgba(219,39,119,0.12); color: #be185d; }
-	.tag-team         { background: rgba(5,150,105,0.12);  color: #047857; }
+	.tab-src-dot.s1 { background: #6366f1; }
+	.tab-src-dot.s2 { background: #f59e0b; }
+	.tab-src-dot.s3 { background: #8b5cf6; }
+	.tab-src-dot.s4 { background: #f97316; }
+	.tab-src-info { display: flex; flex-direction: column; gap: 1px; }
+	.tab-src-info span:first-child { font-size: 0.75rem; font-weight: 600; color: #1a1a1a; }
+	.tab-src-type { font-size: 0.55rem; color: #aaa; text-transform: uppercase; letter-spacing: 0.05em; }
 
-	.managed-ops-badge {
+	/* Hub column */
+	.tab-hub {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-top: 1.85rem;
+	}
+	.tab-hub-node {
+		width: 28px; height: 28px;
+		border-radius: 50%;
+		background: #fff;
+		border: 2px solid rgba(0,0,0,0.12);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+		transition: border-color 0.3s, box-shadow 0.3s;
+	}
+	.tab-hub-node.active {
+		border-color: #6366f1;
+		box-shadow: 0 0 0 4px rgba(99,102,241,0.12);
+	}
+	.tab-hub-inner {
+		width: 10px; height: 10px;
+		border-radius: 50%;
+		background: #e2e8f0;
+		transition: background 0.3s;
+	}
+	.tab-hub-node.active .tab-hub-inner { background: #6366f1; }
+	.tab-hub-line {
+		width: 2px;
+		flex: 1;
+		background: linear-gradient(to bottom, rgba(99,102,241,0.3), transparent);
+		opacity: 0;
+		transition: opacity 0.4s;
+	}
+	.tab-hub-line.active { opacity: 1; }
+
+	/* Process column */
+	.tab-process {
+		background: #fff;
+		border: 1px solid rgba(0,0,0,0.07);
+		border-radius: 14px;
+		padding: 1rem 1.1rem;
+		box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+	}
+	.tab-step-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.15rem; }
+	.tab-step {
+		display: flex;
+		align-items: flex-start;
+		gap: 0.65rem;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid rgba(0,0,0,0.04);
+	}
+	.tab-step:last-child { border-bottom: none; }
+	.tab-step-check {
+		width: 16px; height: 16px;
+		border-radius: 50%;
+		border: 2px solid rgba(0,0,0,0.12);
+		flex-shrink: 0;
+		margin-top: 2px;
+		transition: background 0.3s, border-color 0.3s;
+		position: relative;
+	}
+	.tab-step-check::after {
+		content: '';
+		position: absolute;
+		inset: 2px;
+		border-radius: 50%;
+		background: #10b981;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	.tab-step.done .tab-step-check { border-color: #10b981; }
+	.tab-step.done .tab-step-check::after { opacity: 1; }
+	.tab-step-body { display: flex; flex-direction: column; gap: 3px; flex: 1; }
+	.tab-step-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+	.tab-step-name { font-size: 0.75rem; font-weight: 600; color: #1a1a1a; }
+	.tab-step-detail { font-size: 0.6rem; color: #aaa; line-height: 1.3; }
+
+	/* Ingredient tags */
+	.tab-tag {
+		font-size: 0.52rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		padding: 2px 7px;
+		border-radius: 4px;
+		border: 1px solid;
+		white-space: nowrap;
+		transition: opacity 0.3s ease;
+	}
+	.tab-tag-auto { background: #fef3c7; color: #92400e; border-color: #f59e0b; }
+	.tab-tag-ai   { background: #fce7f3; color: #9d174d; border-color: #ec4899; }
+	.tab-tag-int  { background: #ede9fe; color: #4c1d95; border-color: #7c3aed; }
+	.tab-tag-team { background: #d1fae5; color: #064e3b; border-color: #10b981; }
+
+	/* Dashboard column */
+	.tab-dashboard {
+		background: #fff;
+		border: 1px solid rgba(0,0,0,0.07);
+		border-radius: 14px;
+		padding: 1.1rem 1.25rem;
+		box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+		margin-left: 1rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+	.tab-managed-badge {
 		display: flex;
 		align-items: center;
 		gap: 6px;
 		font-size: 0.6rem;
-		font-weight: 700;
+		font-weight: 800;
 		letter-spacing: 0.1em;
-		color: #6ee7b7;
-		transition: opacity 0.5s ease;
+		color: #059669;
+		transition: opacity 0.5s;
 	}
-	.mob-dot {
-		width: 6px;
-		height: 6px;
+	.tab-managed-dot {
+		width: 7px; height: 7px;
 		border-radius: 50%;
 		background: #10b981;
-		animation: act-pulse 1s ease-in-out infinite;
-		flex-shrink: 0;
+		animation: tab-pulse 1s ease-in-out infinite;
 	}
-	.node-count-label { transition: all 0.3s ease; }
+	.tab-stats {
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		gap: 0.5rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid rgba(0,0,0,0.06);
+	}
+	.tab-stat { display: flex; flex-direction: column; gap: 2px; }
+	.tab-stat-val { font-size: 1rem; font-weight: 800; line-height: 1.1; }
+	.tab-stat-lbl { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; color: #aaa; }
+	.tab-table-label {
+		font-size: 0.58rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: #888;
+		margin-bottom: 0.4rem;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+	}
+	.tab-live-chip {
+		background: rgba(16,185,129,0.12);
+		color: #059669;
+		border: 1px solid rgba(16,185,129,0.3);
+		border-radius: 4px;
+		padding: 1px 6px;
+		font-size: 0.48rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+	}
+	.tab-table { border: 1px solid rgba(0,0,0,0.07); border-radius: 8px; overflow: hidden; }
+	.tab-table-head {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr 0.7fr;
+		padding: 0.4rem 0.6rem;
+		background: rgba(0,0,0,0.025);
+		font-size: 0.5rem;
+		text-transform: uppercase;
+		letter-spacing: 0.07em;
+		color: #aaa;
+		font-weight: 700;
+	}
+	.tab-row {
+		display: grid;
+		grid-template-columns: 1.2fr 1fr 0.7fr;
+		padding: 0.4rem 0.6rem;
+		border-top: 1px solid rgba(0,0,0,0.05);
+		font-size: 0.65rem;
+		color: #333;
+		align-items: center;
+		transition: opacity 0.4s;
+	}
+	.tab-row-flag { background: rgba(245,158,11,0.05); }
+	.tab-stage-q { background: rgba(99,102,241,0.1); color: #4338ca; border-radius: 4px; padding: 1px 7px; font-size: 0.58rem; font-weight: 600; display: inline-block; }
+	.tab-stage-p { background: rgba(139,92,246,0.1); color: #6d28d9; border-radius: 4px; padding: 1px 7px; font-size: 0.58rem; font-weight: 600; display: inline-block; }
+	.tab-stage-f { background: rgba(245,158,11,0.15); color: #b45309; border-radius: 4px; padding: 1px 7px; font-size: 0.58rem; font-weight: 600; display: inline-block; }
+	.tab-stage-w { background: rgba(16,185,129,0.1); color: #047857; border-radius: 4px; padding: 1px 7px; font-size: 0.58rem; font-weight: 600; display: inline-block; }
+	.tab-val { font-weight: 700; color: #1a1a1a; text-align: right; }
+
+	.tab-bars-label { font-size: 0.58rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 0.5rem; }
+	.tab-bar-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.3rem; }
+	.tab-bar-name { font-size: 0.6rem; color: #555; width: 60px; flex-shrink: 0; }
+	.tab-bar-track { flex: 1; height: 6px; background: rgba(0,0,0,0.07); border-radius: 3px; overflow: hidden; }
+	.tab-bar-fill { height: 100%; border-radius: 3px; transition: width 1.2s ease; }
+	.tab-bar-pct { font-size: 0.58rem; color: #888; width: 30px; text-align: right; flex-shrink: 0; }
+
+	.tab-dash-footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding-top: 0.6rem;
+		border-top: 1px solid rgba(0,0,0,0.06);
+		transition: opacity 0.4s;
+	}
+	.tab-footer-item { display: flex; flex-direction: column; gap: 2px; }
+	.tab-footer-lbl { font-size: 0.5rem; text-transform: uppercase; letter-spacing: 0.07em; color: #aaa; }
+	.tab-footer-val { font-size: 0.85rem; font-weight: 700; color: #1a1a1a; }
+	.tab-running-chip {
+		font-size: 0.55rem;
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		color: #059669;
+		background: rgba(16,185,129,0.1);
+		border: 1px solid rgba(16,185,129,0.25);
+		border-radius: 20px;
+		padding: 4px 10px;
+	}
 
 	/* How We Build Section */
 	.how-we-build-section {
@@ -5914,137 +4232,145 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 
 
-		// ── Three-Act Banner Animation ────────────────────────────────
+		// ── Three-Act Banner Animation (full rebuild) ───────────────
 		const banner = document.querySelector('.three-act-banner');
 		if (banner) {
-			const setActPhase = (label) => {
-				const el = banner.querySelector('.act-phase-label');
+			const setAct = (label) => {
+				const el = banner.querySelector('.tab-act-text');
 				if (!el) return;
 				el.style.opacity = '0';
-				setTimeout(() => { el.textContent = label; el.style.opacity = '1'; }, 300);
+				setTimeout(() => { el.textContent = label; el.style.opacity = '1'; }, 250);
 			};
 
-			const updatePaths = () => {
-				const checklist = banner.querySelector('.execution-column');
-				const container = banner.querySelector('.framework-console');
-				if (!checklist || !container) return;
-				const cr = container.getBoundingClientRect();
-				const ch = checklist.getBoundingClientRect();
-				const tX = ch.left - cr.left;
-				const tY = (ch.top - cr.top) + (ch.height / 2);
-				['src1','src2','src3','src4'].forEach(id => {
-					const a = banner.querySelector(`.anchor-${id}`);
-					const p = banner.querySelector(`.stream-${id}`);
-					if (!a || !p) return;
-					const ar = a.getBoundingClientRect();
-					const sX = (ar.left - cr.left) + 1;
-					const sY = (ar.top - cr.top) + (ar.height / 2);
-					const cpx = sX + (tX - sX) * 0.5;
-					p.setAttribute('d', `M ${sX} ${sY} C ${cpx} ${sY}, ${cpx} ${tY}, ${tX} ${tY}`);
-				});
-				const ap = banner.querySelector('.anchor-process');
-				const ao = banner.querySelector('.anchor-oversight');
-				const po = banner.querySelector('.stream-output');
-				if (ap && ao && po) {
-					const apr = ap.getBoundingClientRect();
-					const aor = ao.getBoundingClientRect();
-					const sX2 = apr.right - cr.left, sY2 = apr.top - cr.top + apr.height/2;
-					const tX2 = aor.left - cr.left, tY2 = (aor.top - cr.top) + aor.height/2;
-					const cpx2 = sX2 + (tX2 - sX2) * 0.5;
-					po.setAttribute('d', `M ${sX2} ${sY2} C ${cpx2} ${sY2}, ${cpx2} ${tY2}, ${tX2} ${tY2}`);
-				}
-			};
-			updatePaths();
-			window.addEventListener('resize', updatePaths);
+			const runAnim = () => {
+				const tl = gsap.timeline({ onComplete: () => setTimeout(runAnim, 2000) });
 
-			const runAnimation = () => {
-				const tl = gsap.timeline({ onComplete: () => setTimeout(runAnimation, 1500) });
-				const sources = banner.querySelectorAll('.ta-source');
-				const tasks   = banner.querySelectorAll('.task-item');
-				const nodeLabel = banner.querySelector('.node-count-label');
+				// ── RESET ──────────────────────────────────────────────────
+				const srcs      = banner.querySelectorAll('.tab-src');
+				const steps     = banner.querySelectorAll('.tab-step');
+				const tags      = banner.querySelectorAll('.tab-tag');
+				const stats     = banner.querySelectorAll('.tab-stat');
+				const tableWrap = banner.querySelector('.tab-table-wrap');
+				const barsWrap  = banner.querySelector('.tab-bars-wrap');
+				const fills     = banner.querySelectorAll('.tab-bar-fill');
+				const rows      = banner.querySelectorAll('.tab-row');
+				const footer    = banner.querySelector('.tab-dash-footer');
+				const managed   = banner.querySelector('.tab-managed-badge');
+				const hubNode   = banner.querySelector('.tab-hub-node');
+				const hubLine   = banner.querySelector('.tab-hub-line');
+				const nodeCount = banner.querySelector('.tab-node-count');
+				const pipeline  = banner.querySelector('.tab-pipeline');
+				const flagged   = banner.querySelector('.tab-flagged');
+				const fpipeline = banner.querySelector('.tab-footer-pipeline');
+				const fflagged  = banner.querySelector('.tab-footer-flagged');
 
-				// Reset state
-				tasks.forEach(el => el.classList.remove('is-done','is-active'));
-				banner.querySelectorAll('.dotted-stream').forEach(el => { gsap.killTweensOf(el); gsap.set(el, { visibility:'hidden' }); });
-				sources.forEach(el => gsap.set(el, { opacity:0, x:-10 }));
-				const dash = banner.querySelector('.oversight-dashboard');
-				if (dash) dash.classList.remove('active');
-				const badge = banner.querySelector('.managed-ops-badge');
-				if (badge) gsap.set(badge, { opacity:0 });
-				const newRow = banner.querySelector('.ta-new-row');
-				if (newRow) gsap.set(newRow, { opacity:0 });
-				const pipelineEl = banner.querySelector('.ta-pipeline');
-				if (pipelineEl) pipelineEl.textContent = '$284k';
-				const flaggedEl = banner.querySelector('.ta-flagged');
-				if (flaggedEl) flaggedEl.textContent = '2';
-				const flagFooter = banner.querySelector('.ta-flagged-footer');
-				if (flagFooter) flagFooter.textContent = '2 rec';
-				const pipeFooter = banner.querySelector('.ta-pipeline-footer');
-				if (pipeFooter) pipeFooter.textContent = '$284k';
-				if (nodeLabel) nodeLabel.textContent = '0 Connected';
-				setActPhase('PLUG IN');
+				srcs.forEach(el => { gsap.set(el, { opacity:0, x:-12 }); el.classList.remove('connected'); });
+				steps.forEach(el => { gsap.set(el, { opacity:0, y:8 }); el.classList.remove('done'); });
+				tags.forEach(el => gsap.set(el, { opacity:0 }));
+				stats.forEach(el => gsap.set(el, { opacity:0 }));
+				rows.forEach(el => gsap.set(el, { opacity:0 }));
+				fills.forEach(el => gsap.set(el, { width:'0%' }));
+				if (tableWrap) gsap.set(tableWrap, { opacity:0 });
+				if (barsWrap)  gsap.set(barsWrap,  { opacity:0 });
+				if (footer)    gsap.set(footer,    { opacity:0 });
+				if (managed)   gsap.set(managed,   { opacity:0 });
+				if (hubNode)   hubNode.classList.remove('active');
+				if (hubLine)   hubLine.classList.remove('active');
+				if (nodeCount) nodeCount.textContent = '0 / 4';
+				if (pipeline)  pipeline.textContent  = '$284k';
+				if (flagged)   flagged.textContent   = '2';
+				if (fpipeline) fpipeline.textContent = '$284k';
+				if (fflagged)  fflagged.textContent  = '2 rec';
+				setAct('PLUG IN');
 
-				// ACT 1 — PLUG IN
-				sources.forEach((src, i) => {
-					const sid = src.dataset.source;
+				// ── ACT 1: PLUG IN (0-3s) ──────────────────────────────────
+				const srcColors = ['rgba(99,102,241,0.6)','rgba(245,158,11,0.6)','rgba(139,92,246,0.6)','rgba(249,115,22,0.6)'];
+				srcs.forEach((src, i) => {
 					tl.to(src, {
-						opacity:1, x:0, duration:0.5, ease:'power2.out',
+						opacity:1, x:0, duration:0.55, ease:'back.out(1.4)',
 						onStart: () => {
-							src.classList.add('active');
-							const p = banner.querySelector(`.stream-${sid}`);
-							if (p) { gsap.set(p, { visibility:'visible' }); gsap.to(p, { attr:{ strokeDashoffset:-200 }, duration:3, ease:'none', repeat:-1 }); }
-							if (nodeLabel) nodeLabel.textContent = (i+1) + ' Connected';
+							src.classList.add('connected');
+							if (nodeCount) nodeCount.textContent = (i+1) + ' / 4';
+							// Light up hub when first source connects
+							if (i === 0 && hubNode) hubNode.classList.add('active');
+							if (i === srcs.length-1 && hubLine) hubLine.classList.add('active');
 						}
-					}, i === 0 ? '>' : '-=0.1');
+					}, i === 0 ? '+=0' : '-=0.15');
 				});
 
-				tl.to({}, { duration:0.4 });
+				tl.to({}, { duration:0.5 });
 
-				// ACT 2 — BUILD THE SYSTEM
-				tl.add(() => setActPhase('BUILD THE SYSTEM'));
-				tasks.forEach((task, i) => {
-					const isLast = i === tasks.length - 1;
-					tl.to(task, {
-						onStart: () => {
-							task.classList.add('is-active');
-							if (isLast) {
-								const po = banner.querySelector('.stream-output');
-								if (po) { gsap.set(po, { visibility:'visible' }); gsap.to(po, { attr:{ strokeDashoffset:-200 }, duration:2, ease:'none', repeat:-1 }); }
-							}
-						},
-						duration:1.4
-					}).add(() => task.classList.replace('is-active','is-done'));
+				// ── ACT 2: BUILD THE SYSTEM (3-7s) ────────────────────────
+				tl.add(() => setAct('BUILD THE SYSTEM'));
+
+				// Process steps appear one by one, tags pop in after each
+				steps.forEach((step, i) => {
+					const tag = step.querySelector('.tab-tag');
+					tl.to(step, {
+						opacity:1, y:0, duration:0.5, ease:'power2.out',
+						onComplete: () => {
+							step.classList.add('done');
+							if (tag) gsap.to(tag, { opacity:1, duration:0.3 });
+						}
+					});
+					// Dashboard builds alongside process steps
+					if (i === 0 && stats[0]) tl.to(stats[0], { opacity:1, duration:0.4 }, '<+0.2');
+					if (i === 1 && stats[1]) tl.to(stats[1], { opacity:1, duration:0.4 }, '<+0.2');
+					if (i === 2) {
+						if (stats[2]) tl.to(stats[2], { opacity:1, duration:0.4 }, '<+0.1');
+						if (stats[3]) tl.to(stats[3], { opacity:1, duration:0.4 }, '<+0.2');
+						// Table appears
+						if (tableWrap) tl.to(tableWrap, { opacity:1, duration:0.4 }, '<+0.2');
+						rows.forEach((r, ri) => { tl.to(r, { opacity:1, duration:0.3 }, '<+0.15'); });
+					}
+					if (i === 3 && barsWrap) {
+						tl.to(barsWrap, { opacity:1, duration:0.3 }, '<+0.1');
+						fills.forEach((f, fi) => {
+							const pct = f.dataset.pct + '%';
+							tl.to(f, { width: pct, duration:0.9, ease:'power1.out' }, '<+' + (fi*0.15));
+						});
+					}
 				});
 
-				// ACT 3 — RUN
+				tl.to({}, { duration:0.3 });
+
+				// ── ACT 3: RUN YOUR OPERATIONS (7-12s) ────────────────────
 				tl.add(() => {
-					setActPhase('RUN');
-					if (dash) dash.classList.add('active');
-					if (badge) gsap.to(badge, { opacity:1, duration:0.6 });
-					// New contact row ticks in
-					if (newRow) gsap.to(newRow, { opacity:1, duration:0.5, delay:0.4 });
+					setAct('RUN');
+					// Managed badge
+					if (managed) gsap.to(managed, { opacity:1, duration:0.5 });
+					// Footer appears
+					if (footer) gsap.to(footer, { opacity:1, duration:0.5, delay:0.2 });
+					// New row ticks in
+					const newRow = banner.querySelector('.tab-row-new');
+					if (newRow) gsap.to(newRow, { opacity:1, duration:0.5, delay:0.6 });
 					// Pipeline $284k → $291k
-					if (pipelineEl) {
-						const obj = { val: 284 };
-						gsap.to(obj, { val:291, duration:2.5, ease:'power1.inOut', onUpdate: () => { pipelineEl.textContent = '$' + Math.round(obj.val) + 'k'; if (pipeFooter) pipeFooter.textContent = '$' + Math.round(obj.val) + 'k'; } });
+					if (pipeline) {
+						const o = { v:284 };
+						gsap.to(o, { v:291, duration:2.5, ease:'power1.inOut', delay:0.3,
+							onUpdate: () => {
+								const val = '$' + Math.round(o.v) + 'k';
+								pipeline.textContent = val;
+								if (fpipeline) fpipeline.textContent = val;
+							}
+						});
 					}
 					// Flagged 2 → 3
 					setTimeout(() => {
-						if (flaggedEl) flaggedEl.textContent = '3';
-						if (flagFooter) flagFooter.textContent = '3 rec';
-					}, 2000);
+						if (flagged)  flagged.textContent  = '3';
+						if (fflagged) fflagged.textContent = '3 rec';
+					}, 2200);
 				})
-				.to({}, { duration:3.5 }); // hold on Act 3
+				.to({}, { duration:4 }); // hold on Act 3
 
 				return tl;
 			};
 
-			// Kick off when section enters viewport
 			let started = false;
 			ScrollTrigger.create({
 				trigger: banner,
 				start: 'top 85%',
-				onEnter: () => { if (!started) { started = true; runAnimation(); } }
+				onEnter: () => { if (!started) { started = true; runAnim(); } }
 			});
 		}
 
