@@ -4481,7 +4481,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			};
 
 			const runAnim = () => {
-				const tl = gsap.timeline({ onComplete: () => setTimeout(runAnim, 2000) });
+				const tl = gsap.timeline();
 
 				// ── RESET ──────────────────────────────────────────────────
 				const srcs      = banner.querySelectorAll('.tab-src');
