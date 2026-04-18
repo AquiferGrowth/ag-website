@@ -20,12 +20,12 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 	<main class="container">
 		<div class="hero-fold">
 			<section class="hero">
-				<div class="badge">Managed Operations Firm</div>
+				<div class="badge">Operations, as a Managed Service</div>
 				<h1>
-					WE PLUG IN AND RUN THE <span class="text-gradient">OPERATIONS</span> YOUR BUSINESS HAS OUTGROWN
+					WE <span class="text-gradient">PLUG IN</span>, <span class="text-gradient">BUILD</span> THE SYSTEM, AND <span class="text-gradient">RUN</span> YOUR OPERATIONS
 				</h1>
 				<p class="hero-description">
-					<span class="hero-text-light">Bloated spreadsheets, disconnected tools, and humans holding it all together is not a system — it's a liability. We plug in as your ops firm, own the middle, and hand your team back the work that actually needs them.</span>
+					<span class="hero-text-light">Bloated spreadsheets, disconnected tools, and humans holding it all together is not a system, it's a liability. We build you a system with tools, integrations, AI agents, people and run it as a managed service. Your team stops holding it together and starts moving the business forward.</span>
 				</p>
 				<div class="cta-group">
 					<a href="/contact" class="btn btn-hero-pink">
@@ -966,6 +966,52 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 		<!-- Building Your Operating System Section -->
 
+			</div>
+		</section>
+
+		<!-- How We Build Your System Section -->
+		<section class="how-we-build-section animate-fade-in">
+			<div class="hwb-outer section-white-card">
+				<div class="hwb-header">
+					<h2 class="hwb-title">HOW WE BUILD YOUR SYSTEM</h2>
+					<p class="hwb-subhead">You don't need another AI tool. You don't need another contractor. You need one system that runs your operations — built from the tools you already have, the workflows you already run, and whatever it actually takes to make it reliable.</p>
+				</div>
+
+				<div class="hwb-cards">
+					<div class="hwb-card">
+						<div class="hwb-card-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+						</div>
+						<h3 class="hwb-card-title">Your Existing Tools</h3>
+						<p class="hwb-card-body">We don't rip and replace. Xero, HubSpot, Shopify, Stripe, Airtable, Slack — whatever you've got, we build on top of it. Your stack stays; we make it act like one product.</p>
+					</div>
+
+					<div class="hwb-card">
+						<div class="hwb-card-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/><path d="M2 20h20"/></svg>
+						</div>
+						<h3 class="hwb-card-title">Integrations &amp; Automations</h3>
+						<p class="hwb-card-body">We wire your tools together so data flows without anyone copying, pasting, or chasing. One source of truth, updated in real time.</p>
+					</div>
+
+					<div class="hwb-card">
+						<div class="hwb-card-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>
+						</div>
+						<h3 class="hwb-card-title">AI Agents</h3>
+						<p class="hwb-card-body">For the repetitive, judgment-light work — reconciliations, enrichment, report generation, flagging exceptions — we deploy agents we build, monitor, and maintain. They do the reps so your team doesn't.</p>
+					</div>
+
+					<div class="hwb-card">
+						<div class="hwb-card-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+						</div>
+						<h3 class="hwb-card-title">Our Team</h3>
+						<p class="hwb-card-body">Agents break. Integrations change. Edge cases happen. Our team runs the system like a practice runs a client book — actively, accountably, and with one number to call when something's off.</p>
+					</div>
+				</div>
+
+				<p class="hwb-closing">The product is the managed system. AI, automation, and people are how we build and run it.</p>
 			</div>
 		</section>
 
@@ -3854,6 +3900,104 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 	@keyframes bounce-arrow {
 		0%, 100% { transform: translateY(0); }
 		50% { transform: translateY(5px); }
+	}
+
+	/* How We Build Section */
+	.how-we-build-section {
+		padding: 5rem 1.5rem;
+		display: flex;
+		justify-content: center;
+	}
+	.hwb-outer {
+		max-width: 1100px;
+		width: 100%;
+		padding: 3.5rem;
+	}
+	.hwb-header {
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.hwb-title {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: clamp(1.4rem, 3vw, 2rem);
+		font-weight: 800;
+		letter-spacing: 0.08em;
+		color: #0a0a0a;
+		margin: 0 0 1.25rem 0;
+	}
+	.hwb-subhead {
+		font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+		line-height: 1.7;
+		color: #555;
+		max-width: 780px;
+		margin: 0 auto;
+	}
+	.hwb-cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5rem;
+		margin-bottom: 2.5rem;
+	}
+	.hwb-card {
+		background: #fff;
+		border: 1px solid rgba(0,0,0,0.07);
+		border-radius: 20px;
+		padding: 1.75rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+		transition: box-shadow 0.2s ease, transform 0.2s ease;
+	}
+	.hwb-card:hover {
+		box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+		transform: translateY(-2px);
+	}
+	.hwb-card-icon {
+		width: 48px;
+		height: 48px;
+		background: #fdf1f5;
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #f74c7c;
+		flex-shrink: 0;
+	}
+	.hwb-card-title {
+		font-family: 'Space Grotesk', sans-serif;
+		font-size: 1rem;
+		font-weight: 700;
+		color: #0a0a0a;
+		margin: 0;
+		letter-spacing: 0.01em;
+	}
+	.hwb-card-body {
+		font-size: 0.9rem;
+		line-height: 1.65;
+		color: #666;
+		margin: 0;
+	}
+	.hwb-closing {
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 600;
+		color: #333;
+		border-top: 1px solid rgba(0,0,0,0.07);
+		padding-top: 2rem;
+		margin: 0;
+	}
+	@media (max-width: 900px) {
+		.hwb-cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 540px) {
+		.hwb-outer {
+			padding: 2rem 1.25rem;
+		}
+		.hwb-cards {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* Roadmap Section Styles Refined */
