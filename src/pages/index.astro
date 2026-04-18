@@ -42,7 +42,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 					<div class="banner-grid-overlay"></div>
 
 					<div class="ta-banner-header">
-						<div class="ta-act-badge">
+						<div class="act-badge">
 							<span class="act-dot"></span>
 							<span class="act-phase-label">PLUG IN</span>
 						</div>
@@ -1670,6 +1670,27 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		background: rgba(0,0,0,0.06);
 		border-color: rgba(0,0,0,0.1);
 		color: #333;
+	}
+	/* Shrink status-pulse to a tiny dot — big pulsing circle looks wrong on white */
+	.three-act-banner .status-pulse {
+		width: 8px;
+		height: 8px;
+		background: #10b981;
+		border-radius: 50%;
+		animation: act-pulse 1.4s ease-in-out infinite;
+	}
+	.three-act-banner .status-pulse::after { display: none; }
+	/* Managed ops badge readable on light bg */
+	.three-act-banner .managed-ops-badge { color: #10b981; }
+	/* RUNNING ON SCHEDULE tag */
+	.three-act-banner .ready-tag {
+		font-size: 0.55rem;
+		color: #666;
+		background: rgba(0,0,0,0.04);
+		border: 1px solid rgba(0,0,0,0.08);
+		border-radius: 4px;
+		padding: 2px 6px;
+		letter-spacing: 0.08em;
 	}
 	.ta-banner-header {
 		margin-bottom: 1.75rem;
