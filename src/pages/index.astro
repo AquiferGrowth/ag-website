@@ -43,12 +43,11 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 					<div class="ta-banner-header">
 						<div class="ta-use-case-info">
-							<span class="uc-tag">Use case</span>
 							<h2 class="uc-title">Sales Pipeline &amp; CRM</h2>
-						</div>
-						<div class="ta-act-badge">
-							<span class="act-dot"></span>
-							<span class="act-phase-label">PLUG IN</span>
+							<div class="ta-act-badge">
+								<span class="act-dot"></span>
+								<span class="act-phase-label">PLUG IN</span>
+							</div>
 						</div>
 					</div>
 
@@ -1628,12 +1627,14 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		max-width: 1200px;
 	}
 	.ta-banner-header {
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
 		margin-bottom: 1.75rem;
 	}
-	.ta-use-case-info { display: flex; flex-direction: column; gap: 4px; }
+	.ta-use-case-info {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.6rem;
+	}
 
 	.inactive-slide {
 		visibility: hidden;
