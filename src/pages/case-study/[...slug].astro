@@ -47,22 +47,32 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 
 					<div class="cs-hero-card">
 						<div class="cs-card-inner">
-							<a href={clientUrl} target="_blank" rel="noopener" class="cs-card-img-link">
-								<img src={image} alt={title} />
-								<div class="cs-card-img-overlay">
-									<span>Visit Website ↗</span>
-								</div>
-							</a>
+							<!-- Branded colour block -->
+							<div class={`cs-card-colour cs-colour--${entry.slug}`}>
+								<svg class="cs-card-blob" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<ellipse cx="320" cy="40" rx="130" ry="90" opacity="0.18"/>
+									<ellipse cx="70" cy="170" rx="100" ry="75" opacity="0.13"/>
+								</svg>
+								<span class="cs-card-name">{title}</span>
+								{clientUrl && (
+									<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
+										Visit Website ↗
+									</a>
+								)}
+							</div>
+							<!-- CMS meta -->
 							<div class="cs-card-meta">
 								<div class="cs-meta-row">
-									<div class="cs-meta-item">
-										<span class="cs-meta-label">Customer</span>
-										<span class="cs-meta-value">{title}</span>
-									</div>
 									<div class="cs-meta-item">
 										<span class="cs-meta-label">Industry</span>
 										<span class="cs-meta-value">{industry}</span>
 									</div>
+									{platform && (
+										<div class="cs-meta-item">
+											<span class="cs-meta-label">Platform</span>
+											<span class="cs-meta-value">{platform}</span>
+										</div>
+									)}
 								</div>
 							</div>
 						</div>
@@ -209,43 +219,82 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		box-shadow: 0 8px 30px rgba(0,0,0,0.06);
 		border: 1px solid rgba(0,0,0,0.06);
 	}
-	.cs-card-img-link {
-		display: block;
-		height: 200px;
-		overflow: hidden;
+
+	/* Branded colour block */
+	.cs-card-colour {
 		position: relative;
-		text-decoration: none;
-	}
-	.cs-card-img-link img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		transition: transform 0.4s ease;
-	}
-	.cs-card-img-link:hover img {
-		transform: scale(1.05);
-	}
-	.cs-card-img-overlay {
-		position: absolute;
-		inset: 0;
-		background: rgba(0,0,0,0.45);
+		height: 180px;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		opacity: 0;
-		transition: opacity 0.3s ease;
+		gap: 0.75rem;
+		overflow: hidden;
+		background: #1a1a1a;
 	}
-	.cs-card-img-link:hover .cs-card-img-overlay {
-		opacity: 1;
+	.cs-colour--inoki        { background: #2d6a4a; }
+	.cs-colour--pulsefx      { background: #3b2d7a; }
+	.cs-colour--spotlightavi { background: #7a4a1a; }
+
+	.cs-card-blob {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
 	}
-	.cs-card-img-overlay span {
+	.cs-colour--inoki        .cs-card-blob ellipse { fill: #a7f3d0; }
+	.cs-colour--pulsefx      .cs-card-blob ellipse { fill: #c4b5fd; }
+	.cs-colour--spotlightavi .cs-card-blob ellipse { fill: #fde68a; }
+
+	.cs-card-name {
+		position: relative;
+		z-index: 1;
 		color: #fff;
-		font-size: 0.85rem;
-		font-weight: 700;
-		letter-spacing: 0.02em;
+		font-family: var(--font-display, 'Inter Tight', sans-serif);
+		font-size: 1.4rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0 1.25rem;
 	}
+	.cs-visit-btn {
+		position: relative;
+		z-index: 1;
+		background: rgba(255,255,255,0.18);
+		border: 1px solid rgba(255,255,255,0.35);
+		color: #fff;
+		font-size: 0.75rem;
+		font-weight: 600;
+		padding: 0.35rem 0.9rem;
+		border-radius: 999px;
+		text-decoration: none;
+		transition: background 0.2s;
+	}
+	.cs-visit-btn:hover { background: rgba(255,255,255,0.28); }
+
+	/* Meta section */
 	.cs-card-meta {
 		padding: 1.25rem 1.5rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.9rem;
+	}
+	.cs-meta-item--stat {
+		text-align: center;
+	}
+	.cs-meta-stat {
+		display: block;
+		font-size: 1.8rem;
+		font-weight: 800;
+		color: #1a1a1a;
+		letter-spacing: -0.03em;
+		line-height: 1;
+	}
+	.cs-meta-divider {
+		height: 1px;
+		background: #f0f0f0;
 	}
 	.cs-meta-row {
 		display: grid;
@@ -254,11 +303,11 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 	}
 	.cs-meta-label {
 		display: block;
-		font-size: 0.7rem;
+		font-size: 0.68rem;
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.06em;
 		font-weight: 600;
-		color: #999;
+		color: #aaa;
 		margin-bottom: 0.2rem;
 	}
 	.cs-meta-value {

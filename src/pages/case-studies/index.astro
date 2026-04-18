@@ -29,17 +29,21 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 				<div class="cs-listing-grid">
 					{allCaseStudies.map(cs => (
 						<article class="cs-listing-card">
-							<!-- Image -->
-							<a href={`/case-study/${cs.slug}`} class="cs-listing-img-wrap">
-								<img src={cs.data.image} alt={cs.data.title} class="cs-listing-img" />
+							<!-- Colour block -->
+							<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-lc--${cs.slug}`}>
+								<svg class="cs-lc-blob" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<ellipse cx="330" cy="50" rx="140" ry="110" opacity="0.18"/>
+									<ellipse cx="70" cy="190" rx="110" ry="85" opacity="0.13"/>
+									<ellipse cx="200" cy="120" rx="75" ry="55" opacity="0.09"/>
+								</svg>
 								{cs.data.industry && (
 									<span class="cs-listing-tag">{cs.data.industry}</span>
 								)}
+								<span class="cs-lc-title">{cs.data.title}</span>
 							</a>
 
 							<!-- Content -->
 							<div class="cs-listing-content">
-								<p class="cs-listing-brand">{cs.data.logoBrand ?? cs.data.title.toUpperCase()}</p>
 								<h2 class="cs-listing-headline">{cs.data.headline}</h2>
 								<a href={`/case-study/${cs.slug}`} class="cs-listing-cta">
 									Read case study <span class="cs-cta-arrow">→</span>
@@ -132,37 +136,72 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 	}
 
-	/* Image */
-	.cs-listing-img-wrap {
-		display: block;
+	/* Colour block */
+	.cs-listing-colour {
 		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		overflow: hidden;
 		aspect-ratio: 16 / 10;
+		text-decoration: none;
+		background: #1a1a1a;
+		transition: opacity 0.2s ease;
 	}
-	.cs-listing-img {
+	.cs-listing-card:hover .cs-listing-colour { opacity: 0.92; }
+
+	/* Per-slug colours */
+	.cs-lc--inoki        { background: #2d6a4a; }
+	.cs-lc--pulsefx      { background: #3b2d7a; }
+	.cs-lc--spotlightavi { background: #7a4a1a; }
+	.cs-lc--wellness     { background: #1a5a4a; }
+	.cs-lc--beauty       { background: #7a2252; }
+	.cs-lc--fashion      { background: #2d3040; }
+
+	/* Blob tints per slug */
+	.cs-lc--inoki        .cs-lc-blob ellipse { fill: #a7f3d0; }
+	.cs-lc--pulsefx      .cs-lc-blob ellipse { fill: #c4b5fd; }
+	.cs-lc--spotlightavi .cs-lc-blob ellipse { fill: #fde68a; }
+	.cs-lc--wellness     .cs-lc-blob ellipse { fill: #99f6e4; }
+	.cs-lc--beauty       .cs-lc-blob ellipse { fill: #fbcfe8; }
+	.cs-lc--fashion      .cs-lc-blob ellipse { fill: #bfdbfe; }
+
+	.cs-lc-blob {
+		position: absolute;
+		inset: 0;
 		width: 100%;
 		height: 100%;
-		object-fit: cover;
-		display: block;
-		transition: transform 0.5s ease;
+		pointer-events: none;
 	}
-	.cs-listing-card:hover .cs-listing-img {
-		transform: scale(1.04);
+
+	.cs-lc-title {
+		position: relative;
+		z-index: 1;
+		color: #fff;
+		font-family: var(--font-display, 'Inter Tight', sans-serif);
+		font-size: 1.4rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 0 1.25rem;
 	}
+
 	.cs-listing-tag {
 		position: absolute;
 		top: 1rem;
 		left: 1rem;
-		background: #fff;
-		color: #1a1a1a;
+		z-index: 2;
+		background: rgba(255,255,255,0.2);
+		backdrop-filter: blur(6px);
+		color: #fff;
 		font-size: 0.72rem;
 		font-weight: 700;
 		text-transform: uppercase;
 		letter-spacing: 0.06em;
 		padding: 0.35rem 0.9rem;
 		border-radius: 999px;
-		border: 1.5px solid rgba(0,0,0,0.08);
-		box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+		border: 1px solid rgba(255,255,255,0.3);
 	}
 
 	/* Content */
@@ -172,14 +211,6 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		flex-direction: column;
 		gap: 0.75rem;
 		flex: 1;
-	}
-	.cs-listing-brand {
-		font-size: 0.8rem;
-		font-weight: 700;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-		color: #888;
-		margin: 0;
 	}
 	.cs-listing-headline {
 		font-size: 1.15rem;
