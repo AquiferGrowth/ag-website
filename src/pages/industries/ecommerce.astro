@@ -896,6 +896,7 @@ const testimonials = (await getCollection('testimonials'))
 		<!-- ═══════════════════════════════════════════ -->
 		{testimonials.length > 0 && (
 			<section class="testimonials-section">
+				<div class="container">
 				<div class="section-header">
 					<div class="badge">Social Proof</div>
 					<h2>Trusted by <span class="text-gradient">Modern Operators</span></h2>
@@ -938,6 +939,7 @@ const testimonials = (await getCollection('testimonials'))
 					</button>
 					<span class="expand-label" id="ec-expand-label">More reviews</span>
 				</div>
+				</div><!-- /.container -->
 			</section>
 		)}
 
