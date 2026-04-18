@@ -1611,17 +1611,65 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 	/* Three-Act Banner (replaces old tabs section) */
 	.three-act-banner {
-		background: #020617;
-		color: #FFFFFF;
-		padding: 3rem;
-		border-radius: 24px;
-		margin: 0 0 1rem;
+		background: transparent;
+		color: #1a1a1a;
+		padding: 2rem 0;
 		position: relative;
-		overflow: hidden;
-		border: 1px solid rgba(255,255,255,0.05);
-		box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.1);
 		width: 100%;
 		max-width: 1200px;
+	}
+	/* Hide the dark dot-grid overlay */
+	.three-act-banner .banner-grid-overlay { display: none; }
+
+	/* Panels — white cards on the light page bg */
+	.three-act-banner .console-panel {
+		background: #ffffff;
+		border: 1px solid rgba(0,0,0,0.07);
+		backdrop-filter: none;
+		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+	}
+	.three-act-banner .panel-tag { color: #888; }
+	.three-act-banner .panel-meta { color: #555; }
+	.three-act-banner .source-label span:first-child { color: #1a1a1a; }
+	.three-act-banner .source-item.active .source-label span:first-child { color: #0f172a; }
+	.three-act-banner .s-type { color: #999; }
+	.three-act-banner .source-item { border-color: rgba(0,0,0,0.05); }
+	.three-act-banner .source-item.active { background: rgba(59,130,246,0.06); border-color: rgba(59,130,246,0.2); }
+	.three-act-banner .task-label { color: #1a1a1a; }
+	.three-act-banner .task-detail { color: #999; }
+	.three-act-banner .checkbox-box { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.1); }
+	.three-act-banner .task-item.is-done .checkbox-box { background: #10b981; border-color: #10b981; }
+
+	/* Oversight dashboard */
+	.three-act-banner .oversight-dashboard {
+		background: #ffffff;
+		border: 1px solid rgba(0,0,0,0.07);
+		box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+	}
+	.three-act-banner .dashboard-header { border-color: rgba(0,0,0,0.06); }
+	.three-act-banner .dash-id .label { color: #aaa; }
+	.three-act-banner .dash-id .val { color: #555; }
+	.three-act-banner .ready-tag { color: #888; border-color: rgba(0,0,0,0.1); background: rgba(0,0,0,0.04); }
+	.three-act-banner .crm-stat-label { color: #aaa; }
+	.three-act-banner .crm-table-label { color: #888; }
+	.three-act-banner .crm-table-wrapper { border-color: rgba(0,0,0,0.07); }
+	.three-act-banner .crm-table-head { background: rgba(0,0,0,0.03); color: #999; }
+	.three-act-banner .crm-row { border-color: rgba(0,0,0,0.05); color: #333; }
+	.three-act-banner .crm-row--flag { background: rgba(245,158,11,0.06); }
+	.three-act-banner .crm-src-name { color: #666; }
+	.three-act-banner .crm-src-pct { color: #888; }
+	.three-act-banner .crm-src-track { background: rgba(0,0,0,0.06); }
+	.three-act-banner .m-label { color: #aaa; }
+	.three-act-banner .m-val { color: #333; }
+	.three-act-banner .dashboard-footer { border-color: rgba(0,0,0,0.06); }
+	.three-act-banner .btn-approve-console { background: rgba(0,0,0,0.06); color: #555; border-color: rgba(0,0,0,0.1); }
+	.three-act-banner .oversight-dashboard.active .btn-approve-console { background: #f74c7c; color: #fff; border-color: transparent; }
+
+	/* Act badge — dark pill on light bg */
+	.three-act-banner .act-badge {
+		background: rgba(0,0,0,0.06);
+		border-color: rgba(0,0,0,0.1);
+		color: #333;
 	}
 	.ta-banner-header {
 		margin-bottom: 1.75rem;
