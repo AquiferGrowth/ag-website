@@ -568,13 +568,18 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
         </div>
 
         <!-- Slide 3: Order Fulfillment -->
-        <div class="use-case-slide inactive-slide" data-slide="2" style="grid-area: 1 / 1;">
+        <div class="use-case-slide inactive-slide" data-slide="2" data-anim="three-act" style="grid-area: 1 / 1;">
             <div class="banner-grid-overlay"></div>
-				
-				<div class="use-case-header">
-					<div>
-						<span class="uc-tag">Use case</span>
-						<h2 class="uc-title">Order Fulfillment</h2>
+
+			<div class="use-case-header">
+				<div>
+					<span class="uc-tag">Use case</span>
+					<h2 class="uc-title">Order Fulfillment</h2>
+				</div>
+				<div style="display:flex;align-items:center;gap:1rem;">
+					<div class="act-badge">
+						<span class="act-dot"></span>
+						<span class="act-phase-label">PLUG IN</span>
 					</div>
 					<div class="uc-nav-controls">
 						<button class="uc-nav-btn prev" data-dir="-1" title="Previous Use Case" aria-label="Previous Use Case">
@@ -585,163 +590,187 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 						</button>
 					</div>
 				</div>
+			</div>
 
-				<div class="framework-console">
+			<div class="framework-console">
 
-					<!-- SVG Layer -->
-					<div class="stream-connections">
-						<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
-							<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
-						</svg>
+				<!-- SVG Layer -->
+				<div class="stream-connections">
+					<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
+						<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+						<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+						<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+						<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+						<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
+						<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
+					</svg>
+				</div>
+
+				<!-- Column 1: Source Nodes -->
+				<div class="systems-column console-panel">
+					<div class="panel-header">
+						<span class="panel-tag">Nodes</span>
+						<span class="panel-meta node-count-label">0 Connected</span>
 					</div>
-
-					<!-- Column 1: Source Nodes -->
-					<div class="systems-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Nodes</span>
-							<span class="panel-meta">5 Active</span>
+					<div class="systems-source-list">
+						<div class="source-item ta-source" data-source="src1" style="opacity:0;transform:translateX(-10px)">
+							<div class="source-indicator"></div>
+							<div class="source-label"><span>Shopify</span><span class="s-type">Order Feed</span></div>
+							<div class="stream-anchor anchor-src1"></div>
 						</div>
-						<div class="systems-source-list">
-							<div class="source-item" data-source="src1">
-								<div class="source-indicator"></div>
-								<div class="source-label"><span>Shopify</span><span class="s-type">Order Feed</span></div>
-								<div class="stream-anchor anchor-src1"></div>
-							</div>
-							<div class="source-item" data-source="src2">
-								<div class="source-indicator"></div>
-								<div class="source-label"><span>Amazon Central</span><span class="s-type">FBA Logic</span></div>
-								<div class="stream-anchor anchor-src2"></div>
-							</div>
-							<div class="source-item" data-source="src3">
-								<div class="source-indicator"></div>
-								<div class="source-label"><span>ShipWire 3PL</span><span class="s-type">WMS Stream</span></div>
-								<div class="stream-anchor anchor-src3"></div>
-							</div>
-							<div class="source-item" data-source="src4">
-								<div class="source-indicator"></div>
-								<div class="source-label"><span>FedEx API</span><span class="s-type">Tracking</span></div>
-								<div class="stream-anchor anchor-src4"></div>
-							</div>
-							<div class="source-item" data-source="src5">
-								<div class="source-indicator"></div>
-								<div class="source-label"><span>QuickBooks</span><span class="s-type">Ledger Sync</span></div>
-								<div class="stream-anchor anchor-src5"></div>
-							</div>
+						<div class="source-item ta-source" data-source="src2" style="opacity:0;transform:translateX(-10px)">
+							<div class="source-indicator"></div>
+							<div class="source-label"><span>Amazon Central</span><span class="s-type">FBA Logic</span></div>
+							<div class="stream-anchor anchor-src2"></div>
+						</div>
+						<div class="source-item ta-source" data-source="src3" style="opacity:0;transform:translateX(-10px)">
+							<div class="source-indicator"></div>
+							<div class="source-label"><span>ShipWire 3PL</span><span class="s-type">WMS Stream</span></div>
+							<div class="stream-anchor anchor-src3"></div>
+						</div>
+						<div class="source-item ta-source" data-source="src4" style="opacity:0;transform:translateX(-10px)">
+							<div class="source-indicator"></div>
+							<div class="source-label"><span>FedEx API</span><span class="s-type">Tracking</span></div>
+							<div class="stream-anchor anchor-src4"></div>
+						</div>
+						<div class="source-item ta-source" data-source="src5" style="opacity:0;transform:translateX(-10px)">
+							<div class="source-indicator"></div>
+							<div class="source-label"><span>QuickBooks</span><span class="s-type">Ledger Sync</span></div>
+							<div class="stream-anchor anchor-src5"></div>
 						</div>
 					</div>
+				</div>
 
-					<!-- Column 2: Process Layer -->
-					<div class="execution-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Process Layer</span>
-							<div class="status-pulse active"></div>
-						</div>
-						<ul class="task-checklist">
-							<li class="task-item" data-step="1">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Map Order Sources</span><span class="task-detail">Shopify, Amazon, & 3PL feeds mapped</span></div>
-							</li>
-							<li class="task-item" data-step="2">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Sync Inventory in Real Time</span><span class="task-detail">Stock levels updated on every order</span></div>
-							</li>
-							<li class="task-item" data-step="3">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Match Orders to Fulfillment</span><span class="task-detail">Reconciled against warehouse records</span></div>
-							</li>
-							<li class="task-item" data-step="4">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Track Supplier Updates</span><span class="task-detail">ETAs pulled, delays flagged</span></div>
-							</li>
-							<li class="task-item" data-step="5">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Analyze Stock Levels</span><span class="task-detail">Real-time inventory velocity calculated</span></div>
-							</li>
-							<li class="task-item" data-step="6">
-								<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-								<div class="task-content"><span class="task-label">Generate POs</span><span class="task-detail">Purchasing recommendations ready for review</span></div>
-							</li>
-						</ul>
-						<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
+				<!-- Column 2: Process Layer -->
+				<div class="execution-column console-panel">
+					<div class="panel-header">
+						<span class="panel-tag">Process Layer</span>
+						<div class="status-pulse active"></div>
 					</div>
+					<ul class="task-checklist">
+						<li class="task-item ta-step" data-step="1">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Map Order Sources</span><span class="step-tag tag-integration">INTEGRATION</span></div>
+								<span class="task-detail">Shopify, Amazon, &amp; 3PL feeds mapped</span>
+							</div>
+						</li>
+						<li class="task-item ta-step" data-step="2">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Sync Inventory in Real Time</span><span class="step-tag tag-automation">AUTOMATION</span></div>
+								<span class="task-detail">Stock levels updated on every order</span>
+							</div>
+						</li>
+						<li class="task-item ta-step" data-step="3">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Match Orders to Fulfillment</span><span class="step-tag tag-automation">AUTOMATION</span></div>
+								<span class="task-detail">Reconciled against warehouse records</span>
+							</div>
+						</li>
+						<li class="task-item ta-step" data-step="4">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Flag Low Stock &amp; Delays</span><span class="step-tag tag-ai">AI AGENT</span></div>
+								<span class="task-detail">ETAs pulled, critical SKUs flagged</span>
+							</div>
+						</li>
+						<li class="task-item ta-step" data-step="5">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Analyze Stock Velocity</span><span class="step-tag tag-ai">AI AGENT</span></div>
+								<span class="task-detail">Real-time inventory velocity calculated</span>
+							</div>
+						</li>
+						<li class="task-item ta-step" data-step="6">
+							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+							<div class="task-content">
+								<div class="task-label-row"><span class="task-label">Review &amp; Approve POs</span><span class="step-tag tag-team">OUR TEAM</span></div>
+								<span class="task-detail">Purchasing recommendations ready for review</span>
+							</div>
+						</li>
+					</ul>
+					<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
+				</div>
 
-					<!-- Column 3: Oversight Dashboard -->
-					<div class="oversight-column" style="position: relative;">
-						<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
-						<div class="oversight-dashboard ecom-dashboard">
-							<div class="ecom-layout">
-								<!-- Sidebar -->
-								<div class="ecom-sidebar">
-									<div class="sidebar-item active"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>Inventory</div>
-									<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>Orders</div>
-									<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Logistics</div>
-								</div>
-								<!-- Main Content -->
-								<div class="ecom-main">
-									<div class="dashboard-header" style="background:transparent; padding:0 0 0.75rem 0; border:none;">
-										<div class="dash-id">
-											<span class="label">Fulfillment System</span>
-											<span class="val">OPS-CTRL-V3</span>
-										</div>
-										<div class="dash-status"><div class="status-dot" style="margin-left:0; margin-right:6px;"></div><span class="ready-tag">LIVE</span></div>
+				<!-- Column 3: Oversight Dashboard -->
+				<div class="oversight-column" style="position: relative;">
+					<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
+					<div class="oversight-dashboard ecom-dashboard">
+
+						<div class="managed-ops-badge" style="opacity:0;margin-bottom:0.5rem;">
+							<span class="mob-dot"></span>MANAGED OPS — LIVE
+						</div>
+
+						<div class="ecom-layout">
+							<!-- Sidebar -->
+							<div class="ecom-sidebar">
+								<div class="sidebar-item active"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>Inventory</div>
+								<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>Orders</div>
+								<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Logistics</div>
+							</div>
+							<!-- Main Content -->
+							<div class="ecom-main">
+								<div class="dashboard-header" style="background:transparent; padding:0 0 0.75rem 0; border:none;">
+									<div class="dash-id">
+										<span class="label">Fulfillment System</span>
+										<span class="val">OPS-CTRL-V3</span>
 									</div>
+									<div class="dash-status"><div class="status-dot" style="margin-left:0; margin-right:6px;"></div><span class="ready-tag">LIVE</span></div>
+								</div>
 
-									<div class="inventory-table">
-										<div class="table-head">
-											<span>Product</span>
-											<span>Stock</span>
-											<span>Status</span>
-										</div>
-										<div class="table-row">
-											<span>AQU-MESH-01</span>
-											<span>1,240</span>
-											<span class="status-ok">OPTIMAL</span>
-										</div>
-										<div class="table-row highlight">
-											<span>AQU-PRO-MAX</span>
-											<span>12</span>
-											<span class="status-warn">CRITICAL</span>
-										</div>
-										<div class="table-row">
-											<span>AQU-LITE-X</span>
-											<span>14,082</span>
-											<span class="status-ok">OPTIMAL</span>
-										</div>
-										<div class="table-row">
-											<span>AQU-ULTRA</span>
-											<span>854</span>
-											<span class="status-ok">OPTIMAL</span>
-										</div>
-										<div class="table-row highlight">
-											<span>AQU-PULSE</span>
-											<span>42</span>
-											<span class="status-warn">CRITICAL</span>
-										</div>
-										<div class="table-row">
-											<span>AQU-ELITE</span>
-											<span>2,190</span>
-											<span class="status-ok">OPTIMAL</span>
-										</div>
+								<div class="inventory-table">
+									<div class="table-head">
+										<span>Product</span>
+										<span>Stock</span>
+										<span>Status</span>
+									</div>
+									<div class="table-row">
+										<span>AQU-MESH-01</span>
+										<span>1,240</span>
+										<span class="status-ok">OPTIMAL</span>
+									</div>
+									<div class="table-row highlight">
+										<span>AQU-PRO-MAX</span>
+										<span>12</span>
+										<span class="status-warn">CRITICAL</span>
+									</div>
+									<div class="table-row">
+										<span>AQU-LITE-X</span>
+										<span>14,082</span>
+										<span class="status-ok">OPTIMAL</span>
+									</div>
+									<div class="table-row">
+										<span>AQU-ULTRA</span>
+										<span>854</span>
+										<span class="status-ok">OPTIMAL</span>
+									</div>
+									<div class="table-row highlight">
+										<span>AQU-PULSE</span>
+										<span>42</span>
+										<span class="status-warn">CRITICAL</span>
+									</div>
+									<div class="table-row">
+										<span>AQU-ELITE</span>
+										<span>2,190</span>
+										<span class="status-ok">OPTIMAL</span>
 									</div>
 								</div>
 							</div>
+						</div>
 
-							<div class="dashboard-footer" style="margin-top:0.5rem;">
-								<div class="footer-meta">
-									<div class="meta-item"><span class="m-label">Shortages</span><span class="m-val">2 SKUs</span></div>
-									<div class="meta-item"><span class="m-label">Throughput</span><span class="m-val volume-val">$0</span></div>
-								</div>
-								<button class="btn-approve-console" style="padding: 6px 14px;">Review POs</button>
+						<div class="dashboard-footer" style="margin-top:0.5rem;">
+							<div class="footer-meta">
+								<div class="meta-item"><span class="m-label">Shortages</span><span class="m-val shortage-count">2 SKUs</span></div>
+								<div class="meta-item"><span class="m-label">Throughput</span><span class="m-val volume-val">$0</span></div>
 							</div>
+							<button class="btn-approve-console" style="padding: 6px 14px;">Review POs</button>
 						</div>
 					</div>
+				</div>
 
-				</div><!-- /.framework-console -->
+			</div><!-- /.framework-console -->
         </div>
     </div>
 </section>
@@ -3901,6 +3930,81 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		50% { transform: translateY(5px); }
 	}
 
+	/* Three-Act Animation Elements */
+	.act-badge {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		background: rgba(255,255,255,0.08);
+		border: 1px solid rgba(255,255,255,0.15);
+		border-radius: 20px;
+		padding: 4px 12px 4px 8px;
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: rgba(255,255,255,0.9);
+		transition: all 0.4s ease;
+		white-space: nowrap;
+	}
+	.act-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #f74c7c;
+		animation: act-pulse 1.2s ease-in-out infinite;
+		flex-shrink: 0;
+	}
+	@keyframes act-pulse {
+		0%, 100% { opacity: 1; transform: scale(1); }
+		50% { opacity: 0.5; transform: scale(0.7); }
+	}
+	.act-phase-label { transition: opacity 0.3s ease; }
+
+	.task-label-row {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		flex-wrap: wrap;
+	}
+	.step-tag {
+		font-size: 0.55rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		padding: 2px 6px;
+		border-radius: 4px;
+		opacity: 0;
+		transform: scale(0.8);
+		transition: opacity 0.3s ease 0.2s, transform 0.3s ease 0.2s;
+		white-space: nowrap;
+		flex-shrink: 0;
+	}
+	.task-item.is-active .step-tag,
+	.task-item.is-done .step-tag { opacity: 1; transform: scale(1); }
+	.tag-integration { background: rgba(99,102,241,0.2); color: #a5b4fc; }
+	.tag-automation   { background: rgba(245,158,11,0.2);  color: #fcd34d; }
+	.tag-ai           { background: rgba(236,72,153,0.2);  color: #f9a8d4; }
+	.tag-team         { background: rgba(16,185,129,0.2);  color: #6ee7b7; }
+
+	.managed-ops-badge {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		color: #6ee7b7;
+		transition: opacity 0.5s ease;
+	}
+	.mob-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: #10b981;
+		animation: act-pulse 1s ease-in-out infinite;
+		flex-shrink: 0;
+	}
+	.node-count-label { transition: all 0.3s ease; }
+
 	/* How We Build Section */
 	.how-we-build-section {
 		padding: 5rem 1.5rem;
@@ -6258,13 +6362,21 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 		const createSlideTimeline = (slide) => {
 			const dashboard = slide.querySelector(".oversight-dashboard");
+			const isThreeAct = slide.dataset.anim === 'three-act';
 			const tl = gsap.timeline();
 
 			const counter = (selector, from, to, dur) => {
 				const obj = { val: from };
 				return gsap.to(obj, { val: to, duration: dur, ease: "power1.inOut",
-					onUpdate: () => { slide.querySelector(selector).innerText = Math.round(obj.val) + "%"; }
+					onUpdate: () => { const el = slide.querySelector(selector); if (el) el.innerText = Math.round(obj.val) + "%"; }
 				});
+			};
+
+			const setActPhase = (label) => {
+				const el = slide.querySelector('.act-phase-label');
+				if (!el) return;
+				el.style.opacity = '0';
+				setTimeout(() => { el.textContent = label; el.style.opacity = '1'; }, 300);
 			};
 
 			const reset = () => {
@@ -6275,11 +6387,26 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 					gsap.killTweensOf(el);
 					gsap.set(el, { visibility: "hidden" });
 				});
-				gsap.set(slide.querySelector(".confidence-bar-fill"), { width: "0%" });
-				gsap.set(slide.querySelector(".ring-fill"), { strokeDashoffset: 163.3 });
-				slide.querySelector(".confidence-val").innerText = "0%";
-				slide.querySelector(".volume-val").innerText = "$0.00";
-				dashboard.classList.remove('active');
+				const confFill = slide.querySelector(".confidence-bar-fill");
+				const ringFill = slide.querySelector(".ring-fill");
+				const confVal = slide.querySelector(".confidence-val");
+				const volVal = slide.querySelector(".volume-val");
+				if (confFill) gsap.set(confFill, { width: "0%" });
+				if (ringFill) gsap.set(ringFill, { strokeDashoffset: 163.3 });
+				if (confVal) confVal.innerText = "0%";
+				if (volVal) volVal.innerText = "$0";
+				if (dashboard) dashboard.classList.remove('active');
+				// Three-act resets
+				if (isThreeAct) {
+					slide.querySelectorAll('.ta-source').forEach(el => {
+						gsap.set(el, { opacity: 0, x: -10 });
+					});
+					const badge = slide.querySelector('.managed-ops-badge');
+					if (badge) gsap.set(badge, { opacity: 0 });
+					const nodeLabel = slide.querySelector('.node-count-label');
+					if (nodeLabel) nodeLabel.textContent = '0 Connected';
+					setActPhase('PLUG IN');
+				}
 			};
 
 			const updatePaths = () => {
@@ -6333,85 +6460,129 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			const numTasks = tasks.length;
 			if(numTasks === 0) return tl;
 
-			const phase3Step = Math.ceil(numTasks / 2) + 1;
+			if (isThreeAct) {
+				// ── THREE-ACT ANIMATION ──────────────────────────────────────
+				const sources = slide.querySelectorAll('.ta-source');
+				const nodeLabel = slide.querySelector('.node-count-label');
 
-			// Phase 1 (Data ingest visual)
-			tl.add(() => {
-				const s1 = slide.querySelector(".source-item[data-source='src1']");
-				const s2 = slide.querySelector(".source-item[data-source='src2']");
-				if (s1) s1.classList.add('active');
-				if (s2) s2.classList.add('active');
-				
-				const p1 = slide.querySelector(".stream-src1");
-				const p2 = slide.querySelector(".stream-src2");
-				if (p1) { gsap.set(p1, { visibility: "visible" }); gsap.to(p1, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-				if (p2) { gsap.set(p2, { visibility: "visible" }); gsap.to(p2, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-			});
-
-			tasks.forEach((task, index) => {
-				const step = index + 1;
-				const isLast = (step === numTasks);
-				const prevConf = Math.round(((step - 1) / numTasks) * 100);
-				const targetConf = Math.round((step / numTasks) * 100);
-
-				tl.to(task, {
-					onStart: () => {
-						task.classList.add('is-active');
-						const confFill = slide.querySelector(".confidence-bar-fill");
-						if (confFill) gsap.to(confFill, { width: targetConf + "%", duration: 1.5 });
-						counter(".confidence-val", prevConf, targetConf, 1.5);
-
-						if (step === 2) {
-							// Phase 2 triggers (remaining sources)
-							const sources = ["src3", "src4", "src5"];
-							sources.forEach(sid => {
-								const s = slide.querySelector(`.source-item[data-source='${sid}']`);
-								const p = slide.querySelector(`.stream-${sid}`);
-								if (s) s.classList.add('active');
-								if (p) {
-									gsap.set(p, { visibility: "visible" });
-									gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 });
-								}
-							});
+				// ACT 1 — PLUG IN: sources fly in one by one with streams
+				sources.forEach((src, i) => {
+					const sid = src.dataset.source;
+					tl.to(src, {
+						opacity: 1, x: 0, duration: 0.5, ease: "power2.out",
+						onStart: () => {
+							src.classList.add('active');
+							const p = slide.querySelector(`.stream-${sid}`);
+							if (p) { gsap.set(p, { visibility: "visible" }); gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
+							if (nodeLabel) nodeLabel.textContent = (i + 1) + ' Connected';
 						}
+					}, i === 0 ? ">" : "-=0.1");
+				});
 
-						if (step === phase3Step) {
-							// Phase 3 triggers (activity/throughput)
-							const bars = slide.querySelectorAll(".a-bar");
-							if (bars.length) {
-								gsap.to(bars, {
-									height: () => (30 + Math.random() * 65) + "%",
-									background: "rgba(59, 130, 246, 0.5)",
-									stagger: 0.04, duration: 0.8, ease: "power2.out"
-								});
-							}
-							const volObj = { val: 0 };
-							const volEl = slide.querySelector(".volume-val");
-							if (volEl) {
-								gsap.to(volObj, { val: 1420500, duration: 2, ease: "power1.inOut",
-									onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); }
-								});
-							}
-						}
+				// Short pause before Act 2
+				tl.to({}, { duration: 0.5 });
 
-						if (isLast) {
-							// Phase 4 triggers (output line)
-							const pathOutput = slide.querySelector(".stream-output");
-							if (pathOutput) {
-								gsap.set(pathOutput, { visibility: "visible" });
-								gsap.to(pathOutput, { attr: { strokeDashoffset: -200 }, duration: 2, ease: "none", repeat: -1 });
+				// ACT 2 — BUILD THE SYSTEM: process steps appear with tags
+				tl.add(() => setActPhase('BUILD THE SYSTEM'));
+
+				tasks.forEach((task, index) => {
+					const step = index + 1;
+					const isLast = (step === numTasks);
+					tl.to(task, {
+						onStart: () => {
+							task.classList.add('is-active');
+							if (isLast) {
+								const pathOutput = slide.querySelector(".stream-output");
+								if (pathOutput) { gsap.set(pathOutput, { visibility: "visible" }); gsap.to(pathOutput, { attr: { strokeDashoffset: -200 }, duration: 2, ease: "none", repeat: -1 }); }
 							}
-						}
-					},
-					duration: 2
+						},
+						duration: 1.5
+					})
+					.add(() => task.classList.replace('is-active', 'is-done'));
+				});
+
+				// ACT 3 — RUN: dashboard lights up, counters tick, managed badge appears
+				tl.add(() => {
+					setActPhase('RUN');
+					if (dashboard) dashboard.classList.add('active');
+					const badge = slide.querySelector('.managed-ops-badge');
+					if (badge) gsap.to(badge, { opacity: 1, duration: 0.6 });
+					const shortageEl = slide.querySelector('.shortage-count');
+					const volEl = slide.querySelector('.volume-val');
+					if (volEl) {
+						const volObj = { val: 0 };
+						gsap.to(volObj, { val: 1420500, duration: 2.5, ease: "power1.inOut",
+							onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); }
+						});
+					}
+					// Shortages tick up to simulate live monitoring
+					if (shortageEl) {
+						setTimeout(() => { shortageEl.textContent = '3 SKUs'; }, 2000);
+					}
 				})
-				.add(() => task.classList.replace('is-active', 'is-done'));
-			});
+				.to({}, { duration: 3 }); // hold on Act 3
 
-			tl.add(() => {
-				dashboard.classList.add('active');
-			})
-			.to({}, { duration: 2 }); // Faster hold over phase
+			} else {
+				// ── ORIGINAL ANIMATION (slides 0 & 1) ────────────────────────
+				const phase3Step = Math.ceil(numTasks / 2) + 1;
+
+				// Phase 1 (Data ingest visual)
+				tl.add(() => {
+					const s1 = slide.querySelector(".source-item[data-source='src1']");
+					const s2 = slide.querySelector(".source-item[data-source='src2']");
+					if (s1) s1.classList.add('active');
+					if (s2) s2.classList.add('active');
+					
+					const p1 = slide.querySelector(".stream-src1");
+					const p2 = slide.querySelector(".stream-src2");
+					if (p1) { gsap.set(p1, { visibility: "visible" }); gsap.to(p1, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
+					if (p2) { gsap.set(p2, { visibility: "visible" }); gsap.to(p2, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
+				});
+
+				tasks.forEach((task, index) => {
+					const step = index + 1;
+					const isLast = (step === numTasks);
+					const prevConf = Math.round(((step - 1) / numTasks) * 100);
+					const targetConf = Math.round((step / numTasks) * 100);
+
+					tl.to(task, {
+						onStart: () => {
+							task.classList.add('is-active');
+							const confFill = slide.querySelector(".confidence-bar-fill");
+							if (confFill) gsap.to(confFill, { width: targetConf + "%", duration: 1.5 });
+							counter(".confidence-val", prevConf, targetConf, 1.5);
+
+							if (step === 2) {
+								const sources = ["src3", "src4", "src5"];
+								sources.forEach(sid => {
+									const s = slide.querySelector(`.source-item[data-source='${sid}']`);
+									const p = slide.querySelector(`.stream-${sid}`);
+									if (s) s.classList.add('active');
+									if (p) { gsap.set(p, { visibility: "visible" }); gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
+								});
+							}
+
+							if (step === phase3Step) {
+								const bars = slide.querySelectorAll(".a-bar");
+								if (bars.length) { gsap.to(bars, { height: () => (30 + Math.random() * 65) + "%", background: "rgba(59, 130, 246, 0.5)", stagger: 0.04, duration: 0.8, ease: "power2.out" }); }
+								const volObj = { val: 0 };
+								const volEl = slide.querySelector(".volume-val");
+								if (volEl) { gsap.to(volObj, { val: 1420500, duration: 2, ease: "power1.inOut", onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); } }); }
+							}
+
+							if (isLast) {
+								const pathOutput = slide.querySelector(".stream-output");
+								if (pathOutput) { gsap.set(pathOutput, { visibility: "visible" }); gsap.to(pathOutput, { attr: { strokeDashoffset: -200 }, duration: 2, ease: "none", repeat: -1 }); }
+							}
+						},
+						duration: 2
+					})
+					.add(() => task.classList.replace('is-active', 'is-done'));
+				});
+
+				tl.add(() => { if (dashboard) dashboard.classList.add('active'); })
+				.to({}, { duration: 2 });
+			}
 
 			return tl;
 		};
