@@ -37,744 +37,209 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</div>
 			</section>
 
-				<div class="use-case-categories pb-relative">
-					<button class="category-pill active" data-slide="0">Finance</button>
-					<button class="category-pill" data-slide="1">CRM</button>
-					<button class="category-pill" data-slide="2">E-commerce</button>
-				</div>
-				<section class="framework-banner pb-relative">
-		<div class="use-cases-wrapper" style="display: grid; grid-template-columns: 1fr;">
-        <!-- Slide 1 -->
-        <div class="use-case-slide active-slide" data-slide="0" style="grid-area: 1 / 1;">
-            <div class="banner-grid-overlay"></div>
-				
-				<div class="use-case-header">
-					<div>
-						<span class="uc-tag">Use case</span>
-						<h2 class="uc-title">Financial Reporting & Reconciliation</h2>
-					</div>
-					<div class="uc-nav-controls">
-						<button class="uc-nav-btn next" data-dir="1" title="Next Use Case" aria-label="Next Use Case">
-							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-						</button>
-					</div>
-				</div>
+				<!-- Three-Act Build Banner -->
+				<section class="three-act-banner animate-fade-in">
+					<div class="banner-grid-overlay"></div>
 
-				<div class="framework-console">
-
-					<!-- SVG Connections Layer -->
-					<div class="stream-connections">
-						<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
-							<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
-						</svg>
-					</div>
-
-
-					<!-- Column 1: Source Systems -->
-					<div class="systems-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Source Nodes</span>
-							<span class="panel-meta">4 Linked</span>
+					<div class="ta-banner-header">
+						<div class="ta-use-case-info">
+							<span class="uc-tag">Use case</span>
+							<h2 class="uc-title">Sales Pipeline &amp; CRM</h2>
 						</div>
-						<div class="systems-source-list">
-							<div class="source-item" data-source="src1">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>NetSuite ERP</span>
-									<span class="s-type">Active Feed</span>
-								</div>
-								<div class="stream-anchor anchor-src1"></div>
-							</div>
-							<div class="source-item" data-source="src2">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>QuickBooks Online</span>
-									<span class="s-type">Active Feed</span>
-								</div>
-								<div class="stream-anchor anchor-src2"></div>
-							</div>
-							<div class="source-item" data-source="src3">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>SVB Banking</span>
-									<span class="s-type">Pending Ingest</span>
-								</div>
-								<div class="stream-anchor anchor-src3"></div>
-							</div>
-							<div class="source-item" data-source="src4">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>Stripe API</span>
-									<span class="s-type">Active Stream</span>
-								</div>
-								<div class="stream-anchor anchor-src4"></div>
-							</div>
-						</div>
-						
-
-					</div>
-
-					<!-- Column 2: Execution Logic -->
-					<div class="execution-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Process Layer</span>
-							<div class="status-pulse active"></div>
-						</div>
-						
-						<ul class="task-checklist">
-							<li class="task-item" data-step="1">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Identify Source Schemas</span>
-									<span class="task-detail">Mapping NetSuite to Stripe structures</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="2">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Reconcile Line Items</span>
-									<span class="task-detail">Matching $1.4M across 4 entities</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="3">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Anomaly Flagging</span>
-									<span class="task-detail">0.02% drift detected for review</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="4">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Final Integrity Check</span>
-									<span class="task-detail">Double-layer ledger validation</span>
-								</div>
-							</li>
-						</ul>
-						<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
-					</div>
-
-					<!-- Column 3: Oversight Dashboard -->
-					<div class="oversight-column" style="position: relative;">
-						<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
-						<div class="oversight-dashboard">
-							<div class="dashboard-header">
-								<div class="dash-id">
-									<span class="label">INSTANCE</span>
-									<span class="val">AQ-449-X</span>
-								</div>
-								<div class="dash-status">
-									<span class="ready-tag">READY FOR HUMAN OVERSIGHT</span>
-									<div class="status-dot"></div>
-								</div>
-							</div>
-
-							<div class="dashboard-grid">
-								<!-- Precision Bar -->
-								<div class="dash-main-chart">
-									<div class="chart-header">
-										<span class="c-label">Execution Precision</span>
-										<span class="c-val confidence-val">0%</span>
-									</div>
-									<div class="confidence-bar">
-										<div class="confidence-bar-fill"></div>
-									</div>
-									<div class="chart-axis">
-										<span>0</span><span>25</span><span>50</span><span>75</span><span>100</span>
-									</div>
-								</div>
-
-								<!-- Quality Ring -->
-								<div class="dash-stats">
-									<div class="stat-circle">
-										<svg width="60" height="60" viewBox="0 0 60 60">
-											<circle cx="30" cy="30" r="26" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="6"/>
-											<circle class="ring-fill" cx="30" cy="30" r="26" fill="none" stroke="#10b981" stroke-width="6" stroke-dasharray="163.3 163.3" stroke-dashoffset="163.3"/>
-										</svg>
-										<div class="stat-inner">
-											<span class="s-val">99%</span>
-											<span class="s-label">QUALITY</span>
-										</div>
-									</div>
-								</div>
-
-								<!-- Transaction Ledger -->
-								<div class="dash-ledger">
-									<div class="ledger-header">
-										<span>Transaction</span>
-										<span>Precision</span>
-										<span>Status</span>
-									</div>
-									<div class="ledger-rows">
-										<div class="l-row">
-											<span class="l-name">STRIPE_BATCH_9</span>
-											<span class="l-prec">99.8%</span>
-											<span class="l-status">MATCHED</span>
-										</div>
-										<div class="l-row">
-											<span class="l-name">ERP_VOUCHER_12</span>
-											<span class="l-prec">100%</span>
-											<span class="l-status">MATCHED</span>
-										</div>
-										<div class="l-row warn">
-											<span class="l-name">BANK_STMT_304</span>
-											<span class="l-prec">94.2%</span>
-											<span class="l-status highlight">FLAGGED</span>
-										</div>
-									</div>
-								</div>
-
-								<!-- Activity Chart -->
-								<div class="dash-activity">
-									<div class="activity-label">Mapping Activity</div>
-									<div class="activity-viz">
-										<div class="a-bar" style="height:30%"></div><div class="a-bar" style="height:60%"></div>
-										<div class="a-bar" style="height:45%"></div><div class="a-bar" style="height:80%"></div>
-										<div class="a-bar" style="height:55%"></div><div class="a-bar" style="height:70%"></div>
-										<div class="a-bar" style="height:40%"></div><div class="a-bar" style="height:90%"></div>
-										<div class="a-bar" style="height:65%"></div><div class="a-bar" style="height:75%"></div>
-										<div class="a-bar" style="height:50%"></div><div class="a-bar" style="height:85%"></div>
-										<div class="a-bar" style="height:35%"></div><div class="a-bar" style="height:60%"></div>
-										<div class="a-bar" style="height:70%"></div><div class="a-bar" style="height:45%"></div>
-										<div class="a-bar" style="height:80%"></div><div class="a-bar" style="height:55%"></div>
-									</div>
-								</div>
-
-								<!-- AI Quality Report -->
-								<div class="dash-details">
-									<div class="activity-label">AI Quality Report</div>
-									<div class="quality-grid">
-										<div class="q-item">
-											<span class="q-label">Entities</span>
-											<span class="q-val">4</span>
-										</div>
-										<div class="q-item">
-											<span class="q-label">Unmapped</span>
-											<span class="q-val">0</span>
-										</div>
-										<div class="q-item">
-											<span class="q-label">Verified</span>
-											<span class="q-val">Pass</span>
-										</div>
-									</div>
-								</div>
-
-								<!-- Decision Audit -->
-								<div class="dash-audit">
-									<div class="activity-label">Decision Audit</div>
-									<div class="audit-log">
-										<div class="log-item">
-											<span class="log-time">14:02:11</span>
-											<span class="log-txt">GL Mapping verified via Stripe API</span>
-										</div>
-										<div class="log-item">
-											<span class="log-time">14:02:08</span>
-											<span class="log-txt">Anomaly #449 flagged — 0.02% drift</span>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="dashboard-footer">
-								<div class="footer-meta">
-									<div class="meta-item">
-										<span class="m-label">Drift</span>
-										<span class="m-val">0.02%</span>
-									</div>
-									<div class="meta-item">
-										<span class="m-label">Volume</span>
-										<span class="m-val volume-val">$0.00</span>
-									</div>
-								</div>
-								<button class="btn-approve-console">Review & Sign Off</button>
-							</div>
+						<div class="ta-act-badge">
+							<span class="act-dot"></span>
+							<span class="act-phase-label">PLUG IN</span>
 						</div>
 					</div>
 
-				</div><!-- /.framework-console -->
-        </div>
-        <!-- Slide 2 -->
-        <div class="use-case-slide inactive-slide" data-slide="1" style="grid-area: 1 / 1;">
-            <div class="banner-grid-overlay"></div>
-				
-				<div class="use-case-header">
-					<div>
-						<span class="uc-tag">Use case</span>
-						<h2 class="uc-title">Sales Pipeline & CRM</h2>
-					</div>
-					<div class="uc-nav-controls">
-						<button class="uc-nav-btn prev" data-dir="-1" title="Previous Use Case" aria-label="Previous Use Case">
-							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-						</button>
-						<button class="uc-nav-btn next" data-dir="1" title="Next Use Case" aria-label="Next Use Case">
-							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-						</button>
-					</div>
-				</div>
+					<div class="framework-console">
 
-				<div class="framework-console">
-
-					<!-- SVG Connections Layer -->
-					<div class="stream-connections">
-						<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
-							<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-							<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
-						</svg>
-					</div>
-
-
-					<!-- Column 1: Source Nodes -->
-					<div class="systems-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Source Nodes</span>
-							<span class="panel-meta">4 Linked</span>
+						<!-- SVG Layer -->
+						<div class="stream-connections">
+							<svg width="100%" height="100%" preserveAspectRatio="none" style="position:absolute;top:0;left:0;pointer-events:none;overflow:visible;">
+								<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
+								<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245,158,11,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
+								<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59,130,246,0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
+								<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99,179,246,0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden"/>
+								<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16,185,129,0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden"/>
+							</svg>
 						</div>
-						<div class="systems-source-list">
-							<div class="source-item" data-source="src1">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>HubSpot CRM</span>
-									<span class="s-type">API Sync</span>
-								</div>
-								<div class="stream-anchor anchor-src1"></div>
+
+						<!-- Column 1: Source Nodes -->
+						<div class="systems-column console-panel">
+							<div class="panel-header">
+								<span class="panel-tag">Source Nodes</span>
+								<span class="panel-meta node-count-label">0 Connected</span>
 							</div>
-							<div class="source-item" data-source="src2">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>Website Forms</span>
-									<span class="s-type">Webhook Stream</span>
+							<div class="systems-source-list">
+								<div class="source-item ta-source" data-source="src1" style="opacity:0;transform:translateX(-10px)">
+									<div class="source-indicator"></div>
+									<div class="source-label"><span>HubSpot CRM</span><span class="s-type">API Sync</span></div>
+									<div class="stream-anchor anchor-src1"></div>
 								</div>
-								<div class="stream-anchor anchor-src2"></div>
-							</div>
-							<div class="source-item" data-source="src3">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>LinkedIn Data</span>
-									<span class="s-type">Scraper Feed</span>
+								<div class="source-item ta-source" data-source="src2" style="opacity:0;transform:translateX(-10px)">
+									<div class="source-indicator"></div>
+									<div class="source-label"><span>Website Forms</span><span class="s-type">Webhook Stream</span></div>
+									<div class="stream-anchor anchor-src2"></div>
 								</div>
-								<div class="stream-anchor anchor-src3"></div>
-							</div>
-							<div class="source-item" data-source="src4">
-								<div class="source-indicator"></div>
-								<div class="source-label">
-									<span>Apollo.io</span>
-									<span class="s-type">Enrichment API</span>
+								<div class="source-item ta-source" data-source="src3" style="opacity:0;transform:translateX(-10px)">
+									<div class="source-indicator"></div>
+									<div class="source-label"><span>LinkedIn Data</span><span class="s-type">Scraper Feed</span></div>
+									<div class="stream-anchor anchor-src3"></div>
 								</div>
-								<div class="stream-anchor anchor-src4"></div>
+								<div class="source-item ta-source" data-source="src4" style="opacity:0;transform:translateX(-10px)">
+									<div class="source-indicator"></div>
+									<div class="source-label"><span>Apollo.io</span><span class="s-type">Enrichment API</span></div>
+									<div class="stream-anchor anchor-src4"></div>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<!-- Column 2: Execution Logic -->
-					<div class="execution-column console-panel">
-						<div class="panel-header">
-							<span class="panel-tag">Process Layer</span>
-							<div class="status-pulse active"></div>
-						</div>
-						
-						<ul class="task-checklist">
-							<li class="task-item" data-step="1">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Identify Stale Records</span>
-									<span class="task-detail">Scanning deals with no activity in 14+ days</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="2">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Enrich Missing Data</span>
-									<span class="task-detail">Pulling contact info from source tools</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="3">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Normalise Deal Stages</span>
-									<span class="task-detail">Aligning probabilities to pipeline rules</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="4">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Log Interaction History</span>
-									<span class="task-detail">Matching calls and meetings to records</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="5">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Flag Exceptions</span>
-									<span class="task-detail">Deals missing owner or value flagged</span>
-								</div>
-							</li>
-							<li class="task-item" data-step="6">
-								<div class="checkbox-container">
-									<div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div>
-								</div>
-								<div class="task-content">
-									<span class="task-label">Final Integrity Check</span>
-									<span class="task-detail">Reconciled against forecast model</span>
-								</div>
-							</li>
-						</ul>
-						<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
-					</div>
-
-					<!-- Column 3: Oversight Dashboard -->
-					<div class="oversight-column" style="position: relative;">
-						<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
-						<div class="oversight-dashboard crm-dashboard">
-							<div class="dashboard-header">
-								<div class="dash-id">
-									<span class="label">INSTANCE</span>
-									<span class="val">SLS-992-CRM</span>
-								</div>
-								<div class="dash-status">
-									<span class="ready-tag">READY FOR HUMAN OVERSIGHT</span>
-									<div class="status-dot"></div>
-								</div>
+						<!-- Column 2: Process Layer -->
+						<div class="execution-column console-panel">
+							<div class="panel-header">
+								<span class="panel-tag">Process Layer</span>
+								<div class="status-pulse active"></div>
 							</div>
-
-							<!-- Pipeline Summary Stats -->
-							<div class="crm-stats-row">
-								<div class="crm-stat">
-									<span class="crm-stat-val" style="color:#3b82f6;">$284k</span>
-									<span class="crm-stat-label">Pipeline</span>
-								</div>
-								<div class="crm-stat">
-									<span class="crm-stat-val" style="color:#a5b4fc;">147</span>
-									<span class="crm-stat-label">Contacts</span>
-								</div>
-								<div class="crm-stat">
-									<span class="crm-stat-val" style="color:#f59e0b;">3</span>
-									<span class="crm-stat-label">Flagged</span>
-								</div>
-								<div class="crm-stat">
-									<span class="crm-stat-val" style="color:#10b981;">94%</span>
-									<span class="crm-stat-label">Coverage</span>
-								</div>
-							</div>
-
-							<!-- Contacts Table -->
-							<div class="crm-table-section">
-								<div class="crm-table-label">Contact Records <span class="crm-badge">Live</span></div>
-								<div class="crm-table-wrapper">
-									<div class="crm-table-head">
-										<span>Company</span>
-										<span>Contact</span>
-										<span>Source</span>
-										<span>Stage</span>
-										<span>Value</span>
+							<ul class="task-checklist">
+								<li class="task-item" data-step="1">
+									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+									<div class="task-content">
+										<div class="task-label-row"><span class="task-label">Identify Stale Records</span><span class="step-tag tag-automation">AUTOMATION</span></div>
+										<span class="task-detail">Scanning deals with no activity in 14+ days</span>
 									</div>
-									<div class="crm-table-body">
-										<div class="crm-row crm-row--new">
-											<span class="crm-company">Acme Corp</span>
-											<span class="crm-contact">J. Harrington</span>
-											<span class="crm-source src-web">Web</span>
-											<span class="crm-stage stage-qualified">Qualified</span>
-											<span class="crm-value">$48k</span>
-										</div>
-										<div class="crm-row">
-											<span class="crm-company">Vertex AI</span>
-											<span class="crm-contact">S. Mehta</span>
-											<span class="crm-source src-li">LinkedIn</span>
-											<span class="crm-stage stage-proposal">Proposal</span>
-											<span class="crm-value">$112k</span>
-										</div>
-										<div class="crm-row crm-row--flag">
-											<span class="crm-company">Orbit SaaS</span>
-											<span class="crm-contact">T. Andersen</span>
-											<span class="crm-source src-apollo">Apollo</span>
-											<span class="crm-stage stage-flag">&#9873; No Owner</span>
-											<span class="crm-value">$29k</span>
-										</div>
-										<div class="crm-row">
-											<span class="crm-company">Luminary Co</span>
-											<span class="crm-contact">R. Okafor</span>
-											<span class="crm-source src-web">Web</span>
-											<span class="crm-stage stage-closed">Won</span>
-											<span class="crm-value">$95k</span>
-										</div>
+								</li>
+								<li class="task-item" data-step="2">
+									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+									<div class="task-content">
+										<div class="task-label-row"><span class="task-label">Enrich Missing Data</span><span class="step-tag tag-ai">AI AGENT</span></div>
+										<span class="task-detail">Pulling contact info from source tools</span>
 									</div>
+								</li>
+								<li class="task-item" data-step="3">
+									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+									<div class="task-content">
+										<div class="task-label-row"><span class="task-label">Normalise Deal Stages</span><span class="step-tag tag-integration">INTEGRATION</span></div>
+										<span class="task-detail">Aligning probabilities to pipeline rules</span>
+									</div>
+								</li>
+								<li class="task-item" data-step="4">
+									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+									<div class="task-content">
+										<div class="task-label-row"><span class="task-label">Flag Exceptions</span><span class="step-tag tag-ai">AI AGENT</span></div>
+										<span class="task-detail">Deals missing owner or value flagged</span>
+									</div>
+								</li>
+								<li class="task-item" data-step="5">
+									<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
+									<div class="task-content">
+										<div class="task-label-row"><span class="task-label">Final Integrity Check</span><span class="step-tag tag-team">OUR TEAM</span></div>
+										<span class="task-detail">Reconciled against forecast model</span>
+									</div>
+								</li>
+							</ul>
+							<div class="stream-anchor anchor-process" style="position:absolute;right:0;top:50%;"></div>
+						</div>
+
+						<!-- Column 3: CRM Dashboard -->
+						<div class="oversight-column" style="position:relative;">
+							<div class="stream-anchor anchor-oversight" style="position:absolute;left:0;top:50%;"></div>
+							<div class="oversight-dashboard crm-dashboard">
+
+								<div class="managed-ops-badge" style="opacity:0;margin-bottom:0.5rem;">
+									<span class="mob-dot"></span>MANAGED OPS — LIVE
 								</div>
-							</div>
 
-							<!-- Lead Source Breakdown -->
-							<div class="crm-sources-section">
-								<div class="crm-table-label">Lead Sources</div>
-								<div class="crm-source-bars">
-									<div class="crm-src-row">
-										<span class="crm-src-name">Web Form</span>
-										<div class="crm-src-track"><div class="crm-src-fill" style="width:52%; background:#3b82f6;"></div></div>
-										<span class="crm-src-pct">52%</span>
-									</div>
-									<div class="crm-src-row">
-										<span class="crm-src-name">LinkedIn</span>
-										<div class="crm-src-track"><div class="crm-src-fill" style="width:28%; background:#8b5cf6;"></div></div>
-										<span class="crm-src-pct">28%</span>
-									</div>
-									<div class="crm-src-row">
-										<span class="crm-src-name">Apollo.io</span>
-										<div class="crm-src-track"><div class="crm-src-fill" style="width:20%; background:#f59e0b;"></div></div>
-										<span class="crm-src-pct">20%</span>
-									</div>
-								</div>
-							</div>
-
-							<div class="dashboard-footer">
-								<div class="footer-meta">
-									<div class="meta-item">
-										<span class="m-label">Flagged</span>
-										<span class="m-val">1 rec</span>
-									</div>
-									<div class="meta-item">
-										<span class="m-label">Pipeline</span>
-										<span class="m-val">$284k</span>
-									</div>
-								</div>
-								<button class="btn-approve-console">Sign Off</button>
-							</div>
-						</div>
-					</div>
-
-				</div><!-- /.framework-console -->
-        </div>
-
-        <!-- Slide 3: Order Fulfillment -->
-        <div class="use-case-slide inactive-slide" data-slide="2" data-anim="three-act" style="grid-area: 1 / 1;">
-            <div class="banner-grid-overlay"></div>
-
-			<div class="use-case-header">
-				<div>
-					<span class="uc-tag">Use case</span>
-					<h2 class="uc-title">Order Fulfillment</h2>
-				</div>
-				<div style="display:flex;align-items:center;gap:1rem;">
-					<div class="act-badge">
-						<span class="act-dot"></span>
-						<span class="act-phase-label">PLUG IN</span>
-					</div>
-					<div class="uc-nav-controls">
-						<button class="uc-nav-btn prev" data-dir="-1" title="Previous Use Case" aria-label="Previous Use Case">
-							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-						</button>
-						<button class="uc-nav-btn next" data-dir="1" title="Next Use Case" aria-label="Next Use Case">
-							<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" style="pointer-events: none;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-						</button>
-					</div>
-				</div>
-			</div>
-
-			<div class="framework-console">
-
-				<!-- SVG Layer -->
-				<div class="stream-connections">
-					<svg width="100%" height="100%" preserveAspectRatio="none" style="position: absolute; top:0; left:0; pointer-events:none; overflow:visible;">
-						<path class="dotted-stream stream-src1" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-						<path class="dotted-stream stream-src2" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(245, 158, 11, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-						<path class="dotted-stream stream-src3" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(59, 130, 246, 0.5)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-						<path class="dotted-stream stream-src4" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(99, 179, 246, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-						<path class="dotted-stream stream-src5" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(255, 122, 122, 0.4)" stroke-width="1.5" stroke-dasharray="3 5" visibility="hidden" />
-						<path class="dotted-stream stream-output" d="M 0,0 C 0,0 0,0 0,0" fill="none" stroke="rgba(16, 185, 129, 0.6)" stroke-width="2" stroke-dasharray="4 6" visibility="hidden" />
-					</svg>
-				</div>
-
-				<!-- Column 1: Source Nodes -->
-				<div class="systems-column console-panel">
-					<div class="panel-header">
-						<span class="panel-tag">Nodes</span>
-						<span class="panel-meta node-count-label">0 Connected</span>
-					</div>
-					<div class="systems-source-list">
-						<div class="source-item ta-source" data-source="src1" style="opacity:0;transform:translateX(-10px)">
-							<div class="source-indicator"></div>
-							<div class="source-label"><span>Shopify</span><span class="s-type">Order Feed</span></div>
-							<div class="stream-anchor anchor-src1"></div>
-						</div>
-						<div class="source-item ta-source" data-source="src2" style="opacity:0;transform:translateX(-10px)">
-							<div class="source-indicator"></div>
-							<div class="source-label"><span>Amazon Central</span><span class="s-type">FBA Logic</span></div>
-							<div class="stream-anchor anchor-src2"></div>
-						</div>
-						<div class="source-item ta-source" data-source="src3" style="opacity:0;transform:translateX(-10px)">
-							<div class="source-indicator"></div>
-							<div class="source-label"><span>ShipWire 3PL</span><span class="s-type">WMS Stream</span></div>
-							<div class="stream-anchor anchor-src3"></div>
-						</div>
-						<div class="source-item ta-source" data-source="src4" style="opacity:0;transform:translateX(-10px)">
-							<div class="source-indicator"></div>
-							<div class="source-label"><span>FedEx API</span><span class="s-type">Tracking</span></div>
-							<div class="stream-anchor anchor-src4"></div>
-						</div>
-						<div class="source-item ta-source" data-source="src5" style="opacity:0;transform:translateX(-10px)">
-							<div class="source-indicator"></div>
-							<div class="source-label"><span>QuickBooks</span><span class="s-type">Ledger Sync</span></div>
-							<div class="stream-anchor anchor-src5"></div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Column 2: Process Layer -->
-				<div class="execution-column console-panel">
-					<div class="panel-header">
-						<span class="panel-tag">Process Layer</span>
-						<div class="status-pulse active"></div>
-					</div>
-					<ul class="task-checklist">
-						<li class="task-item ta-step" data-step="1">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Map Order Sources</span><span class="step-tag tag-integration">INTEGRATION</span></div>
-								<span class="task-detail">Shopify, Amazon, &amp; 3PL feeds mapped</span>
-							</div>
-						</li>
-						<li class="task-item ta-step" data-step="2">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Sync Inventory in Real Time</span><span class="step-tag tag-automation">AUTOMATION</span></div>
-								<span class="task-detail">Stock levels updated on every order</span>
-							</div>
-						</li>
-						<li class="task-item ta-step" data-step="3">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Match Orders to Fulfillment</span><span class="step-tag tag-automation">AUTOMATION</span></div>
-								<span class="task-detail">Reconciled against warehouse records</span>
-							</div>
-						</li>
-						<li class="task-item ta-step" data-step="4">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Flag Low Stock &amp; Delays</span><span class="step-tag tag-ai">AI AGENT</span></div>
-								<span class="task-detail">ETAs pulled, critical SKUs flagged</span>
-							</div>
-						</li>
-						<li class="task-item ta-step" data-step="5">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Analyze Stock Velocity</span><span class="step-tag tag-ai">AI AGENT</span></div>
-								<span class="task-detail">Real-time inventory velocity calculated</span>
-							</div>
-						</li>
-						<li class="task-item ta-step" data-step="6">
-							<div class="checkbox-container"><div class="checkbox-box future"><svg viewBox="0 0 24 24" width="10" height="10" stroke="#fff" stroke-width="4" fill="none"><polyline points="20 6 9 17 4 12"/></svg></div></div>
-							<div class="task-content">
-								<div class="task-label-row"><span class="task-label">Review &amp; Approve POs</span><span class="step-tag tag-team">OUR TEAM</span></div>
-								<span class="task-detail">Purchasing recommendations ready for review</span>
-							</div>
-						</li>
-					</ul>
-					<div class="stream-anchor anchor-process" style="position: absolute; right: 0; top: 50%;"></div>
-				</div>
-
-				<!-- Column 3: Oversight Dashboard -->
-				<div class="oversight-column" style="position: relative;">
-					<div class="stream-anchor anchor-oversight" style="position: absolute; left: 0; top: 50%;"></div>
-					<div class="oversight-dashboard ecom-dashboard">
-
-						<div class="managed-ops-badge" style="opacity:0;margin-bottom:0.5rem;">
-							<span class="mob-dot"></span>MANAGED OPS — LIVE
-						</div>
-
-						<div class="ecom-layout">
-							<!-- Sidebar -->
-							<div class="ecom-sidebar">
-								<div class="sidebar-item active"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>Inventory</div>
-								<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/></svg>Orders</div>
-								<div class="sidebar-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>Logistics</div>
-							</div>
-							<!-- Main Content -->
-							<div class="ecom-main">
-								<div class="dashboard-header" style="background:transparent; padding:0 0 0.75rem 0; border:none;">
+								<div class="dashboard-header">
 									<div class="dash-id">
-										<span class="label">Fulfillment System</span>
-										<span class="val">OPS-CTRL-V3</span>
+										<span class="label">INSTANCE</span>
+										<span class="val">SLS-992-CRM</span>
 									</div>
-									<div class="dash-status"><div class="status-dot" style="margin-left:0; margin-right:6px;"></div><span class="ready-tag">LIVE</span></div>
+									<div class="dash-status">
+										<span class="ready-tag">RUNNING ON SCHEDULE</span>
+										<div class="status-dot"></div>
+									</div>
 								</div>
 
-								<div class="inventory-table">
-									<div class="table-head">
-										<span>Product</span>
-										<span>Stock</span>
-										<span>Status</span>
+								<div class="crm-stats-row">
+									<div class="crm-stat">
+										<span class="crm-stat-val ta-pipeline" style="color:#3b82f6;">$284k</span>
+										<span class="crm-stat-label">Pipeline</span>
 									</div>
-									<div class="table-row">
-										<span>AQU-MESH-01</span>
-										<span>1,240</span>
-										<span class="status-ok">OPTIMAL</span>
+									<div class="crm-stat">
+										<span class="crm-stat-val ta-contacts" style="color:#a5b4fc;">147</span>
+										<span class="crm-stat-label">Contacts</span>
 									</div>
-									<div class="table-row highlight">
-										<span>AQU-PRO-MAX</span>
-										<span>12</span>
-										<span class="status-warn">CRITICAL</span>
+									<div class="crm-stat">
+										<span class="crm-stat-val ta-flagged" style="color:#f59e0b;">2</span>
+										<span class="crm-stat-label">Flagged</span>
 									</div>
-									<div class="table-row">
-										<span>AQU-LITE-X</span>
-										<span>14,082</span>
-										<span class="status-ok">OPTIMAL</span>
+									<div class="crm-stat">
+										<span class="crm-stat-val" style="color:#10b981;">94%</span>
+										<span class="crm-stat-label">Coverage</span>
 									</div>
-									<div class="table-row">
-										<span>AQU-ULTRA</span>
-										<span>854</span>
-										<span class="status-ok">OPTIMAL</span>
+								</div>
+
+								<div class="crm-table-section">
+									<div class="crm-table-label">Contact Records <span class="crm-badge">Live</span></div>
+									<div class="crm-table-wrapper">
+										<div class="crm-table-head">
+											<span>Company</span><span>Contact</span><span>Source</span><span>Stage</span><span>Value</span>
+										</div>
+										<div class="crm-table-body">
+											<div class="crm-row crm-row--new">
+												<span class="crm-company">Acme Corp</span>
+												<span class="crm-contact">J. Harrington</span>
+												<span class="crm-source src-web">Web</span>
+												<span class="crm-stage stage-qualified">Qualified</span>
+												<span class="crm-value">$48k</span>
+											</div>
+											<div class="crm-row">
+												<span class="crm-company">Vertex AI</span>
+												<span class="crm-contact">S. Mehta</span>
+												<span class="crm-source src-li">LinkedIn</span>
+												<span class="crm-stage stage-proposal">Proposal</span>
+												<span class="crm-value">$112k</span>
+											</div>
+											<div class="crm-row crm-row--flag">
+												<span class="crm-company">Orbit SaaS</span>
+												<span class="crm-contact">T. Andersen</span>
+												<span class="crm-source src-apollo">Apollo</span>
+												<span class="crm-stage stage-flag">&#9873; No Owner</span>
+												<span class="crm-value">$29k</span>
+											</div>
+											<div class="crm-row ta-new-row" style="opacity:0;">
+												<span class="crm-company">Luminary Co</span>
+												<span class="crm-contact">R. Okafor</span>
+												<span class="crm-source src-web">Web</span>
+												<span class="crm-stage stage-closed">Won</span>
+												<span class="crm-value">$95k</span>
+											</div>
+										</div>
 									</div>
-									<div class="table-row highlight">
-										<span>AQU-PULSE</span>
-										<span>42</span>
-										<span class="status-warn">CRITICAL</span>
+								</div>
+
+								<div class="crm-sources-section">
+									<div class="crm-table-label">Lead Sources</div>
+									<div class="crm-source-bars">
+										<div class="crm-src-row"><span class="crm-src-name">Web Form</span><div class="crm-src-track"><div class="crm-src-fill" style="width:52%;background:#3b82f6;"></div></div><span class="crm-src-pct">52%</span></div>
+										<div class="crm-src-row"><span class="crm-src-name">LinkedIn</span><div class="crm-src-track"><div class="crm-src-fill" style="width:28%;background:#8b5cf6;"></div></div><span class="crm-src-pct">28%</span></div>
+										<div class="crm-src-row"><span class="crm-src-name">Apollo.io</span><div class="crm-src-track"><div class="crm-src-fill" style="width:20%;background:#f59e0b;"></div></div><span class="crm-src-pct">20%</span></div>
 									</div>
-									<div class="table-row">
-										<span>AQU-ELITE</span>
-										<span>2,190</span>
-										<span class="status-ok">OPTIMAL</span>
+								</div>
+
+								<div class="dashboard-footer">
+									<div class="footer-meta">
+										<div class="meta-item"><span class="m-label">Flagged</span><span class="m-val ta-flagged-footer">2 rec</span></div>
+										<div class="meta-item"><span class="m-label">Pipeline</span><span class="m-val ta-pipeline-footer">$284k</span></div>
 									</div>
+									<button class="btn-approve-console">Sign Off</button>
 								</div>
 							</div>
 						</div>
 
-						<div class="dashboard-footer" style="margin-top:0.5rem;">
-							<div class="footer-meta">
-								<div class="meta-item"><span class="m-label">Shortages</span><span class="m-val shortage-count">2 SKUs</span></div>
-								<div class="meta-item"><span class="m-label">Throughput</span><span class="m-val volume-val">$0</span></div>
-							</div>
-							<button class="btn-approve-console" style="padding: 6px 14px;">Review POs</button>
-						</div>
-					</div>
-				</div>
-
-			</div><!-- /.framework-console -->
-        </div>
-    </div>
-</section>
-		<!-- ── Convergence Section: Many Sheets → One System ──────────────── -->
+					</div><!-- /.framework-console -->
+				</section>
 		<section class="convergence-section animate-fade-in">
 			<div class="convergence-outer section-white-card">
 				<div class="convergence-header">
@@ -2141,12 +1606,34 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		position: relative;
 		overflow: hidden;
 		border: 1px solid rgba(255, 255, 255, 0.05);
-		box-shadow: 
+		box-shadow:
 			0 20px 40px -10px rgba(0, 0, 0, 0.4),
 			0 0 0 1px rgba(0, 0, 0, 0.1);
 		width: 100%;
 		max-width: 1200px;
 	}
+
+	/* Three-Act Banner (replaces old tabs section) */
+	.three-act-banner {
+		background: #020617;
+		color: #FFFFFF;
+		padding: 3rem;
+		border-radius: 24px;
+		margin: 0 0 1rem;
+		position: relative;
+		overflow: hidden;
+		border: 1px solid rgba(255,255,255,0.05);
+		box-shadow: 0 20px 40px -10px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.1);
+		width: 100%;
+		max-width: 1200px;
+	}
+	.ta-banner-header {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin-bottom: 1.75rem;
+	}
+	.ta-use-case-info { display: flex; flex-direction: column; gap: 4px; }
 
 	.inactive-slide {
 		visibility: hidden;
@@ -3753,6 +3240,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 		/* Hide the use-case visualisation on mobile — focus on CTA */
 		.framework-banner { display: none; }
+		.three-act-banner { display: none; }
 	}
 
 
@@ -6349,342 +5837,150 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		const masterTimeline = gsap.timeline();
 
 		// Set initial states
-		gsap.set([".hero h1", ".hero p", ".cta-group .btn", ".badge", ".framework-banner"], { opacity: 0, y: 30 });
-		
+		gsap.set([".hero h1", ".hero p", ".cta-group .btn", ".badge", ".three-act-banner"], { opacity: 0, y: 30 });
+
 		masterTimeline
 			.to(".hero h1", { opacity: 1, y: 0, duration: 1.2, ease: "power4.out" })
 			.to(".hero p", { opacity: 1, y: 0, duration: 1, ease: "power3.out" }, "-=0.8")
 			.to(".badge", { opacity: 1, scale: 1, y: 0, duration: 0.6, ease: "back.out(1.7)" }, "-=0.8")
 			.to(".cta-group .btn", { opacity: 1, y: 0, duration: 0.8, stagger: 0.2, ease: "power2.out" }, "-=0.4")
-			.to(".framework-banner", { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
+			.to(".three-act-banner", { opacity: 1, y: 0, duration: 1, ease: "power3.out" });
 
 
 
-		const createSlideTimeline = (slide) => {
-			const dashboard = slide.querySelector(".oversight-dashboard");
-			const isThreeAct = slide.dataset.anim === 'three-act';
-			const tl = gsap.timeline();
-
-			const counter = (selector, from, to, dur) => {
-				const obj = { val: from };
-				return gsap.to(obj, { val: to, duration: dur, ease: "power1.inOut",
-					onUpdate: () => { const el = slide.querySelector(selector); if (el) el.innerText = Math.round(obj.val) + "%"; }
-				});
-			};
-
+		// ── Three-Act Banner Animation ────────────────────────────────
+		const banner = document.querySelector('.three-act-banner');
+		if (banner) {
 			const setActPhase = (label) => {
-				const el = slide.querySelector('.act-phase-label');
+				const el = banner.querySelector('.act-phase-label');
 				if (!el) return;
 				el.style.opacity = '0';
 				setTimeout(() => { el.textContent = label; el.style.opacity = '1'; }, 300);
 			};
 
-			const reset = () => {
-				slide.querySelectorAll('.task-item').forEach(el => el.classList.remove('is-done', 'is-active'));
-				slide.querySelectorAll('.source-item').forEach(el => el.classList.remove('active'));
-				slide.querySelectorAll('.a-bar').forEach(el => gsap.killTweensOf(el));
-				slide.querySelectorAll('.dotted-stream').forEach(el => {
-					gsap.killTweensOf(el);
-					gsap.set(el, { visibility: "hidden" });
-				});
-				const confFill = slide.querySelector(".confidence-bar-fill");
-				const ringFill = slide.querySelector(".ring-fill");
-				const confVal = slide.querySelector(".confidence-val");
-				const volVal = slide.querySelector(".volume-val");
-				if (confFill) gsap.set(confFill, { width: "0%" });
-				if (ringFill) gsap.set(ringFill, { strokeDashoffset: 163.3 });
-				if (confVal) confVal.innerText = "0%";
-				if (volVal) volVal.innerText = "$0";
-				if (dashboard) dashboard.classList.remove('active');
-				// Three-act resets
-				if (isThreeAct) {
-					slide.querySelectorAll('.ta-source').forEach(el => {
-						gsap.set(el, { opacity: 0, x: -10 });
-					});
-					const badge = slide.querySelector('.managed-ops-badge');
-					if (badge) gsap.set(badge, { opacity: 0 });
-					const nodeLabel = slide.querySelector('.node-count-label');
-					if (nodeLabel) nodeLabel.textContent = '0 Connected';
-					setActPhase('PLUG IN');
-				}
-			};
-
 			const updatePaths = () => {
-				const checklist = slide.querySelector(".execution-column");
-				const container = slide.querySelector(".framework-console");
+				const checklist = banner.querySelector('.execution-column');
+				const container = banner.querySelector('.framework-console');
 				if (!checklist || !container) return;
-				
-				const containerRect = container.getBoundingClientRect();
-				const checklistRect = checklist.getBoundingClientRect();
-				const targetX = checklistRect.left - containerRect.left;
-				const targetY = (checklistRect.top - containerRect.top) + (checklistRect.height / 2);
-
-				["src1", "src2", "src3", "src4", "src5"].forEach(id => {
-					const anchor = slide.querySelector(`.anchor-${id}`);
-					const path = slide.querySelector(`.stream-${id}`);
-					if (!anchor || !path) return;
-					
-					const anchorRect = anchor.getBoundingClientRect();
-					const startX = (anchorRect.left - containerRect.left) + 1;
-					const startY = (anchorRect.top - containerRect.top) + (anchorRect.height / 2);
-					
-					const cp1x = startX + (targetX - startX) * 0.5;
-					const cp2x = startX + (targetX - startX) * 0.5;
-					path.setAttribute("d", `M ${startX} ${startY} C ${cp1x} ${startY}, ${cp2x} ${targetY}, ${targetX} ${targetY}`);
+				const cr = container.getBoundingClientRect();
+				const ch = checklist.getBoundingClientRect();
+				const tX = ch.left - cr.left;
+				const tY = (ch.top - cr.top) + (ch.height / 2);
+				['src1','src2','src3','src4'].forEach(id => {
+					const a = banner.querySelector(`.anchor-${id}`);
+					const p = banner.querySelector(`.stream-${id}`);
+					if (!a || !p) return;
+					const ar = a.getBoundingClientRect();
+					const sX = (ar.left - cr.left) + 1;
+					const sY = (ar.top - cr.top) + (ar.height / 2);
+					const cpx = sX + (tX - sX) * 0.5;
+					p.setAttribute('d', `M ${sX} ${sY} C ${cpx} ${sY}, ${cpx} ${tY}, ${tX} ${tY}`);
 				});
-
-				// Process Layer to Oversight connection
-				const anchorProcess = slide.querySelector(".anchor-process");
-				const anchorOversight = slide.querySelector(".anchor-oversight");
-				const pathOutput = slide.querySelector(".stream-output");
-				if (anchorProcess && anchorOversight && pathOutput) {
-					const apRect = anchorProcess.getBoundingClientRect();
-					const aoRect = anchorOversight.getBoundingClientRect();
-					const startX = apRect.right - containerRect.left;
-					const startY = apRect.top - containerRect.top + (apRect.height / 2);
-					const targetX = aoRect.left - containerRect.left;
-					const targetY = (aoRect.top - containerRect.top) + (aoRect.height / 2);
-					
-					const cp1x = startX + (targetX - startX) * 0.5;
-					const cp2x = startX + (targetX - startX) * 0.5;
-					pathOutput.setAttribute("d", `M ${startX} ${startY} C ${cp1x} ${startY}, ${cp2x} ${targetY}, ${targetX} ${targetY}`);
+				const ap = banner.querySelector('.anchor-process');
+				const ao = banner.querySelector('.anchor-oversight');
+				const po = banner.querySelector('.stream-output');
+				if (ap && ao && po) {
+					const apr = ap.getBoundingClientRect();
+					const aor = ao.getBoundingClientRect();
+					const sX2 = apr.right - cr.left, sY2 = apr.top - cr.top + apr.height/2;
+					const tX2 = aor.left - cr.left, tY2 = (aor.top - cr.top) + aor.height/2;
+					const cpx2 = sX2 + (tX2 - sX2) * 0.5;
+					po.setAttribute('d', `M ${sX2} ${sY2} C ${cpx2} ${sY2}, ${cpx2} ${tY2}, ${tX2} ${tY2}`);
 				}
 			};
-
 			updatePaths();
 			window.addEventListener('resize', updatePaths);
 
-			tl.add(reset);
+			const runAnimation = () => {
+				const tl = gsap.timeline({ onComplete: () => setTimeout(runAnimation, 1500) });
+				const sources = banner.querySelectorAll('.ta-source');
+				const tasks   = banner.querySelectorAll('.task-item');
+				const nodeLabel = banner.querySelector('.node-count-label');
 
-			const tasks = slide.querySelectorAll('.task-item');
-			const numTasks = tasks.length;
-			if(numTasks === 0) return tl;
+				// Reset state
+				tasks.forEach(el => el.classList.remove('is-done','is-active'));
+				banner.querySelectorAll('.dotted-stream').forEach(el => { gsap.killTweensOf(el); gsap.set(el, { visibility:'hidden' }); });
+				sources.forEach(el => gsap.set(el, { opacity:0, x:-10 }));
+				const dash = banner.querySelector('.oversight-dashboard');
+				if (dash) dash.classList.remove('active');
+				const badge = banner.querySelector('.managed-ops-badge');
+				if (badge) gsap.set(badge, { opacity:0 });
+				const newRow = banner.querySelector('.ta-new-row');
+				if (newRow) gsap.set(newRow, { opacity:0 });
+				const pipelineEl = banner.querySelector('.ta-pipeline');
+				if (pipelineEl) pipelineEl.textContent = '$284k';
+				const flaggedEl = banner.querySelector('.ta-flagged');
+				if (flaggedEl) flaggedEl.textContent = '2';
+				const flagFooter = banner.querySelector('.ta-flagged-footer');
+				if (flagFooter) flagFooter.textContent = '2 rec';
+				const pipeFooter = banner.querySelector('.ta-pipeline-footer');
+				if (pipeFooter) pipeFooter.textContent = '$284k';
+				if (nodeLabel) nodeLabel.textContent = '0 Connected';
+				setActPhase('PLUG IN');
 
-			if (isThreeAct) {
-				// ── THREE-ACT ANIMATION ──────────────────────────────────────
-				const sources = slide.querySelectorAll('.ta-source');
-				const nodeLabel = slide.querySelector('.node-count-label');
-
-				// ACT 1 — PLUG IN: sources fly in one by one with streams
+				// ACT 1 — PLUG IN
 				sources.forEach((src, i) => {
 					const sid = src.dataset.source;
 					tl.to(src, {
-						opacity: 1, x: 0, duration: 0.5, ease: "power2.out",
+						opacity:1, x:0, duration:0.5, ease:'power2.out',
 						onStart: () => {
 							src.classList.add('active');
-							const p = slide.querySelector(`.stream-${sid}`);
-							if (p) { gsap.set(p, { visibility: "visible" }); gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-							if (nodeLabel) nodeLabel.textContent = (i + 1) + ' Connected';
+							const p = banner.querySelector(`.stream-${sid}`);
+							if (p) { gsap.set(p, { visibility:'visible' }); gsap.to(p, { attr:{ strokeDashoffset:-200 }, duration:3, ease:'none', repeat:-1 }); }
+							if (nodeLabel) nodeLabel.textContent = (i+1) + ' Connected';
 						}
-					}, i === 0 ? ">" : "-=0.1");
+					}, i === 0 ? '>' : '-=0.1');
 				});
 
-				// Short pause before Act 2
-				tl.to({}, { duration: 0.5 });
+				tl.to({}, { duration:0.4 });
 
-				// ACT 2 — BUILD THE SYSTEM: process steps appear with tags
+				// ACT 2 — BUILD THE SYSTEM
 				tl.add(() => setActPhase('BUILD THE SYSTEM'));
-
-				tasks.forEach((task, index) => {
-					const step = index + 1;
-					const isLast = (step === numTasks);
+				tasks.forEach((task, i) => {
+					const isLast = i === tasks.length - 1;
 					tl.to(task, {
 						onStart: () => {
 							task.classList.add('is-active');
 							if (isLast) {
-								const pathOutput = slide.querySelector(".stream-output");
-								if (pathOutput) { gsap.set(pathOutput, { visibility: "visible" }); gsap.to(pathOutput, { attr: { strokeDashoffset: -200 }, duration: 2, ease: "none", repeat: -1 }); }
+								const po = banner.querySelector('.stream-output');
+								if (po) { gsap.set(po, { visibility:'visible' }); gsap.to(po, { attr:{ strokeDashoffset:-200 }, duration:2, ease:'none', repeat:-1 }); }
 							}
 						},
-						duration: 1.5
-					})
-					.add(() => task.classList.replace('is-active', 'is-done'));
+						duration:1.4
+					}).add(() => task.classList.replace('is-active','is-done'));
 				});
 
-				// ACT 3 — RUN: dashboard lights up, counters tick, managed badge appears
+				// ACT 3 — RUN
 				tl.add(() => {
 					setActPhase('RUN');
-					if (dashboard) dashboard.classList.add('active');
-					const badge = slide.querySelector('.managed-ops-badge');
-					if (badge) gsap.to(badge, { opacity: 1, duration: 0.6 });
-					const shortageEl = slide.querySelector('.shortage-count');
-					const volEl = slide.querySelector('.volume-val');
-					if (volEl) {
-						const volObj = { val: 0 };
-						gsap.to(volObj, { val: 1420500, duration: 2.5, ease: "power1.inOut",
-							onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); }
-						});
+					if (dash) dash.classList.add('active');
+					if (badge) gsap.to(badge, { opacity:1, duration:0.6 });
+					// New contact row ticks in
+					if (newRow) gsap.to(newRow, { opacity:1, duration:0.5, delay:0.4 });
+					// Pipeline $284k → $291k
+					if (pipelineEl) {
+						const obj = { val: 284 };
+						gsap.to(obj, { val:291, duration:2.5, ease:'power1.inOut', onUpdate: () => { pipelineEl.textContent = '$' + Math.round(obj.val) + 'k'; if (pipeFooter) pipeFooter.textContent = '$' + Math.round(obj.val) + 'k'; } });
 					}
-					// Shortages tick up to simulate live monitoring
-					if (shortageEl) {
-						setTimeout(() => { shortageEl.textContent = '3 SKUs'; }, 2000);
-					}
+					// Flagged 2 → 3
+					setTimeout(() => {
+						if (flaggedEl) flaggedEl.textContent = '3';
+						if (flagFooter) flagFooter.textContent = '3 rec';
+					}, 2000);
 				})
-				.to({}, { duration: 3 }); // hold on Act 3
+				.to({}, { duration:3.5 }); // hold on Act 3
 
-			} else {
-				// ── ORIGINAL ANIMATION (slides 0 & 1) ────────────────────────
-				const phase3Step = Math.ceil(numTasks / 2) + 1;
-
-				// Phase 1 (Data ingest visual)
-				tl.add(() => {
-					const s1 = slide.querySelector(".source-item[data-source='src1']");
-					const s2 = slide.querySelector(".source-item[data-source='src2']");
-					if (s1) s1.classList.add('active');
-					if (s2) s2.classList.add('active');
-					
-					const p1 = slide.querySelector(".stream-src1");
-					const p2 = slide.querySelector(".stream-src2");
-					if (p1) { gsap.set(p1, { visibility: "visible" }); gsap.to(p1, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-					if (p2) { gsap.set(p2, { visibility: "visible" }); gsap.to(p2, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-				});
-
-				tasks.forEach((task, index) => {
-					const step = index + 1;
-					const isLast = (step === numTasks);
-					const prevConf = Math.round(((step - 1) / numTasks) * 100);
-					const targetConf = Math.round((step / numTasks) * 100);
-
-					tl.to(task, {
-						onStart: () => {
-							task.classList.add('is-active');
-							const confFill = slide.querySelector(".confidence-bar-fill");
-							if (confFill) gsap.to(confFill, { width: targetConf + "%", duration: 1.5 });
-							counter(".confidence-val", prevConf, targetConf, 1.5);
-
-							if (step === 2) {
-								const sources = ["src3", "src4", "src5"];
-								sources.forEach(sid => {
-									const s = slide.querySelector(`.source-item[data-source='${sid}']`);
-									const p = slide.querySelector(`.stream-${sid}`);
-									if (s) s.classList.add('active');
-									if (p) { gsap.set(p, { visibility: "visible" }); gsap.to(p, { attr: { strokeDashoffset: -200 }, duration: 3, ease: "none", repeat: -1 }); }
-								});
-							}
-
-							if (step === phase3Step) {
-								const bars = slide.querySelectorAll(".a-bar");
-								if (bars.length) { gsap.to(bars, { height: () => (30 + Math.random() * 65) + "%", background: "rgba(59, 130, 246, 0.5)", stagger: 0.04, duration: 0.8, ease: "power2.out" }); }
-								const volObj = { val: 0 };
-								const volEl = slide.querySelector(".volume-val");
-								if (volEl) { gsap.to(volObj, { val: 1420500, duration: 2, ease: "power1.inOut", onUpdate: () => { volEl.innerText = "$" + Math.round(volObj.val).toLocaleString(); } }); }
-							}
-
-							if (isLast) {
-								const pathOutput = slide.querySelector(".stream-output");
-								if (pathOutput) { gsap.set(pathOutput, { visibility: "visible" }); gsap.to(pathOutput, { attr: { strokeDashoffset: -200 }, duration: 2, ease: "none", repeat: -1 }); }
-							}
-						},
-						duration: 2
-					})
-					.add(() => task.classList.replace('is-active', 'is-done'));
-				});
-
-				tl.add(() => { if (dashboard) dashboard.classList.add('active'); })
-				.to({}, { duration: 2 });
-			}
-
-			return tl;
-		};
-
-		// Start manual cyclic loop for each framework banner
-		document.querySelectorAll('.framework-banner').forEach((banner) => {
-			let loopStarted = false;
-			const slides = banner.querySelectorAll('.use-case-slide');
-			if(slides.length === 0) return;
-
-			let activeSlideIdx = 0;
-			let currentSlideTl = null;
-			let timeoutId = null;
-
-			// Initial states
-			gsap.set(slides, { autoAlpha: 0, zIndex: 1 });
-
-			// Roadmap Scroll Intersection Observer
-			const roadmapObserver = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('is-visible');
-					}
-				});
-			}, { threshold: 0.15 });
-
-			document.querySelectorAll('.roadmap-step').forEach(step => {
-				roadmapObserver.observe(step);
-			});
-
-			let playSlide = (index) => {
-				// Clear any pending transitions/animations
-				if(currentSlideTl) currentSlideTl.kill();
-				if(timeoutId) clearTimeout(timeoutId);
-
-				// Fast crossfade: Use autoAlpha which toggles visibility:hidden and opacity seamlessly
-				const otherSlides = Array.from(slides).filter((_, i) => i !== index);
-				gsap.to(otherSlides, { autoAlpha: 0, zIndex: 1, duration: 0.3, overwrite: true });
-				gsap.to(slides[index], { autoAlpha: 1, zIndex: 5, duration: 0.3, overwrite: true });
-
-				// Animate slide
-				currentSlideTl = createSlideTimeline(slides[index]);
-				
-				// Advance when slide animation (and its 2-second hold) finishes
-				// We use a timeout tied to the timeline's duration instead of eventCallback which gets flaky when killed
-				const tlDur = currentSlideTl.duration();
-				timeoutId = setTimeout(() => {
-					activeSlideIdx = (activeSlideIdx + 1) % slides.length;
-					playSlide(activeSlideIdx);
-				}, tlDur * 1000);
+				return tl;
 			};
 
-			// Wire up Next/Prev buttons
-			banner.querySelectorAll('.uc-nav-btn').forEach(btn => {
-				btn.addEventListener('click', (e) => {
-					e.preventDefault();
-					e.stopPropagation();
-					const dir = parseInt(btn.getAttribute('data-dir') || 1);
-					activeSlideIdx = (activeSlideIdx + dir + slides.length) % slides.length;
-					playSlide(activeSlideIdx);
-				});
-			});
-
-			// Wire up Category Pills
-			const catsContainer = banner.previousElementSibling;
-			if (catsContainer && catsContainer.classList.contains('use-case-categories')) {
-				const pills = catsContainer.querySelectorAll('.category-pill');
-				
-				// Function to update pills' active state
-				const updatePills = (index) => {
-					pills.forEach((pill, i) => {
-						if (i === index) pill.classList.add('active');
-						else pill.classList.remove('active');
-					});
-				};
-
-				pills.forEach((pill, index) => {
-					pill.addEventListener('click', () => {
-						activeSlideIdx = index;
-						playSlide(activeSlideIdx);
-					});
-				});
-
-				// Inject state update into playSlide core
-				const originalPlaySlide = playSlide;
-				playSlide = (index) => {
-					updatePills(index);
-					originalPlaySlide(index);
-				};
-			}
-
+			// Kick off when section enters viewport
+			let started = false;
 			ScrollTrigger.create({
 				trigger: banner,
-				start: "top 80%",
-				onEnter: () => { 
-					if (!loopStarted) { 
-						loopStarted = true; 
-						playSlide(activeSlideIdx);
-					} 
-				}
+				start: 'top 85%',
+				onEnter: () => { if (!started) { started = true; runAnimation(); } }
 			});
-		});
+		}
 
 		gsap.from(".solution-header h2", {
 			scrollTrigger: { trigger: ".solution-header", start: "top 85%" },
