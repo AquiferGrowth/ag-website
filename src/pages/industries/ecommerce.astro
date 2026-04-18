@@ -2140,12 +2140,18 @@ const testimonials = (await getCollection('testimonials'))
 			padding: 4rem 0;
 		}
 		.section-header {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 			text-align: center;
-			margin-bottom: var(--space-lg);
+			gap: 1rem;
+			margin-bottom: 2rem;
 		}
 		.section-header h2 {
-			font-size: clamp(2rem, 5vw, 3.5rem);
-			margin: 0.5rem 0 0;
+			font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+			font-weight: 850;
+			letter-spacing: -0.03em;
+			margin: 0;
 		}
 		.text-gradient {
 			background: linear-gradient(135deg, #f74c7c, #ff719a);
@@ -2154,77 +2160,78 @@ const testimonials = (await getCollection('testimonials'))
 		}
 		.badge {
 			display: inline-block;
-			padding: 0.3rem 0.9rem;
-			background: rgba(0,0,0,0.05);
+			padding: 0.5rem 1.25rem;
+			background: #1a1a1a;
 			border-radius: 999px;
 			font-size: 0.75rem;
 			font-weight: 700;
 			text-transform: uppercase;
-			letter-spacing: 0.08em;
-			color: var(--text-secondary);
+			letter-spacing: 0.1em;
+			color: #ffffff;
 		}
 		.testimonials-grid {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-			gap: 1.5rem;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.25rem;
 			align-items: start;
 		}
 		.testimonial-card {
-			background: var(--bg-secondary);
-			border: 2px solid var(--border-color);
-			border-radius: var(--radius-lg);
+			background: #ffffff;
+			border: 1.5px solid #e5e7eb;
+			border-radius: 20px;
 			padding: 1.75rem;
 			display: flex;
 			flex-direction: column;
 			gap: 1rem;
-			transition: var(--transition-fast);
+			transition: box-shadow 0.2s ease, transform 0.2s ease;
 		}
 		.testimonial-card:hover {
-			border-color: var(--accent-primary);
-			transform: translateY(-4px);
+			box-shadow: 0 8px 32px rgba(0,0,0,0.07);
+			transform: translateY(-2px);
 		}
 		blockquote {
-			font-size: 1rem;
-			line-height: 1.6;
-			color: var(--text-primary);
+			font-size: 0.95rem;
+			line-height: 1.65;
+			color: #374151;
 			margin: 0;
-			font-style: italic;
+			font-style: normal;
+			font-weight: 400;
 		}
 		.quote-toggle-btn {
 			background: none;
-			border: none;
-			color: var(--accent-primary, #FF7A7A);
-			font-size: 0.82rem;
-			font-weight: 700;
+			border: 1px solid #d1d5db;
+			border-radius: 8px;
+			padding: 0.25rem 0.7rem;
+			font-size: 0.78rem;
+			font-weight: 600;
+			color: #6b7280;
 			cursor: pointer;
-			padding: 0;
-			margin-top: -0.25rem;
-			transition: color 0.2s, opacity 0.2s;
-			opacity: 0.85;
 			align-self: flex-start;
+			transition: border-color 0.15s, color 0.15s;
 		}
-		.quote-toggle-btn:hover { opacity: 1; text-decoration: underline; }
+		.quote-toggle-btn:hover { border-color: #9ca3af; color: #374151; }
 		.testimonial-author {
 			display: flex;
 			align-items: center;
 			gap: 0.75rem;
-			padding-top: 0.5rem;
-			border-top: 1px solid var(--border-color);
+			padding-top: 0.75rem;
+			border-top: 1px solid #f3f4f6;
 		}
 		.author-avatar {
-			width: 44px;
-			height: 44px;
+			width: 40px;
+			height: 40px;
 			border-radius: 50%;
 			object-fit: cover;
-			border: 2px solid var(--accent-primary);
+			flex-shrink: 0;
+			border: 1.5px solid #e5e7eb;
 		}
 		.author-info {
 			display: flex;
 			flex-direction: column;
 			gap: 0.1rem;
 		}
-		.author-info strong { font-size: 0.9rem; font-weight: 800; }
-		.author-info span { font-size: 0.8rem; color: var(--text-secondary); }
+		.author-info strong { display: block; font-size: 0.9rem; font-weight: 700; color: #111827; }
+		.author-info span { font-size: 0.8rem; color: #6b7280; font-weight: 500; }
 		.testimonial-extra { display: none; }
 		.testimonial-extra.visible { display: flex; }
 		.testimonials-expand-wrap {
