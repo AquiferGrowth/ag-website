@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header class="container">
 	<nav class="pill-nav animate-fade-in">
 		<div class="logo">
-			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" style="height: 36px; width: auto; display: block;" /></a>
+			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" style="height: 32px; width: auto; display: block; max-width: none;" /></a>
 		</div>
 
 		<!-- Desktop links -->
@@ -83,12 +83,17 @@ import { SITE_TITLE } from '../consts';
 			padding: 0.65rem 1.25rem;
 		}
 	}
+	.logo {
+		overflow: visible;
+		flex-shrink: 0;
+	}
 	.logo a {
 		font-family: var(--font-display);
 		font-weight: 900;
 		font-size: 1.25rem;
 		color: var(--text-primary);
 		letter-spacing: -0.05em;
+		overflow: visible;
 	}
 	.links {
 		display: flex;
