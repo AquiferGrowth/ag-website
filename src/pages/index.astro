@@ -3131,7 +3131,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 	/* ── Convergence Section ─────────────────────────────────── */
 	.convergence-section {
-		padding: 2rem 1.5rem;
+		padding: 1rem 1.5rem;
 	}
 	.convergence-outer {
 		max-width: 1200px;
@@ -3386,6 +3386,9 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 	}
 
 	/* Output dashboard mockup */
+	@media (max-width: 768px) {
+		.output-dashboard { display: none; }
+	}
 	.output-dashboard {
 		background: #0f172a;
 		border-radius: 12px;
