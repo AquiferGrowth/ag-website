@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header class="container">
 	<nav class="pill-nav animate-fade-in">
 		<div class="logo">
-			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" style="height: 32px; width: auto; display: block; max-width: none;" /></a>
+			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" /></a>
 		</div>
 
 		<!-- Desktop links -->
@@ -86,6 +86,7 @@ import { SITE_TITLE } from '../consts';
 	.logo {
 		overflow: visible;
 		flex-shrink: 0;
+		min-width: 0;
 	}
 	.logo a {
 		font-family: var(--font-display);
@@ -93,7 +94,14 @@ import { SITE_TITLE } from '../consts';
 		font-size: 1.25rem;
 		color: var(--text-primary);
 		letter-spacing: -0.05em;
-		overflow: visible;
+		display: flex;
+		align-items: center;
+	}
+	.logo img {
+		height: 32px !important;
+		width: auto !important;
+		max-width: none !important;
+		display: block;
 	}
 	.links {
 		display: flex;
