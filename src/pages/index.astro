@@ -4329,6 +4329,25 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		.testimonials-grid { grid-template-columns: 1fr; }
 	}
 
+	/* ── Mobile: tighten all section gaps ── */
+	@media (max-width: 768px) {
+		.convergence-section,
+		.how-we-build-section,
+		.solution-roadmap-section,
+		.impact-stats-section,
+		.owner-section,
+		.build-launch-section,
+		.testimonials-section,
+		.case-studies-section {
+			padding-top: 0.75rem !important;
+			padding-bottom: 0.75rem !important;
+		}
+		.section-white-card {
+			padding: 1.5rem 1.25rem !important;
+			border-radius: 20px !important;
+		}
+	}
+
 	/* Success Stories Section */
 	/* ── Case Studies Section ── */
 	.case-studies-section {
