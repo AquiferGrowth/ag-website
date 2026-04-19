@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header class="container">
 	<nav class="pill-nav animate-fade-in">
 		<div class="logo">
-			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" style="height:32px;width:180px;max-width:none;object-fit:contain;object-position:left center;" /></a>
+			<a href="/"><img src="/aquifer-logo.png" alt="AquiferGrowth" style="height:34px;width:auto;max-width:none;display:block;" /></a>
 		</div>
 
 		<!-- Desktop links -->
@@ -73,6 +73,7 @@ import { SITE_TITLE } from '../consts';
 		align-items: center;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 		backdrop-filter: blur(10px);
+		overflow: visible;
 	}
 	@media (max-width: 640px) {
 		header {
@@ -84,24 +85,19 @@ import { SITE_TITLE } from '../consts';
 		}
 	}
 	.logo {
-		overflow: visible;
 		flex-shrink: 0;
-		min-width: 0;
+		overflow: visible;
 	}
 	.logo a {
-		font-family: var(--font-display);
-		font-weight: 900;
-		font-size: 1.25rem;
-		color: var(--text-primary);
-		letter-spacing: -0.05em;
 		display: flex;
 		align-items: center;
+		overflow: visible;
 	}
 	.logo img {
-		height: 32px !important;
-		width: auto !important;
-		max-width: none !important;
 		display: block;
+		height: 34px;
+		width: auto;
+		max-width: none !important;
 	}
 	.links {
 		display: flex;
