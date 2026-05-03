@@ -11,7 +11,7 @@ roi: 10-15h
 info: Saved Weekly
 industry: Wellness & Retail
 platform: Shopify
-image: /images/uploads/screenshot-2026-05-03-at-5.37.07 pm.png
+image: /images/uploads/screenshot-2026-05-03-at-5.39.08 pm.png
 featured: true
 clientUrl: https://inokibathhouse.com
 logoText: INOKI
