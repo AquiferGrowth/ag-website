@@ -173,13 +173,19 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 	}
 
 	/* Per-slug colours */
-	/* Per-slug background — distinct, cohesive dark tones */
+	/* Per-slug background, distinct cohesive dark tones */
 	.cs-lc--spotlightavi { background: #5a3612; }
 	.cs-lc--pulsefx      { background: #2d1f5a; }
 	.cs-lc--inoki        { background: #1f4d33; }
 	.cs-lc--beauty       { background: #5a1a3d; }
 	.cs-lc--wellness     { background: #1a4d4a; }
 	.cs-lc--fashion      { background: #1f2840; }
+	.cs-lc--staygolden   { background: #4a3d0f; }
+	.cs-lc--hairstrong   { background: #4a1f2d; }
+	.cs-lc--pb           { background: #2d3d1a; }
+	.cs-lc--milros       { background: #4d2d0a; }
+	.cs-lc--claymoo      { background: #5a2d1a; }
+	.cs-lc--stepsciences { background: #1a3d4d; }
 
 	/* Blob tints per slug */
 	/* Per-slug blob accent tint */
@@ -190,6 +196,12 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 	.cs-lc--beauty       .cs-lc-blob ellipse       { fill: #fbcfe8; }
 	.cs-lc--wellness     .cs-lc-blob ellipse       { fill: #99f6e4; }
 	.cs-lc--fashion      .cs-lc-blob ellipse       { fill: #bfdbfe; }
+	.cs-lc--staygolden   .cs-lc-blob ellipse       { fill: #fef3c7; }
+	.cs-lc--hairstrong   .cs-lc-blob ellipse       { fill: #fecaca; }
+	.cs-lc--pb           .cs-lc-blob ellipse       { fill: #d9f99d; }
+	.cs-lc--milros       .cs-lc-blob ellipse       { fill: #fcd34d; }
+	.cs-lc--claymoo      .cs-lc-blob ellipse       { fill: #fed7aa; }
+	.cs-lc--stepsciences .cs-lc-blob ellipse       { fill: #a5f3fc; }
 
 	.cs-lc-blob {
 		position: absolute;
