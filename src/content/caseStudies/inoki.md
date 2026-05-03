@@ -1,17 +1,12 @@
 ---
-title: Inoki Bathhouse
-headline: Replaced Spreadsheet Operations with a Fully Integrated, AI-Ready System
-description: "Inoki Bathhouse was running complex operations across inventory,
-  orders, and fulfillment, all out of spreadsheets that didn't talk to each
-  other. AquiferGrowth came in and rebuilt the entire operational foundation: a
-  centralized, integrated system with automation that instantly reclaimed hours
-  every week. They're now building AI capabilities on top of it. A complete
-  operational overhaul."
-roi: 10-15h
-info: Saved Weekly
-industry: Wellness & Retail
-platform: Shopify
-image: /images/uploads/screenshot-2026-05-03-at-5.39.08 pm.png
+title: "Inoki Bathhouse"
+headline: "Replaced Spreadsheet Operations with a Fully Integrated, AI-Ready System"
+description: "Inoki Bathhouse was running complex operations across inventory, orders, and fulfillment, all out of spreadsheets that didn't talk to each other. AquiferGrowth came in and rebuilt the entire operational foundation: a centralized, integrated system with automation that instantly reclaimed hours every week. They're now building AI capabilities on top of it. A complete operational overhaul."
+roi: "10-15h"
+info: "Saved Weekly"
+industry: "Wellness & Retail"
+platform: "Shopify"
+image: ""
 featured: true
 clientUrl: https://inokibathhouse.com
 logoText: INOKI

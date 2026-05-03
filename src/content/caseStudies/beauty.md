@@ -6,7 +6,7 @@ roi: "1.7M+"
 info: "Product attributes managed · 95%+ catalog accuracy sustained"
 industry: "Beauty & Skincare"
 platform: "Shopify"
-image: "/images/case-studies/beauty.png"
+image: ""
 featured: false
 logoText: ""
 logoBrand: "SUKOSHI"

@@ -6,7 +6,7 @@ roi: "10-15h"
 info: "Saved Weekly"
 industry: "Fashion & Apparel"
 platform: "Shopify"
-image: "/images/case-studies/fashion.png"
+image: ""
 featured: false
 logoText: ""
 logoBrand: "FOUR THREE SEVEN"

@@ -173,20 +173,23 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 	}
 
 	/* Per-slug colours */
-	.cs-lc--inoki        { background: #2d6a4a; }
-	.cs-lc--pulsefx      { background: #3b2d7a; }
-	.cs-lc--spotlightavi { background: #7a4a1a; }
-	.cs-lc--wellness     { background: #1a5a4a; }
-	.cs-lc--beauty       { background: #7a2252; }
-	.cs-lc--fashion      { background: #2d3040; }
+	/* Per-slug background — distinct, cohesive dark tones */
+	.cs-lc--spotlightavi { background: #5a3612; }
+	.cs-lc--pulsefx      { background: #2d1f5a; }
+	.cs-lc--inoki        { background: #1f4d33; }
+	.cs-lc--beauty       { background: #5a1a3d; }
+	.cs-lc--wellness     { background: #1a4d4a; }
+	.cs-lc--fashion      { background: #1f2840; }
 
 	/* Blob tints per slug */
-	.cs-lc--inoki        .cs-lc-blob ellipse { fill: #a7f3d0; }
-	.cs-lc--pulsefx      .cs-lc-blob ellipse { fill: #c4b5fd; }
-	.cs-lc--spotlightavi .cs-lc-blob ellipse { fill: #fde68a; }
-	.cs-lc--wellness     .cs-lc-blob ellipse { fill: #99f6e4; }
-	.cs-lc--beauty       .cs-lc-blob ellipse { fill: #fbcfe8; }
-	.cs-lc--fashion      .cs-lc-blob ellipse { fill: #bfdbfe; }
+	/* Per-slug blob accent tint */
+	.cs-lc-blob ellipse                            { fill: #ffffff; }
+	.cs-lc--spotlightavi .cs-lc-blob ellipse       { fill: #fde68a; }
+	.cs-lc--pulsefx      .cs-lc-blob ellipse       { fill: #c4b5fd; }
+	.cs-lc--inoki        .cs-lc-blob ellipse       { fill: #a7f3d0; }
+	.cs-lc--beauty       .cs-lc-blob ellipse       { fill: #fbcfe8; }
+	.cs-lc--wellness     .cs-lc-blob ellipse       { fill: #99f6e4; }
+	.cs-lc--fashion      .cs-lc-blob ellipse       { fill: #bfdbfe; }
 
 	.cs-lc-blob {
 		position: absolute;

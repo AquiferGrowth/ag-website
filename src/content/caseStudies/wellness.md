@@ -6,7 +6,7 @@ roi: "20k+"
 info: "Attributes Structured"
 industry: "Health & Nutrition"
 platform: "Shopify"
-image: "/images/case-studies/wellness.png"
+image: ""
 featured: true
 logoText: "LIVE"
 logoBrand: "HEALTHILLIE"

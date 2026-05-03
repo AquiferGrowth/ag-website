@@ -248,9 +248,13 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		overflow: hidden;
 		background: #1a1a1a;
 	}
-	.cs-colour--inoki        { background: #2d6a4a; }
-	.cs-colour--pulsefx      { background: #3b2d7a; }
-	.cs-colour--spotlightavi { background: #7a4a1a; }
+	/* Per-slug background — distinct, cohesive dark tones */
+	.cs-colour--spotlightavi { background: #5a3612; }
+	.cs-colour--pulsefx      { background: #2d1f5a; }
+	.cs-colour--inoki        { background: #1f4d33; }
+	.cs-colour--beauty       { background: #5a1a3d; }
+	.cs-colour--wellness     { background: #1a4d4a; }
+	.cs-colour--fashion      { background: #1f2840; }
 
 	/* Image variant: photo as background with subtle dark gradient overlay */
 	.cs-card-image {
@@ -272,9 +276,14 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		height: 100%;
 		pointer-events: none;
 	}
-	.cs-colour--inoki        .cs-card-blob ellipse { fill: #a7f3d0; }
-	.cs-colour--pulsefx      .cs-card-blob ellipse { fill: #c4b5fd; }
-	.cs-colour--spotlightavi .cs-card-blob ellipse { fill: #fde68a; }
+	/* Per-slug blob accent tint */
+	.cs-card-blob ellipse                              { fill: #ffffff; }
+	.cs-colour--spotlightavi .cs-card-blob ellipse     { fill: #fde68a; }
+	.cs-colour--pulsefx      .cs-card-blob ellipse     { fill: #c4b5fd; }
+	.cs-colour--inoki        .cs-card-blob ellipse     { fill: #a7f3d0; }
+	.cs-colour--beauty       .cs-card-blob ellipse     { fill: #fbcfe8; }
+	.cs-colour--wellness     .cs-card-blob ellipse     { fill: #99f6e4; }
+	.cs-colour--fashion      .cs-card-blob ellipse     { fill: #bfdbfe; }
 
 	.cs-card-name {
 		position: relative;

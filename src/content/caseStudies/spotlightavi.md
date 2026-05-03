@@ -6,7 +6,7 @@ roi: "40+"
 info: "Hours Saved Weekly"
 industry: "Media & Creative"
 platform: "Airtable, Google Drive, N8N"
-image: "/images/case-studies/spotlightavi.png"
+image: ""
 featured: true
 logoText: "AVI"
 logoBrand: "MEDIA LIBRARY"
