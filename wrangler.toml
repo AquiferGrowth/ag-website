@@ -1,4 +1,6 @@
-name = "ag-website"
-pages_build_output_dir = "dist"
+name = "ag-website-git"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./dist"
