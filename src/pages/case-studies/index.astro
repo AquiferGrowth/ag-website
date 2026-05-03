@@ -29,18 +29,27 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 				<div class="cs-listing-grid">
 					{allCaseStudies.map(cs => (
 						<article class="cs-listing-card">
-							<!-- Colour block -->
-							<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-lc--${cs.slug}`}>
-								<svg class="cs-lc-blob" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-									<ellipse cx="330" cy="50" rx="140" ry="110" opacity="0.18"/>
-									<ellipse cx="70" cy="190" rx="110" ry="85" opacity="0.13"/>
-									<ellipse cx="200" cy="120" rx="75" ry="55" opacity="0.09"/>
-								</svg>
-								{cs.data.industry && (
-									<span class="cs-listing-tag">{cs.data.industry}</span>
-								)}
-								<span class="cs-lc-title">{cs.data.title}</span>
-							</a>
+							<!-- Hero image (or colour block fallback) -->
+							{cs.data.image ? (
+								<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-listing-image cs-lc--${cs.slug}`} style={`background-image: url(${cs.data.image})`}>
+									<div class="cs-listing-overlay"></div>
+									{cs.data.industry && (
+										<span class="cs-listing-tag">{cs.data.industry}</span>
+									)}
+								</a>
+							) : (
+								<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-lc--${cs.slug}`}>
+									<svg class="cs-lc-blob" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<ellipse cx="330" cy="50" rx="140" ry="110" opacity="0.18"/>
+										<ellipse cx="70" cy="190" rx="110" ry="85" opacity="0.13"/>
+										<ellipse cx="200" cy="120" rx="75" ry="55" opacity="0.09"/>
+									</svg>
+									{cs.data.industry && (
+										<span class="cs-listing-tag">{cs.data.industry}</span>
+									)}
+									<span class="cs-lc-title">{cs.data.title}</span>
+								</a>
+							)}
 
 							<!-- Content -->
 							<div class="cs-listing-content">
@@ -143,12 +152,25 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		align-items: center;
 		justify-content: center;
 		overflow: hidden;
-		aspect-ratio: 16 / 10;
+		aspect-ratio: 9 / 4;
 		text-decoration: none;
 		background: #1a1a1a;
 		transition: opacity 0.2s ease;
 	}
 	.cs-listing-card:hover .cs-listing-colour { opacity: 0.92; }
+
+	/* Image variant: photo as background with subtle dark gradient overlay */
+	.cs-listing-image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.cs-listing-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 100%);
+		pointer-events: none;
+	}
 
 	/* Per-slug colours */
 	.cs-lc--inoki        { background: #2d6a4a; }
@@ -202,6 +224,13 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		padding: 0.35rem 0.9rem;
 		border-radius: 999px;
 		border: 1px solid rgba(255,255,255,0.3);
+	}
+	/* On image cards, move the tag to bottom-left so it doesn't overlap brand wordmarks at top */
+	.cs-listing-image .cs-listing-tag {
+		top: auto;
+		bottom: 1rem;
+		background: rgba(0,0,0,0.45);
+		border-color: rgba(255,255,255,0.2);
 	}
 
 	/* Content */

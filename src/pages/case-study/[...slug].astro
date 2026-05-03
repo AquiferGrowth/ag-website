@@ -47,19 +47,31 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 
 					<div class="cs-hero-card">
 						<div class="cs-card-inner">
-							<!-- Branded colour block -->
-							<div class={`cs-card-colour cs-colour--${entry.slug}`}>
-								<svg class="cs-card-blob" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-									<ellipse cx="320" cy="40" rx="130" ry="90" opacity="0.18"/>
-									<ellipse cx="70" cy="170" rx="100" ry="75" opacity="0.13"/>
-								</svg>
-								<span class="cs-card-name">{title}</span>
-								{clientUrl && (
-									<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
-										Visit Website ↗
-									</a>
-								)}
-							</div>
+							<!-- Hero image (or branded colour block fallback) -->
+							{image ? (
+								<div class={`cs-card-colour cs-card-image cs-colour--${entry.slug}`} style={`background-image: url(${image})`}>
+									<div class="cs-card-overlay"></div>
+									<span class="cs-card-name">{title}</span>
+									{clientUrl && (
+										<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
+											Visit Website ↗
+										</a>
+									)}
+								</div>
+							) : (
+								<div class={`cs-card-colour cs-colour--${entry.slug}`}>
+									<svg class="cs-card-blob" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+										<ellipse cx="320" cy="40" rx="130" ry="90" opacity="0.18"/>
+										<ellipse cx="70" cy="170" rx="100" ry="75" opacity="0.13"/>
+									</svg>
+									<span class="cs-card-name">{title}</span>
+									{clientUrl && (
+										<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
+											Visit Website ↗
+										</a>
+									)}
+								</div>
+							)}
 							<!-- CMS meta -->
 							<div class="cs-card-meta">
 								<div class="cs-meta-row">
@@ -70,7 +82,11 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 									{platform && (
 										<div class="cs-meta-item">
 											<span class="cs-meta-label">Platform</span>
-											<span class="cs-meta-value">{platform}</span>
+											<span class="cs-meta-value cs-meta-stack">
+												{platform.split(',').map(p => (
+													<span class="cs-meta-line">{p.trim()}</span>
+												))}
+											</span>
 										</div>
 									)}
 								</div>
@@ -223,7 +239,7 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 	/* Branded colour block */
 	.cs-card-colour {
 		position: relative;
-		height: 180px;
+		aspect-ratio: 9 / 4;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -235,6 +251,19 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 	.cs-colour--inoki        { background: #2d6a4a; }
 	.cs-colour--pulsefx      { background: #3b2d7a; }
 	.cs-colour--spotlightavi { background: #7a4a1a; }
+
+	/* Image variant: photo as background with subtle dark gradient overlay */
+	.cs-card-image {
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.cs-card-overlay {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.55) 100%);
+		pointer-events: none;
+	}
 
 	.cs-card-blob {
 		position: absolute;
@@ -315,6 +344,15 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		font-size: 0.9rem;
 		font-weight: 700;
 		color: #1a1a1a;
+	}
+	.cs-meta-stack {
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.cs-meta-line {
+		display: block;
+		line-height: 1.35;
 	}
 
 	/* ─── Timeline ─── */
