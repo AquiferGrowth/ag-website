@@ -32,7 +32,7 @@ const featuredCaseStudies = allCaseStudies.slice(0, 3);
 
 				<div class="ec-hero__cta-row">
 					<a href="/contact" class="ec-btn ec-btn--hero">
-						<span>Book a 20-min ops audit</span>
+						<span>Let's Chat</span>
 						<span class="ec-animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -1099,92 +1099,35 @@ const featuredCaseStudies = allCaseStudies.slice(0, 3);
 		</section>
 
 		<!-- ═══════════════════════════════════════════ -->
-		<!-- SECTION 6: CASE STUDIES                    -->
+		<!-- SECTION 6: CASE STUDIES (matches homepage) -->
 		<!-- ═══════════════════════════════════════════ -->
-		<section class="ec-cases scroll-reveal">
+		<section class="case-studies-section scroll-reveal" id="customers">
 			<div class="container">
-				<div class="ec-cases__intro">
-					<h2 class="ec-section-title">Real brands. Real numbers.</h2>
+				<div class="section-header">
+					<div class="badge">Case Studies</div>
+					<h2 style="font-weight: 850; letter-spacing: -0.04em;">Work That <span class="text-gradient">Speaks</span></h2>
 				</div>
-				<div class="ec-cases__grid">
-					{featuredCaseStudies.length > 0 ? featuredCaseStudies.map((cs) => (
-						<article class="ec-case-card scroll-reveal">
-							<div class="ec-case-card__head">
-								<h3 class="ec-case-card__brand">{cs.data.title}</h3>
-								<div class="ec-case-card__industry">{cs.data.industry}</div>
-							</div>
-							<div class="ec-case-card__block">
-								<h4 class="ec-case-card__label">The problem</h4>
-								<p>Operations were spread across disconnected spreadsheets, forecasts were gut-feel, and hero SKUs stocked out repeatedly during peak weeks.</p>
-							</div>
-							<div class="ec-case-card__block">
-								<h4 class="ec-case-card__label">What we did</h4>
-								<ul class="ec-case-card__bullets">
-									<li>Rebuilt forecast at SKU level</li>
-									<li>Implemented reorder point automation</li>
-									<li>Restructured supplier lead time expectations</li>
-								</ul>
-							</div>
-							<div class="ec-case-card__block">
-								<h4 class="ec-case-card__label">The result</h4>
-								<ul class="ec-case-card__metrics">
-									<li><span class="ec-case-card__metric">$X</span><span class="ec-case-card__metric-label">saved on dead stock</span></li>
-									<li><span class="ec-case-card__metric">X% → Y%</span><span class="ec-case-card__metric-label">stockout rate</span></li>
-									<li><span class="ec-case-card__metric">X hrs/wk</span><span class="ec-case-card__metric-label">team time saved</span></li>
-								</ul>
-							</div>
-							<a href={`/case-study/${cs.slug}`} class="ec-case-card__link">Read full case study &rarr;</a>
-						</article>
-					)) : (
-						<>
-							<article class="ec-case-card scroll-reveal">
-								<div class="ec-case-card__head">
-									<h3 class="ec-case-card__brand">Inoki Bathhouse</h3>
-									<div class="ec-case-card__industry">Skincare &amp; Wellness</div>
-								</div>
-								<div class="ec-case-card__block">
-									<h4 class="ec-case-card__label">The problem</h4>
-									<p>Operations lived in 6 different spreadsheets. Forecasting was gut-feel. Three hero SKUs stocked out every month during peak.</p>
-								</div>
-								<div class="ec-case-card__block">
-									<h4 class="ec-case-card__label">What we did</h4>
-									<ul class="ec-case-card__bullets">
-										<li>Rebuilt forecast at SKU level</li>
-										<li>Implemented reorder point automation</li>
-										<li>Restructured supplier lead time expectations</li>
-									</ul>
-								</div>
-								<div class="ec-case-card__block">
-									<h4 class="ec-case-card__label">The result</h4>
-									<ul class="ec-case-card__metrics">
-										<li><span class="ec-case-card__metric">$X</span><span class="ec-case-card__metric-label">saved on dead stock</span></li>
-										<li><span class="ec-case-card__metric">X% → Y%</span><span class="ec-case-card__metric-label">stockout rate</span></li>
-										<li><span class="ec-case-card__metric">X hrs/wk</span><span class="ec-case-card__metric-label">team time saved</span></li>
-									</ul>
-								</div>
-								<a href="/case-study/inoki" class="ec-case-card__link">Read full case study &rarr;</a>
-							</article>
-						</>
-					)}
-				</div>
-			</div>
-		</section>
 
-		<!-- ═══════════════════════════════════════════ -->
-		<!-- SECTION 8: FINAL CTA                       -->
-		<!-- ═══════════════════════════════════════════ -->
-		<section class="ec-final scroll-reveal">
-			<div class="container">
-				<div class="ec-final__inner">
-					<h2 class="ec-final__title">Your ops shouldn't be<br>the thing holding you back.</h2>
-					<p class="ec-final__sub">If you're spending nights approving POs, mornings chasing inventory counts, and weekends fighting spreadsheets, there's a better way. Book a 20-minute ops audit. No pressure, no pitch &mdash; just a real conversation about what your ops look like and whether we can help.</p>
-					<a href="/contact" class="ec-final__cta">
-						Book your 20-min audit
-						<span class="ec-animated-dots">
-							<span></span><span></span><span></span><span></span>
-						</span>
-					</a>
-					<p class="ec-final__fineprint">No credit card required. No commitment. Just a conversation.</p>
+				<div class="cs-grid">
+					{featuredCaseStudies.map(cs => (
+						<div class="cs-outer-card">
+							<a href={`/case-study/${cs.slug}`} class={`cs-inner cs-inner--${cs.slug}`}>
+								<svg class="cs-blob" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<ellipse cx="320" cy="60" rx="130" ry="100" opacity="0.18"/>
+									<ellipse cx="80" cy="240" rx="110" ry="85" opacity="0.13"/>
+									<ellipse cx="200" cy="150" rx="80" ry="60" opacity="0.10"/>
+								</svg>
+								<span class="cs-title">{cs.data.title}</span>
+							</a>
+							<a href={`/case-study/${cs.slug}`} class="cs-cta-btn">
+								See Full Case Study <span class="cs-arrow">↗</span>
+							</a>
+						</div>
+					))}
+				</div>
+
+				<div class="cs-view-more">
+					<a href="/case-studies" class="btn btn-secondary">View All Case Studies →</a>
 				</div>
 			</div>
 		</section>
@@ -2366,224 +2309,178 @@ const featuredCaseStudies = allCaseStudies.slice(0, 3);
 		.ec-how-step__body { text-align: left; }
 	}
 
-	/* ─────────── Section 6: Case Studies ─────────── */
-	.ec-cases { padding: 5rem 0; }
-	.ec-cases__intro {
+	/* ─────────── Section 6: Case Studies (matches homepage) ─────────── */
+	.case-studies-section {
+		padding: 5rem 0;
+		width: 100%;
+	}
+	.section-header {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		text-align: center;
-		margin-bottom: 3.5rem;
+		gap: 1rem;
+		margin-bottom: 0.5rem;
 	}
-	.ec-cases__grid {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 2rem;
-	}
-	.ec-case-card {
-		background: var(--bg-secondary);
-		border: 1.5px solid #e5e7eb;
-		border-radius: 18px;
-		padding: 2rem 1.75rem;
-		display: flex;
-		flex-direction: column;
-		gap: 1.25rem;
-		box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
-	}
-	.ec-case-card:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 10px 28px rgba(0,0,0,0.07);
-	}
-	.ec-case-card__head {
-		border-bottom: 1px solid #ececec;
-		padding-bottom: 1rem;
-	}
-	.ec-case-card__brand {
-		font-family: var(--font-display);
-		font-size: 1.4rem;
-		font-weight: 800;
-		letter-spacing: -0.02em;
-		color: var(--text-primary);
-		margin: 0 0 0.25rem;
-	}
-	.ec-case-card__industry {
-		font-size: 0.78rem;
+	.badge {
+		background: #1A1A1A;
+		color: #fff;
+		padding: 0.5rem 1.25rem;
+		border-radius: var(--radius-pill);
+		font-size: 0.75rem;
 		font-weight: 700;
-		letter-spacing: 0.06em;
 		text-transform: uppercase;
-		color: var(--accent-primary);
-	}
-	.ec-case-card__block {
-		display: flex;
-		flex-direction: column;
-		gap: 0.4rem;
-	}
-	.ec-case-card__label {
-		font-family: var(--font-display);
-		font-size: 0.72rem;
-		font-weight: 800;
 		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: var(--text-secondary);
-		margin: 0;
+		margin-bottom: 1rem;
+		display: inline-block;
+		width: fit-content;
 	}
-	.ec-case-card__block p {
-		font-size: 0.92rem;
-		line-height: 1.55;
-		color: var(--text-primary);
-		margin: 0;
+	.text-gradient { color: var(--accent-primary); }
+
+	/* Cards row (right-to-left to mirror homepage) */
+	.cs-grid {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 1.5rem;
+		margin-top: 3rem;
 	}
-	.ec-case-card__bullets {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.cs-outer-card {
+		flex: 1;
+		min-width: 0;
+		background: #f3dad7;
+		border-radius: 24px;
+		padding: 16px;
 		display: flex;
 		flex-direction: column;
-		gap: 0.3rem;
+		gap: 14px;
 	}
-	.ec-case-card__bullets li {
+	.cs-inner {
 		position: relative;
-		padding-left: 1rem;
-		font-size: 0.9rem;
-		line-height: 1.5;
-		color: var(--text-primary);
-	}
-	.ec-case-card__bullets li::before {
-		content: "";
-		position: absolute;
-		top: 0.55rem;
-		left: 0;
-		width: 5px;
-		height: 5px;
-		border-radius: 50%;
-		background: var(--accent-primary);
-	}
-	.ec-case-card__metrics {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+		border-radius: 16px;
+		height: 260px;
+		background: #2a2a2a;
+		overflow: hidden;
 		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-	}
-	.ec-case-card__metrics li {
-		display: flex;
-		flex-direction: column;
-		background: var(--bg-primary);
-		border: 1px solid #ececec;
-		border-radius: 10px;
-		padding: 0.55rem 0.85rem;
-	}
-	.ec-case-card__metric {
-		font-family: var(--font-display);
-		font-size: 1.2rem;
-		font-weight: 800;
-		color: var(--accent-primary);
-		letter-spacing: -0.02em;
-	}
-	.ec-case-card__metric-label {
-		font-size: 0.78rem;
-		color: var(--text-secondary);
-	}
-	.ec-case-card__link {
-		margin-top: auto;
-		color: var(--accent-primary);
-		font-weight: 700;
+		align-items: center;
+		justify-content: center;
 		text-decoration: none;
-		font-size: 0.92rem;
-		align-self: flex-start;
-		border-bottom: 2px solid transparent;
-		padding-bottom: 2px;
-		transition: border-color 0.2s ease;
+		cursor: pointer;
+		transition: opacity 0.2s ease, transform 0.2s ease;
 	}
-	.ec-case-card__link:hover { border-bottom-color: var(--accent-primary); }
-	@media (max-width: 768px) {
-		.ec-cases { padding: 2.5rem 0; }
-		.ec-cases__grid { grid-template-columns: 1fr; gap: 1.25rem; }
+	.cs-inner:hover { opacity: 0.93; transform: translateY(-2px); }
+
+	/* Per-slug brand colours, distinct cohesive dark tones (matches case-studies listing) */
+	.cs-inner--spotlightavi { background: #5a3612; }
+	.cs-inner--pulsefx      { background: #2d1f5a; }
+	.cs-inner--inoki        { background: #1f4d33; }
+	.cs-inner--beauty       { background: #5a1a3d; }
+	.cs-inner--wellness     { background: #1a4d4a; }
+	.cs-inner--fashion      { background: #1f2840; }
+	.cs-inner--staygolden   { background: #4a3d0f; }
+	.cs-inner--hairstrong   { background: #4a1f2d; }
+	.cs-inner--pb           { background: #2d3d1a; }
+	.cs-inner--milros       { background: #4d2d0a; }
+	.cs-inner--claymoo      { background: #5a2d1a; }
+	.cs-inner--stepsciences { background: #1a3d4d; }
+
+	.cs-blob {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	.cs-blob ellipse { fill: #ffffff; }
+	.cs-inner--spotlightavi .cs-blob ellipse { fill: #fde68a; }
+	.cs-inner--pulsefx      .cs-blob ellipse { fill: #c4b5fd; }
+	.cs-inner--inoki        .cs-blob ellipse { fill: #a7f3d0; }
+	.cs-inner--beauty       .cs-blob ellipse { fill: #fbcfe8; }
+	.cs-inner--wellness     .cs-blob ellipse { fill: #99f6e4; }
+	.cs-inner--fashion      .cs-blob ellipse { fill: #bfdbfe; }
+	.cs-inner--staygolden   .cs-blob ellipse { fill: #fef3c7; }
+	.cs-inner--hairstrong   .cs-blob ellipse { fill: #fecaca; }
+	.cs-inner--pb           .cs-blob ellipse { fill: #d9f99d; }
+	.cs-inner--milros       .cs-blob ellipse { fill: #fcd34d; }
+	.cs-inner--claymoo      .cs-blob ellipse { fill: #fed7aa; }
+	.cs-inner--stepsciences .cs-blob ellipse { fill: #a5f3fc; }
+
+	.cs-title {
+		position: relative;
+		z-index: 1;
+		color: #ffffff;
+		font-family: var(--font-display);
+		font-size: 1.9rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		text-transform: uppercase;
+		text-align: center;
+		line-height: 1.15;
+		padding: 0 1.5rem;
 	}
 
-	/* ─────────── Section 8: Final CTA ─────────── */
-	.ec-final { padding: 6rem 0; }
-	.ec-final__inner {
-		background: var(--accent-primary);
-		color: #fff;
-		border-radius: 32px;
-		padding: 5rem 3rem;
-		text-align: center;
-		position: relative;
-		overflow: hidden;
-	}
-	.ec-final__inner::before {
-		content: "";
-		position: absolute;
-		top: -40%;
-		left: -20%;
-		width: 60%;
-		height: 180%;
-		background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
-		pointer-events: none;
-	}
-	.ec-final__inner::after {
-		content: "";
-		position: absolute;
-		bottom: -40%;
-		right: -20%;
-		width: 60%;
-		height: 180%;
-		background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-		pointer-events: none;
-	}
-	.ec-final__title {
-		position: relative;
-		font-family: var(--font-display);
-		font-size: clamp(2rem, 5vw, 3.6rem);
-		font-weight: 800;
-		line-height: 1.05;
-		letter-spacing: -0.04em;
-		text-transform: uppercase;
-		color: #fff;
-		margin: 0 0 1.5rem;
-	}
-	.ec-final__sub {
-		position: relative;
-		font-size: 1.1rem;
-		line-height: 1.65;
-		color: rgba(255,255,255,0.92);
-		max-width: 720px;
-		margin: 0 auto 2.25rem;
-	}
-	.ec-final__cta {
-		position: relative;
+	.cs-cta-btn {
 		display: inline-flex;
 		align-items: center;
-		gap: 0.75rem;
+		gap: 0.4rem;
+		align-self: center;
 		background: #fff;
-		color: var(--accent-primary);
-		padding: 1.25rem 2.75rem;
-		border-radius: var(--radius-pill);
-		font-family: var(--font-display);
-		font-size: 1.15rem;
-		font-weight: 800;
+		color: #1a1a1a;
+		font-size: 0.85rem;
+		font-weight: 600;
+		padding: 0.55rem 1.1rem;
+		border-radius: 100px;
 		text-decoration: none;
+		transition: background 0.2s, transform 0.2s;
+	}
+	.cs-cta-btn:hover {
+		background: #f5f5f5;
+		transform: translateY(-1px);
+	}
+	.cs-arrow { color: #e8334a; font-size: 0.95rem; }
+
+	.cs-view-more {
+		margin-top: 2.5rem;
+		display: flex;
+		justify-content: center;
+	}
+	.btn {
+		padding: 1rem 2.5rem;
+		border-radius: var(--radius-pill);
+		font-weight: 800;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		letter-spacing: 0.05em;
+		transition: var(--transition-fast);
+		border: 2px solid var(--border-color);
+		text-decoration: none;
+	}
+	.btn-secondary {
+		background: #FF7A7A;
+		color: #000;
 		border: 2px solid #000;
 		box-shadow: 4px 4px 0 #000;
+		text-transform: none;
+		font-size: 1rem;
 		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+		display: inline-block;
 	}
-	.ec-final__cta:hover {
+	.btn-secondary:hover {
 		transform: translate(-4px, -4px);
 		box-shadow: 8px 8px 0 #000;
+		background: #ff9d9d;
 	}
-	.ec-final__fineprint {
-		position: relative;
-		margin-top: 1.25rem;
-		font-size: 0.85rem;
-		color: rgba(255,255,255,0.85);
+	.btn-secondary:active {
+		transform: translate(0, 0);
+		box-shadow: 0 0 0 #000;
 	}
+
 	@media (max-width: 768px) {
-		.ec-final { padding: 2.5rem 0; }
-		.ec-final__inner {
-			padding: 3rem 1.5rem;
-			border-radius: 20px;
-		}
+		.case-studies-section { padding: 2.5rem 0; }
+		.cs-grid { flex-direction: column; }
+		.cs-inner { height: 220px; }
+		.cs-view-more { margin-top: 1rem; }
 	}
+
 </style>
 
 <script>
