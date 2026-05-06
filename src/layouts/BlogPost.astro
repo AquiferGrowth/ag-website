@@ -87,6 +87,39 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				overflow-x: auto;
 				margin-bottom: 1.5rem;
 			}
+			.prose :global(table) {
+				width: 100%;
+				border-collapse: collapse;
+				margin: 2rem 0;
+				font-size: 1rem;
+				overflow-x: auto;
+				display: block;
+			}
+			.prose :global(thead tr) {
+				background: var(--bg-dark);
+				color: var(--text-on-dark);
+			}
+			.prose :global(th) {
+				padding: 0.85rem 1.25rem;
+				text-align: left;
+				font-weight: 700;
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				border: 1px solid var(--border-color);
+			}
+			.prose :global(td) {
+				padding: 0.75rem 1.25rem;
+				border: 1px solid var(--border-color);
+				color: var(--text-secondary);
+				vertical-align: top;
+			}
+			.prose :global(tbody tr:nth-child(even)) {
+				background: var(--bg-secondary);
+			}
+			.prose :global(tbody tr:hover) {
+				background: rgba(255, 85, 0, 0.05);
+			}
 			.title {
 				margin-bottom: 2rem;
 				padding: 2rem 0;
@@ -115,7 +148,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<main>
 			<article>
 				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
+					{heroImage && <img src={heroImage} alt={title} />}
 				</div>
 				<div class="prose">
 					<div class="title">
