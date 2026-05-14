@@ -56,6 +56,9 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Inter+Tight:wght@800&family=Syne:wght@800&display=swap" rel="stylesheet">
+
+		<!-- Page-specific head injections (e.g. schema markup) -->
+		<slot name="head" />
 	</head>
 	<body class="bg-grid">
 		<slot />
