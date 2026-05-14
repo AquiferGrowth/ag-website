@@ -15,7 +15,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 ---
 
 <Layout title="AquiferGrowth | Your Plugin Ops Firm | Ecommerce Operations Automation" description="We build and run AI-powered operations for e-commerce and DTC brands. Managed catalog, inventory, finance, and fulfillment — one system.">
-	<script slot="head" type="application/ld+json">{JSON.stringify({
+	<script slot="head" type="application/ld+json" set:html={JSON.stringify({
 		"@context": "https://schema.org",
 		"@type": "Organization",
 		"name": "AquiferGrowth",
@@ -27,7 +27,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			"width": 200,
 			"height": 60
 		},
-		"description": "AquiferGrowth is a Toronto-based AI-powered operations agency helping ecommerce, DTC, SaaS, and retail brands automate and scale their operations through a structured Map → Build → Own methodology.",
+		"description": "AquiferGrowth is a Toronto-based AI-powered operations agency helping ecommerce, DTC, SaaS, and retail brands automate and scale their operations through a structured Map - Build - Own methodology.",
 		"foundingDate": "2023",
 		"address": {
 			"@type": "PostalAddress",
@@ -45,12 +45,12 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			"@type": "OfferCatalog",
 			"name": "AI Operations Services",
 			"itemListElement": [
-				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Map — Operations Audit","description": "Deep-dive audit to identify automation opportunities across your ecommerce or retail operations."}},
-				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Build — AI Systems Setup","description": "Custom AI-powered systems and workflows built and integrated into your existing tech stack."}},
-				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Own — Ongoing Operations Management","description": "Hands-on management and continuous optimization of your AI operations systems."}}
+				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Map - Operations Audit","description": "Deep-dive audit to identify automation opportunities across your ecommerce or retail operations."}},
+				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Build - AI Systems Setup","description": "Custom AI-powered systems and workflows built and integrated into your existing tech stack."}},
+				{"@type": "Offer","itemOffered": {"@type": "Service","name": "Own - Ongoing Operations Management","description": "Hands-on management and continuous optimization of your AI operations systems."}}
 			]
 		}
-	})}</script>
+	})} />
 	<ParticleBackground />
 	<Header />
 	<main class="container">
