@@ -18,8 +18,8 @@ export async function GET(context) {
     '/industries/retail',
   ];
 
-  const blogUrls = posts.map(p => `/blog/${p.id}/`);
-  const caseUrls = caseStudies.map(p => `/case-study/${p.id}/`);
+  const blogUrls = posts.map(p => `/blog/${p.slug}/`);
+  const caseUrls = caseStudies.map(p => `/case-study/${p.slug}/`);
 
   const allUrls = [...staticPages, ...blogUrls, ...caseUrls];
 
