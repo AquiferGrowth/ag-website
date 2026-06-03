@@ -14,7 +14,7 @@ const featuredCase = allCaseStudies.find(c => c.data.featured);
 const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 ---
 
-<Layout title="AquiferGrowth | Your Embedded Ops Team | Ecommerce Operations Automation" description="We build and run AI-powered operations for e-commerce and DTC brands. Managed catalog, inventory, finance, and fulfillment — one system.">
+<Layout title="AquiferGrowth | Your Embedded Ops Team | Ecommerce Operations Automation" description="We build and run AI-powered operations for e-commerce and DTC brands. Managed catalog, inventory, finance, and fulfillment, one system.">
 	<script slot="head" type="application/ld+json" set:html={JSON.stringify({
 		"@context": "https://schema.org",
 		"@type": "Organization",
@@ -58,10 +58,10 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			<section class="hero">
 				<div class="badge">YOUR EMBEDDED OPS TEAM</div>
 				<h1>
-					WE <span class="text-gradient">BUILD</span> AND <span class="text-gradient">RUN</span> YOUR OPERATIONS
+					WE <span class="text-gradient">BUILD</span> AND <span class="text-gradient">RUN</span> YOUR SYSTEM
 				</h1>
 				<p class="hero-description">
-					<span class="hero-text-light">We are your operators. We build the internal tools, handle the integrations, deploy the AI agents, and run the day-to-day. Not advise, not hand you a dashboard. We own the daily, weekly, and monthly outcomes.</span>
+					<span class="hero-text-light">We build your internal tools, wire your integrations, and deploy your AI agents, then own the whole system end-to-end so it never decays.</span>
 				</p>
 				<div class="cta-group">
 					<a href="/contact" class="btn btn-hero-pink">
@@ -72,6 +72,20 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 					</a>
 				</div>
 			</section>
+
+				<!-- Fork: two paths under the CTA -->
+				<section class="hero-fork animate-fade-in" aria-label="How we engage">
+					<div class="fork-card section-white-card">
+						<div class="fork-card__eyebrow">MANAGED OPS</div>
+						<h3 class="fork-card__title">When the process is standardized, we run it.</h3>
+						<p class="fork-card__body">Inventory, fulfilment, reconciliation, distribution, exporting, operations we already know how to run. We own the daily, weekly, and monthly outcomes.</p>
+					</div>
+					<div class="fork-card section-white-card">
+						<div class="fork-card__eyebrow">MANAGED SYSTEM OPS</div>
+						<h3 class="fork-card__title">When the process is yours, we build the system that runs it.</h3>
+						<p class="fork-card__body">Your workflows, your domain, your judgment. We build the tooling, integrations, and AI, own the system end-to-end, and you make the calls only you can make.</p>
+					</div>
+				</section>
 
 				<!-- Three-Act Build Banner -->
 				<section class="three-act-banner animate-fade-in">
@@ -409,7 +423,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 							<div class="win-item">
 								<div class="win-icon">✓</div>
 								<div class="win-text">
-									<strong>System-owned — not person-owned</strong>
+									<strong>System-owned, not person-owned</strong>
 									<span>Runs regardless of who's on holiday. No single point of failure.</span>
 								</div>
 							</div>
@@ -439,7 +453,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				</div>
 
 				<div class="comparison-cta">
-					<a href="/contact" class="btn btn-hero-pink"><span class="cta-full">Replace Your Spreadsheets → Let's Talk</span><span class="cta-mobile">Let's Talk</span>
+					<a href="/contact" class="btn btn-hero-pink"><span class="cta-full">Let's Talk</span><span class="cta-mobile">Let's Talk</span>
 						<span class="animated-dots">
 							<span></span><span></span><span></span><span></span>
 						</span>
@@ -453,7 +467,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		<section class="how-we-build-section animate-fade-in">
 			<div class="hwb-outer section-white-card">
 				<div class="hwb-header">
-					<h2 class="hwb-title">HOW WE BUILD YOUR SYSTEM</h2>
+					<h2 class="hwb-title">HOW WE BUILD &amp; RUN YOUR SYSTEM</h2>
 					<p class="hwb-subhead">You don't need another AI tool. You don't need another contractor. You need one system that runs your operations, built from the tools you already have, the workflows you already run, and whatever it actually takes to make it reliable.</p>
 					</div>
 
@@ -496,7 +510,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		<!-- Building Your Operating System Section -->
 		<section class="solution-roadmap-section animate-fade-in" id="framework-roadmap">
 			<div class="roadmap-outer-content section-white-card">
-				<h2 class="roadmap-main-title">The Plugin Ops Model</h2>
+				<h2 class="roadmap-main-title">The Embedded Ops Model</h2>
 				<p class="roadmap-main-subtitle">How we take ops off your plate</p>
 				
 				<div class="solution-card">
@@ -592,7 +606,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 							<div class="step-header-card">
 								<h3 class="step-title">The Embedded Ops Team</h3>
 								<p>
-									We plug in and replace the liability stack with a single operating layer — owned by us, run on schedule, built to scale. Your team stops maintaining the system and starts moving the business forward.
+									We plug in and replace the liability stack with a single operating layer, owned by us, run on schedule, built to scale. Your team stops maintaining the system and starts moving the business forward.
 								</p>
 							</div>
 							<div class="step-connector-line"></div>
@@ -649,7 +663,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 						<div class="roadmap-step">
 							<div class="step-header-card">
 								<p class="step-title">The Outcome, Modern Operations</p>
-								<p>With your ops firm plugged in, the work runs on schedule. Your team focuses on what moves the business, not what keeps it alive. Data stays live, reports stay accurate, and the business scales without adding headcount.</p>
+								<p>With your embedded ops team plugged in, the work runs on schedule. Your team focuses on what moves the business, not what keeps it alive. Data stays live, reports stay accurate, and the business scales without adding headcount.</p>
 							</div>
 							<div class="step-connector-line"></div>
 							<div class="step-visual-card visual-teal">
@@ -1042,6 +1056,53 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		vertical-align: top;
 		justify-content: flex-start;
 		overflow: hidden;
+	}
+
+	/* ── The Fork: two cards under the CTA ── */
+	.hero-fork {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.25rem;
+		width: 100%;
+		max-width: 1080px;
+		margin: 1.5rem auto 0;
+	}
+	.fork-card {
+		max-width: none;
+		padding: 2rem 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+		text-align: left;
+	}
+	.fork-card__eyebrow {
+		font-size: 0.7rem;
+		font-weight: 800;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--accent-primary);
+	}
+	.fork-card__title {
+		font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+		font-weight: 800;
+		line-height: 1.25;
+		letter-spacing: -0.02em;
+		color: #1a1a1a;
+		margin: 0;
+	}
+	.fork-card__body {
+		font-size: 0.95rem;
+		line-height: 1.55;
+		color: #555;
+		margin: 0;
+	}
+	@media (max-width: 720px) {
+		.hero-fork {
+			grid-template-columns: 1fr;
+			gap: 0.85rem;
+			margin-top: 1rem;
+		}
+		.fork-card { padding: 1.5rem 1.25rem; }
 	}
 	.section-header {
 		display: flex;
