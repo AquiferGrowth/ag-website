@@ -84,8 +84,11 @@ import { SITE_TITLE } from '../consts';
 		justify-content: space-between;
 		align-items: center;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-		backdrop-filter: blur(10px);
 		overflow: visible;
+		/* Promote to its own GPU layer so the fixed header doesn't repaint
+		   the page underneath on every scroll frame. */
+		will-change: transform;
+		transform: translateZ(0);
 	}
 	@media (max-width: 640px) {
 		header {

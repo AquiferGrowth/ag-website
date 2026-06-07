@@ -21,13 +21,13 @@ const featuredCaseStudies = allCaseStudies.slice(0, 3);
 			<div class="ec-hero__bg-blur"></div>
 			<div class="ec-hero__bg-blur ec-hero__bg-blur--right"></div>
 			<div class="ec-hero__inner container">
-				<div class="ec-hero__eyebrow">ECOMMERCE OPS, MANAGED</div>
+				<div class="ec-hero__eyebrow">MANAGED E-COMMERCE OPS</div>
 				<h1 class="ec-hero__title">
 					Focus on the brand.<br>
 					We run the <span class="ec-hero__title-accent">operations.</span>
 				</h1>
 				<p class="ec-hero__subtitle">
-					Ecommerce ops is a real function, not a side task. Inventory counts, variance investigation, PO reconciliation, COGS and margin tracking, supplier coordination, weekly reporting. Work that needs to happen every week, by someone senior, on a schedule. We take that function. End to end.
+					Ecommerce ops is a real function. When it's run loosely, it costs you in thin margins, dead stock, and numbers you can't trust. Inventory counts, variance investigation, PO reconciliation, COGS, supplier coordination must run on daily, weekly, and monthly cadences. We own that function. End to end.
 				</p>
 
 				<div class="ec-hero__cta-row">
@@ -1111,6 +1111,17 @@ const featuredCaseStudies = allCaseStudies.slice(0, 3);
 	.scroll-reveal.is-visible {
 		opacity: 1;
 		transform: translateY(0);
+	}
+
+	/* Perf: skip rendering off-screen sections so scroll doesn't have to
+	   paint the whole 2.5k-line page on every frame. Supported in modern
+	   Chrome/Edge/Safari; older browsers ignore it. */
+	.ec-who,
+	.ec-services__intro,
+	.ec-service,
+	.case-studies-section {
+		content-visibility: auto;
+		contain-intrinsic-size: 1px 700px;
 	}
 
 	/* Section title */
