@@ -30,7 +30,7 @@ This guide covers what product catalog management actually is, why it breaks dow
 
 ## What is Product Catalog Management?
 
-Product catalog management is the operational practice of keeping your product data accurate, complete, organized, and consistent across your Shopify store, your other sales channels, and every system that depends on that data.
+[Product catalog management](/industries/ecommerce) is the operational practice of keeping your product data accurate, complete, organized, and consistent across your Shopify store, your other sales channels, and every system that depends on that data.
 
 It covers five core functions:
 
@@ -102,7 +102,7 @@ The catalog does not just get built once. It stays current, continuously.
 
 ## What AI Catalog Automation Actually Looks Like — A Real Example
 
-Most descriptions of AI catalog management are abstract. Here is exactly what we built for Sukoshi Mart — a K-beauty brand on Shopify with 10,000+ SKUs — and what it took to make it work.
+Most descriptions of AI catalog management are abstract. Here is exactly what we built for [Sukoshi Mart](https://sukoshi.com/) — a K-beauty brand on [Shopify with 10,000+ SKUs](/case-study/beauty) — and what it took to make it work.
 
 This is the path that any brand with a complex catalog needs to follow. The tools change. The structure does not.
 
@@ -214,7 +214,7 @@ AI-powered catalog management closes that leak. Not by replacing the judgment of
 
 The brands that win on catalog quality in 2026 are the ones that stopped trying to maintain it manually and built the system that maintains it for them.
 
-That is what we built at AquiferGrowth. If you run an [ecommerce or retail brand](/industries/ecommerce) wrestling with catalog chaos, [get in touch](/contact) and we'll show you what an audit of your catalog actually looks like.
+That is what we built at [AquiferGrowth](https://aquifergrowth.com/). If you run an ecommerce or retail brand wrestling with catalog chaos, [get in touch](/contact) and we'll show you what an audit of your catalog actually looks like.
 
 ## Frequently Asked Questions
 
