@@ -8,12 +8,26 @@ import Header from '../components/Header.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, faqs } = Astro.props;
+
+const faqSchema = faqs && faqs.length > 0 ? {
+	'@context': 'https://schema.org',
+	'@type': 'FAQPage',
+	mainEntity: faqs.map((faq) => ({
+		'@type': 'Question',
+		name: faq.question,
+		acceptedAnswer: {
+			'@type': 'Answer',
+			text: faq.answer,
+		},
+	})),
+} : null;
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		{faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
 		<style>
 			main {
 				width: calc(100% - 2em);
