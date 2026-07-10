@@ -1,0 +1,87 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Page Not Found | AquiferGrowth"
+  description="That page doesn't exist. Head back to AquiferGrowth."
+>
+  <Header />
+  <main>
+    <section class="nf">
+      <div class="container nf__inner">
+        <p class="nf__code">404</p>
+        <h1 class="nf__title">This page <span class="text-gradient">doesn't exist.</span></h1>
+        <p class="nf__body">
+          The link may be old, or the page may have moved. Everything that does
+          exist is one click away.
+        </p>
+        <a href="/" class="nf-btn">
+          <span>Back to home</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  .nf { padding: 6rem 0 8rem; }
+  .nf__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+  .nf__code {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    color: var(--text-secondary);
+  }
+  .nf__title {
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .nf__body {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    max-width: 42ch;
+    margin: 0;
+  }
+  .nf-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    background: #FF7A7A;
+    color: #1A1A1A;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                background 0.2s ease;
+  }
+  .nf-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+    background: #ff9d9d;
+  }
+  .nf-btn:active { transform: translate(0, 0); box-shadow: 0 0 0 #000; }
+</style>
