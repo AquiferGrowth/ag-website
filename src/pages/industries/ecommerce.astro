@@ -371,12 +371,31 @@ const tuesdayStops = [
 
             <!-- 6. Inventory Management (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
-              <div class="en-out-card__visual en-vis-placeholder">
-                <svg class="en-vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                  <line x1="12" y1="22.08" x2="12" y2="12"/>
-                </svg>
+              <div class="en-out-card__visual en-vis-invmgmt">
+                <div class="en-vis-dotgrid" aria-hidden="true"></div>
+                <div class="en-vis-glow en-vis-glow--invmgmt" aria-hidden="true"></div>
+                <div class="en-vis-file-chip en-vis-file-chip--1">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  inventory_FINAL_v4.xlsx <em>12,090?</em>
+                </div>
+                <div class="en-vis-file-chip en-vis-file-chip--2">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  stock_count_AUG(2).csv <em>11,834?</em>
+                </div>
+                <div class="en-vis-file-chip en-vis-file-chip--3">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  counts_v2_USE_THIS.xlsx <em>12,388?</em>
+                </div>
+                <div class="en-vis-invmgmt-photo" aria-hidden="true"></div>
+                <div class="en-vis-panel en-vis-invmgmt-panel">
+                  <div class="en-vis-panel__head">
+                    <span class="en-vis-panel__title">Live Inventory</span>
+                    <span class="en-vis-panel__meta"><span class="en-vis-live-dot" aria-hidden="true"></span> Synced 2m ago</span>
+                  </div>
+                  <div class="en-vis-stat-row"><span>SKUs tracked</span><strong>12,463</strong></div>
+                  <div class="en-vis-stat-row"><span>Stock on hand</span><strong>$482K</strong></div>
+                  <div class="en-vis-stat-row"><span>Locations</span><strong>4</strong></div>
+                </div>
               </div>
               <div class="en-out-card__text">
                 <h3 class="en-out-card__title">Inventory Management</h3>
@@ -386,13 +405,26 @@ const tuesdayStops = [
 
             <!-- 7. Inventory Forecasting (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
-              <div class="en-out-card__visual en-vis-placeholder">
-                <svg class="en-vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="18" y1="20" x2="18" y2="10"/>
-                  <line x1="12" y1="20" x2="12" y2="4"/>
-                  <line x1="6" y1="20" x2="6" y2="14"/>
-                  <line x1="3" y1="20" x2="21" y2="20"/>
+              <div class="en-out-card__visual en-vis-forecast">
+                <div class="en-vis-dotgrid" aria-hidden="true"></div>
+                <div class="en-vis-glow en-vis-glow--forecast" aria-hidden="true"></div>
+                <span class="en-vis-chartlabel">Demand · Fleece Hoodie</span>
+                <span class="en-vis-chartlabel-meta">Q4 forecast</span>
+                <svg class="en-vis-forecast-chart" viewBox="0 0 200 90" preserveAspectRatio="none" aria-hidden="true">
+                  <!-- forecast confidence band -->
+                  <polygon points="112,54 200,16 200,46 112,62" fill="#ff4d6d" opacity="0.08"/>
+                  <!-- history line -->
+                  <polyline points="4,74 32,68 60,70 88,60 112,54" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+                  <!-- forecast line (dashed) -->
+                  <polyline points="112,54 136,44 164,30 196,20" fill="none" stroke="#ff4d6d" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+                  <!-- restock arrival marker (Nov 4) -->
+                  <line x1="130" y1="14" x2="130" y2="82" stroke="#1a1a1a" opacity="0.22" stroke-dasharray="3 3" stroke-width="1"/>
+                  <!-- stockout point (Nov 21) -->
+                  <circle cx="164" cy="30" r="3.5" fill="#ff4d6d"/>
+                  <circle cx="164" cy="30" r="7" fill="#ff4d6d" opacity="0.2"/>
                 </svg>
+                <span class="en-vis-callout en-vis-callout--warn" style="top:22%; right:4%;">⚠ Stocks out · Nov 21</span>
+                <span class="en-vis-callout" style="bottom:4%; left:48%;">Restock lands · Nov 4</span>
               </div>
               <div class="en-out-card__text">
                 <h3 class="en-out-card__title">Inventory Forecasting</h3>
@@ -410,22 +442,22 @@ const tuesdayStops = [
                   </div>
                   <div class="en-vis-loc-row">
                     <span class="en-vis-loc-label">Toronto DC</span>
-                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:86%; --d:0s;"></span></span>
+                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:86%;"></span></span>
                     <span class="en-vis-loc-count">1,208</span>
                   </div>
                   <div class="en-vis-loc-row">
                     <span class="en-vis-loc-label">Amazon FBA</span>
-                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:46%; --d:0.12s;"></span></span>
+                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:46%;"></span></span>
                     <span class="en-vis-loc-count">641</span>
                   </div>
                   <div class="en-vis-loc-row">
                     <span class="en-vis-loc-label">3PL · Vancouver</span>
-                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:30%; --d:0.24s;"></span></span>
+                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:30%;"></span></span>
                     <span class="en-vis-loc-count">415</span>
                   </div>
                   <div class="en-vis-loc-row">
                     <span class="en-vis-loc-label">Retail Store</span>
-                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:16%; --d:0.36s;"></span></span>
+                    <span class="en-vis-loc-track"><span class="en-vis-loc-fill" style="--w:16%;"></span></span>
                     <span class="en-vis-loc-count">217</span>
                   </div>
                 </div>
@@ -471,14 +503,17 @@ const tuesdayStops = [
 
             <!-- 11. Purchase Order Management (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
-              <div class="en-out-card__visual en-vis-placeholder">
-                <svg class="en-vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                  <polyline points="14 2 14 8 20 8"/>
-                  <line x1="9" y1="13" x2="15" y2="13"/>
-                  <line x1="9" y1="17" x2="15" y2="17"/>
-                  <line x1="9" y1="9" x2="11" y2="9"/>
-                </svg>
+              <div class="en-out-card__visual en-vis-po">
+                <div class="en-vis-panel en-vis-po-panel">
+                  <div class="en-vis-panel__head">
+                    <span class="en-vis-panel__title">PO-2041 · Northline Apparel</span>
+                    <span class="en-vis-panel__meta">Receiving</span>
+                  </div>
+                  <div class="en-vis-stat-row"><span>Ordered</span><strong>500 units</strong></div>
+                  <div class="en-vis-stat-row"><span>Received</span><strong>462 units</strong></div>
+                  <div class="en-vis-stat-row en-vis-stat-row--alert"><span>Short-shipped</span><strong>38 units</strong></div>
+                </div>
+                <span class="en-vis-pill en-vis-pill--success" style="bottom:9%; right:6%;">✓ Credit note requested · $1,214</span>
               </div>
               <div class="en-out-card__text">
                 <h3 class="en-out-card__title">Purchase Order Management</h3>
@@ -488,13 +523,21 @@ const tuesdayStops = [
 
             <!-- 12. Supplier Management (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
-              <div class="en-out-card__visual en-vis-placeholder">
-                <svg class="en-vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                  <circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
+              <div class="en-out-card__visual en-vis-supplier">
+                <div class="en-vis-panel en-vis-supplier-panel">
+                  <div class="en-vis-supplier-head">
+                    <span class="en-vis-supplier-avatar">NA</span>
+                    <span class="en-vis-supplier-id">
+                      <span class="en-vis-panel__title">Northline Apparel</span>
+                      <span class="en-vis-panel__meta">Apparel · Guangzhou</span>
+                    </span>
+                  </div>
+                  <div class="en-vis-stat-row"><span>Lead time</span><strong>41 days</strong></div>
+                  <div class="en-vis-stat-row"><span>MOQ</span><strong>300 units</strong></div>
+                  <div class="en-vis-stat-row"><span>Last unit cost</span><strong>$8.40</strong></div>
+                </div>
+                <span class="en-vis-pill en-vis-pill--white" style="top:9%; right:6%;">Lead time 32d → 41d</span>
+                <span class="en-vis-pill en-vis-pill--success" style="bottom:8%; left:6%;">✓ Next PO adjusted automatically</span>
               </div>
               <div class="en-out-card__text">
                 <h3 class="en-out-card__title">Supplier Management</h3>
@@ -504,11 +547,26 @@ const tuesdayStops = [
 
             <!-- 13. COGS & Margin Tracking (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
-              <div class="en-out-card__visual en-vis-placeholder">
-                <svg class="en-vis-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="12" y1="1" x2="12" y2="23"/>
-                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                </svg>
+              <div class="en-out-card__visual en-vis-cogs">
+                <div class="en-vis-panel en-vis-cogs-panel">
+                  <div class="en-vis-panel__head">
+                    <span class="en-vis-panel__title">Fleece Hoodie · HOD-001</span>
+                    <span class="en-vis-panel__meta">Landed cost</span>
+                  </div>
+                  <div class="en-vis-cogs-chips">
+                    <span class="en-vis-cogs-chip">Unit $8.40</span>
+                    <span class="en-vis-cogs-chip">Freight $1.90</span>
+                    <span class="en-vis-cogs-chip">Duties $0.72</span>
+                  </div>
+                  <div class="en-vis-cogs-margin">
+                    <span class="en-vis-panel__meta">True margin</span>
+                    <span class="en-vis-cogs-margin-old">61%</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="12" x2="20" y2="12"/><polyline points="13 5 20 12 13 19"/></svg>
+                    <span class="en-vis-cogs-margin-new">54%</span>
+                  </div>
+                </div>
+                <span class="en-vis-pill en-vis-pill--coral" style="top:9%; right:6%;">⚠️ Freight +38% this month</span>
+                <span class="en-vis-pill en-vis-pill--success" style="bottom:8%; left:6%;">✓ Price review flagged</span>
               </div>
               <div class="en-out-card__text">
                 <h3 class="en-out-card__title">COGS &amp; Margin Tracking</h3>
@@ -3770,9 +3828,6 @@ const tuesdayStops = [
     width: var(--w);
     border-radius: inherit;
     background: linear-gradient(90deg, #ff9d9d, #ff4d6d);
-    /* Replays each time the cluster tab is shown (display:none → block) */
-    animation: en-loc-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
-    animation-delay: var(--d, 0s);
   }
   .en-vis-loc-count {
     font-size: 0.62rem;
@@ -3781,11 +3836,276 @@ const tuesdayStops = [
     text-align: right;
     font-variant-numeric: tabular-nums;
   }
-  @keyframes en-loc-grow {
-    from { width: 0; }
+
+  /* ───── Shared mini-panel for story visuals (pure CSS) ───── */
+  .en-vis-panel {
+    position: absolute;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 1;
+  }
+  .en-vis-panel__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .en-vis-panel__title {
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    white-space: nowrap;
+  }
+  .en-vis-panel__meta {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #8a8a8a;
+    white-space: nowrap;
+  }
+  .en-vis-stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    font-size: 0.66rem;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 0.35rem;
+  }
+  .en-vis-stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .en-vis-stat-row strong {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  .en-vis-stat-row--alert span,
+  .en-vis-stat-row--alert strong { color: #d63955; }
+
+  /* ───── Shared ambient layers (dot grid + soft glow, like pricing/hero) ───── */
+  .en-vis-dotgrid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, #d1d1d1 1.2px, transparent 1.6px);
+    background-size: 12px 12px;
+    opacity: 0.35;
+    mask-image: radial-gradient(ellipse at center, #000 45%, transparent 78%);
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 45%, transparent 78%);
+  }
+  .en-vis-glow {
+    position: absolute;
+    width: 60%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.16), transparent 70%);
+    filter: blur(18px);
+    pointer-events: none;
+  }
+  .en-vis-glow--invmgmt { top: -18%; right: -10%; }
+
+  /* Inventory Management — messy files → product + live panel */
+  .en-vis-file-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.56rem;
+    font-weight: 500;
+    color: #8a8a8a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    z-index: 1;
+    white-space: nowrap;
+  }
+  .en-vis-file-chip svg { width: 0.7rem; height: 0.7rem; flex: none; color: #b5b5b5; }
+  /* Each file claims a different total — the pain shown as data, not a badge */
+  .en-vis-file-chip em {
+    font-style: normal;
+    font-weight: 700;
+    color: #d63955;
+    font-variant-numeric: tabular-nums;
+  }
+  .en-vis-live-dot {
+    display: inline-block;
+    width: 0.42rem; height: 0.42rem;
+    border-radius: 50%;
+    background: #10b981;
+    margin-right: 0.15rem;
+    animation: en-live-pulse 2s ease-in-out infinite;
+  }
+  @keyframes en-live-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.35); }
+    50%      { box-shadow: 0 0 0 4px rgba(16, 185, 129, 0); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .en-vis-loc-fill { animation: none; }
+    .en-vis-live-dot { animation: none; }
+  }
+  /* The stack fades as it recedes — the "past" you're leaving behind */
+  .en-vis-file-chip--1 { top: 24%; left: 5%; transform: rotate(-3deg); opacity: 0.9; }
+  .en-vis-file-chip--2 { top: 46%; left: 8%; transform: rotate(2deg); opacity: 0.65; }
+  .en-vis-file-chip--3 { top: 68%; left: 4%; transform: rotate(-1.5deg); opacity: 0.4; filter: blur(0.6px); }
+  .en-vis-invmgmt-photo {
+    position: absolute;
+    top: 4%; right: 0;
+    width: 36%; height: 92%;
+    background: url('/images/uploads/catalog-jacket.png') center center / contain no-repeat;
+    filter: drop-shadow(0 10px 18px rgba(0,0,0,0.12));
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+            mask-image: linear-gradient(to bottom, transparent 0%, #000 10%, #000 90%, transparent 100%);
+  }
+  .en-vis-invmgmt-panel {
+    top: 50%; right: 26%;
+    transform: translateY(-52%);
+    width: 40%;
+    z-index: 2;
+  }
+
+  /* Forecasting — full-bleed demand curve, story told in chart annotations */
+  .en-vis-glow--forecast { top: -14%; right: -8%; }
+  .en-vis-forecast-chart {
+    position: absolute;
+    left: 5%; right: 5%;
+    top: 20%; bottom: 14%;
+    width: 90%;
+    height: 66%;
+  }
+  .en-vis-chartlabel {
+    position: absolute;
+    top: 7%; left: 5%;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 999px;
+    padding: 0.32rem 0.7rem;
+    font-family: var(--font-display);
+    font-size: 0.66rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  .en-vis-chartlabel-meta {
+    position: absolute;
+    top: 9%; right: 5%;
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: #8a8a8a;
+    z-index: 2;
+    white-space: nowrap;
+  }
+  /* Chart annotation callouts — tooltip-style, like the orders card's status tags */
+  .en-vis-callout {
+    position: absolute;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.07);
+    border-radius: 8px;
+    padding: 0.32rem 0.6rem;
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    z-index: 2;
+    white-space: nowrap;
+  }
+  .en-vis-callout--warn { color: #b45309; }
+
+  /* PO Management — reconciliation ledger */
+  .en-vis-po-panel {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -55%);
+    width: 70%;
+  }
+
+  /* Supplier Management — record card */
+  .en-vis-supplier-panel {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -52%);
+    width: 70%;
+  }
+  .en-vis-supplier-head {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding-bottom: 0.2rem;
+  }
+  .en-vis-supplier-avatar {
+    flex: none;
+    width: 1.8rem; height: 1.8rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9d9d, #ff4d6d);
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 0.62rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .en-vis-supplier-id {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+  }
+
+  /* COGS — landed cost chips + margin slip */
+  .en-vis-cogs-panel {
+    top: 50%; left: 50%;
+    transform: translate(-50%, -52%);
+    width: 74%;
+  }
+  .en-vis-cogs-chips {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .en-vis-cogs-chip {
+    background: #faf4f0;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 6px;
+    padding: 0.28rem 0.5rem;
+    font-size: 0.58rem;
+    font-weight: 600;
+    color: #555;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .en-vis-cogs-margin {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    padding-top: 0.15rem;
+  }
+  .en-vis-cogs-margin svg {
+    width: 0.8rem; height: 0.8rem;
+    align-self: center;
+    color: #b5b5b5;
+  }
+  .en-vis-cogs-margin-old {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #b5b5b5;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+  }
+  .en-vis-cogs-margin-new {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #d63955;
   }
 
   /* ═══════ CASE STUDIES (re-uses cs-listing styles from ecommerce.astro pattern) ═══════ */
@@ -4861,6 +5181,27 @@ const tuesdayStops = [
   }
 
   /* ═══════ RESPONSIVE ═══════ */
+  /* Story visuals adapt to the CARD's width, not the viewport — a narrow
+     card happens both on phones and in 2-col desktop grids. */
+  .en-out-card { container-type: inline-size; }
+  @container (max-width: 560px) {
+    .en-vis-file-chip--3 { display: none; }
+    .en-vis-file-chip--1 { top: 10%; left: 5%; }
+    .en-vis-file-chip--2 { top: 27%; left: 8%; }
+    .en-vis-invmgmt-panel {
+      top: auto; bottom: 6%; right: auto; left: 5%;
+      transform: none;
+      width: 64%;
+    }
+    .en-vis-stat-row span,
+    .en-vis-panel__head { white-space: nowrap; }
+    .en-vis-po-panel,
+    .en-vis-supplier-panel,
+    .en-vis-cogs-panel { width: 84%; }
+    .en-vis-loc-panel { width: 86%; }
+    .en-vis-callout,
+    .en-vis-chartlabel { font-size: 0.56rem; }
+  }
   @media (max-width: 900px) {
     .en-why__grid,
     .en-process__grid { grid-template-columns: 1fr; gap: 2rem; }
