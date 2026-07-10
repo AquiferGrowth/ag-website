@@ -97,7 +97,7 @@ const serviceSchema = {
               <span class="dd-browser__dot dd-browser__dot--r"></span>
               <span class="dd-browser__dot dd-browser__dot--y"></span>
               <span class="dd-browser__dot dd-browser__dot--g"></span>
-              <span class="dd-browser__url">yourbrand.com/products/glow-serum</span>
+              <span class="dd-browser__url">livehealthillie.com/products/minerals-chill</span>
               <span class="dd-browser__cart">
                 <span class="dd-browser__cart-bag"></span>
                 <span class="dd-browser__cart-badge dd-el" data-el="cartbadge">1</span>
@@ -105,33 +105,32 @@ const serviceSchema = {
             </div>
             <div class="dd-pdp" data-static="true" aria-hidden="true">
               <div class="dd-pdp__media dd-el" data-el="media">
-                <span class="dd-pdp__chip">New</span>
-                <div class="dd-bottle">
-                  <span class="dd-bottle__cap"></span>
-                  <span class="dd-bottle__neck"></span>
-                  <span class="dd-bottle__body">
-                    <span class="dd-bottle__label">
-                      <i></i><i></i><i></i>
-                    </span>
-                  </span>
-                  <span class="dd-bottle__shadow"></span>
+                <span class="dd-pdp__chip">Best Seller</span>
+                <div class="dd-packet">
+                  <span class="dd-packet__crimp"></span>
+                  <span class="dd-packet__brand">Live Healthillie</span>
+                  <span class="dd-packet__title">Minerals<br />&amp; Chill</span>
+                  <span class="dd-packet__flavor">Tropical Punch</span>
+                  <span class="dd-packet__fruit"></span>
+                  <span class="dd-packet__crimp dd-packet__crimp--bottom"></span>
+                  <span class="dd-packet__shadow"></span>
                 </div>
                 <div class="dd-pdp__thumbs">
                   <span></span><span></span><span></span>
                 </div>
               </div>
               <div class="dd-pdp__info">
-                <p class="dd-pdp__brand dd-el" data-el="brand">Solstice Skin</p>
-                <p class="dd-pdp__name dd-el" data-el="name">Vitamin C Glow Serum</p>
-                <p class="dd-pdp__stars dd-el" data-el="stars"><span>★★★★★</span> 4.9 · 212 reviews</p>
-                <p class="dd-pdp__price dd-el" data-el="price">$42 <s>$56</s></p>
+                <p class="dd-pdp__brand dd-el" data-el="brand">Live Healthillie</p>
+                <p class="dd-pdp__name dd-el" data-el="name">Minerals &amp; Chill — Stick Packs</p>
+                <p class="dd-pdp__stars dd-el" data-el="stars"><span>★★★★★</span> 4.7 · 275 reviews</p>
+                <p class="dd-pdp__price dd-el" data-el="price">$44.99 <s>$49.99</s></p>
                 <div class="dd-pdp__variants dd-el" data-el="variants">
-                  <span class="is-selected">30 ml</span>
-                  <span>50 ml</span>
-                  <span>Duo</span>
+                  <span class="is-selected">Orange</span>
+                  <span>Lemon Lime</span>
+                  <span>Tropical Punch</span>
                 </div>
                 <div class="dd-pdp__atc dd-el" data-el="atc">Add to cart</div>
-                <p class="dd-pdp__meta dd-el" data-el="meta">Free shipping over $50 · 30-day returns</p>
+                <p class="dd-pdp__meta dd-el" data-el="meta">Subscribe &amp; save 10% · Free shipping over $125</p>
               </div>
               <div class="dd-pdp__toast dd-el" data-el="toast">✓ Added to cart</div>
               <div class="dd-cursor dd-el" data-el="cursor">
@@ -329,6 +328,27 @@ const serviceSchema = {
         <div class="dd-case__sheet dd-reveal">
           <p class="dd-eyebrow dd-eyebrow--ondark">Featured work · Live Healthillie</p>
           <h2 class="dd-h2 dd-h2--ondark">One product page. <span class="text-gradient">Two numbers that moved.</span></h2>
+
+          <div class="dd-case__media">
+            <figure class="dd-case__media-item dd-case__media-item--product">
+              <img
+                src="/images/design/mc-product-dark.jpg"
+                alt="Minerals & Chill stick pack — Live Healthillie's hero product"
+                width="900"
+                height="1125"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="dd-case__media-item dd-case__media-item--ui">
+              <img
+                src="/images/design/mc-buybox.webp"
+                alt="The rebuilt Minerals & Chill buy box: flavor selector, subscribe-and-save purchase options, and add to cart"
+                width="1000"
+                height="1288"
+                loading="lazy"
+              />
+            </figure>
+          </div>
 
           <div class="dd-case__beats">
             <div class="dd-case__beat">
@@ -817,60 +837,87 @@ const serviceSchema = {
     padding: 0.22rem 0.6rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
-  .dd-bottle { position: relative; width: 74px; height: 158px; margin-bottom: 14px; }
-  .dd-bottle__cap {
+  .dd-packet {
+    position: relative;
+    width: 70px;
+    height: 170px;
+    margin-bottom: 14px;
+    background: linear-gradient(175deg, #ffdce2, #f9b7c2 65%, #f6a9b6);
+    border-radius: 8px;
+    box-shadow: inset -8px 0 14px rgba(255, 255, 255, 0.45);
+  }
+  .dd-packet__crimp {
     position: absolute;
-    top: 0;
+    top: -4px;
     left: 50%;
     transform: translateX(-50%);
-    width: 22px;
-    height: 32px;
-    background: #1a1a1a;
-    border-radius: 6px 6px 3px 3px;
+    width: 62px;
+    height: 8px;
+    background: #f29fae;
+    border-radius: 3px;
   }
-  .dd-bottle__neck {
+  .dd-packet__crimp--bottom { top: auto; bottom: -4px; }
+  .dd-packet__brand {
     position: absolute;
-    top: 31px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 14px;
-    height: 10px;
-    background: #e8b88a;
-  }
-  .dd-bottle__body {
-    position: absolute;
-    bottom: 0;
+    top: 12px;
     left: 0;
-    width: 74px;
-    height: 118px;
-    background: linear-gradient(180deg, #ffd9a0, #f6a95c);
-    border-radius: 14px 14px 18px 18px;
-    box-shadow: inset -8px 0 14px rgba(255, 255, 255, 0.35);
+    right: 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.4rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #c9526a;
+    white-space: nowrap;
   }
-  .dd-bottle__label {
+  .dd-packet__title {
     position: absolute;
-    left: 9px;
-    right: 9px;
-    top: 30px;
-    height: 52px;
-    background: #fffdf8;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+    top: 32px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 0.82rem;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    color: #23252b;
   }
-  .dd-bottle__label i { display: block; height: 3px; border-radius: 2px; background: #d9d2c4; }
-  .dd-bottle__label i:nth-child(1) { width: 60%; background: #1a1a1a; }
-  .dd-bottle__label i:nth-child(2) { width: 44%; }
-  .dd-bottle__label i:nth-child(3) { width: 52%; }
-  .dd-bottle__shadow {
+  .dd-packet__flavor {
     position: absolute;
-    bottom: -12px;
+    bottom: 54px;
     left: 50%;
     transform: translateX(-50%);
-    width: 84px;
+    background: #fffdf8;
+    color: #e2607a;
+    font-size: 0.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+  .dd-packet__fruit {
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 46px;
+    height: 30px;
+    border-radius: 40% 60% 55% 45%;
+    background:
+      radial-gradient(circle at 30% 60%, #f4747f 0 45%, transparent 50%),
+      radial-gradient(circle at 70% 40%, #f7a052 0 55%, transparent 60%);
+  }
+  .dd-packet__shadow {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82px;
     height: 12px;
     background: radial-gradient(ellipse, rgba(26, 26, 26, 0.18), transparent 70%);
     border-radius: 50%;
@@ -1380,6 +1427,31 @@ const serviceSchema = {
     margin: 0 auto;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
   }
+  .dd-case__media {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  .dd-case__media-item {
+    margin: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    height: 480px;
+    border: 1px solid rgba(249, 247, 242, 0.08);
+  }
+  .dd-case__media-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+  .dd-case__media-item--ui {
+    background: #fff;
+    padding: 1.4rem 1.4rem 0;
+  }
+  .dd-case__media-item--ui img { object-position: top; }
+
   .dd-case__beats {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -1549,6 +1621,8 @@ const serviceSchema = {
     .dd-pillar__grid { grid-template-columns: 1fr; gap: 2rem; }
     .dd-pillar__grid--flip .dd-pillar__text { order: 1; }
     .dd-pillar__grid--flip .dd-pillar__visual { order: 2; }
+    .dd-case__media { grid-template-columns: 1fr; }
+    .dd-case__media-item { height: 380px; }
     .dd-case__beats { grid-template-columns: 1fr; gap: 2rem; }
     .dd-case__stats { flex-direction: row; gap: 2.5rem; }
     .dd-work__grid { grid-template-columns: 1fr; }
