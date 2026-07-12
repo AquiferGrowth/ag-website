@@ -12,7 +12,7 @@ export async function GET(context) {
     '/blog',
     '/about',
     '/contact',
-    '/design',
+    '/build',
     '/team',
     '/case-studies',
     '/industries/ecommerce',
