@@ -198,21 +198,20 @@ import Footer from '../components/Footer.astro';
     <!-- ═══════════════════════════════════════════ -->
     <!-- 03 · THE COST                               -->
     <!-- ═══════════════════════════════════════════ -->
-    <section class="geo-cost">
+    <section class="geo-section">
       <div class="container">
-        <div class="geo-cost__inner">
-          <span class="geo-eyebrow geo-eyebrow--light">The cost</span>
-          <h2 class="geo-cost__title">
-            Every &ldquo;didn't get named&rdquo; is a<br />
-            <span class="text-gradient">buyer you'll never see.</span>
-          </h2>
+        <div class="geo-sheet">
+          <div class="geo-intro">
+            <span class="geo-eyebrow">The cost</span>
+            <h2 class="geo-section__title">Every &ldquo;didn't get named&rdquo; is a <span class="text-gradient">buyer you'll never see</span>.</h2>
+          </div>
           <div class="geo-cost__stats">
             <div class="geo-cost__stat">
-              <div class="geo-cost__stat-num">60%</div>
+              <div class="geo-cost__stat-num">60<span class="geo-cost__stat-unit">%</span></div>
               <div class="geo-cost__stat-label">of Google searches now end without a click</div>
             </div>
-            <div class="geo-cost__stat">
-              <div class="geo-cost__stat-num">700M+</div>
+            <div class="geo-cost__stat geo-cost__stat--hero">
+              <div class="geo-cost__stat-num">700<span class="geo-cost__stat-unit">M+</span></div>
               <div class="geo-cost__stat-label">weekly users on ChatGPT alone</div>
             </div>
             <div class="geo-cost__stat">
@@ -1092,71 +1091,64 @@ import Footer from '../components/Footer.astro';
   }
 
   /* ══════ COST ══════ */
-  .geo-cost {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
-    padding: 5rem 0;
-    color: #1a1a1a;
-    position: relative;
-    overflow: hidden;
-  }
-  .geo-cost__inner {
-    max-width: 1080px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-  }
-  .geo-cost__title {
-    font-family: var(--font-display);
-    font-weight: 850;
-    font-size: clamp(1.9rem, 3.6vw, 3rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
-    color: #1a1a1a;
-    margin: 0 0 2.5rem;
-  }
-  .geo-cost__title .text-gradient {
-    background: linear-gradient(135deg, #1a1a1a, #3d3d3d);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-  }
   .geo-cost__stats {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
-    margin: 0 auto 2.5rem;
-    max-width: 900px;
+    margin: 0 auto 2rem;
+    max-width: 960px;
   }
   .geo-cost__stat {
-    background: rgba(255, 255, 255, 0.14);
-    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 18px;
-    padding: 1.5rem 1.25rem;
-    backdrop-filter: blur(6px);
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+  }
+  .geo-cost__stat--hero {
+    background: linear-gradient(160deg, var(--accent-primary), var(--accent-orange));
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.18);
+  }
+  .geo-cost__stat--hero .geo-cost__stat-num,
+  .geo-cost__stat--hero .geo-cost__stat-label {
+    color: #1a1a1a;
   }
   .geo-cost__stat-num {
     font-family: var(--font-display);
     font-weight: 850;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.4rem, 4.8vw, 3.6rem);
     line-height: 1;
-    letter-spacing: -0.03em;
-    color: #1a1a1a;
-    margin-bottom: 0.55rem;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: baseline;
   }
+  .geo-cost__stat-unit {
+    font-size: 0.7em;
+    margin-left: 0.05em;
+    color: var(--accent-primary);
+  }
+  .geo-cost__stat--hero .geo-cost__stat-unit { color: #1a1a1a; }
   .geo-cost__stat-label {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     line-height: 1.4;
-    color: rgba(26, 26, 26, 0.82);
+    color: var(--text-secondary);
+    max-width: 220px;
   }
   .geo-cost__note {
     max-width: 700px;
     margin: 0 auto;
-    font-size: 1rem;
+    text-align: center;
+    font-size: 0.95rem;
     line-height: 1.55;
-    color: rgba(26, 26, 26, 0.82);
+    color: var(--text-secondary);
   }
 
   /* ══════ COMPARE ══════ */
