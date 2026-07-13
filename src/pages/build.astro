@@ -158,8 +158,8 @@ import Footer from '../components/Footer.astro';
       <div class="container">
         <div class="dd-sheet">
           <div class="dd-intro">
-            <h2 class="dd-h2">You're already paying <span class="text-gradient">for the fix.</span></h2>
-            <p class="dd-intro__sub">The budget isn't the problem. The stack you've bought is doing a fraction of what it should.</p>
+            <h2 class="dd-h2">You're <span class="text-gradient">leaking money.</span></h2>
+            <p class="dd-intro__sub">$10,300 a month, already leaving your account. Barely any of it working.</p>
           </div>
 
           <div class="dd-pay-grid">
@@ -172,13 +172,12 @@ import Footer from '../components/Footer.astro';
               <p class="dd-pay-card__body"><b>Recharge, Rebuy, Klaviyo.</b> Installed. Barely wired.</p>
             </div>
             <div class="dd-pay-card">
-              <div class="dd-pay-card__value dd-pay-card__value--text">Every point of conversion</div>
-              <p class="dd-pay-card__body">On traffic you've already paid for. That's the one that compounds.</p>
+              <div class="dd-pay-card__value">~$5,000<em>/mo</em></div>
+              <p class="dd-pay-card__body"><b>Missed conversion.</b> Paid clicks landing on a store that doesn't close.</p>
             </div>
           </div>
 
           <p class="dd-pay-note">Typical mid-market DTC stack. Yours may be worse.</p>
-          <p class="dd-pay-close">None of this needs more budget. <span class="text-gradient">It needs someone to own it.</span></p>
         </div>
       </div>
     </section>
@@ -196,33 +195,33 @@ import Footer from '../components/Footer.astro';
           <div class="dd-services">
             <div class="dd-service">
               <div class="dd-service__title">Storefronts, Build or Improve</div>
-              <p class="dd-service__body">Shopify, Webflow, or fully custom. Design and build across the whole surface &mdash; first wireframe to production deploy. Fast pages, clean handoff, and a codebase your next developer won't curse.</p>
+              <p class="dd-service__body">Shopify and Shopify Plus, themed or custom. A new store from a blank file, or a rescue on the one you've got. Plus migrations included.</p>
               <div class="dd-service__tags">
-                <span>Shopify</span><span>Shopify Plus</span><span>Webflow</span><span>Custom code</span>
+                <span>Shopify</span><span>Shopify Plus</span><span>Custom code</span><span>Migrations</span>
               </div>
             </div>
 
             <div class="dd-service">
-              <div class="dd-service__title">Product pages &amp; UX</div>
-              <p class="dd-service__body">PDP redesigns, design systems, UX and accessibility audits. We find where buyers hesitate, then remove the reason.</p>
+              <div class="dd-service__title">Product Pages &amp; UX Design</div>
+              <p class="dd-service__body">PDPs, collection pages, and the buy box. We rebuild the moments where buyers hesitate, then check the number 60 days after launch.</p>
               <div class="dd-service__tags">
-                <span>PDP redesign</span><span>Design systems</span><span>UX audit</span><span>Accessibility</span><span>CRO</span>
+                <span>PDP</span><span>Collection pages</span><span>Subscribe &amp; save</span><span>Mobile checkout</span>
               </div>
             </div>
 
             <div class="dd-service">
-              <div class="dd-service__title">The layer underneath</div>
-              <p class="dd-service__body">Catalog taxonomy, product data, merchandising structure, search and filtering. The unglamorous work that decides whether the pretty page actually sells. This is the part other agencies don't do.</p>
+              <div class="dd-service__title">Catalog, Data &amp; Merchandising</div>
+              <p class="dd-service__body">Filtering only works if your product data does. Same colour spelled three ways, half the catalog missing tags. We fix what's underneath.</p>
               <div class="dd-service__tags">
-                <span>Taxonomy</span><span>Product data</span><span>Merchandising</span><span>Search &amp; filtering</span>
+                <span>Product data</span><span>Taxonomy</span><span>Filtering</span><span>On-site search</span><span>Merchandising</span>
               </div>
             </div>
 
             <div class="dd-service">
-              <div class="dd-service__title">Motion &amp; interactive</div>
-              <p class="dd-service__body">Hero animations, product demos, interactive embeds. Your product explained in seconds, in the browser, not in a 40-slide deck.</p>
+              <div class="dd-service__title">Motion &amp; Interactive</div>
+              <p class="dd-service__body">Hero animation, PDP video, interactive demos. Built in code, not After Effects, so they load fast instead of tanking your page speed.</p>
               <div class="dd-service__tags">
-                <span>Hero animation</span><span>Interactive embeds</span><span>Launch assets</span>
+                <span>Hero animation</span><span>PDP video</span><span>Interactive demos</span><span>Launch pages</span>
               </div>
             </div>
           </div>
@@ -255,7 +254,7 @@ import Footer from '../components/Footer.astro';
                       </div>
                       <div class="dd-feature__block">
                         <div class="dd-feature__block-label">The build</div>
-                        <p class="dd-feature__block-body">Figma prototype, then a bespoke PDP template on Shopify Plus. Custom reviews with star and attribute filtering. Flavor variant swatches, quantity ticker, quick-add that opens the cart tray. Variant images on the CDN, Route protection suppressed, clinical-study link. Designed Dec 2025, live Mar 23, 2026.</p>
+                        <p class="dd-feature__block-body">Figma prototype, then a bespoke PDP template on Shopify Plus. Custom reviews with star and attribute filtering. Flavor variant swatches, quantity ticker, quick-add that opens the cart tray. Variant images on the CDN, Route protection suppressed, clinical-study link.</p>
                       </div>
                       <div class="dd-feature__block">
                         <div class="dd-feature__block-label">The result</div>
@@ -272,9 +271,27 @@ import Footer from '../components/Footer.astro';
                         <p class="dd-feature__metric-note">First 60 days live, against the 60 days prior.</p>
                       </div>
                     </div>
-                    <figure class="dd-feature__figure">
-                      <img src="/images/design/mc-buybox.webp" alt="Minerals & Chill buy-box" />
-                    </figure>
+                    <div class="dd-pdp-carousel" id="ddPdpCarousel" role="region" aria-roledescription="carousel" aria-label="Minerals & Chill PDP screenshots" tabindex="0">
+                      <div class="dd-pdp-viewport">
+                        <div class="dd-pdp-track">
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-1.webp" alt="Minerals & Chill PDP · top" loading="lazy" /></div>
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-2.webp" alt="Minerals & Chill PDP · buy box" loading="lazy" /></div>
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-3.webp" alt="Minerals & Chill PDP · details" loading="lazy" /></div>
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-4.webp" alt="Minerals & Chill PDP · description" loading="lazy" /></div>
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-5.webp" alt="Minerals & Chill PDP · reviews" loading="lazy" /></div>
+                          <div class="dd-pdp-slide"><img src="/images/design/mc-pdp-6.webp" alt="Minerals & Chill PDP · footer" loading="lazy" /></div>
+                        </div>
+                      </div>
+                      <div class="dd-pdp-controls">
+                        <button class="dd-pdp-nav dd-pdp-nav--prev" type="button" aria-label="Previous PDP view" disabled>
+                          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l-6 6 6 6"/></svg>
+                        </button>
+                        <div class="dd-pdp-counter" aria-live="polite"><b>1</b><span>/ 6</span></div>
+                        <button class="dd-pdp-nav dd-pdp-nav--next" type="button" aria-label="Next PDP view">
+                          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4l6 6-6 6"/></svg>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </article>
 
@@ -638,6 +655,14 @@ import Footer from '../components/Footer.astro';
         nextSel: '.dd-owns-nav--next',
         counterSel: '.dd-owns-counter b',
       },
+      {
+        rootId: 'ddPdpCarousel',
+        trackSel: '.dd-pdp-track',
+        slideSel: '.dd-pdp-slide',
+        prevSel: '.dd-pdp-nav--prev',
+        nextSel: '.dd-pdp-nav--next',
+        counterSel: '.dd-pdp-counter b',
+      },
     ];
 
     carousels.forEach((cfg) => {
@@ -668,8 +693,16 @@ import Footer from '../components/Footer.astro';
         if (index < total - 1) { index++; render(); }
       });
       root.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && index > 0) { index--; render(); e.preventDefault(); }
-        if (e.key === 'ArrowRight' && index < total - 1) { index++; render(); e.preventDefault(); }
+        if (e.key === 'ArrowLeft') {
+          if (index > 0) { index--; render(); }
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        if (e.key === 'ArrowRight') {
+          if (index < total - 1) { index++; render(); }
+          e.preventDefault();
+          e.stopPropagation();
+        }
       });
 
       render();
@@ -1665,6 +1698,87 @@ import Footer from '../components/Footer.astro';
     border: 1px solid rgba(255, 255, 255, 0.06);
   }
   .dd-feature__figure img { width: 100%; height: auto; display: block; }
+
+  /* Mini PDP carousel — nested inside slide 1's right column */
+  .dd-pdp-carousel {
+    margin: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .dd-pdp-carousel:focus-visible {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 4px;
+  }
+  .dd-pdp-viewport {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 900 / 1034;
+    background: #fff;
+  }
+  .dd-pdp-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+  }
+  .dd-pdp-slide {
+    flex: 0 0 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .dd-pdp-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top center;
+    display: block;
+  }
+  .dd-pdp-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.55rem 0.8rem;
+    background: #0f0f0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .dd-pdp-nav {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid rgba(245, 240, 232, 0.18);
+    background: rgba(245, 240, 232, 0.04);
+    color: #f5f0e8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  }
+  .dd-pdp-nav svg { width: 16px; height: 16px; }
+  .dd-pdp-nav:hover:not(:disabled) {
+    background: rgba(255, 122, 122, 0.16);
+    border-color: rgba(255, 122, 122, 0.5);
+  }
+  .dd-pdp-nav:disabled { opacity: 0.32; cursor: not-allowed; }
+  .dd-pdp-counter {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: rgba(245, 240, 232, 0.72);
+    letter-spacing: 0.05em;
+    min-width: 46px;
+    text-align: center;
+  }
+  .dd-pdp-counter b { color: #fff; font-weight: 700; }
+  .dd-pdp-counter span { margin-left: 0.2rem; }
   .dd-feature__quote {
     margin: 3rem auto 0;
     max-width: 780px;
