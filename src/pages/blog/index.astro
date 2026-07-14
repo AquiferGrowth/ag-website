@@ -103,13 +103,14 @@ const allCategories = ['All', ...new Set(allPosts.map(p => p.data.category).filt
 			}
 			.post-card img {
 				width: 100%;
-				height: 200px;
+				height: auto;
+				aspect-ratio: 1200 / 630;
 				object-fit: cover;
 				display: block;
 			}
 			.post-card-img-placeholder {
 				width: 100%;
-				height: 200px;
+				aspect-ratio: 1200 / 630;
 				background: var(--bg-dark);
 				display: flex;
 				align-items: center;
