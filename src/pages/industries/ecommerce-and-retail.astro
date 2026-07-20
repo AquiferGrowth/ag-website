@@ -255,19 +255,19 @@ const tuesdayStops = [
         <div class="en-outcomes__intro">
           <h2>You Felt The Cost. <span class="text-gradient">Here's The Fix.</span></h2>
           <p class="en-outcomes__body">
-            We don't hand you software. We run your catalog, inventory, and merchandising every day and answer for the result.
+            We don't hand you software. We run your supply chain and merchandising every day and answer for the result.
           </p>
         </div>
 
         <!-- ───── Cluster filter pills ───── -->
         <div class="en-outcomes__tabs">
-          <button class="en-outcomes__tab is-active" data-cluster="catalog" type="button">Catalog</button>
-          <button class="en-outcomes__tab" data-cluster="inventory" type="button">Inventory</button>
-          <button class="en-outcomes__tab" data-cluster="supplier" type="button">COGS &amp; Suppliers</button>
+          <button class="en-outcomes__tab is-active" data-cluster="supply-chain" type="button">Supply Chain Operations</button>
+          <button class="en-outcomes__tab" data-cluster="merchandising" type="button">Merchandising</button>
+          <button class="en-outcomes__tab" data-cluster="design-dev" type="button">Design &amp; Dev</button>
         </div>
 
-        <!-- ───── Cluster 1: Catalog & Merchandising ───── -->
-        <div class="en-outcomes__cluster is-active" data-cluster="catalog">
+        <!-- ───── Cluster: Merchandising ───── -->
+        <div class="en-outcomes__cluster" data-cluster="merchandising">
           <div class="en-outcomes__grid">
 
             <!-- 1. Product Catalog Management (wide) -->
@@ -365,8 +365,8 @@ const tuesdayStops = [
           </div>
         </div>
 
-        <!-- ───── Cluster 2: Inventory & Stock ───── -->
-        <div class="en-outcomes__cluster" data-cluster="inventory">
+        <!-- ───── Cluster: Supply Chain Operations (inventory + supplier merged) ───── -->
+        <div class="en-outcomes__cluster is-active" data-cluster="supply-chain">
           <div class="en-outcomes__grid">
 
             <!-- 6. Inventory Management (half — 2x2) -->
@@ -483,12 +483,6 @@ const tuesdayStops = [
                 <p class="en-out-card__body">Sync and update inventory in bulk across Shopify, Amazon, and more from one central hub.</p>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- ───── Cluster 3: Supplier & Finance ───── -->
-        <div class="en-outcomes__cluster" data-cluster="supplier">
-          <div class="en-outcomes__grid">
 
             <!-- 10. Centralized Order Tracking (half — 2x2) -->
             <div class="en-out-card en-out-card--wide">
@@ -576,6 +570,107 @@ const tuesdayStops = [
           </div>
         </div>
 
+        <!-- ───── Cluster: Design & Dev ───── -->
+        <div class="en-outcomes__cluster" data-cluster="design-dev">
+          <div class="en-outcomes__grid">
+
+            <!-- Storefront Design & Build -->
+            <div class="en-out-card en-out-card--wide">
+              <div class="en-out-card__visual en-vis-dd">
+                <div class="en-vis-dd-window">
+                  <div class="en-vis-dd-chrome"><span></span><span></span><span></span></div>
+                  <div class="en-vis-dd-body">
+                    <div class="en-vis-dd-hero"></div>
+                    <div class="en-vis-dd-tiles"><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+                <span class="en-vis-chip en-vis-chip--pink" style="top:12%; right:8%;">Homepage</span>
+                <span class="en-vis-chip en-vis-chip--pink" style="top:36%; left:6%;">PLP</span>
+              </div>
+              <div class="en-out-card__text">
+                <h3 class="en-out-card__title">Storefront Design &amp; Build</h3>
+                <p class="en-out-card__body">Full storefronts, custom sections, and brand-first design. Shopify Plus themes built to sell, not just to look at.</p>
+              </div>
+            </div>
+
+            <!-- PDP & Buy Box -->
+            <div class="en-out-card en-out-card--wide">
+              <div class="en-out-card__visual en-vis-dd">
+                <div class="en-vis-dd-pdp">
+                  <div class="en-vis-dd-pdp-img"></div>
+                  <div class="en-vis-dd-pdp-info">
+                    <div class="en-vis-dd-line en-vis-dd-line--title"></div>
+                    <div class="en-vis-dd-line en-vis-dd-line--half"></div>
+                    <div class="en-vis-dd-swatches"><span></span><span></span><span></span></div>
+                    <div class="en-vis-dd-cta"></div>
+                  </div>
+                </div>
+                <span class="en-vis-chip en-vis-chip--pink" style="top:12%; right:8%;">Variants</span>
+                <span class="en-vis-chip en-vis-chip--pink" style="bottom:16%; left:8%;">Buy box</span>
+              </div>
+              <div class="en-out-card__text">
+                <h3 class="en-out-card__title">PDP &amp; Buy Box</h3>
+                <p class="en-out-card__body">Product pages that convert. Variants that don't confuse. A buy box designed to answer the moment of hesitation.</p>
+              </div>
+            </div>
+
+            <!-- Checkout Experience -->
+            <div class="en-out-card en-out-card--wide">
+              <div class="en-out-card__visual en-vis-dd">
+                <div class="en-vis-dd-stepper">
+                  <div class="en-vis-dd-step is-done"><span class="en-vis-dd-step-dot">1</span><span class="en-vis-dd-step-lbl">Cart</span></div>
+                  <div class="en-vis-dd-step-line is-done"></div>
+                  <div class="en-vis-dd-step is-done"><span class="en-vis-dd-step-dot">2</span><span class="en-vis-dd-step-lbl">Info</span></div>
+                  <div class="en-vis-dd-step-line"></div>
+                  <div class="en-vis-dd-step"><span class="en-vis-dd-step-dot">3</span><span class="en-vis-dd-step-lbl">Pay</span></div>
+                </div>
+                <span class="en-vis-chip en-vis-chip--pink" style="top:12%; right:8%;">Trust signals</span>
+                <span class="en-vis-chip en-vis-chip--pink" style="bottom:14%; left:8%;">Upsells</span>
+              </div>
+              <div class="en-out-card__text">
+                <h3 class="en-out-card__title">Checkout Experience</h3>
+                <p class="en-out-card__body">Multi-step checkout with trust signals, upsells, and the friction removed. Where the funnel used to leak, it now closes.</p>
+              </div>
+            </div>
+
+            <!-- B2B & Subscription Portals -->
+            <div class="en-out-card en-out-card--wide">
+              <div class="en-out-card__visual en-vis-dd">
+                <div class="en-vis-dd-portal">
+                  <div class="en-vis-dd-portal-tabs"><span class="is-active">Overview</span><span>Subscription</span><span>Orders</span></div>
+                  <div class="en-vis-dd-portal-body">
+                    <div class="en-vis-dd-line en-vis-dd-line--title"></div>
+                    <div class="en-vis-dd-line en-vis-dd-line--wide"></div>
+                    <div class="en-vis-dd-line en-vis-dd-line--half"></div>
+                  </div>
+                </div>
+                <span class="en-vis-chip en-vis-chip--pink" style="top:12%; right:8%;">Wholesale</span>
+                <span class="en-vis-chip en-vis-chip--pink" style="bottom:14%; left:8%;">Subscribe</span>
+              </div>
+              <div class="en-out-card__text">
+                <h3 class="en-out-card__title">B2B &amp; Subscription Portals</h3>
+                <p class="en-out-card__body">Custom subscription portals, wholesale storefronts, and loyalty engines. Built where the app store ends.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 3.5 · PARTNER BANNER (Oxford Comma)        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="en-partner-banner">
+      <div class="container">
+        <a href="https://www.oxfordcomma.digital/" target="_blank" rel="noopener" class="en-partner-banner__inner">
+          <span class="en-partner-banner__chip">Partner</span>
+          <span class="en-partner-banner__text">AI search visibility, delivered with <b>Oxford Comma</b>.</span>
+          <span class="en-partner-banner__arrow" aria-hidden="true">
+            <svg width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 10h10M11 5l5 5-5 5"/></svg>
+          </span>
+        </a>
       </div>
     </section>
 
@@ -1035,28 +1130,32 @@ const tuesdayStops = [
           <div class="section-header">
             <h2 style="font-weight: 850; letter-spacing: -0.02em;">Tiered <span class="text-gradient">Pricing</span></h2>
           </div>
-          <p class="ec-services__subhead">Three tiers, priced by the complexity of your operation, channels, SKU count, locations, and how much of the function you hand us. Where you land depends on your store. Reach out and we'll place you in the right one.</p>
+          <p class="ec-services__subhead">Three tiers, priced by the complexity of your operation. Where you land depends on your store. Reach out and we'll place you in the right one.</p>
         </div>
 
         <div class="ec-pricing__grid">
           <div class="ec-pricing__card">
             <div class="ec-pricing__tier">Starter</div>
             <div class="ec-pricing__price"><span class="ec-pricing__amount">$5,000</span><span class="ec-pricing__period">/mo</span></div>
-            <p class="ec-pricing__body">Single channel, straightforward catalog, one location. We centralize your data, run the core cadences and own the function end to end.</p>
+            <p class="ec-pricing__body">The full function, owned end to end. Forecasting, POs, reconciliation, merchandising, run on daily, weekly, and monthly cadences.</p>
+            <div class="ec-pricing__meta">Under 250 SKUs &middot; Single channel, one location</div>
           </div>
           <div class="ec-pricing__card ec-pricing__card--featured">
             <div class="ec-pricing__tier">Growth</div>
             <div class="ec-pricing__price"><span class="ec-pricing__amount">$7,000</span><span class="ec-pricing__period">/mo</span></div>
-            <p class="ec-pricing__body">Multichannel or 1-5 locations, medium SKU count, decent SKU velocity. Full managed operations plus forecasting and tighter reconciliation across your 3PL and suppliers.</p>
+            <p class="ec-pricing__body">The same function, across more surface. More SKUs moving, more exceptions to catch.</p>
+            <div class="ec-pricing__meta">250&ndash;1,000 SKUs &middot; Multichannel or up to 5 locations</div>
           </div>
           <div class="ec-pricing__card">
             <div class="ec-pricing__tier">Scale</div>
             <div class="ec-pricing__price"><span class="ec-pricing__amount">$10,000</span><span class="ec-pricing__period">/mo</span></div>
-            <p class="ec-pricing__body">Multiple channels, 5+ locations, high SKU count, high SKU velocity. The full function run on tight daily, weekly, and monthly cadences.</p>
+            <p class="ec-pricing__body">The same function at full volume, every channel and location reconciled daily.</p>
+            <div class="ec-pricing__meta">1,000+ SKUs &middot; 5+ locations or marketplace-heavy</div>
           </div>
         </div>
 
         <div class="ec-pricing__footer">
+          <p class="ec-pricing__note">Storefront builds and AI search visibility are scoped separately.</p>
           <a href="/contact" class="ec-btn ec-btn--hero">
             <span>Let's Chat</span>
             <span class="ec-animated-dots">
@@ -2552,6 +2651,277 @@ const tuesdayStops = [
     /* Fade the bottom edge of the visual into the card body */
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
             mask-image: linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%);
+  }
+  /* Design & Dev visual mockups (neutral / illustrated) */
+  .en-vis-dd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.15rem 1.35rem;
+  }
+  .en-vis-dd .en-vis-chip {
+    z-index: 3;
+    position: absolute;
+    padding: 0.22rem 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 999px;
+  }
+
+  /* Card 1 — Storefront browser mock */
+  .en-vis-dd-window {
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .en-vis-dd-chrome {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 10px;
+    background: #f6f6f6;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  }
+  .en-vis-dd-chrome span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+  .en-vis-dd-chrome span:first-child { background: #ff6259; }
+  .en-vis-dd-chrome span:nth-child(2) { background: #ffbd2e; }
+  .en-vis-dd-chrome span:nth-child(3) { background: #28c840; }
+  .en-vis-dd-body {
+    padding: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .en-vis-dd-hero {
+    height: 46px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.22), rgba(255, 126, 95, 0.18));
+  }
+  .en-vis-dd-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+  }
+  .en-vis-dd-tiles span {
+    height: 32px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+
+  /* Card 2 — PDP mock */
+  .en-vis-dd-pdp {
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 0.7rem;
+    padding: 0.7rem;
+    align-items: center;
+  }
+  .en-vis-dd-pdp-img {
+    height: 96px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.18), rgba(255, 126, 95, 0.14));
+  }
+  .en-vis-dd-pdp-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .en-vis-dd-line {
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.08);
+  }
+  .en-vis-dd-line--title {
+    height: 8px;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.35);
+  }
+  .en-vis-dd-line--half { width: 55%; }
+  .en-vis-dd-line--wide { width: 90%; }
+  .en-vis-dd-swatches {
+    display: flex;
+    gap: 4px;
+    margin-top: 2px;
+  }
+  .en-vis-dd-swatches span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .en-vis-dd-swatches span:first-child { background: var(--accent-primary); }
+  .en-vis-dd-swatches span:nth-child(2) { background: #f59e0b; }
+  .en-vis-dd-cta {
+    margin-top: 2px;
+    height: 18px;
+    border-radius: 999px;
+    background: #1a1a1a;
+    width: 65%;
+  }
+
+  /* Card 3 — Checkout stepper */
+  .en-vis-dd-stepper {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.9rem 1rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+  .en-vis-dd-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .en-vis-dd-step-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.08);
+    color: rgba(0, 0, 0, 0.4);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .en-vis-dd-step.is-done .en-vis-dd-step-dot {
+    background: var(--accent-primary);
+    color: #fff;
+  }
+  .en-vis-dd-step-lbl {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .en-vis-dd-step.is-done .en-vis-dd-step-lbl { color: var(--text-primary); }
+  .en-vis-dd-step-line {
+    flex: 1;
+    height: 2px;
+    background: rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.1rem;
+    min-width: 20px;
+  }
+  .en-vis-dd-step-line.is-done { background: var(--accent-primary); }
+
+  /* Card 4 — Portal mock */
+  .en-vis-dd-portal {
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+  }
+  .en-vis-dd-portal-tabs {
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: 0 0.5rem;
+  }
+  .en-vis-dd-portal-tabs span {
+    padding: 0.5rem 0.6rem 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .en-vis-dd-portal-tabs span.is-active {
+    color: var(--text-primary);
+    border-bottom-color: var(--accent-primary);
+  }
+  .en-vis-dd-portal-body {
+    padding: 0.85rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  /* Partner banner (Oxford Comma) */
+  .en-partner-banner { padding: 1rem 0 0; }
+  .en-partner-banner__inner {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0.9rem 1.25rem 0.9rem 0.9rem;
+    background: linear-gradient(90deg, rgba(255, 77, 109, 0.05), rgba(255, 126, 95, 0.03));
+    border: 1px solid rgba(255, 77, 109, 0.22);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-primary);
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .en-partner-banner__inner:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 77, 109, 0.5);
+    background: linear-gradient(90deg, rgba(255, 77, 109, 0.08), rgba(255, 126, 95, 0.05));
+  }
+  .en-partner-banner__chip {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent-primary);
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+  .en-partner-banner__text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--text-primary);
+  }
+  .en-partner-banner__text b { color: var(--accent-primary); font-weight: 700; }
+  .en-partner-banner__arrow {
+    margin-left: auto;
+    color: var(--accent-primary);
+    display: inline-flex;
+    transition: transform 0.2s ease;
+  }
+  .en-partner-banner__inner:hover .en-partner-banner__arrow {
+    transform: translateX(3px);
+  }
+  @media (max-width: 560px) {
+    .en-partner-banner__inner {
+      flex-wrap: wrap;
+      border-radius: 20px;
+      padding: 1rem;
+    }
+    .en-partner-banner__text { font-size: 0.9rem; }
   }
   .en-out-card__text {
     padding: 1.5rem 1.5rem 1.75rem;
@@ -5097,6 +5467,17 @@ const tuesdayStops = [
     line-height: 1.6;
     color: #555;
     margin: 0;
+  }
+  .ec-pricing__meta {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin-top: auto;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.07);
   }
   .ec-pricing__footer {
     text-align: center;

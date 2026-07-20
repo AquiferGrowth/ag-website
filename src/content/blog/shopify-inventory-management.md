@@ -274,6 +274,6 @@ Full Shopify inventory automation is not a single tool or a one-time project. It
 
 The brands that build this infrastructure early, when the cost is low and the blast radius of failure is small, arrive at scale with operational foundations that support their growth rather than fighting against it.
 
-At AquiferGrowth, we build and manage the complete Shopify inventory automation stack for **[ecommerce brands](/industries/ecommerce)**. We design the system, connect the tools, implement the workflows, and run the infrastructure on an ongoing basis — so your team never falls back to manual, and your inventory keeps working correctly as the business grows.
+At AquiferGrowth, we build and manage the complete Shopify inventory automation stack for **[ecommerce brands](/industries/ecommerce-and-retail)**. We design the system, connect the tools, implement the workflows, and run the infrastructure on an ongoing basis — so your team never falls back to manual, and your inventory keeps working correctly as the business grows.
 
 **[Book a call](/contact)** to discuss your inventory operations.

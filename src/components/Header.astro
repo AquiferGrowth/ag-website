@@ -12,21 +12,27 @@ import { SITE_TITLE } from '../consts';
 		<!-- Desktop links -->
 		<div class="links">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/industries/ecommerce">E-commerce</HeaderLink>
-			{/* Industries dropdown hidden for now — re-enable when content is ready
+			<div class="nav-dropdown">
+				<a href="/industries/ecommerce-and-retail" class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
+					Ecommerce &amp; Retail
+					<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				</a>
+				<div class="nav-dropdown__menu" role="menu">
+					<a href="/supply-chain-operations" class="nav-dropdown__item" role="menuitem"><span>Supply Chain Operations</span></a>
+					<a href="/merchandising" class="nav-dropdown__item" role="menuitem"><span>Merchandising</span></a>
+					<a href="/design-and-dev" class="nav-dropdown__item" role="menuitem"><span>Design &amp; Dev</span></a>
+				</div>
+			</div>
 			<div class="nav-dropdown">
 				<button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">
-					Industries
+					Professional Services
 					<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="nav-dropdown__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 				</button>
 				<div class="nav-dropdown__menu" role="menu">
-					<a href="/industries/ecommerce" class="nav-dropdown__item" role="menuitem">
-						<span class="nav-dropdown__item-icon">🛒</span>
-						<span>E-commerce</span>
-					</a>
+					<a href="/finance-and-accounting" class="nav-dropdown__item" role="menuitem"><span>Finance &amp; Accounting</span></a>
+					<a href="/healthcare" class="nav-dropdown__item" role="menuitem"><span>Healthcare</span></a>
 				</div>
 			</div>
-			*/}
 			<HeaderLink href="/case-studies">Case Studies</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/contact">Contact</HeaderLink>
@@ -44,18 +50,27 @@ import { SITE_TITLE } from '../consts';
 <!-- Mobile drawer -->
 <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
 	<a href="/" class="mobile-menu__link">Home</a>
-	<a href="/industries/ecommerce" class="mobile-menu__link">E-commerce</a>
-	{/* Industries mobile submenu hidden for now — re-enable when content is ready
 	<div class="mobile-menu__group">
-		<button class="mobile-menu__link mobile-menu__group-trigger" id="mobileIndustriesToggle" aria-expanded="false">
-			Industries
+		<button class="mobile-menu__link mobile-menu__group-trigger" aria-expanded="false">
+			Ecommerce &amp; Retail
 			<svg width="12" height="12" viewBox="0 0 10 10" fill="none" class="mobile-menu__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
 		</button>
-		<div class="mobile-menu__submenu" id="mobileIndustriesMenu">
-			<a href="/industries/ecommerce" class="mobile-menu__sublink">E-commerce</a>
+		<div class="mobile-menu__submenu">
+			<a href="/supply-chain-operations" class="mobile-menu__sublink">Supply Chain Operations</a>
+			<a href="/merchandising" class="mobile-menu__sublink">Merchandising</a>
+			<a href="/design-and-dev" class="mobile-menu__sublink">Design &amp; Dev</a>
 		</div>
 	</div>
-	*/}
+	<div class="mobile-menu__group">
+		<button class="mobile-menu__link mobile-menu__group-trigger" aria-expanded="false">
+			Professional Services
+			<svg width="12" height="12" viewBox="0 0 10 10" fill="none" class="mobile-menu__caret"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+		</button>
+		<div class="mobile-menu__submenu">
+			<a href="/finance-and-accounting" class="mobile-menu__sublink">Finance &amp; Accounting</a>
+			<a href="/healthcare" class="mobile-menu__sublink">Healthcare</a>
+		</div>
+	</div>
 	<a href="/case-studies" class="mobile-menu__link">Case Studies</a>
 	<a href="/blog" class="mobile-menu__link">Blog</a>
 	<a href="/contact" class="mobile-menu__link">Contact</a>
@@ -131,6 +146,7 @@ import { SITE_TITLE } from '../consts';
 		background: none;
 		border: none;
 		cursor: pointer;
+		text-decoration: none;
 		font-family: inherit;
 		font-weight: inherit;
 		font-size: 0.85rem;
@@ -387,11 +403,12 @@ import { SITE_TITLE } from '../consts';
 		link.addEventListener('click', closeMenu);
 	});
 
-	// Mobile industries toggle
-	const industriesToggle = document.getElementById('mobileIndustriesToggle');
-	const industriesMenu = document.getElementById('mobileIndustriesMenu');
-	industriesToggle?.addEventListener('click', () => {
-		const isOpen = industriesMenu?.classList.toggle('is-open');
-		industriesToggle.setAttribute('aria-expanded', String(isOpen));
+	// Mobile submenu toggles (generic — works for every .mobile-menu__group)
+	document.querySelectorAll('.mobile-menu__group-trigger').forEach(trigger => {
+		trigger.addEventListener('click', () => {
+			const menu = trigger.nextElementSibling;
+			const isOpen = menu?.classList.toggle('is-open');
+			trigger.setAttribute('aria-expanded', String(isOpen));
+		});
 	});
 </script>

@@ -1,0 +1,1578 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Merchandising Operations for Ecommerce Brands | AquiferGrowth"
+  description="Catalog, collections, metafields, SEO, and international pricing, run end to end. The data behind your storefront, managed like a product."
+>
+  <Header />
+  <main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="mer-hero">
+      <div class="mer-hero__bg-blur"></div>
+      <div class="mer-hero__bg-blur mer-hero__bg-blur--right"></div>
+      <div class="mer-hero__inner container">
+        <div class="mer-hero__copy">
+          <h1 class="mer-hero__title">
+            You paid for the inventory.<br />
+            <span class="text-gradient">The storefront decides if it sells.</span>
+          </h1>
+          <p class="mer-hero__subtitle">
+            Buried products, stale collections, messy product data. That's stock you own, sitting still. We run your catalog and merchandising as a managed service, so what's on the shelf gets seen, and what gets seen gets bought.
+          </p>
+          <div class="mer-hero__cta-row">
+            <a href="/contact" class="mer-btn">
+              <span>Let's Chat</span>
+              <span class="mer-animated-dots"><span></span><span></span><span></span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Catalog ops dashboard mock -->
+        <div class="mer-hero__mock" aria-hidden="true">
+          <div class="mer-ops-mock">
+            <div class="mer-ops-mock__head">
+              <span class="mer-ops-mock__live"><span class="mer-ops-mock__live-dot"></span> Catalog &middot; Live</span>
+              <span class="mer-ops-mock__meta">Synced 4m ago</span>
+            </div>
+            <div class="mer-ops-mock__stats">
+              <div class="mer-ops-mock__stat">
+                <span class="mer-ops-mock__stat-label">Products</span>
+                <span class="mer-ops-mock__stat-val">2,847</span>
+              </div>
+              <div class="mer-ops-mock__stat">
+                <span class="mer-ops-mock__stat-label">Collections</span>
+                <span class="mer-ops-mock__stat-val">34</span>
+              </div>
+              <div class="mer-ops-mock__stat">
+                <span class="mer-ops-mock__stat-label">SEO coverage</span>
+                <span class="mer-ops-mock__stat-val">92%</span>
+              </div>
+              <div class="mer-ops-mock__stat">
+                <span class="mer-ops-mock__stat-label">Locales</span>
+                <span class="mer-ops-mock__stat-val">6</span>
+              </div>
+            </div>
+            <div class="mer-ops-mock__alerts">
+              <div class="mer-ops-mock__alert mer-ops-mock__alert--ok">
+                <span class="mer-ops-mock__alert-mark">&#10003;</span>
+                42 metafields standardized this week
+              </div>
+              <div class="mer-ops-mock__alert mer-ops-mock__alert--warn">
+                <span class="mer-ops-mock__alert-mark">&#9888;</span>
+                8 products missing photography
+              </div>
+              <div class="mer-ops-mock__alert">
+                <span class="mer-ops-mock__alert-mark">&#9679;</span>
+                Q4 collections refreshed
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 02 · THE REALITY                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="mer-section">
+      <div class="container">
+        <div class="mer-sheet">
+          <div class="mer-intro">
+            <h2 class="mer-section__title">Nobody knows what your storefront <span class="text-gradient">actually shows</span>.</h2>
+            <p class="mer-section__subtitle">The catalog drifted. Collections went stale. Metafields sprawled. Pricing crept. You built the store; now the data behind it runs itself, badly.</p>
+          </div>
+
+          <div class="mer-args">
+            <!-- 01 -->
+            <article class="mer-arg">
+              <div class="mer-arg__viz">
+                <div class="mer-viz-name">
+                  <div class="mer-viz-name__row">
+                    <span class="mer-viz-name__badge">Shopify</span>
+                    <span class="mer-viz-name__title">Wireless Charger</span>
+                    <span class="mer-viz-name__price">$45.00</span>
+                  </div>
+                  <div class="mer-viz-name__row mer-viz-name__row--drift">
+                    <span class="mer-viz-name__badge">Amazon</span>
+                    <span class="mer-viz-name__title">wireless-charger-v2</span>
+                    <span class="mer-viz-name__price">$42.99</span>
+                  </div>
+                  <div class="mer-viz-name__row mer-viz-name__row--drift">
+                    <span class="mer-viz-name__badge">Wholesale</span>
+                    <span class="mer-viz-name__title">WirelessCharger (Blk)</span>
+                    <span class="mer-viz-name__price">&pound;38.00</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mer-arg__body">
+                <div class="mer-arg__num">01</div>
+                <h3 class="mer-arg__title">Same product, three names.</h3>
+                <p class="mer-arg__copy">Shopify calls it one thing. Amazon calls it another. Your wholesale portal has a third. Support answers questions your own data made up.</p>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="mer-arg">
+              <div class="mer-arg__viz">
+                <div class="mer-viz-coll">
+                  <div class="mer-viz-coll__row">
+                    <div class="mer-viz-coll__thumb"></div>
+                    <span class="mer-viz-coll__name">Summer '25</span>
+                    <span class="mer-viz-coll__age">4 mo ago</span>
+                  </div>
+                  <div class="mer-viz-coll__row">
+                    <div class="mer-viz-coll__thumb mer-viz-coll__thumb--2"></div>
+                    <span class="mer-viz-coll__name">New Arrivals</span>
+                    <span class="mer-viz-coll__age">7 mo ago</span>
+                  </div>
+                  <div class="mer-viz-coll__row">
+                    <div class="mer-viz-coll__thumb mer-viz-coll__thumb--3"></div>
+                    <span class="mer-viz-coll__name">Best Sellers</span>
+                    <span class="mer-viz-coll__age">1 yr ago</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mer-arg__body">
+                <div class="mer-arg__num">02</div>
+                <h3 class="mer-arg__title">Collections haven't been touched since spring.</h3>
+                <p class="mer-arg__copy">You have eighteen collections. Half were curated once and forgotten. The rest are on autopilot showing whatever the sort algorithm picks. Nobody knows what customers actually see.</p>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="mer-arg">
+              <div class="mer-arg__viz">
+                <div class="mer-viz-meta">
+                  <div class="mer-viz-meta__row">
+                    <span class="mer-viz-meta__key">custom.ingredients</span>
+                    <span class="mer-viz-meta__flag mer-viz-meta__flag--warn">DUPLICATE</span>
+                  </div>
+                  <div class="mer-viz-meta__row">
+                    <span class="mer-viz-meta__key">product.ingredients</span>
+                    <span class="mer-viz-meta__flag mer-viz-meta__flag--warn">DUPLICATE</span>
+                  </div>
+                  <div class="mer-viz-meta__row">
+                    <span class="mer-viz-meta__key">custom.ingedients</span>
+                    <span class="mer-viz-meta__flag mer-viz-meta__flag--err">TYPO</span>
+                  </div>
+                  <div class="mer-viz-meta__row">
+                    <span class="mer-viz-meta__key">custom.material_v2</span>
+                    <span class="mer-viz-meta__flag">ORPHAN</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mer-arg__body">
+                <div class="mer-arg__num">03</div>
+                <h3 class="mer-arg__title">The metafield sprawl.</h3>
+                <p class="mer-arg__copy">Same data, three keys. Half your PDPs render neither. Every theme update prays nothing quietly broke.</p>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="mer-arg">
+              <div class="mer-arg__viz">
+                <div class="mer-viz-fx">
+                  <div class="mer-viz-fx__row">
+                    <span class="mer-viz-fx__flag">&#127482;&#127480; USD</span>
+                    <span class="mer-viz-fx__val">$45.00</span>
+                    <span class="mer-viz-fx__delta mer-viz-fx__delta--ok">on track</span>
+                  </div>
+                  <div class="mer-viz-fx__row">
+                    <span class="mer-viz-fx__flag">&#127468;&#127463; GBP</span>
+                    <span class="mer-viz-fx__val">&pound;38.00</span>
+                    <span class="mer-viz-fx__delta mer-viz-fx__delta--warn">&darr; 4%</span>
+                  </div>
+                  <div class="mer-viz-fx__row">
+                    <span class="mer-viz-fx__flag">&#127466;&#127482; EUR</span>
+                    <span class="mer-viz-fx__val">&euro;41.00</span>
+                    <span class="mer-viz-fx__delta mer-viz-fx__delta--warn">&darr; 8%</span>
+                  </div>
+                  <div class="mer-viz-fx__row">
+                    <span class="mer-viz-fx__flag">&#127464;&#127462; CAD</span>
+                    <span class="mer-viz-fx__val">C$58.00</span>
+                    <span class="mer-viz-fx__delta mer-viz-fx__delta--warn">&darr; 6%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mer-arg__body">
+                <div class="mer-arg__num">04</div>
+                <h3 class="mer-arg__title">International pricing drifts.</h3>
+                <p class="mer-arg__copy">You set USD, GBP, EUR, CAD once. FX moved. Sales happened. Six months later the prices don't add up and someone's underselling by eight points.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 03 · THE COST                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="mer-section">
+      <div class="container">
+        <div class="mer-sheet">
+          <div class="mer-intro">
+            <h2 class="mer-section__title">The catalog is the cheapest growth lever <span class="text-gradient">you're not pulling</span>.</h2>
+            <p class="mer-section__subtitle">No new ad spend, no new inventory. The same store, sorted by data instead of gut.</p>
+          </div>
+          <div class="mer-cost__stats">
+            <div class="mer-cost__stat">
+              <div class="mer-cost__stat-num">+40%</div>
+              <div class="mer-cost__stat-tag">Conversion</div>
+              <div class="mer-cost__stat-label">Store conversion when the catalog runs on sell-through instead of memory.</div>
+            </div>
+            <div class="mer-cost__stat">
+              <div class="mer-cost__stat-num">2x</div>
+              <div class="mer-cost__stat-tag">Collection sales</div>
+              <div class="mer-cost__stat-label">Conversion on collections re-sorted by data. Buried products start pulling their weight.</div>
+            </div>
+            <div class="mer-cost__stat">
+              <div class="mer-cost__stat-num">&minus;27%</div>
+              <div class="mer-cost__stat-tag">Dead stock</div>
+              <div class="mer-cost__stat-label">Cash freed from non-moving inventory once placement starts moving it.</div>
+            </div>
+          </div>
+          <p class="mer-cost__closer">Traffic you already paid for, inventory you already bought. The catalog decides how much of it converts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 05 · THE MACHINE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="mer-section mer-section--caps" id="covered">
+      <div class="container">
+        <div class="mer-sheet">
+          <div class="mer-intro">
+            <h2 class="mer-section__title">Six functions. <span class="text-gradient">One owner</span>.</h2>
+            <p class="mer-section__subtitle">Catalog, collections, metafields, SEO, international pricing, automation. Run on one cadence, answered for by one team.</p>
+          </div>
+
+          <div class="mer-caps">
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-catalog">
+                <div class="mer-viz-catalog__row">
+                  <span class="mer-viz-catalog__sku">SKU&middot;A21</span>
+                  <span class="mer-viz-catalog__name">Merino Crew Tee, Slate</span>
+                  <span class="mer-viz-catalog__dot mer-viz-catalog__dot--live">Live</span>
+                </div>
+                <div class="mer-viz-catalog__row">
+                  <span class="mer-viz-catalog__sku">SKU&middot;A22</span>
+                  <span class="mer-viz-catalog__name">Merino Crew Tee, Sand</span>
+                  <span class="mer-viz-catalog__dot mer-viz-catalog__dot--sync">Sync</span>
+                </div>
+                <div class="mer-viz-catalog__row">
+                  <span class="mer-viz-catalog__sku">SKU&middot;A23</span>
+                  <span class="mer-viz-catalog__name">Merino Crew Tee, Fog</span>
+                  <span class="mer-viz-catalog__dot mer-viz-catalog__dot--draft">Draft</span>
+                </div>
+              </div>
+              <div class="mer-cap__num">01</div>
+              <h3 class="mer-cap__title">Product Catalog Management</h3>
+              <p class="mer-cap__copy">Every product named, tagged, priced, and described right, everywhere. No CSV uploads at midnight, no duplicate SKUs, no "which version is live." Your catalog just stays clean.</p>
+              <ul class="mer-cap__list">
+                <li>Single source of truth</li>
+                <li>Cross-channel sync (Shopify, Amazon, wholesale)</li>
+                <li>Duplicate &amp; error auto-flagging</li>
+              </ul>
+            </article>
+
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-grid">
+                <div class="mer-viz-grid__tile mer-viz-grid__tile--top"><span class="mer-viz-grid__rank">01</span></div>
+                <div class="mer-viz-grid__tile"><span class="mer-viz-grid__rank">02</span></div>
+                <div class="mer-viz-grid__tile"><span class="mer-viz-grid__rank">03</span></div>
+                <div class="mer-viz-grid__tile"><span class="mer-viz-grid__rank">04</span></div>
+                <div class="mer-viz-grid__tile mer-viz-grid__tile--muted"><span class="mer-viz-grid__rank">05</span></div>
+                <div class="mer-viz-grid__tile mer-viz-grid__tile--muted"><span class="mer-viz-grid__rank">06</span></div>
+              </div>
+              <div class="mer-cap__num">02</div>
+              <h3 class="mer-cap__title">Collection Curation &amp; Refresh</h3>
+              <p class="mer-cap__copy">Your storefront stays fresh without you touching it. Collections curated, tagged, merchandised on a weekly cadence, so the products that sell are always the products people see.</p>
+              <ul class="mer-cap__list">
+                <li>Weekly curation cadence</li>
+                <li>Seasonal &amp; campaign collections</li>
+                <li>Sort logic that reflects sell-through</li>
+              </ul>
+            </article>
+
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-schema">
+                <div class="mer-viz-schema__row"><span class="mer-viz-schema__key">product.material</span><span class="mer-viz-schema__type">text</span></div>
+                <div class="mer-viz-schema__row"><span class="mer-viz-schema__key">product.care</span><span class="mer-viz-schema__type">rich_text</span></div>
+                <div class="mer-viz-schema__row"><span class="mer-viz-schema__key">product.fit_notes</span><span class="mer-viz-schema__type">list</span></div>
+                <div class="mer-viz-schema__row"><span class="mer-viz-schema__key">variant.origin</span><span class="mer-viz-schema__type">country</span></div>
+              </div>
+              <div class="mer-cap__num">03</div>
+              <h3 class="mer-cap__title">Metafield Architecture</h3>
+              <p class="mer-cap__copy">One schema. Applied consistently. Metafields that survive theme swaps, PDP rebuilds, and every future integration. Change once, correct across the store.</p>
+              <ul class="mer-cap__list">
+                <li>Standardized keys &amp; namespaces</li>
+                <li>Migration from legacy fields</li>
+                <li>Documentation your dev team can read</li>
+              </ul>
+            </article>
+
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-serp">
+                <div class="mer-viz-serp__url">yourstore.com &rsaquo; collections &rsaquo; merino-tees</div>
+                <div class="mer-viz-serp__title">Merino Wool Tees, Women's Collection</div>
+                <div class="mer-viz-serp__snippet">32 styles, ethically sourced, breathable knit for daily wear&hellip;</div>
+                <div class="mer-viz-serp__meta">Rank <strong>#2</strong> &middot; Impressions <strong>+38%</strong></div>
+              </div>
+              <div class="mer-cap__num">04</div>
+              <h3 class="mer-cap__title">Collection-Level SEO</h3>
+              <p class="mer-cap__copy">Titles, descriptions, URLs, and internal linking owned page by page. Collections rank while you sleep, so search traffic compounds instead of drifting.</p>
+              <ul class="mer-cap__list">
+                <li>Category keyword strategy</li>
+                <li>Structured data &amp; schema</li>
+                <li>Internal linking against site depth</li>
+              </ul>
+            </article>
+
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-fx">
+                <div class="mer-viz-fx__row"><span class="mer-viz-fx__glyph">$</span><span class="mer-viz-fx__code">USD</span><span class="mer-viz-fx__price">$68.00</span></div>
+                <div class="mer-viz-fx__row"><span class="mer-viz-fx__glyph">&euro;</span><span class="mer-viz-fx__code">EUR</span><span class="mer-viz-fx__price">&euro;64.00</span></div>
+                <div class="mer-viz-fx__row"><span class="mer-viz-fx__glyph">&pound;</span><span class="mer-viz-fx__code">GBP</span><span class="mer-viz-fx__price">&pound;54.00</span></div>
+                <div class="mer-viz-fx__row"><span class="mer-viz-fx__glyph">&yen;</span><span class="mer-viz-fx__code">JPY</span><span class="mer-viz-fx__price">&yen;10,400</span></div>
+              </div>
+              <div class="mer-cap__num">05</div>
+              <h3 class="mer-cap__title">International Pricing</h3>
+              <p class="mer-cap__copy">Sell in every currency without pricing chaos. International prices mapped, adjusted for FX and margin, and kept consistent across markets and bundles.</p>
+              <ul class="mer-cap__list">
+                <li>Locale-specific pricing rules</li>
+                <li>FX &amp; margin monitoring</li>
+                <li>Bundle price consistency</li>
+              </ul>
+            </article>
+
+            <article class="mer-cap">
+              <div class="mer-cap__viz mer-viz-rules">
+                <div class="mer-viz-rules__card">
+                  <div class="mer-viz-rules__line"><span class="mer-viz-rules__op">if</span> <span class="mer-viz-rules__key">tag</span> = <span class="mer-viz-rules__val">"restock"</span></div>
+                  <div class="mer-viz-rules__line"><span class="mer-viz-rules__op">then</span> add to <span class="mer-viz-rules__val">Back in Stock</span></div>
+                </div>
+                <div class="mer-viz-rules__bar">
+                  <div class="mer-viz-rules__fill"></div>
+                  <span class="mer-viz-rules__status">Applying &middot; 218/312</span>
+                </div>
+              </div>
+              <div class="mer-cap__num">06</div>
+              <h3 class="mer-cap__title">Bulk Ops &amp; Automation</h3>
+              <p class="mer-cap__copy">Tag rules, dynamic collections, batch pricing, bulk edits. The manual grind you're doing today, automated with rules that hold up as the catalog scales.</p>
+              <ul class="mer-cap__list">
+                <li>Rule-based tagging &amp; sorting</li>
+                <li>Dynamic (smart) collections</li>
+                <li>Batch operations with audit trail</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main { overflow-x: hidden; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ══════ SHARED ══════ */
+  .mer-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(255, 77, 109, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══════ HERO ══════ */
+  .mer-hero {
+    position: relative;
+    padding: 4.5rem 0 3.5rem;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  .mer-hero__bg-blur {
+    position: absolute;
+    top: -180px;
+    left: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.16), rgba(255, 77, 109, 0) 65%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .mer-hero__bg-blur--right {
+    top: auto;
+    left: auto;
+    right: -180px;
+    bottom: -220px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(255, 126, 95, 0.14), rgba(255, 126, 95, 0) 65%);
+  }
+  .mer-hero__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .mer-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.35rem;
+    max-width: 640px;
+  }
+  .mer-hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255, 77, 109, 0.4);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+  }
+  .mer-hero__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.1rem, 4.6vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mer-hero__subtitle {
+    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .mer-hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .mer-hero__link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .mer-hero__link:hover { color: var(--accent-primary); }
+
+  /* Ops dashboard mock */
+  .mer-hero__mock { position: relative; }
+  .mer-ops-mock {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .mer-ops-mock__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.15rem;
+    background: #0f0f0f;
+    color: #f5f0e8;
+  }
+  .mer-ops-mock__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .mer-ops-mock__live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    animation: mer-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes mer-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .mer-ops-mock__meta {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 0.04em;
+  }
+  .mer-ops-mock__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0.4rem 0.75rem;
+    background: #fff;
+  }
+  .mer-ops-mock__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .mer-ops-mock__stat:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .mer-ops-mock__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .mer-ops-mock__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .mer-ops-mock__stat-val {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+  }
+  .mer-ops-mock__alerts {
+    padding: 0.85rem 1rem 1rem;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .mer-ops-mock__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.35;
+  }
+  .mer-ops-mock__alert-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .mer-ops-mock__alert--ok .mer-ops-mock__alert-mark {
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.14);
+  }
+  .mer-ops-mock__alert--warn .mer-ops-mock__alert-mark {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.14);
+  }
+
+  /* ══════ BUTTON ══════ */
+  .mer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #FF7A7A;
+    color: #1A1A1A;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .mer-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+  .mer-btn--lg {
+    font-size: 1.05rem;
+    padding: 1.05rem 1.9rem;
+  }
+  .mer-animated-dots {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .mer-animated-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    animation: mer-dot 1.4s infinite ease-in-out both;
+  }
+  .mer-animated-dots span:nth-child(1) { animation-delay: -0.32s; }
+  .mer-animated-dots span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes mer-dot {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ══════ SECTION ══════ */
+  .mer-section {
+    padding: 3rem 0;
+    background: var(--bg-primary);
+  }
+  .mer-sheet {
+    background: var(--bg-secondary);
+    border-radius: 44px;
+    padding: 3.25rem 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .mer-intro {
+    max-width: 780px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .mer-section__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .mer-section__subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  /* ══════ REALITY ARG CARDS ══════ */
+  .mer-args {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .mer-arg {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .mer-arg:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .mer-arg__viz {
+    padding: 1.6rem;
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+  }
+  .mer-arg__body {
+    padding: 1.6rem 1.75rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mer-arg__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .mer-arg__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mer-arg__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.35rem 0 0;
+  }
+
+  /* Viz: name drift (Card 1) */
+  .mer-viz-name {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .mer-viz-name__row {
+    display: grid;
+    grid-template-columns: 68px 1fr auto;
+    gap: 0.55rem;
+    align-items: center;
+    padding: 0.55rem 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  }
+  .mer-viz-name__row--drift {
+    background: rgba(255, 77, 109, 0.04);
+    border-color: rgba(255, 77, 109, 0.2);
+  }
+  .mer-viz-name__badge {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.4rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+  }
+  .mer-viz-name__title {
+    font-family: var(--font-mono);
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.75rem;
+  }
+  .mer-viz-name__price {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 0.78rem;
+  }
+
+  /* Viz: stale collections (Card 2) */
+  .mer-viz-coll {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mer-viz-coll__row {
+    display: grid;
+    grid-template-columns: 34px 1fr auto;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.55rem 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  }
+  .mer-viz-coll__thumb {
+    width: 34px;
+    height: 34px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.22), rgba(255, 126, 95, 0.18));
+  }
+  .mer-viz-coll__thumb--2 { background: linear-gradient(135deg, rgba(59, 130, 246, 0.22), rgba(139, 92, 246, 0.18)); }
+  .mer-viz-coll__thumb--3 { background: linear-gradient(135deg, rgba(34, 197, 94, 0.22), rgba(16, 185, 129, 0.18)); }
+  .mer-viz-coll__name {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  .mer-viz-coll__age {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--accent-primary);
+    letter-spacing: 0.04em;
+  }
+
+  /* Viz: metafield sprawl (Card 3) */
+  .mer-viz-meta {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .mer-viz-meta__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.45rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  .mer-viz-meta__key {
+    letter-spacing: 0.02em;
+  }
+  .mer-viz-meta__flag {
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.4rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .mer-viz-meta__flag--warn {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .mer-viz-meta__flag--err {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+
+  /* Viz: FX drift (Card 4) */
+  .mer-viz-fx {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .mer-viz-fx__row {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.55rem;
+    align-items: center;
+    padding: 0.45rem 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  .mer-viz-fx__flag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .mer-viz-fx__val {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 0.78rem;
+  }
+  .mer-viz-fx__delta {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .mer-viz-fx__delta--ok {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16a34a;
+  }
+  .mer-viz-fx__delta--warn {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+
+  /* ══════ COST ══════ */
+  .mer-cost__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-items: start;
+  }
+  .mer-cost__stat {
+    background: #fdfcf9;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 3px solid var(--accent-primary);
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem 1.6rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .mer-cost__stat--hero {
+    background: linear-gradient(160deg, var(--accent-primary), var(--accent-orange));
+    border-color: transparent;
+    box-shadow: 0 24px 48px rgba(255, 77, 109, 0.22);
+    transform: translateY(-6px);
+  }
+  .mer-cost__stat-num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+  .mer-cost__stat--hero .mer-cost__stat-num {
+    color: #fff;
+    font-size: 3rem;
+  }
+  .mer-cost__stat-unit {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    margin-left: 0.05rem;
+  }
+  .mer-cost__stat--hero .mer-cost__stat-unit {
+    color: rgba(255, 255, 255, 0.85);
+  }
+  .mer-cost__stat-label {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .mer-cost__stat--hero .mer-cost__stat-label {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  .mer-cost__stat-tag {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-top: -0.35rem;
+  }
+  .mer-cost__stat--hero .mer-cost__stat-tag {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  .mer-cost__closer {
+    max-width: 720px;
+    margin: 2.5rem auto 0;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  /* ══════ RELIEF ══════ */
+  .mer-relief {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .mer-relief__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .mer-relief__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .mer-relief__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.32);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .mer-relief__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .mer-relief__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mer-relief__copy {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* ══════ CAPABILITIES GRID ══════ */
+  .mer-caps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .mer-cap {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .mer-cap:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .mer-cap__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .mer-cap__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mer-cap__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .mer-cap__list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0.85rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .mer-cap__list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+  }
+  .mer-cap__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+
+  /* ══════ CAP VIZ (shared shell) ══════ */
+  .mer-cap__viz {
+    background: linear-gradient(180deg, #fbf7f2 0%, #f5efe6 100%);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 14px;
+    padding: 1rem 1.05rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-height: 148px;
+  }
+
+  /* Card 1 — Catalog rows */
+  .mer-viz-catalog { gap: 0.4rem; }
+  .mer-viz-catalog__row {
+    display: grid;
+    grid-template-columns: 62px 1fr auto;
+    align-items: center;
+    gap: 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    padding: 0.5rem 0.65rem;
+  }
+  .mer-viz-catalog__sku {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--text-secondary);
+  }
+  .mer-viz-catalog__name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mer-viz-catalog__dot {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+  }
+  .mer-viz-catalog__dot--live { background: rgba(34, 158, 111, 0.14); color: #1f7a52; }
+  .mer-viz-catalog__dot--sync { background: rgba(255, 77, 109, 0.14); color: var(--accent-primary); }
+  .mer-viz-catalog__dot--draft { background: rgba(26, 26, 26, 0.08); color: var(--text-secondary); }
+
+  /* Card 2 — Collection grid */
+  .mer-viz-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 55px);
+    gap: 0.4rem;
+    padding: 0.85rem;
+  }
+  .mer-viz-grid__tile {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0.25rem 0.35rem;
+  }
+  .mer-viz-grid__tile::after {
+    content: '';
+    position: absolute;
+    left: 8px; right: 8px; top: 8px; bottom: 8px;
+    background: linear-gradient(135deg, rgba(255, 77, 109, 0.14), rgba(255, 126, 95, 0.06));
+    border-radius: 4px;
+  }
+  .mer-viz-grid__tile--top {
+    border-color: var(--accent-primary);
+    box-shadow: 0 4px 12px rgba(255, 77, 109, 0.18);
+  }
+  .mer-viz-grid__tile--top::after {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+  }
+  .mer-viz-grid__tile--muted::after {
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.08), rgba(26, 26, 26, 0.03));
+  }
+  .mer-viz-grid__rank {
+    position: relative;
+    z-index: 1;
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: rgba(26, 26, 26, 0.55);
+  }
+  .mer-viz-grid__tile--top .mer-viz-grid__rank { color: #fff; }
+
+  /* Card 3 — Schema rows */
+  .mer-viz-schema { gap: 0.35rem; padding: 0.9rem; }
+  .mer-viz-schema__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 2px solid var(--accent-primary);
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+  }
+  .mer-viz-schema__key {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  .mer-viz-schema__type {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    background: rgba(255, 77, 109, 0.09);
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+  }
+
+  /* Card 4 — SERP result */
+  .mer-viz-serp {
+    background: #fff;
+    padding: 0.9rem 1rem 0.85rem;
+    gap: 0.25rem;
+  }
+  .mer-viz-serp__url {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .mer-viz-serp__title {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a4bbf;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .mer-viz-serp__snippet {
+    font-size: 0.72rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+  .mer-viz-serp__meta {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding-top: 0.35rem;
+    margin-top: 0.15rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .mer-viz-serp__meta strong { color: var(--accent-primary); }
+
+  /* Card 5 — FX rows */
+  .mer-viz-fx { gap: 0.35rem; padding: 0.9rem; }
+  .mer-viz-fx__row {
+    display: grid;
+    grid-template-columns: 20px 40px 1fr;
+    align-items: center;
+    gap: 0.5rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 0.3rem 0.65rem;
+  }
+  .mer-viz-fx__glyph {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--accent-primary);
+    text-align: center;
+  }
+  .mer-viz-fx__code {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--text-secondary);
+  }
+  .mer-viz-fx__price {
+    font-family: var(--font-display);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: right;
+    letter-spacing: -0.01em;
+  }
+
+  /* Card 6 — Rules + progress */
+  .mer-viz-rules { gap: 0.65rem; padding: 0.9rem; }
+  .mer-viz-rules__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-left: 2px solid var(--accent-primary);
+    border-radius: 8px;
+    padding: 0.55rem 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .mer-viz-rules__line {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-primary);
+  }
+  .mer-viz-rules__op {
+    color: var(--accent-primary);
+    font-weight: 700;
+  }
+  .mer-viz-rules__key {
+    color: var(--text-secondary);
+  }
+  .mer-viz-rules__val {
+    background: rgba(255, 77, 109, 0.09);
+    padding: 0.05rem 0.35rem;
+    border-radius: 4px;
+    color: var(--accent-primary);
+    font-weight: 600;
+  }
+  .mer-viz-rules__bar {
+    position: relative;
+    height: 22px;
+    background: rgba(26, 26, 26, 0.06);
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 0.6rem;
+  }
+  .mer-viz-rules__fill {
+    position: absolute;
+    inset: 0 30% 0 0;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-orange));
+    border-radius: 6px;
+  }
+  .mer-viz-rules__status {
+    position: relative;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ══════ MATH ══════ */
+  .mer-math {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .mer-math__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    padding: 2.25rem 2rem 2.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .mer-math__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.35);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .mer-math__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+  .mer-math__num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+  }
+  .mer-math__unit {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.65rem;
+  }
+  .mer-math__list {
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .mer-math__list li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .mer-math__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+  .mer-math__link {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+    padding-bottom: 2px;
+  }
+  .mer-math__link:hover { color: #e8446a; border-color: #e8446a; }
+
+  /* ══════ SCOPE STRIP ══════ */
+  .mer-scope {
+    padding: 1rem 0 0;
+    background: var(--bg-primary);
+  }
+  .mer-scope__note {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+  .mer-scope__note a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+  }
+  .mer-scope__note a:hover { border-color: var(--accent-primary); }
+
+  /* ══════ CTA ══════ */
+  .mer-cta {
+    padding: 5rem 0 6rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .mer-cta__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .mer-cta__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mer-cta__sub {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  /* ══════ RESPONSIVE ══════ */
+  @media (max-width: 960px) {
+    .mer-hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .mer-hero__mock { max-width: 420px; margin: 0 auto; }
+    .mer-args { grid-template-columns: 1fr; }
+    .mer-cost__stats { grid-template-columns: 1fr; }
+    .mer-relief { grid-template-columns: 1fr; }
+    .mer-caps { grid-template-columns: 1fr; }
+    .mer-math { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .mer-hero { padding: 3rem 0 2.5rem; }
+    .mer-section { padding: 2rem 0; }
+    .mer-sheet { padding: 2.25rem 1.25rem; border-radius: 28px; }
+    .mer-cta { padding: 4rem 0; }
+    .mer-hero__cta-row { gap: 1rem; }
+  }
+</style>
+</content>
+</invoke>

@@ -56,12 +56,12 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 	<main class="container">
 		<div class="hero-fold">
 			<section class="hero">
-				<div class="badge">YOUR EMBEDDED OPS TEAM</div>
+				<div class="badge">YOUR EMBEDDED OPERATIONS TEAM</div>
 				<h1>
 					WE <span class="text-gradient">ENGINEER</span> AND <span class="text-gradient">RUN</span> YOUR OPERATIONS
 				</h1>
 				<p class="hero-description">
-					<span class="hero-text-light">We engineer your stack so it fits how you actually operate. The tools, integrations, and AI agents, mapped to your workflows. Then we own the whole function and run it end to end. Daily, weekly, monthly.</span>
+					<span class="hero-text-light">We build your stack so it fits how you actually operate. Tools, integrations, AI agents, and people, mapped to your workflows. Then we own the whole function and run it end to end. Daily, weekly, monthly.</span>
 				</p>
 				<div class="cta-group">
 					<a href="/contact" class="btn btn-hero-pink">
@@ -74,7 +74,14 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			</section>
 
 				<!-- Three-Act Build Banner -->
-				<section class="three-act-banner animate-fade-in">
+				<div class="three-act-card section-white-card">
+				<section class="three-act-banner animate-fade-in" data-variant="ecommerce">
+
+					<!-- Variant pills -->
+					<div class="tab-variant-pills" role="tablist" aria-label="Workflow example">
+						<button type="button" class="tab-variant-pill is-active" data-variant="ecommerce" role="tab" aria-selected="true">Ecommerce &amp; Retail</button>
+						<button type="button" class="tab-variant-pill" data-variant="proservices" role="tab" aria-selected="false">Professional Services</button>
+					</div>
 
 					<!-- Act Phase Label -->
 					<div class="tab-act-header">
@@ -227,6 +234,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 					</div><!-- /.tab-grid -->
 				</section>
+				</div><!-- /.three-act-card -->
 		</div><!-- /.hero-fold -->
 
 		<section class="convergence-section animate-fade-in">
@@ -329,7 +337,7 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 						<div class="conv-node">
 							<div class="conv-node-ring"></div>
 							<div class="conv-node-inner">
-								<span>AQ</span>
+								<span>AG</span>
 							</div>
 						</div>
 						<div class="conv-arrow-out">
@@ -1606,6 +1614,45 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		position: relative;
 	}
 	@media (max-width: 800px) { .three-act-banner { display: none; } }
+
+	/* White sheet wrapper around the three-act banner */
+	.three-act-card.section-white-card {
+		max-width: 1320px;
+		padding: 2rem 2.5rem;
+		margin: 1rem auto 0;
+	}
+	.three-act-card .three-act-banner { max-width: 100%; }
+	@media (max-width: 800px) { .three-act-card { display: none; } }
+
+	/* Variant pills (Ecommerce & Retail | Professional Services) */
+	.tab-variant-pills {
+		display: inline-flex;
+		gap: 0.35rem;
+		padding: 0.28rem;
+		background: rgba(0, 0, 0, 0.05);
+		border: 1px solid rgba(0, 0, 0, 0.06);
+		border-radius: 999px;
+		margin-bottom: 0.85rem;
+	}
+	.tab-variant-pill {
+		font-family: var(--font-display);
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		padding: 0.4rem 0.85rem;
+		border-radius: 999px;
+		border: none;
+		background: transparent;
+		color: rgba(0, 0, 0, 0.55);
+		cursor: pointer;
+		transition: background 0.2s ease, color 0.2s ease;
+	}
+	.tab-variant-pill:hover:not(.is-active) { color: var(--text-primary); }
+	.tab-variant-pill.is-active {
+		background: #1a1a1a;
+		color: #fff;
+	}
 
 	/* Act phase pill */
 	.tab-act-header { margin-bottom: 0.75rem; }
@@ -4662,6 +4709,179 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 
 				return tl;
 			};
+
+			// ── Variant data (Ecommerce & Retail | Professional Services) ──
+			const WORKFLOWS = {
+				ecommerce: {
+					sources: [
+						{ name: 'Shopify', type: 'Admin API' },
+						{ name: 'Klaviyo', type: 'Webhook' },
+						{ name: 'ShipStation', type: '3PL Feed' },
+						{ name: 'Amazon Seller', type: 'MWS API' },
+					],
+					steps: [
+						{ name: 'Sync Inventory Levels', tag: 'AUTOMATION', tagClass: 'auto', detail: 'Reconciling Shopify against 3PL counts' },
+						{ name: 'Match Orders to Shipments', tag: 'INTEGRATION', tagClass: 'int', detail: 'Merging channel orders with fulfillment' },
+						{ name: 'Flag Oversells', tag: 'AI AGENT', tagClass: 'ai', detail: 'Detecting SKUs at risk of stock-out' },
+						{ name: 'Categorize Returns', tag: 'AI AGENT', tagClass: 'ai', detail: 'Sorting returns by reason and disposition' },
+						{ name: 'Weekly Reconciliation', tag: 'OUR TEAM', tagClass: 'team', detail: 'Numbers signed off against ledger' },
+					],
+					statLabels: ['Revenue', 'Orders', 'Oversells', 'Coverage'],
+					tableLabel: 'Order Records',
+					tableCols: ['SKU', 'Status', 'Value'],
+					tableRows: [
+						{ name: 'Wireless Buds', stage: 'Fulfilled', stageClass: 'q', val: '$48k' },
+						{ name: 'Everyday Tote', stage: 'In Transit', stageClass: 'p', val: '$112k' },
+						{ name: 'Signature Blend', stage: '⚑ Oversold', stageClass: 'f', val: '$29k' },
+						{ name: 'Ceramic Mug', stage: 'Delivered', stageClass: 'w', val: '$95k' },
+					],
+					barsLabel: 'Channel Mix',
+					bars: [
+						{ name: 'Shopify', pct: 52, color: '#3b82f6' },
+						{ name: 'Amazon', pct: 28, color: '#8b5cf6' },
+						{ name: 'Wholesale', pct: 20, color: '#f59e0b' },
+					],
+					footerLabels: ['Oversells', 'Revenue'],
+				},
+				proservices: {
+					sources: [
+						{ name: 'HubSpot CRM', type: 'API Sync' },
+						{ name: 'Website Forms', type: 'Webhook' },
+						{ name: 'LinkedIn', type: 'Scraper Feed' },
+						{ name: 'Apollo.io', type: 'Enrichment API' },
+					],
+					steps: [
+						{ name: 'Identify Stale Records', tag: 'AUTOMATION', tagClass: 'auto', detail: 'Scanning deals with no activity in 14+ days' },
+						{ name: 'Enrich Missing Data', tag: 'AI AGENT', tagClass: 'ai', detail: 'Pulling contact info from source tools' },
+						{ name: 'Normalise Deal Stages', tag: 'INTEGRATION', tagClass: 'int', detail: 'Aligning probabilities to pipeline rules' },
+						{ name: 'Flag Exceptions', tag: 'AI AGENT', tagClass: 'ai', detail: 'Deals missing owner or value flagged' },
+						{ name: 'Final Integrity Check', tag: 'OUR TEAM', tagClass: 'team', detail: 'Reconciled against forecast model' },
+					],
+					statLabels: ['Pipeline', 'Contacts', 'Flagged', 'Coverage'],
+					tableLabel: 'Contact Records',
+					tableCols: ['Company', 'Stage', 'Value'],
+					tableRows: [
+						{ name: 'Acme Corp', stage: 'Qualified', stageClass: 'q', val: '$48k' },
+						{ name: 'Vertex AI', stage: 'Proposal', stageClass: 'p', val: '$112k' },
+						{ name: 'Orbit SaaS', stage: '⚑ No Owner', stageClass: 'f', val: '$29k' },
+						{ name: 'Luminary Co', stage: 'Won', stageClass: 'w', val: '$95k' },
+					],
+					barsLabel: 'Lead Sources',
+					bars: [
+						{ name: 'Web Form', pct: 52, color: '#3b82f6' },
+						{ name: 'LinkedIn', pct: 28, color: '#8b5cf6' },
+						{ name: 'Apollo.io', pct: 20, color: '#f59e0b' },
+					],
+					footerLabels: ['Flagged', 'Pipeline'],
+				},
+			};
+
+			const applyVariant = (name) => {
+				const data = WORKFLOWS[name];
+				if (!data) return;
+
+				// Sources (left column)
+				banner.querySelectorAll('.tab-src').forEach((el, i) => {
+					const s = data.sources[i];
+					if (!s) return;
+					const spans = el.querySelectorAll('.tab-src-info span');
+					if (spans[0]) spans[0].textContent = s.name;
+					if (spans[1]) spans[1].textContent = s.type;
+				});
+
+				// Steps (middle column)
+				banner.querySelectorAll('.tab-step').forEach((el, i) => {
+					const s = data.steps[i];
+					if (!s) return;
+					const nameEl = el.querySelector('.tab-step-name');
+					const detailEl = el.querySelector('.tab-step-detail');
+					const tagEl = el.querySelector('.tab-tag');
+					if (nameEl) nameEl.textContent = s.name;
+					if (detailEl) detailEl.textContent = s.detail;
+					if (tagEl) {
+						tagEl.textContent = s.tag;
+						tagEl.classList.remove('tab-tag-auto', 'tab-tag-ai', 'tab-tag-int', 'tab-tag-team');
+						tagEl.classList.add('tab-tag-' + s.tagClass);
+					}
+				});
+
+				// Stat labels
+				banner.querySelectorAll('.tab-stat-lbl').forEach((el, i) => {
+					if (data.statLabels[i]) el.textContent = data.statLabels[i];
+				});
+
+				// Table label (preserving the LIVE chip)
+				const tableLabelEl = banner.querySelector('.tab-table-label');
+				if (tableLabelEl && data.tableLabel) {
+					const chip = tableLabelEl.querySelector('.tab-live-chip');
+					tableLabelEl.textContent = data.tableLabel + ' ';
+					if (chip) tableLabelEl.appendChild(chip);
+				}
+
+				// Table column headers
+				const headEl = banner.querySelector('.tab-table-head');
+				if (headEl) {
+					const heads = headEl.querySelectorAll('span');
+					heads.forEach((h, i) => { if (data.tableCols[i]) h.textContent = data.tableCols[i]; });
+				}
+
+				// Table rows
+				banner.querySelectorAll('.tab-row').forEach((el, i) => {
+					const r = data.tableRows[i];
+					if (!r) return;
+					const cells = el.querySelectorAll('span');
+					if (cells[0]) cells[0].textContent = r.name;
+					if (cells[1]) {
+						cells[1].textContent = r.stage;
+						cells[1].className = 'tab-stage-' + r.stageClass;
+					}
+					if (cells[2]) cells[2].textContent = r.val;
+				});
+
+				// Bars label
+				const barsLabelEl = banner.querySelector('.tab-bars-label');
+				if (barsLabelEl && data.barsLabel) barsLabelEl.textContent = data.barsLabel;
+
+				// Bars
+				banner.querySelectorAll('.tab-bar-row').forEach((el, i) => {
+					const b = data.bars[i];
+					if (!b) return;
+					const nameEl = el.querySelector('.tab-bar-name');
+					const pctEl = el.querySelector('.tab-bar-pct');
+					const fillEl = el.querySelector('.tab-bar-fill');
+					if (nameEl) nameEl.textContent = b.name;
+					if (pctEl) pctEl.textContent = b.pct + '%';
+					if (fillEl) {
+						fillEl.setAttribute('data-pct', String(b.pct));
+						fillEl.style.background = b.color;
+					}
+				});
+
+				// Dashboard footer labels
+				banner.querySelectorAll('.tab-dash-footer .tab-footer-lbl').forEach((el, i) => {
+					if (data.footerLabels && data.footerLabels[i]) el.textContent = data.footerLabels[i];
+				});
+			};
+
+			// Default to Ecommerce & Retail
+			applyVariant('ecommerce');
+
+			// Pill click handlers
+			const pills = document.querySelectorAll('.tab-variant-pill');
+			pills.forEach(pill => {
+				pill.addEventListener('click', () => {
+					const name = pill.getAttribute('data-variant');
+					if (!name) return;
+					pills.forEach(p => {
+						const isActive = p === pill;
+						p.classList.toggle('is-active', isActive);
+						p.setAttribute('aria-selected', String(isActive));
+					});
+					banner.setAttribute('data-variant', name);
+					applyVariant(name);
+					runAnim();
+				});
+			});
 
 			let started = false;
 			ScrollTrigger.create({

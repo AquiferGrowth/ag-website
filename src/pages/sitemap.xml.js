@@ -12,11 +12,16 @@ export async function GET(context) {
     '/blog',
     '/about',
     '/contact',
-    '/build',
+    '/design-and-dev',
+    '/supply-chain-operations',
+    '/merchandising',
+    '/finance-and-accounting',
+    '/healthcare',
+    '/field-services',
     '/ai-seo',
     '/team',
     '/case-studies',
-    '/industries/ecommerce',
+    '/industries/ecommerce-and-retail',
     '/industries/retail',
   ];
 

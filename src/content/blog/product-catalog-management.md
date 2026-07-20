@@ -30,7 +30,7 @@ This guide covers what product catalog management actually is, why it breaks dow
 
 ## What is Product Catalog Management?
 
-**[Product catalog management](/industries/ecommerce)** is the operational practice of keeping your product data accurate, complete, organized, and consistent across your Shopify store, your other sales channels, and every system that depends on that data.
+**[Product catalog management](/industries/ecommerce-and-retail)** is the operational practice of keeping your product data accurate, complete, organized, and consistent across your Shopify store, your other sales channels, and every system that depends on that data.
 
 It covers five core functions:
 

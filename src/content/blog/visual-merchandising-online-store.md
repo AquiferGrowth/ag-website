@@ -227,7 +227,7 @@ None of these decisions required a designer. They required operational disciplin
 
 The good news is that the highest-impact visual merchandising improvements are also the most operationally straightforward. Performance-based collection sorting and automated badge logic two changes that take days to implement consistently deliver 20–35% revenue lifts from existing traffic. No new products. No new marketing spend. No design team.
 
-At **[AquiferGrowth](https://aquifergrowth.com/)**, we build and manage the operational infrastructure that powers ecommerce brands including visual merchandising systems connected to your catalog, inventory, and customer data. We do not just configure the tools. We run the system continuously, so your merchandising keeps improving without anyone on your team having to maintain it. If you run an **[ecommerce or retail brand](/industries/ecommerce)** and want this built for you, **[get in touch](/contact)**.
+At **[AquiferGrowth](https://aquifergrowth.com/)**, we build and manage the operational infrastructure that powers ecommerce brands including visual merchandising systems connected to your catalog, inventory, and customer data. We do not just configure the tools. We run the system continuously, so your merchandising keeps improving without anyone on your team having to maintain it. If you run an **[ecommerce or retail brand](/industries/ecommerce-and-retail)** and want this built for you, **[get in touch](/contact)**.
 
 ## Frequently Asked Questions
 

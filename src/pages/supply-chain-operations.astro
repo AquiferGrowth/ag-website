@@ -1,0 +1,2076 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Supply Chain Operations for Ecommerce Brands | AquiferGrowth"
+  description="Forecasting, MRP, procurement, inventory, production, S&OP, risk. Your whole supply chain, run end to end on subscription. Skip the hire, own the function."
+>
+  <Header />
+  <main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-hero">
+      <div class="sco-hero__bg-blur"></div>
+      <div class="sco-hero__bg-blur sco-hero__bg-blur--right"></div>
+      <div class="sco-hero__inner container">
+        <div class="sco-hero__copy">
+          <h1 class="sco-hero__title">
+            We own your supply chain.<br />
+            <span class="text-gradient">You own the business.</span>
+          </h1>
+          <p class="sco-hero__subtitle">
+            Forecasting, purchase orders, supplier follow-ups, receiving, counts. We run all of it as a managed service, wired together with automations and AI agents and we own the outcome when something breaks.
+          </p>
+          <div class="sco-hero__cta-row">
+            <a href="/contact" class="sco-btn">
+              <span>Let's Chat</span>
+              <span class="sco-animated-dots"><span></span><span></span><span></span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Ops dashboard mock -->
+        <div class="sco-hero__mock" aria-hidden="true">
+          <div class="sco-ops-mock">
+            <div class="sco-ops-mock__head">
+              <span class="sco-ops-mock__live"><span class="sco-ops-mock__live-dot"></span> Supply Chain &middot; Live</span>
+              <span class="sco-ops-mock__meta">Synced 2m ago</span>
+            </div>
+            <div class="sco-ops-mock__stats">
+              <div class="sco-ops-mock__stat">
+                <span class="sco-ops-mock__stat-label">SKUs tracked</span>
+                <span class="sco-ops-mock__stat-val">12,463</span>
+              </div>
+              <div class="sco-ops-mock__stat">
+                <span class="sco-ops-mock__stat-label">Stock on hand</span>
+                <span class="sco-ops-mock__stat-val">$482K</span>
+              </div>
+              <div class="sco-ops-mock__stat">
+                <span class="sco-ops-mock__stat-label">Open POs</span>
+                <span class="sco-ops-mock__stat-val">14</span>
+              </div>
+              <div class="sco-ops-mock__stat">
+                <span class="sco-ops-mock__stat-label">Locations</span>
+                <span class="sco-ops-mock__stat-val">4</span>
+              </div>
+            </div>
+            <div class="sco-ops-mock__alerts">
+              <div class="sco-ops-mock__alert sco-ops-mock__alert--ok">
+                <span class="sco-ops-mock__alert-mark">&#10003;</span>
+                Weekly count reconciled
+              </div>
+              <div class="sco-ops-mock__alert sco-ops-mock__alert--warn">
+                <span class="sco-ops-mock__alert-mark">&#9888;</span>
+                2 SKUs approaching reorder point
+              </div>
+              <div class="sco-ops-mock__alert">
+                <span class="sco-ops-mock__alert-mark">&#9679;</span>
+                Q4 forecast on track
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 02 · THE REALITY                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-intro">
+            <h2 class="sco-section__title">Nobody owns the supply chain. <span class="text-gradient">So you do.</span></h2>
+            <p class="sco-section__subtitle">The 3PL moves boxes. The manufacturer makes product. Nobody reconciles what was ordered against what landed against what's live. That gap has a name on it, and it's yours.</p>
+          </div>
+
+          <div class="sco-args">
+            <!-- 01 -->
+            <article class="sco-arg">
+              <div class="sco-arg__viz">
+                <div class="sco-viz-files">
+                  <div class="sco-viz-file">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span>inventory_FINAL_v4.xlsx</span>
+                    <em>12,090?</em>
+                  </div>
+                  <div class="sco-viz-file">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span>stock_count_AUG(2).csv</span>
+                    <em>11,834?</em>
+                  </div>
+                  <div class="sco-viz-file">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    <span>counts_v2_USE_THIS.xlsx</span>
+                    <em>12,388?</em>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-arg__body">
+                <div class="sco-arg__num">01</div>
+                <h3 class="sco-arg__title">The count never matches.</h3>
+                <p class="sco-arg__copy">Three files, three answers. The warehouse guy said close enough. Nobody's numbers are right, and every decision downstream inherits that lie.</p>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="sco-arg">
+              <div class="sco-arg__viz">
+                <div class="sco-viz-cal">
+                  <div class="sco-viz-cal__row"><span>Sat</span><span>Rebuild the count</span></div>
+                  <div class="sco-viz-cal__row"><span>Sun</span><span>Cut next month's POs</span></div>
+                  <div class="sco-viz-cal__row sco-viz-cal__row--now"><span>Mon</span><span>Pretend to run the business</span></div>
+                </div>
+              </div>
+              <div class="sco-arg__body">
+                <div class="sco-arg__num">02</div>
+                <h3 class="sco-arg__title">Sunday night is inventory night.</h3>
+                <p class="sco-arg__copy">Your team went home Friday. You spent the weekend on ops. You are not the person who should still be doing this work.</p>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="sco-arg">
+              <div class="sco-arg__viz">
+                <div class="sco-viz-order">
+                  <div class="sco-viz-order__row">
+                    <span class="sco-viz-order__badge sco-viz-order__badge--warn">Oversold</span>
+                    <span class="sco-viz-order__sku">Hydration Sticks &middot; Amazon</span>
+                  </div>
+                  <div class="sco-viz-order__row sco-viz-order__row--refund">
+                    <span class="sco-viz-order__lbl">Refund issued</span>
+                    <span class="sco-viz-order__amt">$48.60</span>
+                  </div>
+                  <div class="sco-viz-order__row sco-viz-order__row--refund">
+                    <span class="sco-viz-order__lbl">Refund issued</span>
+                    <span class="sco-viz-order__amt">$48.60</span>
+                  </div>
+                  <div class="sco-viz-order__row sco-viz-order__row--refund">
+                    <span class="sco-viz-order__lbl">Refund issued</span>
+                    <span class="sco-viz-order__amt">$48.60</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-arg__body">
+                <div class="sco-arg__num">03</div>
+                <h3 class="sco-arg__title">You're refunding your own store's oversells.</h3>
+                <p class="sco-arg__copy">Friday's count didn't make Shopify. Amazon sold three of what wasn't there. Monday morning is apologies. That's not ops, it's a slow leak.</p>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="sco-arg">
+              <div class="sco-arg__viz">
+                <div class="sco-viz-forecast">
+                  <div class="sco-viz-forecast__label">Q4 &middot; Demand</div>
+                  <svg viewBox="0 0 200 90" class="sco-viz-forecast__svg" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="scoBand" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#FF4D6D" stop-opacity="0.35" />
+                        <stop offset="100%" stop-color="#FF4D6D" stop-opacity="0" />
+                      </linearGradient>
+                    </defs>
+                    <polygon points="100,44 200,10 200,70 100,54" fill="url(#scoBand)" />
+                    <polyline points="4,66 24,64 44,60 64,58 84,52 100,44" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+                    <polyline points="100,44 130,30 160,20 196,12" fill="none" stroke="#FF4D6D" stroke-width="2" stroke-dasharray="5 4" stroke-linecap="round"/>
+                  </svg>
+                  <span class="sco-viz-forecast__q">?</span>
+                </div>
+              </div>
+              <div class="sco-arg__body">
+                <div class="sco-arg__num">04</div>
+                <h3 class="sco-arg__title">Q4 is a guess.</h3>
+                <p class="sco-arg__copy">You're planning peak against three months of data that doesn't reconcile. The plan is instinct plus a prayer. Fine at $2M. Ruinous at $20M.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 03 · THE COST                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-intro">
+            <h2 class="sco-section__title">The cost of <span class="text-gradient">nobody owning it</span>.</h2>
+            <p class="sco-section__subtitle">Nobody sends you an invoice for the chaos. It just comes out of margin, cash, and your week.</p>
+          </div>
+          <div class="sco-cost__stats">
+            <div class="sco-cost__stat">
+              <div class="sco-cost__stat-title">Cash Trapped</div>
+              <div class="sco-cost__stat-num">30<span class="sco-cost__stat-unit">%</span></div>
+              <div class="sco-cost__stat-label">That's how much inventory cash typically sleeps in SKUs that won't move, while your bestsellers go dark.</div>
+            </div>
+            <div class="sco-cost__stat">
+              <div class="sco-cost__stat-title">Sales Lost</div>
+              <div class="sco-cost__stat-num">90<span class="sco-cost__stat-unit">days</span></div>
+              <div class="sco-cost__stat-label">Behind on every stockout the moment you notice it. Lead time doesn't pause while you catch up.</div>
+            </div>
+            <div class="sco-cost__stat">
+              <div class="sco-cost__stat-title">Hours Wasted</div>
+              <div class="sco-cost__stat-num">10+<span class="sco-cost__stat-unit">hrs/wk</span></div>
+              <div class="sco-cost__stat-label">Founder time lost every week to reconciling counts, chasing POs, and playing the system.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 04 · THE RELIEF                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-intro">
+            <h2 class="sco-section__title">We own the function. <span class="text-gradient">You run the company</span>.</h2>
+          </div>
+
+          <div class="sco-relief">
+            <div class="sco-relief__card">
+              <div class="sco-relief__num">01</div>
+              <h3 class="sco-relief__title">You stop reconciling.</h3>
+              <p class="sco-relief__copy">One live count across every location and channel. The spreadsheets go in a drawer.</p>
+            </div>
+            <div class="sco-relief__card sco-relief__card--hero">
+              <div class="sco-relief__num">02</div>
+              <h3 class="sco-relief__title">You stop forecasting.</h3>
+              <p class="sco-relief__copy">Forecasts run against real sell-through. Reorder points move themselves.</p>
+            </div>
+            <div class="sco-relief__card">
+              <div class="sco-relief__num">03</div>
+              <h3 class="sco-relief__title">You stop being the system.</h3>
+              <p class="sco-relief__copy">Decisions stop routing through you. Exceptions land in one thread, on your schedule.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 05 · THE MACHINE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section sco-section--caps" id="covered">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-intro">
+            <h2 class="sco-section__title">Every workstream, <span class="text-gradient">owned end to end</span>.</h2>
+            <p class="sco-section__subtitle">Eight functions, one team, one cadence. Daily, weekly, and monthly rhythms that keep the operation running so you never have to.</p>
+          </div>
+
+          <div class="sco-caps">
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-flow">
+                  <span class="sco-viz-flow__node">Data</span>
+                  <span class="sco-viz-flow__arrow">&rarr;</span>
+                  <span class="sco-viz-flow__node sco-viz-flow__node--hot">AI Agent</span>
+                  <span class="sco-viz-flow__arrow">&rarr;</span>
+                  <span class="sco-viz-flow__node">Action</span>
+                </div>
+              </div>
+              <div class="sco-cap__num">01</div>
+              <h3 class="sco-cap__title">Strategic Planning &amp; Automation</h3>
+              <p class="sco-cap__copy">Supply chain initiatives that cut cost and lift throughput. AI-first workflows across procurement analysis, supply planning scenarios, exception management, and risk monitoring.</p>
+              <ul class="sco-cap__list">
+                <li>LLM-driven procurement analysis</li>
+                <li>Scenario planning &amp; capacity modeling</li>
+                <li>Exception dashboards, live</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-po">
+                  <div class="sco-viz-po__head">
+                    <span class="sco-viz-po__id">PO-4521</span>
+                    <span class="sco-viz-po__meta">Receiving</span>
+                  </div>
+                  <div class="sco-viz-po__row"><span>Ordered</span><b>500</b></div>
+                  <div class="sco-viz-po__row"><span>Received</span><b>462</b></div>
+                  <div class="sco-viz-po__row sco-viz-po__row--warn"><span>Short</span><b>38</b></div>
+                </div>
+              </div>
+              <div class="sco-cap__num">02</div>
+              <h3 class="sco-cap__title">Materials Requirement Planning</h3>
+              <p class="sco-cap__copy">Supply planning translated from the approved demand plan into executable POs. Packaging and raw materials land on time, capacity constraints are flagged before they hit.</p>
+              <ul class="sco-cap__list">
+                <li>PO placement &amp; tracking</li>
+                <li>Lead-time variability monitoring</li>
+                <li>Shortage &amp; excess auto-flagging</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-supplier">
+                  <div class="sco-viz-supplier__row">
+                    <span class="sco-viz-supplier__name">Northline</span>
+                    <span class="sco-viz-supplier__bar"><span style="width:84%; background:#22c55e;"></span></span>
+                    <span class="sco-viz-supplier__grade">A</span>
+                  </div>
+                  <div class="sco-viz-supplier__row">
+                    <span class="sco-viz-supplier__name">Kestrel</span>
+                    <span class="sco-viz-supplier__bar"><span style="width:56%; background:#f59e0b;"></span></span>
+                    <span class="sco-viz-supplier__grade">B</span>
+                  </div>
+                  <div class="sco-viz-supplier__row">
+                    <span class="sco-viz-supplier__name">Mizuno</span>
+                    <span class="sco-viz-supplier__bar"><span style="width:32%; background:#ff4d6d;"></span></span>
+                    <span class="sco-viz-supplier__grade">C</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-cap__num">03</div>
+              <h3 class="sco-cap__title">Procurement &amp; Vendor Management</h3>
+              <p class="sco-cap__copy">Supplier relationships, sourced and negotiated. Pricing agreements owned, performance measured, risk clustered so you know who to press and who to protect.</p>
+              <ul class="sco-cap__list">
+                <li>Supplier performance scorecards</li>
+                <li>Pricing trend &amp; negotiation insights</li>
+                <li>Supplier risk clustering</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-forecast-mini">
+                  <div class="sco-viz-forecast-mini__label">Demand &middot; Fleece Hoodie</div>
+                  <svg viewBox="0 0 200 60" preserveAspectRatio="none" class="sco-viz-forecast-mini__svg" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="scoForecastBand" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#FF4D6D" stop-opacity="0.32"/>
+                        <stop offset="100%" stop-color="#FF4D6D" stop-opacity="0"/>
+                      </linearGradient>
+                    </defs>
+                    <polygon points="112,32 200,4 200,44 112,50" fill="url(#scoForecastBand)"/>
+                    <polyline points="4,48 32,44 60,40 88,36 112,32" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+                    <polyline points="112,32 140,24 168,14 196,6" fill="none" stroke="#FF4D6D" stroke-width="2" stroke-dasharray="4 3" stroke-linecap="round"/>
+                    <circle cx="112" cy="32" r="3.5" fill="#1a1a1a"/>
+                  </svg>
+                  <span class="sco-viz-forecast-mini__badge">Reorder in 12d</span>
+                </div>
+              </div>
+              <div class="sco-cap__num">04</div>
+              <h3 class="sco-cap__title">Inventory Management &amp; Forecasting</h3>
+              <p class="sco-cap__copy">Levels, forecasting, replenishment strategies. Stockouts down, excess down, working capital freed. Predictive analytics on safety stock and warehouse capacity.</p>
+              <ul class="sco-cap__list">
+                <li>SKU-level demand vs forecast tracking</li>
+                <li>Safety stock &amp; working capital optimization</li>
+                <li>Warehouse capacity utilization</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-gantt">
+                  <div class="sco-viz-gantt__row">
+                    <span class="sco-viz-gantt__lbl">Line A</span>
+                    <span class="sco-viz-gantt__track"><span class="sco-viz-gantt__fill" style="left:8%; width:42%; background:#3b82f6;"></span></span>
+                  </div>
+                  <div class="sco-viz-gantt__row">
+                    <span class="sco-viz-gantt__lbl">Line B</span>
+                    <span class="sco-viz-gantt__track"><span class="sco-viz-gantt__fill" style="left:26%; width:52%; background:#8b5cf6;"></span></span>
+                  </div>
+                  <div class="sco-viz-gantt__row">
+                    <span class="sco-viz-gantt__lbl">Line C</span>
+                    <span class="sco-viz-gantt__track"><span class="sco-viz-gantt__fill" style="left:48%; width:40%; background:#f59e0b;"></span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-cap__num">05</div>
+              <h3 class="sco-cap__title">Production &amp; Master Scheduling</h3>
+              <p class="sco-cap__copy">Production plans and shift-level scheduling that hit forecast without wasting capacity. Changeovers minimized, run sequencing modeled, exceptions surfaced live.</p>
+              <ul class="sco-cap__list">
+                <li>Shift-level production schedules</li>
+                <li>Run sequencing &amp; changeover reduction</li>
+                <li>Real-time exception dashboards</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-week">
+                  <div class="sco-viz-week__label">Supply Review &middot; Weekly</div>
+                  <div class="sco-viz-week__grid">
+                    <span class="sco-viz-week__day sco-viz-week__day--done">M</span>
+                    <span class="sco-viz-week__day sco-viz-week__day--done">T</span>
+                    <span class="sco-viz-week__day sco-viz-week__day--now">W</span>
+                    <span class="sco-viz-week__day">T</span>
+                    <span class="sco-viz-week__day">F</span>
+                  </div>
+                  <div class="sco-viz-week__event">Wed 10am &middot; Ops sign-off</div>
+                </div>
+              </div>
+              <div class="sco-cap__num">06</div>
+              <h3 class="sco-cap__title">S&amp;OP Leadership</h3>
+              <p class="sco-cap__copy">We own the Supply Review inside your S&amp;OP/IBP cycle. Supply feasibility, inventory strategy, capacity planning, and operational risk translated into a weekly cadence your team actually runs.</p>
+              <ul class="sco-cap__list">
+                <li>SKU-level demand vs forecast tools</li>
+                <li>Weekly cadence with brand stakeholders</li>
+                <li>AI-driven risk dashboards</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-alerts">
+                  <div class="sco-viz-alerts__row sco-viz-alerts__row--err">
+                    <span class="sco-viz-alerts__ic">&#9888;</span>
+                    <span>Port strike &middot; Rotterdam</span>
+                  </div>
+                  <div class="sco-viz-alerts__row sco-viz-alerts__row--warn">
+                    <span class="sco-viz-alerts__ic">&#9888;</span>
+                    <span>Lead time &middot; 32&rarr;41d</span>
+                  </div>
+                  <div class="sco-viz-alerts__row sco-viz-alerts__row--ok">
+                    <span class="sco-viz-alerts__ic">&#10003;</span>
+                    <span>Supplier B, cleared</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-cap__num">07</div>
+              <h3 class="sco-cap__title">Risk Management</h3>
+              <p class="sco-cap__copy">Supply disruptions, transportation delays, and compliance issues caught before they blow up the month. Geopolitical, supplier concentration, and lead-time volatility monitored in real time.</p>
+              <ul class="sco-cap__list">
+                <li>Geopolitical exposure alerts</li>
+                <li>Supplier concentration monitoring</li>
+                <li>Transportation delay tracking</li>
+              </ul>
+            </article>
+
+            <article class="sco-cap">
+              <div class="sco-cap__viz">
+                <div class="sco-viz-matrix">
+                  <div class="sco-viz-matrix__cell sco-viz-matrix__cell--keep">
+                    <span class="sco-viz-matrix__lbl">Keep</span>
+                    <span class="sco-viz-matrix__count">42</span>
+                  </div>
+                  <div class="sco-viz-matrix__cell sco-viz-matrix__cell--grow">
+                    <span class="sco-viz-matrix__lbl">Grow</span>
+                    <span class="sco-viz-matrix__count">18</span>
+                  </div>
+                  <div class="sco-viz-matrix__cell sco-viz-matrix__cell--reduce">
+                    <span class="sco-viz-matrix__lbl">Reduce</span>
+                    <span class="sco-viz-matrix__count">24</span>
+                  </div>
+                  <div class="sco-viz-matrix__cell sco-viz-matrix__cell--kill">
+                    <span class="sco-viz-matrix__lbl">Kill</span>
+                    <span class="sco-viz-matrix__count">11</span>
+                  </div>
+                </div>
+              </div>
+              <div class="sco-cap__num">08</div>
+              <h3 class="sco-cap__title">SKU Rationalization &amp; Slotting</h3>
+              <p class="sco-cap__copy">Profitability and velocity clustering to keep the tail from eating the head. Purchases sized in pallet quantities to keep storage tight and warehouse capacity honest.</p>
+              <ul class="sco-cap__list">
+                <li>Profitability &amp; velocity clustering</li>
+                <li>Kill / keep / consolidate decisions</li>
+                <li>Pallet-quantity purchase enforcement</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 04 · TOOLS & STACK                         -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-intro">
+            <h2 class="sco-section__title">We work inside the systems <span class="text-gradient">you already own</span>.</h2>
+            <p class="sco-section__subtitle">No forced migrations. We run in your stack and layer AI where it earns its keep.</p>
+          </div>
+
+          <div class="sco-tools">
+            <div class="sco-tool">
+              <div class="sco-tool__name">Inventory System</div>
+              <div class="sco-tool__meta">IMS &amp; ERP</div>
+              <p class="sco-tool__body">POs, receiving, inventory, and costs, inside the system your finance team trusts.</p>
+            </div>
+            <div class="sco-tool">
+              <div class="sco-tool__name">Shopify + Channel Feeds</div>
+              <div class="sco-tool__meta">Sell-side</div>
+              <p class="sco-tool__body">Live sell-through by SKU, channel, and location. The signal behind every forecast.</p>
+            </div>
+            <div class="sco-tool">
+              <div class="sco-tool__name">Demand &amp; MRP</div>
+              <div class="sco-tool__meta">Planning</div>
+              <p class="sco-tool__body">Whatever you're on, or a stack we spin up. Forecasting wired to real sales data.</p>
+            </div>
+            <div class="sco-tool">
+              <div class="sco-tool__name">Custom Dashboards</div>
+              <div class="sco-tool__meta">Visibility</div>
+              <p class="sco-tool__body">Exceptions, risk, and cadence. Built to your KPIs, not a vendor's template.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 05 · FULL-TIME HIRE VS AQUIFERGROWTH        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="sco-section sco-compare">
+      <div class="container">
+        <div class="sco-sheet">
+          <div class="sco-compare__inner">
+            <h2 class="sco-compare__title">Full-Time Hire vs <span class="text-gradient">AquiferGrowth</span>.</h2>
+
+          <div class="sco-compare__table">
+            <!-- Column headers -->
+            <div class="sco-compare__row sco-compare__row--head">
+              <div class="sco-compare__row-label"></div>
+              <div class="sco-compare__col-head">
+                <span class="sco-compare__col-title">Full-Time Hire</span>
+              </div>
+              <div class="sco-compare__col-head sco-compare__col-head--hero">
+                <span class="sco-compare__col-title">AquiferGrowth</span>
+                <span class="sco-compare__col-meta">The owned function</span>
+              </div>
+            </div>
+
+            <!-- COST -->
+            <div class="sco-compare__group">
+              <div class="sco-compare__group-label">Cost</div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">Cost per year</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">$150K+</span>
+                  <span class="sco-compare__cell-sub">Salary, benefits, recruiter, ramp</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">Flat retainer</span>
+                  <span class="sco-compare__cell-sub">Tooling and AI agents included</span>
+                </div>
+              </div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">What you buy</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">One person's hours</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">A function: people, AI agents, tooling</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SPEED -->
+            <div class="sco-compare__group">
+              <div class="sco-compare__group-label">Speed</div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">Time to productive</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">3&ndash;6 months</span>
+                  <span class="sco-compare__cell-sub">Search, hire, onboard, ramp</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">First week</span>
+                  <span class="sco-compare__cell-sub">Data in, cadences running</span>
+                </div>
+              </div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">Coverage</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">One skill set, 40 hours</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">Daily, weekly, monthly cadences</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- RISK -->
+            <div class="sco-compare__group">
+              <div class="sco-compare__group-label">Risk</div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">When they leave</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">The knowledge walks out with them</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">The system stays. We own continuity</span>
+                </div>
+              </div>
+              <div class="sco-compare__row">
+                <div class="sco-compare__row-label">Best fit</div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">$50M+ complex organizations</span>
+                </div>
+                <div class="sco-compare__cell">
+                  <span class="sco-compare__cell-val">$1M&ndash;$10M Shopify brands</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main { overflow-x: hidden; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ══════ SHARED ══════ */
+  .sco-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(255, 77, 109, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══════ HERO ══════ */
+  .sco-hero {
+    position: relative;
+    padding: 4.5rem 0 3.5rem;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  .sco-hero__bg-blur {
+    position: absolute;
+    top: -180px;
+    left: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.16), rgba(255, 77, 109, 0) 65%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .sco-hero__bg-blur--right {
+    top: auto;
+    left: auto;
+    right: -180px;
+    bottom: -220px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(255, 126, 95, 0.14), rgba(255, 126, 95, 0) 65%);
+  }
+  .sco-hero__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .sco-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.35rem;
+    max-width: 640px;
+  }
+  .sco-hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255, 77, 109, 0.4);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+  }
+  .sco-hero__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.1rem, 4.6vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .sco-hero__subtitle {
+    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .sco-hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .sco-hero__link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .sco-hero__link:hover { color: var(--accent-primary); }
+
+  /* Ops dashboard mock */
+  .sco-hero__mock { position: relative; }
+  .sco-ops-mock {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .sco-ops-mock__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.15rem;
+    background: #0f0f0f;
+    color: #f5f0e8;
+  }
+  .sco-ops-mock__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .sco-ops-mock__live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    animation: sco-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes sco-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .sco-ops-mock__meta {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 0.04em;
+  }
+  .sco-ops-mock__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0.4rem 0.75rem;
+    background: #fff;
+  }
+  .sco-ops-mock__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .sco-ops-mock__stat:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .sco-ops-mock__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .sco-ops-mock__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .sco-ops-mock__stat-val {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+  }
+  .sco-ops-mock__alerts {
+    padding: 0.85rem 1rem 1rem;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .sco-ops-mock__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.35;
+  }
+  .sco-ops-mock__alert-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .sco-ops-mock__alert--ok .sco-ops-mock__alert-mark {
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.14);
+  }
+  .sco-ops-mock__alert--warn .sco-ops-mock__alert-mark {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.14);
+  }
+
+  /* ══════ BUTTON ══════ */
+  .sco-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #FF7A7A;
+    color: #1A1A1A;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .sco-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+  .sco-btn--lg {
+    font-size: 1.05rem;
+    padding: 1.05rem 1.9rem;
+  }
+  .sco-animated-dots {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .sco-animated-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    animation: sco-dot 1.4s infinite ease-in-out both;
+  }
+  .sco-animated-dots span:nth-child(1) { animation-delay: -0.32s; }
+  .sco-animated-dots span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes sco-dot {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ══════ SECTION ══════ */
+  .sco-section {
+    padding: 3rem 0;
+    background: var(--bg-primary);
+  }
+  .sco-sheet {
+    background: var(--bg-secondary);
+    border-radius: 44px;
+    padding: 3.25rem 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sco-intro {
+    max-width: 780px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .sco-section__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .sco-section__subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  /* ══════ REALITY ARG CARDS ══════ */
+  .sco-args {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .sco-arg {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .sco-arg:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .sco-arg__viz {
+    padding: 1.6rem;
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+  }
+  .sco-arg__body {
+    padding: 1.6rem 1.75rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sco-arg__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .sco-arg__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .sco-arg__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.35rem 0 0;
+  }
+
+  /* Viz: spreadsheet files */
+  .sco-viz-files {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sco-viz-file {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.55rem 0.75rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: #1a1a1a;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  }
+  .sco-viz-file svg {
+    width: 15px;
+    height: 15px;
+    color: #16a34a;
+    flex-shrink: 0;
+  }
+  .sco-viz-file span {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sco-viz-file em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 0.75rem;
+  }
+
+  /* Viz: weekend calendar */
+  .sco-viz-cal {
+    width: 100%;
+    max-width: 320px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+  }
+  .sco-viz-cal__row {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0.85rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 0.88rem;
+    color: #333;
+  }
+  .sco-viz-cal__row:last-child { border-bottom: none; }
+  .sco-viz-cal__row span:first-child {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    width: 45px;
+  }
+  .sco-viz-cal__row--now {
+    background: rgba(255, 77, 109, 0.06);
+  }
+
+  /* Viz: refund stack */
+  .sco-viz-order {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .sco-viz-order__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0.75rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .sco-viz-order__row--refund {
+    background: rgba(255, 77, 109, 0.05);
+    border-color: rgba(255, 77, 109, 0.2);
+  }
+  .sco-viz-order__badge {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .sco-viz-order__badge--warn {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .sco-viz-order__sku {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .sco-viz-order__lbl {
+    color: var(--accent-primary);
+    font-weight: 700;
+    font-size: 0.8rem;
+  }
+  .sco-viz-order__amt {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 0.8rem;
+  }
+
+  /* Viz: forecast with a "?" */
+  .sco-viz-forecast {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+  }
+  .sco-viz-forecast__label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 0.5rem;
+  }
+  .sco-viz-forecast__svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .sco-viz-forecast__q {
+    position: absolute;
+    top: 32%;
+    right: 8%;
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--accent-primary);
+    opacity: 0.55;
+  }
+
+  /* ══════ COST ══════ */
+  .sco-cost__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    align-items: start;
+  }
+  .sco-cost__stat {
+    background: #fdfcf9;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 3px solid var(--accent-primary);
+    border-radius: 16px;
+    padding: 1.5rem 1.35rem 1.4rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .sco-cost__stat-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 0.15rem;
+  }
+  .sco-cost__stat-num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 2.6rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+  }
+  .sco-cost__stat-unit {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+  }
+  .sco-cost__stat-label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  @media (max-width: 900px) {
+    .sco-cost__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sco-cost__stat-num { font-size: 2.1rem; }
+  }
+  @media (max-width: 560px) {
+    .sco-cost__stats { grid-template-columns: 1fr; }
+  }
+
+  /* ══════ RELIEF ══════ */
+  .sco-relief {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .sco-relief__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .sco-relief__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .sco-relief__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.32);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .sco-relief__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .sco-relief__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .sco-relief__copy {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* ══════ CAPABILITIES GRID ══════ */
+  .sco-caps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .sco-cap {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .sco-cap:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .sco-cap__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .sco-cap__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .sco-cap__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .sco-cap__list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0.85rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .sco-cap__list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+  }
+  .sco-cap__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+
+  /* ══════ CAPABILITY VIZZES ══════ */
+  .sco-cap__viz {
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    margin-bottom: 0.6rem;
+    height: 118px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* 01 · Flow */
+  .sco-viz-flow {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sco-viz-flow__node {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    color: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .sco-viz-flow__node--hot {
+    background: var(--accent-primary);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.28);
+  }
+  .sco-viz-flow__arrow {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 0.9rem;
+  }
+
+  /* 02 · PO panel */
+  .sco-viz-po {
+    width: 100%;
+    max-width: 220px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 0.55rem 0.7rem;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.03);
+  }
+  .sco-viz-po__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .sco-viz-po__id {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+  }
+  .sco-viz-po__meta {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  .sco-viz-po__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.15rem 0;
+    font-size: 0.72rem;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .sco-viz-po__row b {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: #1a1a1a;
+  }
+  .sco-viz-po__row--warn {
+    color: var(--accent-primary);
+  }
+  .sco-viz-po__row--warn b { color: var(--accent-primary); }
+
+  /* 03 · Supplier bars */
+  .sco-viz-supplier {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .sco-viz-supplier__row {
+    display: grid;
+    grid-template-columns: 62px 1fr 18px;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .sco-viz-supplier__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+  }
+  .sco-viz-supplier__bar {
+    height: 8px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    overflow: hidden;
+    display: block;
+  }
+  .sco-viz-supplier__bar span {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+  .sco-viz-supplier__grade {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+  }
+
+  /* 04 · Forecast mini chart */
+  .sco-viz-forecast-mini {
+    width: 100%;
+    max-width: 220px;
+    position: relative;
+  }
+  .sco-viz-forecast-mini__label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 0.35rem;
+  }
+  .sco-viz-forecast-mini__svg {
+    width: 100%;
+    height: 54px;
+    display: block;
+  }
+  .sco-viz-forecast-mini__badge {
+    display: inline-block;
+    margin-top: 0.35rem;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.12);
+    color: var(--accent-primary);
+  }
+
+  /* 05 · Gantt */
+  .sco-viz-gantt {
+    width: 100%;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.42rem;
+  }
+  .sco-viz-gantt__row {
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    gap: 0.55rem;
+    align-items: center;
+  }
+  .sco-viz-gantt__lbl {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .sco-viz-gantt__track {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    position: relative;
+    display: block;
+  }
+  .sco-viz-gantt__fill {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 4px;
+  }
+
+  /* 06 · Weekly cadence */
+  .sco-viz-week {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+  }
+  .sco-viz-week__label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 0.45rem;
+  }
+  .sco-viz-week__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.35rem;
+    margin-bottom: 0.45rem;
+  }
+  .sco-viz-week__day {
+    flex: 1;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+  .sco-viz-week__day--done {
+    background: rgba(34, 197, 94, 0.14);
+    border-color: rgba(34, 197, 94, 0.35);
+    color: #16a34a;
+  }
+  .sco-viz-week__day--now {
+    background: var(--accent-primary);
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255, 77, 109, 0.28);
+  }
+  .sco-viz-week__event {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: rgba(0, 0, 0, 0.55);
+    letter-spacing: 0.02em;
+  }
+
+  /* 07 · Alerts stack */
+  .sco-viz-alerts {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .sco-viz-alerts__row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.55rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-size: 0.72rem;
+    color: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .sco-viz-alerts__ic {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.55);
+    font-size: 0.72rem;
+    flex-shrink: 0;
+  }
+  .sco-viz-alerts__row--err .sco-viz-alerts__ic {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+  .sco-viz-alerts__row--warn .sco-viz-alerts__ic {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .sco-viz-alerts__row--ok .sco-viz-alerts__ic {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16a34a;
+  }
+
+  /* 08 · Matrix */
+  .sco-viz-matrix {
+    width: 100%;
+    max-width: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35rem;
+  }
+  .sco-viz-matrix__cell {
+    padding: 0.4rem 0.55rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+  }
+  .sco-viz-matrix__lbl {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .sco-viz-matrix__count {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+  }
+  .sco-viz-matrix__cell--keep { border-color: rgba(34, 197, 94, 0.35); background: rgba(34, 197, 94, 0.06); }
+  .sco-viz-matrix__cell--keep .sco-viz-matrix__lbl { color: #16a34a; }
+  .sco-viz-matrix__cell--grow { border-color: rgba(59, 130, 246, 0.35); background: rgba(59, 130, 246, 0.06); }
+  .sco-viz-matrix__cell--grow .sco-viz-matrix__lbl { color: #2563eb; }
+  .sco-viz-matrix__cell--reduce { border-color: rgba(217, 119, 6, 0.35); background: rgba(217, 119, 6, 0.06); }
+  .sco-viz-matrix__cell--reduce .sco-viz-matrix__lbl { color: #d97706; }
+  .sco-viz-matrix__cell--kill { border-color: rgba(255, 77, 109, 0.35); background: rgba(255, 77, 109, 0.06); }
+  .sco-viz-matrix__cell--kill .sco-viz-matrix__lbl { color: var(--accent-primary); }
+
+  /* ══════ TOOLS ══════ */
+  .sco-tools {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .sco-tool {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 18px;
+    padding: 1.5rem 1.3rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .sco-tool__name {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.05rem;
+    letter-spacing: -0.015em;
+    color: var(--text-primary);
+  }
+  .sco-tool__meta {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    margin-bottom: 0.4rem;
+  }
+  .sco-tool__body {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* ══════ COMPARE (Full-Time Hire vs AquiferGrowth) ══════ */
+  .sco-compare .sco-sheet { position: relative; }
+  .sco-compare__inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .sco-compare__eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-orange);
+    margin-bottom: 1.15rem;
+  }
+  .sco-compare__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    text-transform: none;
+    max-width: 900px;
+  }
+  .sco-compare__title-vs {
+    color: rgba(26, 26, 26, 0.35);
+    font-weight: 500;
+    font-style: italic;
+    margin: 0 0.35rem;
+  }
+  .sco-compare__subtitle {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 0 2.75rem;
+    max-width: 720px;
+  }
+
+  .sco-compare__table {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .sco-compare__row {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr;
+    gap: 1rem;
+    align-items: stretch;
+    padding: 0.35rem 0;
+  }
+  .sco-compare__row--head {
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.35rem;
+  }
+  .sco-compare__row-label {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    padding: 1rem 0;
+    align-self: center;
+  }
+  .sco-compare__col-head {
+    padding: 1.05rem 1.35rem;
+    border-radius: 12px;
+    background: #fdfcf9;
+    border: 1px solid rgba(26, 26, 26, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  .sco-compare__col-head--hero {
+    background: linear-gradient(160deg, var(--accent-primary), var(--accent-orange));
+    border-color: transparent;
+    box-shadow: 0 18px 36px rgba(255, 77, 109, 0.22);
+  }
+  .sco-compare__col-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+  }
+  .sco-compare__col-head--hero .sco-compare__col-title {
+    color: #fff;
+  }
+  .sco-compare__col-meta {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .sco-compare__group {
+    padding-top: 1.5rem;
+    margin-top: 0.85rem;
+    border-top: 1px solid rgba(26, 26, 26, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sco-compare__group:first-of-type {
+    border-top: none;
+    padding-top: 0.5rem;
+    margin-top: 0;
+  }
+  .sco-compare__group-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-orange);
+    padding-left: 0.15rem;
+    margin-bottom: 0.35rem;
+  }
+  .sco-compare__cell {
+    padding: 1rem 1.2rem;
+    background: #fbf7f2;
+    border: 1px solid rgba(26, 26, 26, 0.08);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    align-self: stretch;
+  }
+  .sco-compare__row .sco-compare__cell:last-child {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.09), rgba(255, 126, 95, 0.05));
+    border-color: rgba(255, 77, 109, 0.28);
+  }
+  .sco-compare__cell-val {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    color: var(--text-primary);
+  }
+  .sco-compare__row .sco-compare__cell:last-child .sco-compare__cell-val {
+    color: var(--text-primary);
+  }
+  .sco-compare__cell-sub {
+    font-size: 0.82rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+  }
+
+  @media (max-width: 900px) {
+    .sco-compare { padding: 3.5rem 0 4rem; }
+    .sco-compare__row {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .sco-compare__row-label {
+      grid-column: 1 / -1;
+      padding: 0.75rem 0 0.25rem;
+      color: var(--accent-orange);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .sco-compare__row--head .sco-compare__row-label { display: none; }
+    .sco-compare__cell,
+    .sco-compare__col-head { padding: 0.85rem 1rem; }
+    .sco-compare__cell-val { font-size: 1rem; }
+  }
+
+  /* ══════ MATH ══════ */
+  .sco-math {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .sco-math__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    padding: 2.25rem 2rem 2.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .sco-math__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.35);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .sco-math__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+  .sco-math__num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+  }
+  .sco-math__unit {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.65rem;
+  }
+  .sco-math__list {
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .sco-math__list li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .sco-math__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+  .sco-math__link {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+    padding-bottom: 2px;
+  }
+  .sco-math__link:hover { color: #e8446a; border-color: #e8446a; }
+
+  /* ══════ SCOPE STRIP ══════ */
+  .sco-scope {
+    padding: 1rem 0 0;
+    background: var(--bg-primary);
+  }
+  .sco-scope__note {
+    max-width: 780px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+  .sco-scope__note a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+  }
+  .sco-scope__note a:hover { border-color: var(--accent-primary); }
+
+  /* ══════ CTA ══════ */
+  .sco-cta {
+    padding: 5rem 0 6rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .sco-cta__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .sco-cta__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .sco-cta__sub {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  /* ══════ RESPONSIVE ══════ */
+  @media (max-width: 960px) {
+    .sco-hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .sco-hero__mock { max-width: 420px; margin: 0 auto; }
+    .sco-args { grid-template-columns: 1fr; }
+    .sco-cost__stats { grid-template-columns: 1fr; }
+    .sco-relief { grid-template-columns: 1fr; }
+    .sco-caps { grid-template-columns: 1fr; }
+    .sco-tools { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .sco-math { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .sco-hero { padding: 3rem 0 2.5rem; }
+    .sco-section { padding: 2rem 0; }
+    .sco-sheet { padding: 2.25rem 1.25rem; border-radius: 28px; }
+    .sco-cta { padding: 4rem 0; }
+    .sco-tools { grid-template-columns: 1fr; }
+    .sco-hero__cta-row { gap: 1rem; }
+  }
+</style>
+</content>
+</invoke>

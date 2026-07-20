@@ -1,0 +1,1343 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="AI for Canadian Tax & Accounting Firms | AquiferGrowth"
+  description="For Canadian firms running T1s and T2s across Caseware, Profile, QuickBooks, SharePoint, and Excel. We embed AI agents into the prep, review, and filing work, so your team spends their hours on judgment instead of data entry."
+>
+  <Header />
+  <main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-hero">
+      <div class="fin-hero__bg-blur"></div>
+      <div class="fin-hero__bg-blur fin-hero__bg-blur--right"></div>
+      <div class="fin-hero__inner container">
+        <div class="fin-hero__copy">
+          <h1 class="fin-hero__title">
+            AI in your finance ops.<br />
+            <span class="text-gradient">Built, run, owned.</span>
+          </h1>
+          <p class="fin-hero__subtitle">
+            We embed agents into prep, review, and filing, built into the workflows you already run. Your team keeps the judgment.
+          </p>
+          <div class="fin-hero__cta-row">
+            <a href="/contact" class="fin-btn">
+              <span>Let's Chat</span>
+              <span class="fin-animated-dots"><span></span><span></span><span></span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- File prep dashboard mock -->
+        <div class="fin-hero__mock" aria-hidden="true">
+          <div class="fin-ops-mock">
+            <div class="fin-ops-mock__head">
+              <span class="fin-ops-mock__live"><span class="fin-ops-mock__live-dot"></span> Prep queue &middot; Live</span>
+              <span class="fin-ops-mock__meta">Week of Nov 10</span>
+            </div>
+            <div class="fin-ops-mock__stats">
+              <div class="fin-ops-mock__stat">
+                <span class="fin-ops-mock__stat-label">Files in prep</span>
+                <span class="fin-ops-mock__stat-val">312</span>
+              </div>
+              <div class="fin-ops-mock__stat">
+                <span class="fin-ops-mock__stat-label">Auto-drafted</span>
+                <span class="fin-ops-mock__stat-val">248</span>
+              </div>
+              <div class="fin-ops-mock__stat">
+                <span class="fin-ops-mock__stat-label">Exceptions</span>
+                <span class="fin-ops-mock__stat-val">37</span>
+              </div>
+              <div class="fin-ops-mock__stat">
+                <span class="fin-ops-mock__stat-label">Awaiting client</span>
+                <span class="fin-ops-mock__stat-val">27</span>
+              </div>
+            </div>
+            <div class="fin-ops-mock__alerts">
+              <div class="fin-ops-mock__alert fin-ops-mock__alert--ok">
+                <span class="fin-ops-mock__alert-mark">&#10003;</span>
+                Docs matched &middot; 248 files ready for review
+              </div>
+              <div class="fin-ops-mock__alert fin-ops-mock__alert--warn">
+                <span class="fin-ops-mock__alert-mark">&#9888;</span>
+                Professional fees up 340% YoY on 4 files
+              </div>
+              <div class="fin-ops-mock__alert">
+                <span class="fin-ops-mock__alert-mark">&#9679;</span>
+                Related-company links refreshed &middot; 62 files
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 02 · THE REALITY                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-section">
+      <div class="container">
+        <div class="fin-sheet">
+          <div class="fin-intro">
+            <h2 class="fin-section__title">The file isn't the work. <span class="text-gradient">Getting it ready is</span>.</h2>
+            <p class="fin-section__subtitle">Your seniors are re-typing bank balances into lead sheets. Your managers are keeping review notes in Excel spreadsheets. Your partners are catching what the tools couldn't. That's not talent, it's tolerance.</p>
+          </div>
+
+          <div class="fin-args">
+            <!-- 01 -->
+            <article class="fin-arg">
+              <div class="fin-arg__viz">
+                <div class="fin-viz-close">
+                  <div class="fin-viz-close__row">
+                    <span class="fin-viz-close__month">Bank statements</span>
+                    <span class="fin-viz-close__status fin-viz-close__status--ok">Received</span>
+                  </div>
+                  <div class="fin-viz-close__row">
+                    <span class="fin-viz-close__month">Mortgage stmt</span>
+                    <span class="fin-viz-close__status fin-viz-close__status--ok">Received</span>
+                  </div>
+                  <div class="fin-viz-close__row">
+                    <span class="fin-viz-close__month">Property tax</span>
+                    <span class="fin-viz-close__status fin-viz-close__status--open">Follow-up sent &middot; 3d</span>
+                  </div>
+                  <div class="fin-viz-close__row">
+                    <span class="fin-viz-close__month">T4 slips</span>
+                    <span class="fin-viz-close__status fin-viz-close__status--late">Missing</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-arg__body">
+                <div class="fin-arg__num">01</div>
+                <h3 class="fin-arg__title">Doc intake is a scavenger hunt.</h3>
+                <p class="fin-arg__copy">Clients upload to SharePoint. Some send QuickBooks exports, some send bank statements, some send an Excel summary, some send a shoebox. Someone opens every folder to know what's missing.</p>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="fin-arg">
+              <div class="fin-arg__viz">
+                <div class="fin-viz-ar">
+                  <div class="fin-viz-ar__label">Hours per T2 file</div>
+                  <div class="fin-viz-ar__row">
+                    <span class="fin-viz-ar__bucket">Intake</span>
+                    <span class="fin-viz-ar__track"><span class="fin-viz-ar__fill" style="width:20%; background:#f59e0b;"></span></span>
+                    <span class="fin-viz-ar__amt">2h</span>
+                  </div>
+                  <div class="fin-viz-ar__row">
+                    <span class="fin-viz-ar__bucket">Trial balance</span>
+                    <span class="fin-viz-ar__track"><span class="fin-viz-ar__fill" style="width:60%; background:#ff4d6d;"></span></span>
+                    <span class="fin-viz-ar__amt">6h</span>
+                  </div>
+                  <div class="fin-viz-ar__row">
+                    <span class="fin-viz-ar__bucket">Lead sheets</span>
+                    <span class="fin-viz-ar__track"><span class="fin-viz-ar__fill" style="width:75%; background:#ff4d6d;"></span></span>
+                    <span class="fin-viz-ar__amt">7.5h</span>
+                  </div>
+                  <div class="fin-viz-ar__row">
+                    <span class="fin-viz-ar__bucket">Review + notes</span>
+                    <span class="fin-viz-ar__track"><span class="fin-viz-ar__fill" style="width:50%; background:#f59e0b;"></span></span>
+                    <span class="fin-viz-ar__amt">5h</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-arg__body">
+                <div class="fin-arg__num">02</div>
+                <h3 class="fin-arg__title">Trial balances get re-typed.</h3>
+                <p class="fin-arg__copy">QuickBooks exports go into Caseware by hand. Prior-year numbers reconciled by eye. Lead sheets hyperlinked one supporting doc at a time. Every file, every year, the same manual pass.</p>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="fin-arg">
+              <div class="fin-arg__viz">
+                <div class="fin-viz-tax">
+                  <div class="fin-viz-tax__row">
+                    <span class="fin-viz-tax__flag">RN</span>
+                    <span class="fin-viz-tax__name">Cash tie-out</span>
+                    <span class="fin-viz-tax__status fin-viz-tax__status--warn">Ask preparer</span>
+                  </div>
+                  <div class="fin-viz-tax__row">
+                    <span class="fin-viz-tax__flag">RN</span>
+                    <span class="fin-viz-tax__name">Prof fees breakdown</span>
+                    <span class="fin-viz-tax__status fin-viz-tax__status--err">Open</span>
+                  </div>
+                  <div class="fin-viz-tax__row">
+                    <span class="fin-viz-tax__flag">RN</span>
+                    <span class="fin-viz-tax__name">CCA class 8</span>
+                    <span class="fin-viz-tax__status fin-viz-tax__status--ok">Answered</span>
+                  </div>
+                  <div class="fin-viz-tax__row">
+                    <span class="fin-viz-tax__flag">RN</span>
+                    <span class="fin-viz-tax__name">Related-co loan</span>
+                    <span class="fin-viz-tax__status fin-viz-tax__status--warn">Ask partner</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-arg__body">
+                <div class="fin-arg__num">03</div>
+                <h3 class="fin-arg__title">Review notes live in Excel.</h3>
+                <p class="fin-arg__copy">The manager has questions. She lists them in a spreadsheet. She attaches it to the file. The preparer answers in the same sheet. Round-trip, forever. No history, no queue, no view of what's actually stuck.</p>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="fin-arg">
+              <div class="fin-arg__viz">
+                <div class="fin-viz-clients">
+                  <div class="fin-viz-clients__row">
+                    <span class="fin-viz-clients__name">Schedule 100</span>
+                    <span class="fin-viz-clients__track"><span class="fin-viz-clients__fill" style="width:82%; background:#22c55e;"></span></span>
+                    <span class="fin-viz-clients__margin">Auto</span>
+                  </div>
+                  <div class="fin-viz-clients__row">
+                    <span class="fin-viz-clients__name">Schedule 33 loans</span>
+                    <span class="fin-viz-clients__track"><span class="fin-viz-clients__fill" style="width:22%; background:#ff4d6d;"></span></span>
+                    <span class="fin-viz-clients__margin fin-viz-clients__margin--warn">Manual</span>
+                  </div>
+                  <div class="fin-viz-clients__row">
+                    <span class="fin-viz-clients__name">Schedule 7 rentals</span>
+                    <span class="fin-viz-clients__track"><span class="fin-viz-clients__fill" style="width:22%; background:#ff4d6d;"></span></span>
+                    <span class="fin-viz-clients__margin fin-viz-clients__margin--warn">Manual</span>
+                  </div>
+                  <div class="fin-viz-clients__row">
+                    <span class="fin-viz-clients__name">Related-co linking</span>
+                    <span class="fin-viz-clients__track"><span class="fin-viz-clients__fill" style="width:22%; background:#ff4d6d;"></span></span>
+                    <span class="fin-viz-clients__margin fin-viz-clients__margin--warn">Manual</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fin-arg__body">
+                <div class="fin-arg__num">04</div>
+                <h3 class="fin-arg__title">The tax software doesn't talk back.</h3>
+                <p class="fin-arg__copy">GIFI export imports the basics. Everything past that (dividends, rental properties, related-company loans, shareholder info) is manual, every file, every year. Your team re-does last year's work to start this year's.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 03 · THE COST                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-section">
+      <div class="container">
+        <div class="fin-sheet">
+          <div class="fin-intro">
+            <h2 class="fin-section__title">The tools cost less than <span class="text-gradient">the time inside them</span>.</h2>
+            <p class="fin-section__subtitle">The line item you see is the license. The line item you don't is a senior spending their week on data entry.</p>
+          </div>
+          <div class="fin-cost__stats">
+            <div class="fin-cost__stat">
+              <div class="fin-cost__stat-num">20+<span class="fin-cost__stat-unit">hrs</span></div>
+              <div class="fin-cost__stat-label">Prep + review time on the average T2 file, most of it copying numbers between systems that already have them.</div>
+            </div>
+            <div class="fin-cost__stat">
+              <div class="fin-cost__stat-num">5</div>
+              <div class="fin-cost__stat-label">Tools in the loop for a single file. QuickBooks, Caseware, Profile, SharePoint, Excel. None of them talk to each other cleanly.</div>
+            </div>
+            <div class="fin-cost__stat">
+              <div class="fin-cost__stat-num">$30<span class="fin-cost__stat-unit">k+</span></div>
+              <div class="fin-cost__stat-label">Enterprise license fees for software your firm uses at 20% of what it can do, because the pieces you actually need don't exist there yet.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 04 · THE RELIEF                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-section">
+      <div class="container">
+        <div class="fin-sheet">
+          <div class="fin-intro">
+            <h2 class="fin-section__title">Your team stops doing computer work. <span class="text-gradient">They do the work only they can do</span>.</h2>
+            <p class="fin-section__subtitle">Agents handle the intake, the trial balance, the lead sheets, the exceptions. Your team spends the time where judgment lives.</p>
+          </div>
+
+          <div class="fin-relief">
+            <div class="fin-relief__card">
+              <div class="fin-relief__num">01</div>
+              <h3 class="fin-relief__title">Preparers stop re-typing.</h3>
+              <p class="fin-relief__copy">The trial balance draft is waiting for them. Supporting docs are already linked. They review, they don't transcribe.</p>
+            </div>
+            <div class="fin-relief__card">
+              <div class="fin-relief__num">02</div>
+              <h3 class="fin-relief__title">Managers get a queue, not a spreadsheet.</h3>
+              <p class="fin-relief__copy">Every exception the agent surfaces sits in one review workspace. Notes track by item, not by email thread. Nothing gets lost between rounds.</p>
+            </div>
+            <div class="fin-relief__card">
+              <div class="fin-relief__num">03</div>
+              <h3 class="fin-relief__title">Partners see the story.</h3>
+              <p class="fin-relief__copy">Every doc, every entry, every adjustment has a status, an actor, a disposition. The audit trail writes itself. You sign what you can see.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 05 · THE MACHINE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-section fin-section--caps" id="covered">
+      <div class="container">
+        <div class="fin-sheet">
+          <div class="fin-intro">
+            <h2 class="fin-section__title">Six agents. One workspace. <span class="text-gradient">Your team on top</span>.</h2>
+            <p class="fin-section__subtitle">Every step of file prep, review, and filing, agent-drafted and human-approved. Wired into your firm, not sold as a SaaS.</p>
+          </div>
+
+          <div class="fin-caps">
+            <article class="fin-cap">
+              <div class="fin-cap__num">01</div>
+              <h3 class="fin-cap__title">Document Intake Agent</h3>
+              <p class="fin-cap__copy">Reads every file the client uploads, matches it against the expected doc list, and asks the client for what's missing. Your preparers open the file when the docs are ready, not before.</p>
+              <ul class="fin-cap__list">
+                <li>Per-client expected doc list</li>
+                <li>Auto-classify: bank stmt, mortgage, T4, invoice</li>
+                <li>Auto-nudge client on gaps and large items</li>
+              </ul>
+            </article>
+
+            <article class="fin-cap">
+              <div class="fin-cap__num">02</div>
+              <h3 class="fin-cap__title">Bookkeeping Normalizer</h3>
+              <p class="fin-cap__copy">Whatever the client sends (QuickBooks export, bank statements, an Excel summary, a shoebox) gets normalized to your firm's standard chart of accounts. One shape in, no matter what came out.</p>
+              <ul class="fin-cap__list">
+                <li>Multi-source ingestion (QB, banks, spreadsheets)</li>
+                <li>Standard chart of accounts by client type</li>
+                <li>Categorization learned from your prior files</li>
+              </ul>
+            </article>
+
+            <article class="fin-cap">
+              <div class="fin-cap__num">03</div>
+              <h3 class="fin-cap__title">Trial Balance &amp; Lead Sheets</h3>
+              <p class="fin-cap__copy">First-draft trial balance built from the source. Lead sheets pre-populated. Every number hyperlinked to the supporting doc that produced it. Preparers land on a file that's already 80% done.</p>
+              <ul class="fin-cap__list">
+                <li>Prior-year carry-forward with tie-out</li>
+                <li>Auto-linked supporting evidence</li>
+                <li>Draft journal entries, ready to accept or edit</li>
+              </ul>
+            </article>
+
+            <article class="fin-cap">
+              <div class="fin-cap__num">04</div>
+              <h3 class="fin-cap__title">Exception &amp; Variance Detection</h3>
+              <p class="fin-cap__copy">Year-over-year variance flagged before the manager opens the file. Large items without backup, unusual movements, anything that touches a special tax rule, surfaced with the reason. Your seniors see the story, not the spreadsheet.</p>
+              <ul class="fin-cap__list">
+                <li>YoY variance and trend detection</li>
+                <li>Large-item backup checks with client auto-outreach</li>
+                <li>Special-rule triggers (passive income, CCA, related-co)</li>
+              </ul>
+            </article>
+
+            <article class="fin-cap">
+              <div class="fin-cap__num">05</div>
+              <h3 class="fin-cap__title">Tax Return Computer-Use</h3>
+              <p class="fin-cap__copy">The agent operates your tax software the way your team does. GIFI import, then the schedules that never imported (dividends, rental properties, related-company links, shareholder info) filled in from the file, logged step by step.</p>
+              <ul class="fin-cap__list">
+                <li>Profile, TaxCycle, or your stack</li>
+                <li>Manual schedules filled, not skipped</li>
+                <li>Every action captured in the audit trail</li>
+              </ul>
+            </article>
+
+            <article class="fin-cap">
+              <div class="fin-cap__num">06</div>
+              <h3 class="fin-cap__title">Review &amp; Audit Workspace</h3>
+              <p class="fin-cap__copy">Every doc, entry, and adjustment has a status, an actor, and a disposition. Managers get an exception queue instead of an inbox. Partners see the sequence of operations for every file they sign off on.</p>
+              <ul class="fin-cap__list">
+                <li>Per-item status, actor (human / agent), disposition</li>
+                <li>Manager exception queue, not Excel review notes</li>
+                <li>End-to-end audit trail on every file</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 06 · THE MATH                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-section">
+      <div class="container">
+        <div class="fin-sheet">
+          <div class="fin-intro">
+            <h2 class="fin-section__title">The same T2 file, <span class="text-gradient">on both sides</span>.</h2>
+            <p class="fin-section__subtitle">Same client, same year end, same team of seniors and partners. What changes is where the hours go.</p>
+          </div>
+
+          <div class="fin-math">
+            <div class="fin-math__card">
+              <div class="fin-math__label">Today</div>
+              <div class="fin-math__num">20+ hrs</div>
+              <div class="fin-math__unit">Per file, five tools deep</div>
+              <ul class="fin-math__list">
+                <li>Preparer opens SharePoint, hunts for docs</li>
+                <li>Trial balance re-typed from QuickBooks into Caseware</li>
+                <li>Lead sheets hyperlinked one supporting doc at a time</li>
+                <li>Manager review notes tracked in an Excel spreadsheet</li>
+                <li>Profile schedules (dividends, rentals, related-co) filled by hand</li>
+              </ul>
+            </div>
+            <div class="fin-math__card fin-math__card--hero">
+              <div class="fin-math__label">With AquiferGrowth</div>
+              <div class="fin-math__num">6&ndash;8 hrs</div>
+              <div class="fin-math__unit">Per file, one workspace</div>
+              <ul class="fin-math__list">
+                <li>Docs auto-classified, missing items auto-requested</li>
+                <li>Trial balance and lead sheets drafted from the source</li>
+                <li>Supporting evidence linked automatically</li>
+                <li>Manager exception queue, not an Excel round-trip</li>
+                <li>Tax software driven by computer-use, audit log built in</li>
+              </ul>
+              <a href="/contact" class="fin-math__link">Talk to us about a pilot &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 07 · CTA                                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fin-cta">
+      <div class="container">
+        <div class="fin-cta__inner">
+          <h2 class="fin-cta__title">Bring one process to us.<br /><span class="text-gradient">We'll build the agent for it</span>.</h2>
+          <p class="fin-cta__sub">One call. We map the workflow, pick the highest-leverage step, and ship a pilot inside your firm.</p>
+          <a href="/contact" class="fin-btn fin-btn--lg">
+            <span>Let's Chat</span>
+            <span class="fin-animated-dots"><span></span><span></span><span></span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main { overflow-x: hidden; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ══════ SHARED ══════ */
+  .fin-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(255, 77, 109, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══════ HERO ══════ */
+  .fin-hero {
+    position: relative;
+    padding: 4.5rem 0 3.5rem;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  .fin-hero__bg-blur {
+    position: absolute;
+    top: -180px;
+    left: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.16), rgba(255, 77, 109, 0) 65%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .fin-hero__bg-blur--right {
+    top: auto;
+    left: auto;
+    right: -180px;
+    bottom: -220px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(255, 126, 95, 0.14), rgba(255, 126, 95, 0) 65%);
+  }
+  .fin-hero__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .fin-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.35rem;
+    max-width: 640px;
+  }
+  .fin-hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255, 77, 109, 0.4);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+  }
+  .fin-hero__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.1rem, 4.6vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fin-hero__subtitle {
+    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .fin-hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .fin-hero__link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .fin-hero__link:hover { color: var(--accent-primary); }
+
+  /* Ops dashboard mock */
+  .fin-hero__mock { position: relative; }
+  .fin-ops-mock {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .fin-ops-mock__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.15rem;
+    background: #0f0f0f;
+    color: #f5f0e8;
+  }
+  .fin-ops-mock__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .fin-ops-mock__live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    animation: fin-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes fin-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .fin-ops-mock__meta {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 0.04em;
+  }
+  .fin-ops-mock__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0.4rem 0.75rem;
+    background: #fff;
+  }
+  .fin-ops-mock__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .fin-ops-mock__stat:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .fin-ops-mock__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .fin-ops-mock__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .fin-ops-mock__stat-val {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+  }
+  .fin-ops-mock__alerts {
+    padding: 0.85rem 1rem 1rem;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fin-ops-mock__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.35;
+  }
+  .fin-ops-mock__alert-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .fin-ops-mock__alert--ok .fin-ops-mock__alert-mark {
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.14);
+  }
+  .fin-ops-mock__alert--warn .fin-ops-mock__alert-mark {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.14);
+  }
+
+  /* ══════ BUTTON ══════ */
+  .fin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #FF7A7A;
+    color: #1A1A1A;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .fin-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+  .fin-btn--lg {
+    font-size: 1.05rem;
+    padding: 1.05rem 1.9rem;
+  }
+  .fin-animated-dots {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .fin-animated-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    animation: fin-dot 1.4s infinite ease-in-out both;
+  }
+  .fin-animated-dots span:nth-child(1) { animation-delay: -0.32s; }
+  .fin-animated-dots span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes fin-dot {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ══════ SECTION ══════ */
+  .fin-section {
+    padding: 3rem 0;
+    background: var(--bg-primary);
+  }
+  .fin-sheet {
+    background: var(--bg-secondary);
+    border-radius: 44px;
+    padding: 3.25rem 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .fin-intro {
+    max-width: 780px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .fin-section__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .fin-section__subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  /* ══════ REALITY ARG CARDS ══════ */
+  .fin-args {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .fin-arg {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fin-arg:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fin-arg__viz {
+    padding: 1.6rem;
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+  }
+  .fin-arg__body {
+    padding: 1.6rem 1.75rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fin-arg__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fin-arg__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fin-arg__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.35rem 0 0;
+  }
+
+  /* Viz: close status rows (Card 1) */
+  .fin-viz-close {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .fin-viz-close__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.55rem 0.7rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .fin-viz-close__month {
+    font-family: var(--font-display);
+    font-weight: 800;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+  }
+  .fin-viz-close__status {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .fin-viz-close__status--ok {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16a34a;
+  }
+  .fin-viz-close__status--late {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .fin-viz-close__status--open {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+
+  /* Viz: AR aging (Card 2) */
+  .fin-viz-ar {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .fin-viz-ar__label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin-bottom: 0.35rem;
+  }
+  .fin-viz-ar__row {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    gap: 0.55rem;
+    align-items: center;
+  }
+  .fin-viz-ar__bucket {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .fin-viz-ar__track {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    overflow: hidden;
+    display: block;
+  }
+  .fin-viz-ar__fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+  .fin-viz-ar__amt {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    min-width: 40px;
+    text-align: right;
+  }
+
+  /* Viz: sales tax (Card 3) */
+  .fin-viz-tax {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .fin-viz-tax__row {
+    display: grid;
+    grid-template-columns: 32px 1fr auto;
+    gap: 0.55rem;
+    align-items: center;
+    padding: 0.5rem 0.65rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .fin-viz-tax__flag {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 0.2rem 0;
+    border-radius: 4px;
+  }
+  .fin-viz-tax__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 0.85rem;
+  }
+  .fin-viz-tax__status {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .fin-viz-tax__status--ok {
+    background: rgba(34, 197, 94, 0.14);
+    color: #16a34a;
+  }
+  .fin-viz-tax__status--warn {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .fin-viz-tax__status--err {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+
+  /* Viz: client profitability (Card 4) */
+  .fin-viz-clients {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fin-viz-clients__row {
+    display: grid;
+    grid-template-columns: 62px 1fr 44px;
+    gap: 0.55rem;
+    align-items: center;
+  }
+  .fin-viz-clients__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 0.82rem;
+  }
+  .fin-viz-clients__track {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    overflow: hidden;
+    display: block;
+  }
+  .fin-viz-clients__fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+  .fin-viz-clients__fill--dash {
+    background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0 6px, transparent 6px 12px);
+    width: 100%;
+  }
+  .fin-viz-clients__margin {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.74rem;
+    color: #16a34a;
+    text-align: right;
+  }
+  .fin-viz-clients__margin--warn { color: var(--accent-primary); }
+  .fin-viz-clients__margin--q {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+  }
+
+  /* ══════ COST ══════ */
+  .fin-cost__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0 auto 2rem;
+    max-width: 960px;
+  }
+  .fin-cost__stat {
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+  }
+  .fin-cost__stat--hero {
+    background: linear-gradient(160deg, var(--accent-primary), var(--accent-orange));
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.18);
+  }
+  .fin-cost__stat--hero .fin-cost__stat-num,
+  .fin-cost__stat--hero .fin-cost__stat-label {
+    color: #1a1a1a;
+  }
+  .fin-cost__stat-num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.4rem, 4.8vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .fin-cost__stat-unit {
+    font-size: 0.7em;
+    margin-left: 0.05em;
+    color: var(--accent-primary);
+  }
+  .fin-cost__stat--hero .fin-cost__stat-unit { color: #1a1a1a; }
+  .fin-cost__stat-label {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    max-width: 240px;
+  }
+  .fin-cost__note {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  /* ══════ RELIEF ══════ */
+  .fin-relief {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .fin-relief__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fin-relief__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fin-relief__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.32);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .fin-relief__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fin-relief__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fin-relief__copy {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* ══════ CAPABILITIES GRID ══════ */
+  .fin-caps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .fin-cap {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fin-cap:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fin-cap__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fin-cap__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fin-cap__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .fin-cap__list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0.85rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fin-cap__list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+  }
+  .fin-cap__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+
+  /* ══════ MATH ══════ */
+  .fin-math {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .fin-math__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    padding: 2.25rem 2rem 2.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .fin-math__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.35);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .fin-math__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+  .fin-math__num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+  }
+  .fin-math__unit {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.65rem;
+  }
+  .fin-math__list {
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fin-math__list li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .fin-math__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+  .fin-math__link {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+    padding-bottom: 2px;
+  }
+  .fin-math__link:hover { color: #e8446a; border-color: #e8446a; }
+
+  /* ══════ CTA ══════ */
+  .fin-cta {
+    padding: 5rem 0 6rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .fin-cta__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .fin-cta__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fin-cta__sub {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  /* ══════ RESPONSIVE ══════ */
+  @media (max-width: 960px) {
+    .fin-hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .fin-hero__mock { max-width: 420px; margin: 0 auto; }
+    .fin-args { grid-template-columns: 1fr; }
+    .fin-cost__stats { grid-template-columns: 1fr; }
+    .fin-relief { grid-template-columns: 1fr; }
+    .fin-caps { grid-template-columns: 1fr; }
+    .fin-math { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .fin-hero { padding: 3rem 0 2.5rem; }
+    .fin-section { padding: 2rem 0; }
+    .fin-sheet { padding: 2.25rem 1.25rem; border-radius: 28px; }
+    .fin-cta { padding: 4rem 0; }
+    .fin-hero__cta-row { gap: 1rem; }
+  }
+</style>
+</content>
+</invoke>

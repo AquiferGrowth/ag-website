@@ -1,0 +1,1308 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Field Services Operations & Dispatch Management | AquiferGrowth"
+  description="Dispatch, work orders, invoicing, and follow-ups run end to end. Techs know where they're going. Customers know when. Invoices land same day."
+>
+  <Header />
+  <main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO                                        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-hero">
+      <div class="fld-hero__bg-blur"></div>
+      <div class="fld-hero__bg-blur fld-hero__bg-blur--right"></div>
+      <div class="fld-hero__inner container">
+        <div class="fld-hero__copy">
+          <span class="fld-hero__eyebrow">Professional Services &middot; Field Services</span>
+          <h1 class="fld-hero__title">
+            Your board, run.<br />
+            <span class="text-gradient">Your day, clean.</span>
+          </h1>
+          <p class="fld-hero__subtitle">
+            Dispatch, work orders, invoicing, and follow-ups run end to end. Techs know where they're going. Customers know when. Invoices land same day.
+          </p>
+          <div class="fld-hero__cta-row">
+            <a href="/contact" class="fld-btn">
+              <span>Let's Chat</span>
+              <span class="fld-animated-dots"><span></span><span></span><span></span></span>
+            </a>
+            <a href="#covered" class="fld-hero__link">See what we cover &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Field ops dashboard mock -->
+        <div class="fld-hero__mock" aria-hidden="true">
+          <div class="fld-ops-mock">
+            <div class="fld-ops-mock__head">
+              <span class="fld-ops-mock__live"><span class="fld-ops-mock__live-dot"></span> Dispatch &middot; Live</span>
+              <span class="fld-ops-mock__meta">Route synced 2m ago</span>
+            </div>
+            <div class="fld-ops-mock__stats">
+              <div class="fld-ops-mock__stat">
+                <span class="fld-ops-mock__stat-label">Jobs today</span>
+                <span class="fld-ops-mock__stat-val">47</span>
+              </div>
+              <div class="fld-ops-mock__stat">
+                <span class="fld-ops-mock__stat-label">Techs out</span>
+                <span class="fld-ops-mock__stat-val">12</span>
+              </div>
+              <div class="fld-ops-mock__stat">
+                <span class="fld-ops-mock__stat-label">On-time</span>
+                <span class="fld-ops-mock__stat-val">94%</span>
+              </div>
+              <div class="fld-ops-mock__stat">
+                <span class="fld-ops-mock__stat-label">Same-day billed</span>
+                <span class="fld-ops-mock__stat-val">88%</span>
+              </div>
+            </div>
+            <div class="fld-ops-mock__alerts">
+              <div class="fld-ops-mock__alert fld-ops-mock__alert--ok">
+                <span class="fld-ops-mock__alert-mark">&#10003;</span>
+                Route optimizer saved 2.4 hrs
+              </div>
+              <div class="fld-ops-mock__alert fld-ops-mock__alert--warn">
+                <span class="fld-ops-mock__alert-mark">&#9888;</span>
+                3 jobs need parts confirmation
+              </div>
+              <div class="fld-ops-mock__alert">
+                <span class="fld-ops-mock__alert-mark">&#9679;</span>
+                14 review requests sent today
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 02 · THE REALITY                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-section">
+      <div class="container">
+        <div class="fld-sheet">
+          <div class="fld-intro">
+            <span class="fld-eyebrow">The reality</span>
+            <h2 class="fld-section__title">The techs are good. The <span class="text-gradient">office isn't keeping up</span>.</h2>
+            <p class="fld-section__subtitle">Dispatch runs on text messages. Invoices go out Friday. Second trips eat the margin. Nobody sees the whole day.</p>
+          </div>
+
+          <div class="fld-args">
+            <!-- 01 -->
+            <article class="fld-arg">
+              <div class="fld-arg__viz">
+                <div class="fld-viz-chat">
+                  <div class="fld-viz-chat__row fld-viz-chat__row--in">
+                    <span class="fld-viz-chat__bubble">Mike, take the Anderson job on Elm at 10</span>
+                  </div>
+                  <div class="fld-viz-chat__row fld-viz-chat__row--out">
+                    <span class="fld-viz-chat__bubble">Already on Baker across town</span>
+                  </div>
+                  <div class="fld-viz-chat__row fld-viz-chat__row--in">
+                    <span class="fld-viz-chat__bubble">Josh?</span>
+                  </div>
+                  <div class="fld-viz-chat__row fld-viz-chat__row--out">
+                    <span class="fld-viz-chat__bubble">Can do noon</span>
+                  </div>
+                  <div class="fld-viz-chat__row fld-viz-chat__row--in">
+                    <span class="fld-viz-chat__bubble">Customer wants 10</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fld-arg__body">
+                <div class="fld-arg__num">01</div>
+                <h3 class="fld-arg__title">Dispatch is a group text.</h3>
+                <p class="fld-arg__copy">Half the assignments happen at 6am on the way in. Techs check their phones at the light. Nobody has the same picture of today.</p>
+              </div>
+            </article>
+
+            <!-- 02 -->
+            <article class="fld-arg">
+              <div class="fld-arg__viz">
+                <div class="fld-viz-timeline">
+                  <div class="fld-viz-timeline__row">
+                    <span class="fld-viz-timeline__day">Mon</span>
+                    <span class="fld-viz-timeline__event fld-viz-timeline__event--ok">Job done</span>
+                  </div>
+                  <div class="fld-viz-timeline__row">
+                    <span class="fld-viz-timeline__day">Tue</span>
+                    <span class="fld-viz-timeline__event">Paperwork lands</span>
+                  </div>
+                  <div class="fld-viz-timeline__row">
+                    <span class="fld-viz-timeline__day">Fri</span>
+                    <span class="fld-viz-timeline__event fld-viz-timeline__event--warn">Invoice sent</span>
+                  </div>
+                  <div class="fld-viz-timeline__row">
+                    <span class="fld-viz-timeline__day">+45d</span>
+                    <span class="fld-viz-timeline__event fld-viz-timeline__event--err">Payment received</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fld-arg__body">
+                <div class="fld-arg__num">02</div>
+                <h3 class="fld-arg__title">The invoice goes out Friday.</h3>
+                <p class="fld-arg__copy">Job wraps Monday. Paperwork lands Tuesday. Invoice sends Friday. Payment shows up 45 days later. You paid the tech before the customer paid you.</p>
+              </div>
+            </article>
+
+            <!-- 03 -->
+            <article class="fld-arg">
+              <div class="fld-arg__viz">
+                <div class="fld-viz-truck">
+                  <div class="fld-viz-truck__row">
+                    <span class="fld-viz-truck__stop">8:00</span>
+                    <span class="fld-viz-truck__loc">Anderson &middot; 22 Elm</span>
+                    <span class="fld-viz-truck__flag fld-viz-truck__flag--err">Missing part</span>
+                  </div>
+                  <div class="fld-viz-truck__row">
+                    <span class="fld-viz-truck__stop">9:30</span>
+                    <span class="fld-viz-truck__loc">Warehouse</span>
+                    <span class="fld-viz-truck__flag fld-viz-truck__flag--warn">Back for capacitor</span>
+                  </div>
+                  <div class="fld-viz-truck__row">
+                    <span class="fld-viz-truck__stop">10:45</span>
+                    <span class="fld-viz-truck__loc">Anderson &middot; 22 Elm</span>
+                    <span class="fld-viz-truck__flag fld-viz-truck__flag--warn">Second trip</span>
+                  </div>
+                  <div class="fld-viz-truck__row">
+                    <span class="fld-viz-truck__stop">11:30</span>
+                    <span class="fld-viz-truck__loc">Baker &middot; 14 Oak</span>
+                    <span class="fld-viz-truck__flag fld-viz-truck__flag--err">Bumped &middot; +90 min</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fld-arg__body">
+                <div class="fld-arg__num">03</div>
+                <h3 class="fld-arg__title">Second trip. Missing part.</h3>
+                <p class="fld-arg__copy">Tech gets to the site. Capacitor's blown. Not on the truck. Two hours of drive time, one lost slot on the board, and the next customer's rescheduling now.</p>
+              </div>
+            </article>
+
+            <!-- 04 -->
+            <article class="fld-arg">
+              <div class="fld-arg__viz">
+                <div class="fld-viz-techs">
+                  <div class="fld-viz-techs__row">
+                    <span class="fld-viz-techs__name">Mike D.</span>
+                    <span class="fld-viz-techs__track"><span class="fld-viz-techs__fill" style="width:76%; background:#22c55e;"></span></span>
+                    <span class="fld-viz-techs__margin">+38%</span>
+                  </div>
+                  <div class="fld-viz-techs__row">
+                    <span class="fld-viz-techs__name">Josh R.</span>
+                    <span class="fld-viz-techs__track"><span class="fld-viz-techs__fill fld-viz-techs__fill--dash"></span></span>
+                    <span class="fld-viz-techs__margin fld-viz-techs__margin--q">?</span>
+                  </div>
+                  <div class="fld-viz-techs__row">
+                    <span class="fld-viz-techs__name">Chris P.</span>
+                    <span class="fld-viz-techs__track"><span class="fld-viz-techs__fill fld-viz-techs__fill--dash"></span></span>
+                    <span class="fld-viz-techs__margin fld-viz-techs__margin--q">?</span>
+                  </div>
+                  <div class="fld-viz-techs__row">
+                    <span class="fld-viz-techs__name">Dan L.</span>
+                    <span class="fld-viz-techs__track"><span class="fld-viz-techs__fill" style="width:22%; background:#ff4d6d;"></span></span>
+                    <span class="fld-viz-techs__margin fld-viz-techs__margin--warn">&minus;14%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="fld-arg__body">
+                <div class="fld-arg__num">04</div>
+                <h3 class="fld-arg__title">You don't know which techs make money.</h3>
+                <p class="fld-arg__copy">You know who works hard. You don't know who's profitable. Time is in one system, parts another, revenue a third. Nobody sees the whole page.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 03 · THE COST                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-section">
+      <div class="container">
+        <div class="fld-sheet">
+          <div class="fld-intro">
+            <span class="fld-eyebrow">The cost</span>
+            <h2 class="fld-section__title">Every unfilled slot is <span class="text-gradient">revenue that never happened</span>.</h2>
+            <p class="fld-section__subtitle">Slow dispatch, second trips, late invoices, missed follow-ups. Each one is small. Together they eat the margin the techs earned in the field.</p>
+          </div>
+          <div class="fld-cost__stats">
+            <div class="fld-cost__stat">
+              <div class="fld-cost__stat-num">$100<span class="fld-cost__stat-unit">k+</span></div>
+              <div class="fld-cost__stat-label">Fully loaded Field Operations Manager hire</div>
+            </div>
+            <div class="fld-cost__stat fld-cost__stat--hero">
+              <div class="fld-cost__stat-num">15&ndash;25<span class="fld-cost__stat-unit">%</span></div>
+              <div class="fld-cost__stat-label">Revenue lost to unfilled slots, second trips, and slow invoicing</div>
+            </div>
+            <div class="fld-cost__stat">
+              <div class="fld-cost__stat-num">45<span class="fld-cost__stat-unit">days</span></div>
+              <div class="fld-cost__stat-label">Typical AR aging when invoices go out on Friday, not Monday</div>
+            </div>
+          </div>
+          <p class="fld-cost__note">The techs already did the work. The office is where it stops turning into money. That's the piece nobody's watching.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 04 · THE RELIEF                            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-section">
+      <div class="container">
+        <div class="fld-sheet">
+          <div class="fld-intro">
+            <span class="fld-eyebrow">The relief</span>
+            <h2 class="fld-section__title">Hand us the board. <span class="text-gradient">Get your day back</span>.</h2>
+            <p class="fld-section__subtitle">Dispatch runs itself. Techs know their day. Customers know when. Invoices go out with the job. You stop putting out fires and start running the business.</p>
+          </div>
+
+          <div class="fld-relief">
+            <div class="fld-relief__card">
+              <div class="fld-relief__num">01</div>
+              <h3 class="fld-relief__title">You stop running dispatch.</h3>
+              <p class="fld-relief__copy">Board runs itself. Routes optimized. Techs sequenced. ETAs sent before the customer asks.</p>
+            </div>
+            <div class="fld-relief__card fld-relief__card--hero">
+              <div class="fld-relief__num">02</div>
+              <h3 class="fld-relief__title">You stop chasing invoices.</h3>
+              <p class="fld-relief__copy">Invoice goes out with the job. Card on file where possible. Cash lands same week, not same quarter.</p>
+            </div>
+            <div class="fld-relief__card">
+              <div class="fld-relief__num">03</div>
+              <h3 class="fld-relief__title">You start seeing the day.</h3>
+              <p class="fld-relief__copy">Per-tech, per-service margin. Callback rate by job type. What actually makes money, and what quietly doesn't.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 05 · THE MACHINE                           -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-section fld-section--caps" id="covered">
+      <div class="container">
+        <div class="fld-sheet">
+          <div class="fld-intro">
+            <span class="fld-eyebrow">The machine</span>
+            <h2 class="fld-section__title">Every office function, <span class="text-gradient">run</span>.</h2>
+            <p class="fld-section__subtitle">Six workstreams, one team, one cadence. Dispatch, work orders, field sync, customer comms, invoicing, and the analytics behind all of it.</p>
+          </div>
+
+          <div class="fld-caps">
+            <article class="fld-cap">
+              <div class="fld-cap__num">01</div>
+              <h3 class="fld-cap__title">Dispatch &amp; Scheduling</h3>
+              <p class="fld-cap__copy">Board full, routes optimized, techs sequenced. Same-day calls slotted without blowing up the day. The 6am group text goes away.</p>
+              <ul class="fld-cap__list">
+                <li>Route optimization &amp; sequencing</li>
+                <li>Same-day call slotting</li>
+                <li>Capacity &amp; skill-based assignment</li>
+              </ul>
+            </article>
+
+            <article class="fld-cap">
+              <div class="fld-cap__num">02</div>
+              <h3 class="fld-cap__title">Work Order Management</h3>
+              <p class="fld-cap__copy">Estimate to work order to invoice, on one chain. No paperwork lost between the truck and the office. Photos, forms, and signatures live on the job record.</p>
+              <ul class="fld-cap__list">
+                <li>Estimate &rarr; job &rarr; invoice chain</li>
+                <li>Photo, form, and signature capture</li>
+                <li>Change order tracking</li>
+              </ul>
+            </article>
+
+            <article class="fld-cap">
+              <div class="fld-cap__num">03</div>
+              <h3 class="fld-cap__title">Field-to-Office Sync</h3>
+              <p class="fld-cap__copy">The tech's app talks to the office. Time on site, parts used, notes, and photos land in the record automatically. No hand-entry, no lost details.</p>
+              <ul class="fld-cap__list">
+                <li>Tech mobile app integration</li>
+                <li>Truck stock &amp; parts tracking</li>
+                <li>Automatic timekeeping</li>
+              </ul>
+            </article>
+
+            <article class="fld-cap">
+              <div class="fld-cap__num">04</div>
+              <h3 class="fld-cap__title">Customer Communication</h3>
+              <p class="fld-cap__copy">Appointment confirmations, on-the-way texts, ETA updates, review requests, follow-ups. The customer stays informed without the office answering the phone.</p>
+              <ul class="fld-cap__list">
+                <li>ETA and on-the-way notifications</li>
+                <li>Review request automation</li>
+                <li>Recurring service follow-ups</li>
+              </ul>
+            </article>
+
+            <article class="fld-cap">
+              <div class="fld-cap__num">05</div>
+              <h3 class="fld-cap__title">Invoicing &amp; Membership Billing</h3>
+              <p class="fld-cap__copy">Invoice sends with the job. Cards on file where possible. Membership plans billed on cadence. AR watched weekly instead of when you notice it.</p>
+              <ul class="fld-cap__list">
+                <li>Same-day invoicing</li>
+                <li>Membership &amp; maintenance plan billing</li>
+                <li>Weekly AR aging review</li>
+              </ul>
+            </article>
+
+            <article class="fld-cap">
+              <div class="fld-cap__num">06</div>
+              <h3 class="fld-cap__title">Reporting &amp; Analytics</h3>
+              <p class="fld-cap__copy">Per-tech P&amp;L. Per-service margin. Callback rate by job type. The numbers that show what's earning and what's costing you every ticket.</p>
+              <ul class="fld-cap__list">
+                <li>Per-tech profitability</li>
+                <li>Per-service &amp; per-job margin</li>
+                <li>Callback root-cause tracking</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 06 · THE MATH                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-section">
+      <div class="container">
+        <div class="fld-sheet">
+          <div class="fld-intro">
+            <span class="fld-eyebrow">The math</span>
+            <h2 class="fld-section__title">Hire it. <span class="text-gradient">Or subscribe to it</span>.</h2>
+            <p class="fld-section__subtitle">A Field Ops Manager clears $100k+ fully loaded. Our subscription runs the same function, plus analytics and customer comms, for less than half.</p>
+          </div>
+
+          <div class="fld-math">
+            <div class="fld-math__card">
+              <div class="fld-math__label">Hire a Field Operations Manager</div>
+              <div class="fld-math__num">$100k+</div>
+              <div class="fld-math__unit">/ year, fully loaded</div>
+              <ul class="fld-math__list">
+                <li>Base: $75k, $95k</li>
+                <li>Benefits &amp; taxes: +25%</li>
+                <li>Recruiting fee: ~$18k</li>
+                <li>Ramp time: 2, 3 months to fluent</li>
+                <li>Still needs a dispatcher underneath</li>
+              </ul>
+            </div>
+            <div class="fld-math__card fld-math__card--hero">
+              <div class="fld-math__label">Subscribe to AquiferGrowth</div>
+              <div class="fld-math__num">$60k</div>
+              <div class="fld-math__unit">/ year, starting</div>
+              <ul class="fld-math__list">
+                <li>From $5,000/mo</li>
+                <li>Day-1 team, no ramp</li>
+                <li>Dispatch + work orders + invoicing + comms</li>
+                <li>Per-tech and per-service analytics</li>
+                <li>Scale as the crew grows</li>
+              </ul>
+              <a href="/contact" class="fld-math__link">Talk to us about scope &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 07 · CTA                                   -->
+    <!-- ═══════════════════════════════════════════ -->
+    <section class="fld-cta">
+      <div class="container">
+        <div class="fld-cta__inner">
+          <h2 class="fld-cta__title">Stop running dispatch.<br /><span class="text-gradient">Start running the business</span>.</h2>
+          <p class="fld-cta__sub">One call. We scope your board, plug into your system, and start the same week.</p>
+          <a href="/contact" class="fld-btn fld-btn--lg">
+            <span>Let's Chat</span>
+            <span class="fld-animated-dots"><span></span><span></span><span></span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  main { overflow-x: hidden; }
+
+  .text-gradient {
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* ══════ SHARED ══════ */
+  .fld-eyebrow {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(255, 77, 109, 0.35);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+    margin-bottom: 1.25rem;
+  }
+
+  /* ══════ HERO ══════ */
+  .fld-hero {
+    position: relative;
+    padding: 4.5rem 0 3.5rem;
+    overflow: hidden;
+    background: var(--bg-primary);
+  }
+  .fld-hero__bg-blur {
+    position: absolute;
+    top: -180px;
+    left: -160px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 77, 109, 0.16), rgba(255, 77, 109, 0) 65%);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .fld-hero__bg-blur--right {
+    top: auto;
+    left: auto;
+    right: -180px;
+    bottom: -220px;
+    width: 620px;
+    height: 620px;
+    background: radial-gradient(circle, rgba(255, 126, 95, 0.14), rgba(255, 126, 95, 0) 65%);
+  }
+  .fld-hero__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+  }
+  .fld-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.35rem;
+    max-width: 640px;
+  }
+  .fld-hero__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(255, 77, 109, 0.4);
+    border-radius: 999px;
+    background: rgba(255, 77, 109, 0.06);
+  }
+  .fld-hero__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.1rem, 4.6vw, 4.2rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fld-hero__subtitle {
+    font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .fld-hero__cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .fld-hero__link {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .fld-hero__link:hover { color: var(--accent-primary); }
+
+  /* Ops dashboard mock */
+  .fld-hero__mock { position: relative; }
+  .fld-ops-mock {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .fld-ops-mock__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.15rem;
+    background: #0f0f0f;
+    color: #f5f0e8;
+  }
+  .fld-ops-mock__live {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .fld-ops-mock__live-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+    animation: fld-pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes fld-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+  .fld-ops-mock__meta {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: rgba(245, 240, 232, 0.6);
+    letter-spacing: 0.04em;
+  }
+  .fld-ops-mock__stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0.4rem 0.75rem;
+    background: #fff;
+  }
+  .fld-ops-mock__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.7rem 0.6rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .fld-ops-mock__stat:nth-child(odd) {
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  .fld-ops-mock__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .fld-ops-mock__stat-label {
+    font-family: var(--font-mono);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .fld-ops-mock__stat-val {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.5rem;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #1a1a1a;
+  }
+  .fld-ops-mock__alerts {
+    padding: 0.85rem 1rem 1rem;
+    background: #fafafa;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fld-ops-mock__alert {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #333;
+    line-height: 1.35;
+  }
+  .fld-ops-mock__alert-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    color: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.05);
+  }
+  .fld-ops-mock__alert--ok .fld-ops-mock__alert-mark {
+    color: #16a34a;
+    background: rgba(34, 197, 94, 0.14);
+  }
+  .fld-ops-mock__alert--warn .fld-ops-mock__alert-mark {
+    color: #d97706;
+    background: rgba(217, 119, 6, 0.14);
+  }
+
+  /* ══════ BUTTON ══════ */
+  .fld-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    background: #FF7A7A;
+    color: #1A1A1A;
+    padding: 0.9rem 1.5rem;
+    border: 2px solid #000;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 4px 4px 0 #000;
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .fld-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 #000;
+  }
+  .fld-btn--lg {
+    font-size: 1.05rem;
+    padding: 1.05rem 1.9rem;
+  }
+  .fld-animated-dots {
+    display: inline-flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .fld-animated-dots span {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #1A1A1A;
+    animation: fld-dot 1.4s infinite ease-in-out both;
+  }
+  .fld-animated-dots span:nth-child(1) { animation-delay: -0.32s; }
+  .fld-animated-dots span:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes fld-dot {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  /* ══════ SECTION ══════ */
+  .fld-section {
+    padding: 3rem 0;
+    background: var(--bg-primary);
+  }
+  .fld-sheet {
+    background: var(--bg-secondary);
+    border-radius: 44px;
+    padding: 3.25rem 2.5rem;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .fld-intro {
+    max-width: 780px;
+    margin: 0 auto 2.75rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .fld-section__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2rem, 3.6vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+    text-wrap: balance;
+  }
+  .fld-section__subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.15rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  /* ══════ REALITY ARG CARDS ══════ */
+  .fld-args {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .fld-arg {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fld-arg:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fld-arg__viz {
+    padding: 1.6rem;
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+  }
+  .fld-arg__body {
+    padding: 1.6rem 1.75rem 1.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fld-arg__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fld-arg__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.35rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fld-arg__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0.35rem 0 0;
+  }
+
+  /* Viz: chat bubbles (Card 1) */
+  .fld-viz-chat {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fld-viz-chat__row {
+    display: flex;
+  }
+  .fld-viz-chat__row--in { justify-content: flex-start; }
+  .fld-viz-chat__row--out { justify-content: flex-end; }
+  .fld-viz-chat__bubble {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 12px;
+    max-width: 78%;
+    line-height: 1.35;
+  }
+  .fld-viz-chat__row--in .fld-viz-chat__bubble {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    color: #1a1a1a;
+    border-bottom-left-radius: 4px;
+  }
+  .fld-viz-chat__row--out .fld-viz-chat__bubble {
+    background: var(--accent-primary);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+  }
+
+  /* Viz: timeline (Card 2) */
+  .fld-viz-timeline {
+    width: 100%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fld-viz-timeline__row {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 0.5rem 0.7rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  }
+  .fld-viz-timeline__day {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+  .fld-viz-timeline__event {
+    font-size: 0.82rem;
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+  .fld-viz-timeline__event--ok { color: #16a34a; }
+  .fld-viz-timeline__event--warn { color: #d97706; }
+  .fld-viz-timeline__event--err { color: var(--accent-primary); }
+
+  /* Viz: truck route (Card 3) */
+  .fld-viz-truck {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .fld-viz-truck__row {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.4rem 0.6rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+  .fld-viz-truck__stop {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .fld-viz-truck__loc {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #1a1a1a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .fld-viz-truck__flag {
+    font-family: var(--font-mono);
+    font-size: 0.58rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.55);
+  }
+  .fld-viz-truck__flag--warn {
+    background: rgba(217, 119, 6, 0.14);
+    color: #d97706;
+  }
+  .fld-viz-truck__flag--err {
+    background: rgba(255, 77, 109, 0.14);
+    color: var(--accent-primary);
+  }
+
+  /* Viz: tech profitability (Card 4) */
+  .fld-viz-techs {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fld-viz-techs__row {
+    display: grid;
+    grid-template-columns: 62px 1fr 44px;
+    gap: 0.55rem;
+    align-items: center;
+  }
+  .fld-viz-techs__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 0.82rem;
+  }
+  .fld-viz-techs__track {
+    height: 10px;
+    background: rgba(0, 0, 0, 0.06);
+    border-radius: 999px;
+    overflow: hidden;
+    display: block;
+  }
+  .fld-viz-techs__fill {
+    display: block;
+    height: 100%;
+    border-radius: 999px;
+  }
+  .fld-viz-techs__fill--dash {
+    background: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0 6px, transparent 6px 12px);
+    width: 100%;
+  }
+  .fld-viz-techs__margin {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.74rem;
+    color: #16a34a;
+    text-align: right;
+  }
+  .fld-viz-techs__margin--warn { color: var(--accent-primary); }
+  .fld-viz-techs__margin--q {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+  }
+
+  /* ══════ COST ══════ */
+  .fld-cost__stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin: 0 auto 2rem;
+    max-width: 960px;
+  }
+  .fld-cost__stat {
+    background: linear-gradient(180deg, #f5f2ec 0%, #efeae1 100%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+  }
+  .fld-cost__stat--hero {
+    background: linear-gradient(160deg, var(--accent-primary), var(--accent-orange));
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.18);
+  }
+  .fld-cost__stat--hero .fld-cost__stat-num,
+  .fld-cost__stat--hero .fld-cost__stat-label {
+    color: #1a1a1a;
+  }
+  .fld-cost__stat-num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.4rem, 4.8vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: baseline;
+  }
+  .fld-cost__stat-unit {
+    font-size: 0.7em;
+    margin-left: 0.05em;
+    color: var(--accent-primary);
+  }
+  .fld-cost__stat--hero .fld-cost__stat-unit { color: #1a1a1a; }
+  .fld-cost__stat-label {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+    max-width: 240px;
+  }
+  .fld-cost__note {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+  }
+
+  /* ══════ RELIEF ══════ */
+  .fld-relief {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .fld-relief__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fld-relief__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fld-relief__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.32);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .fld-relief__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fld-relief__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fld-relief__copy {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* ══════ CAPABILITIES GRID ══════ */
+  .fld-caps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .fld-cap {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 1.85rem 1.75rem 1.95rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .fld-cap:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 77, 109, 0.3);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.08);
+  }
+  .fld-cap__num {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--accent-primary);
+  }
+  .fld-cap__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: 1.3rem;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fld-cap__copy {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+  .fld-cap__list {
+    list-style: none;
+    margin: 0.6rem 0 0;
+    padding: 0.85rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .fld-cap__list li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: var(--text-secondary);
+  }
+  .fld-cap__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+
+  /* ══════ MATH ══════ */
+  .fld-math {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .fld-math__card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 22px;
+    padding: 2.25rem 2rem 2.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  }
+  .fld-math__card--hero {
+    background: linear-gradient(160deg, rgba(255, 77, 109, 0.06), rgba(255, 126, 95, 0.02) 60%, #fff);
+    border-color: rgba(255, 77, 109, 0.35);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.1);
+  }
+  .fld-math__label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+  }
+  .fld-math__num {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(2.6rem, 5vw, 3.6rem);
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--text-primary);
+  }
+  .fld-math__unit {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.65rem;
+  }
+  .fld-math__list {
+    list-style: none;
+    margin: 0.35rem 0 0;
+    padding: 0.9rem 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fld-math__list li {
+    position: relative;
+    padding-left: 1.15rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+  .fld-math__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent-primary);
+  }
+  .fld-math__link {
+    align-self: flex-start;
+    margin-top: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 77, 109, 0.35);
+    padding-bottom: 2px;
+  }
+  .fld-math__link:hover { color: #e8446a; border-color: #e8446a; }
+
+  /* ══════ CTA ══════ */
+  .fld-cta {
+    padding: 5rem 0 6rem;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .fld-cta__inner {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .fld-cta__title {
+    font-family: var(--font-display);
+    font-weight: 850;
+    font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .fld-cta__sub {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+    margin: 0;
+    max-width: 560px;
+  }
+
+  /* ══════ RESPONSIVE ══════ */
+  @media (max-width: 960px) {
+    .fld-hero__inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .fld-hero__mock { max-width: 420px; margin: 0 auto; }
+    .fld-args { grid-template-columns: 1fr; }
+    .fld-cost__stats { grid-template-columns: 1fr; }
+    .fld-relief { grid-template-columns: 1fr; }
+    .fld-caps { grid-template-columns: 1fr; }
+    .fld-math { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .fld-hero { padding: 3rem 0 2.5rem; }
+    .fld-section { padding: 2rem 0; }
+    .fld-sheet { padding: 2.25rem 1.25rem; border-radius: 28px; }
+    .fld-cta { padding: 4rem 0; }
+    .fld-hero__cta-row { gap: 1rem; }
+  }
+</style>
+</content>
+</invoke>
