@@ -13,7 +13,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, headline, description, roi, info, industry, platform, image, challenges, solutions, results, highlights, clientUrl } = entry.data;
+const { title, headline, description, roi, info, industry, platform, image, imageFocus, challenges, solutions, results, highlights, clientUrl } = entry.data;
+const CardTag = clientUrl ? 'a' : 'div';
+const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noopener' } : {};
 ---
 
 <Layout title={`${title} | Case Study`} description={description}>
@@ -47,30 +49,20 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 
 					<div class="cs-hero-card">
 						<div class="cs-card-inner">
-							<!-- Hero image (or branded colour block fallback) -->
+							<!-- Hero image (or branded colour block fallback); whole card links to client site -->
 							{image ? (
-								<div class={`cs-card-colour cs-card-image cs-colour--${entry.slug}`} style={`background-image: url(${image})`}>
+								<CardTag class={`cs-card-colour cs-card-image cs-colour--${entry.slug} ${clientUrl ? 'cs-card-link' : ''}`} style={`background-image: url(${image}); background-position: ${imageFocus || 'center'}`} {...cardLinkProps}>
 									<div class="cs-card-overlay"></div>
 									<span class="cs-card-name">{title}</span>
-									{clientUrl && (
-										<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
-											Visit Website ↗
-										</a>
-									)}
-								</div>
+								</CardTag>
 							) : (
-								<div class={`cs-card-colour cs-colour--${entry.slug}`}>
+								<CardTag class={`cs-card-colour cs-colour--${entry.slug} ${clientUrl ? 'cs-card-link' : ''}`} {...cardLinkProps}>
 									<svg class="cs-card-blob" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 										<ellipse cx="320" cy="40" rx="130" ry="90" opacity="0.18"/>
 										<ellipse cx="70" cy="170" rx="100" ry="75" opacity="0.13"/>
 									</svg>
 									<span class="cs-card-name">{title}</span>
-									{clientUrl && (
-										<a href={clientUrl} target="_blank" rel="noopener" class="cs-visit-btn">
-											Visit Website ↗
-										</a>
-									)}
-								</div>
+								</CardTag>
 							)}
 							<!-- CMS meta -->
 							<div class="cs-card-meta">
@@ -152,16 +144,6 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 			</section>
 		)}
 
-		<!-- Bottom CTA -->
-		<section class="cs-bottom-cta">
-			<div class="cs-container">
-				<div class="cs-bottom-inner">
-					<h2>Ready to be next?</h2>
-					<p>Let's build the operations infrastructure your brand deserves.</p>
-					<a href="/contact" class="btn-cta-pink">Let's Chat →</a>
-				</div>
-			</div>
-		</section>
 	</main>
 
 	<Footer />
@@ -320,6 +302,8 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		text-align: center;
 		padding: 0 1.25rem;
 	}
+	/* Whole card is a link to the client site */
+	.cs-card-link { cursor: pointer; text-decoration: none; }
 	.cs-visit-btn {
 		position: relative;
 		z-index: 1;
@@ -331,9 +315,9 @@ const { title, headline, description, roi, info, industry, platform, image, chal
 		padding: 0.35rem 0.9rem;
 		border-radius: 999px;
 		text-decoration: none;
-		transition: background 0.2s;
+		transition: background 0.2s, transform 0.2s;
 	}
-	.cs-visit-btn:hover { background: rgba(255,255,255,0.28); }
+	.cs-card-link:hover .cs-visit-btn { background: rgba(255,255,255,0.32); transform: translateY(-1px); }
 
 	/* Meta section */
 	.cs-card-meta {

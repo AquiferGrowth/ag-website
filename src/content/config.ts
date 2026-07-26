@@ -64,6 +64,7 @@ const caseStudies = defineCollection({
 		industry: z.string(),
 		platform: z.string(),
 		image: z.string(),
+		imageFocus: z.string().optional().default('center'),
 		featured: z.boolean().default(false),
 		clientUrl: z.string().optional(),
 		logoText: z.string().optional(),

@@ -6,11 +6,12 @@ roi: "10-15h"
 info: "Saved Weekly"
 industry: "Fashion & Apparel"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/fashion.jpg"
+imageFocus: "center"
 featured: false
 logoText: ""
 logoBrand: "FOUR THREE SEVEN"
-clientUrl: "https://www.fourthreeeven.com"
+clientUrl: "https://shop437.com"
 pubDate: 2024-03-15
 challenges:
   - title: "Seasonal Launch Lag"

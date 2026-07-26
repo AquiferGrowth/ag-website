@@ -6,9 +6,9 @@ roi: "Faster"
 info: "Less Friction"
 industry: "E-commerce"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/claymoo.jpg"
 featured: false
-clientUrl: ""
+clientUrl: "https://claymoo.com"
 logoText: "CLAYMOO"
 logoBrand: "INTEGRATED OPS"
 pubDate: 2024-10-05

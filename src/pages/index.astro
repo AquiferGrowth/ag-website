@@ -77,11 +77,6 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 				<div class="three-act-card section-white-card">
 				<section class="three-act-banner animate-fade-in" data-variant="ecommerce">
 
-					<!-- Variant pills -->
-					<div class="tab-variant-pills" role="tablist" aria-label="Workflow example">
-						<button type="button" class="tab-variant-pill is-active" data-variant="ecommerce" role="tab" aria-selected="true">Ecommerce &amp; Retail</button>
-						<button type="button" class="tab-variant-pill" data-variant="proservices" role="tab" aria-selected="false">Professional Services</button>
-					</div>
 
 					<!-- Act Phase Label -->
 					<div class="tab-act-header">
@@ -952,13 +947,17 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 			<div class="cs-grid">
 				{allCaseStudies.slice(0, 3).map(cs => (
 					<div class="cs-outer-card">
-						<a href={`/case-study/${cs.slug}`} class={`cs-inner cs-inner--${cs.slug}`}>
-							<!-- abstract SVG blob -->
-							<svg class="cs-blob" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-								<ellipse cx="320" cy="60" rx="130" ry="100" opacity="0.18"/>
-								<ellipse cx="80" cy="240" rx="110" ry="85" opacity="0.13"/>
-								<ellipse cx="200" cy="150" rx="80" ry="60" opacity="0.10"/>
-							</svg>
+						<a href={`/case-study/${cs.slug}`} class={`cs-inner cs-inner--${cs.slug} ${cs.data.image ? 'cs-inner--image' : ''}`}>
+							{cs.data.image ? (
+								<img src={cs.data.image} alt={cs.data.title} class="cs-inner-img" style={`object-position: ${cs.data.imageFocus || 'center'}`} loading="lazy" />
+							) : (
+								<svg class="cs-blob" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<ellipse cx="320" cy="60" rx="130" ry="100" opacity="0.18"/>
+									<ellipse cx="80" cy="240" rx="110" ry="85" opacity="0.13"/>
+									<ellipse cx="200" cy="150" rx="80" ry="60" opacity="0.10"/>
+								</svg>
+							)}
+							<div class="cs-inner-scrim"></div>
 							<span class="cs-title">{cs.data.title}</span>
 						</a>
 						<a href={`/case-study/${cs.slug}`} class="cs-cta-btn">
@@ -4471,6 +4470,25 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 	}
 
 	.cs-inner:hover { opacity: 0.93; transform: translateY(-2px); }
+
+	/* Image variant */
+	.cs-inner-img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+	.cs-inner-scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.5) 100%);
+		pointer-events: none;
+		z-index: 1;
+	}
+	.cs-inner:not(.cs-inner--image) .cs-inner-scrim { display: none; }
 
 	/* Per-client lighter brand colours */
 	.cs-inner--inoki        { background: #2d6a4a; }

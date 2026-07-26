@@ -6,11 +6,11 @@ roi: "40+"
 info: "Hours Saved Weekly"
 industry: "Media & Creative"
 platform: "Airtable, Google Drive, N8N"
-image: ""
+image: "/images/case-studies/spotlightavi.jpg"
 featured: true
 logoText: "AVI"
 logoBrand: "MEDIA LIBRARY"
-clientUrl: "https://spotlightavi.com"
+clientUrl: "https://savi.net"
 pubDate: 2024-07-01
 challenges:
   - title: "40+ Hours Per Week Lost to File Hunting"

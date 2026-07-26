@@ -11,7 +11,7 @@ roi: 100%
 info: Pipeline Automated
 industry: Sales & CRM
 platform: Claude
-image: ""
+image: "/images/case-studies/pulsefx.jpg"
 featured: true
 clientUrl: https://pulsefx.com
 logoText: PULSEFX

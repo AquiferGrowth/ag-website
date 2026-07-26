@@ -6,9 +6,9 @@ roi: "B2B"
 info: "Pipeline Centralized"
 industry: "Beauty & Personal Care"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/hairstrong.jpg"
 featured: true
-clientUrl: ""
+clientUrl: "https://hairstrong.ca"
 logoText: "HAIR STRONG"
 logoBrand: "B2B OPS"
 pubDate: 2025-02-10

@@ -1183,7 +1183,7 @@ const tuesdayStops = [
           {featuredCaseStudies.map(cs => (
             <article class="cs-listing-card">
               {cs.data.image ? (
-                <a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-listing-image cs-lc--${cs.slug}`} style={`background-image: url(${cs.data.image})`}>
+                <a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-listing-image cs-lc--${cs.slug}`} style={`background-image: url(${cs.data.image}); background-position: ${cs.data.imageFocus || 'center'}`}>
                   <div class="cs-listing-overlay"></div>
                   {cs.data.industry && <span class="cs-listing-tag">{cs.data.industry}</span>}
                 </a>

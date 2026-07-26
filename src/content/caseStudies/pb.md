@@ -1,14 +1,14 @@
 ---
-title: "PB"
+title: "Pilabarre"
 headline: "Built and Now Run the Operational Backbone as an Embedded Partner"
 description: "PB needed more than a tool, they needed an ops team. AquiferGrowth built a full inventory management system covering forecasting, product management, collections, and PO workflows, then stayed embedded with the team to run those operations day to day. It's not a hand-off, it's a continuous partnership where AquiferGrowth is an active part of how PB runs the business."
 roi: "Embedded"
 info: "Ops Partnership"
 industry: "E-commerce"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/pb.jpg"
 featured: true
-clientUrl: ""
+clientUrl: "https://pila-barre.com"
 logoText: "PB"
 logoBrand: "MANAGED OPS"
 pubDate: 2024-11-20

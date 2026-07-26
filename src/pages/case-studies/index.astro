@@ -28,49 +28,25 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 			<div class="container">
 				<div class="cs-listing-grid">
 					{allCaseStudies.map(cs => (
-						<article class="cs-listing-card">
-							<!-- Hero image (or colour block fallback) -->
+						<a href={`/case-study/${cs.slug}`} class={`cs-card cs-lc--${cs.slug} ${cs.data.image ? 'cs-card--image' : ''}`}>
 							{cs.data.image ? (
-								<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-listing-image cs-lc--${cs.slug}`} style={`background-image: url(${cs.data.image})`}>
-									<div class="cs-listing-overlay"></div>
-									{cs.data.industry && (
-										<span class="cs-listing-tag">{cs.data.industry}</span>
-									)}
-								</a>
+								<img src={cs.data.image} alt={cs.data.title} class="cs-card__img" style={`object-position: ${cs.data.imageFocus || 'center'}`} loading="lazy" />
 							) : (
-								<a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-lc--${cs.slug}`}>
-									<svg class="cs-lc-blob" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-										<ellipse cx="330" cy="50" rx="140" ry="110" opacity="0.18"/>
-										<ellipse cx="70" cy="190" rx="110" ry="85" opacity="0.13"/>
-										<ellipse cx="200" cy="120" rx="75" ry="55" opacity="0.09"/>
-									</svg>
-									{cs.data.industry && (
-										<span class="cs-listing-tag">{cs.data.industry}</span>
-									)}
-									<span class="cs-lc-title">{cs.data.title}</span>
-								</a>
+								<svg class="cs-lc-blob" viewBox="0 0 400 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+									<ellipse cx="330" cy="90" rx="180" ry="140" opacity="0.16"/>
+									<ellipse cx="70" cy="430" rx="140" ry="100" opacity="0.11"/>
+									<ellipse cx="220" cy="260" rx="90" ry="70" opacity="0.08"/>
+								</svg>
 							)}
-
-							<!-- Content -->
-							<div class="cs-listing-content">
-								<h2 class="cs-listing-headline">{cs.data.headline}</h2>
-								<a href={`/case-study/${cs.slug}`} class="cs-listing-cta">
-									Read case study <span class="cs-cta-arrow">→</span>
-								</a>
+							<div class="cs-card__scrim"></div>
+							<div class="cs-card__brand">{cs.data.title}</div>
+							<div class="cs-card__foot">
+								<span class="cs-card__arrow" aria-hidden="true">
+									<svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13 1L21 9L13 17M21 9H1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</span>
 							</div>
-						</article>
+						</a>
 					))}
-				</div>
-			</div>
-		</section>
-
-		<!-- Bottom CTA -->
-		<section class="cs-bottom-cta">
-			<div class="container">
-				<div class="cs-bottom-inner">
-					<h2>Ready to be next?</h2>
-					<p>Let's build the operations infrastructure your brand deserves.</p>
-					<a href="/contact" class="btn-cta-pink">Let's Chat →</a>
 				</div>
 			</div>
 		</section>
@@ -130,47 +106,116 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		gap: 2rem;
 	}
 
-	/* Card */
-	.cs-listing-card {
-		background: #fff;
-		border: 1.5px solid #e5e7eb;
+	/* Card — Platter-style portrait, image-fills, overlaid text */
+	.cs-card {
+		position: relative;
+		display: block;
+		aspect-ratio: 1 / 1;
 		border-radius: 20px;
 		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-	.cs-listing-card:hover {
-		transform: translateY(-6px);
-		box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-	}
-
-	/* Colour block */
-	.cs-listing-colour {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		overflow: hidden;
-		aspect-ratio: 9 / 4;
 		text-decoration: none;
+		color: #fff;
 		background: #1a1a1a;
-		transition: opacity 0.2s ease;
+		transition: transform 0.35s ease, box-shadow 0.35s ease;
+		isolation: isolate;
 	}
-	.cs-listing-card:hover .cs-listing-colour { opacity: 0.92; }
-
-	/* Image variant: photo as background with subtle dark gradient overlay */
-	.cs-listing-image {
-		background-size: cover;
-		background-position: center;
-		background-repeat: no-repeat;
+	.cs-card:hover {
+		transform: translateY(-6px);
+		box-shadow: 0 24px 48px rgba(0,0,0,0.14);
 	}
-	.cs-listing-overlay {
+	.cs-card__img {
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.6) 100%);
-		pointer-events: none;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
 	}
+	.cs-card__scrim {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.05) 32%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0.88) 100%);
+		pointer-events: none;
+		z-index: 1;
+	}
+	.cs-card__tag {
+		position: absolute;
+		top: 1.15rem;
+		left: 1.15rem;
+		z-index: 3;
+		background: rgba(255,255,255,0.18);
+		backdrop-filter: blur(6px);
+		color: #fff;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.66rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		padding: 0.35rem 0.85rem;
+		border-radius: 999px;
+		border: 1px solid rgba(255,255,255,0.28);
+	}
+	.cs-card__brand {
+		position: absolute;
+		left: 1.5rem;
+		right: 1.5rem;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		font-family: var(--font-display, 'Inter Tight', sans-serif);
+		font-weight: 850;
+		font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+		line-height: 0.95;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		text-align: center;
+		color: #fff;
+		text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+	}
+	.cs-card__foot {
+		position: absolute;
+		left: 0; right: 0; bottom: 0;
+		z-index: 3;
+		padding: 1.5rem 1.5rem 1.4rem;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		gap: 1rem;
+	}
+	.cs-card__headline {
+		flex: 1;
+		margin: 0;
+		font-family: var(--font-display, 'Inter Tight', sans-serif);
+		font-size: 0.95rem;
+		font-weight: 700;
+		line-height: 1.3;
+		letter-spacing: -0.015em;
+		color: #fff;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+	.cs-card__arrow {
+		flex-shrink: 0;
+		width: 38px;
+		height: 38px;
+		border-radius: 999px;
+		background: rgba(255,255,255,0.16);
+		border: 1px solid rgba(255,255,255,0.3);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+		transition: background 0.2s ease, transform 0.2s ease;
+	}
+	.cs-card:hover .cs-card__arrow {
+		background: #fff;
+		color: #1a1a1a;
+		transform: translateX(3px);
+	}
+
 
 	/* Per-slug colours */
 	/* Per-slug background, distinct cohesive dark tones */
@@ -224,111 +269,6 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
 		padding: 0 1.25rem;
 	}
 
-	.cs-listing-tag {
-		position: absolute;
-		top: 1rem;
-		left: 1rem;
-		z-index: 2;
-		background: rgba(255,255,255,0.2);
-		backdrop-filter: blur(6px);
-		color: #fff;
-		font-size: 0.72rem;
-		font-weight: 700;
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-		padding: 0.35rem 0.9rem;
-		border-radius: 999px;
-		border: 1px solid rgba(255,255,255,0.3);
-	}
-	/* On image cards, move the tag to bottom-left so it doesn't overlap brand wordmarks at top */
-	.cs-listing-image .cs-listing-tag {
-		top: auto;
-		bottom: 1rem;
-		background: rgba(0,0,0,0.45);
-		border-color: rgba(255,255,255,0.2);
-	}
-
-	/* Content */
-	.cs-listing-content {
-		padding: 1.75rem;
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-		flex: 1;
-	}
-	.cs-listing-headline {
-		font-size: 0.98rem;
-		font-weight: 700;
-		color: #1a1a1a;
-		line-height: 1.35;
-		margin: 0;
-		letter-spacing: -0.015em;
-		flex: 1;
-	}
-	.cs-listing-cta {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.5rem;
-		margin-top: 0.5rem;
-		padding: 0.6rem 1.25rem;
-		border: 1.5px solid #1a1a1a;
-		border-radius: 999px;
-		font-size: 0.85rem;
-		font-weight: 700;
-		color: #1a1a1a;
-		text-decoration: none;
-		width: fit-content;
-		transition: all 0.25s ease;
-	}
-	.cs-listing-cta:hover {
-		background: #1a1a1a;
-		color: #fff;
-	}
-	.cs-cta-arrow {
-		transition: transform 0.2s ease;
-	}
-	.cs-listing-cta:hover .cs-cta-arrow {
-		transform: translateX(3px);
-	}
-
-	/* Bottom CTA */
-	.cs-bottom-cta {
-		padding: 6rem 0;
-		background: #1a1a1a;
-	}
-	.cs-bottom-inner {
-		text-align: center;
-		color: #fff;
-	}
-	.cs-bottom-inner h2 {
-		font-size: clamp(2rem, 4vw, 3rem);
-		font-weight: 850;
-		letter-spacing: -0.04em;
-		margin: 0 0 0.75rem;
-	}
-	.cs-bottom-inner p {
-		font-size: 1.1rem;
-		color: #aaa;
-		margin: 0 0 2rem;
-	}
-	.btn-cta-pink {
-		display: inline-block;
-		background: #FF7A7A;
-		color: #000;
-		font-weight: 800;
-		padding: 1rem 2.5rem;
-		border-radius: 999px;
-		border: 2px solid #fff;
-		box-shadow: 4px 4px 0 #fff;
-		font-size: 1rem;
-		transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-		text-decoration: none;
-	}
-	.btn-cta-pink:hover {
-		transform: translate(-4px, -4px);
-		box-shadow: 8px 8px 0 #fff;
-		background: #ff9d9d;
-	}
 
 	/* Responsive */
 	@media (max-width: 1024px) {

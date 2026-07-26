@@ -6,9 +6,9 @@ roi: "Cost Clarity"
 info: "Per-Component"
 industry: "Precious Metals"
 platform: "Business Central"
-image: ""
+image: "/images/case-studies/milros.jpg"
 featured: true
-clientUrl: ""
+clientUrl: "https://milroscompany.com"
 logoText: "MILROS"
 logoBrand: "DATA STACK"
 pubDate: 2024-09-15

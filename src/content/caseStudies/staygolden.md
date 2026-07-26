@@ -6,9 +6,10 @@ roi: "Full Stack"
 info: "Built From Scratch"
 industry: "E-commerce"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/staygolden.jpg"
+imageFocus: "right center"
 featured: true
-clientUrl: ""
+clientUrl: "https://staygoldenhi.com"
 logoText: "STAYGOLDEN"
 logoBrand: "INVENTORY OPS"
 pubDate: 2025-01-15

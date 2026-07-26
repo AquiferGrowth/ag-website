@@ -6,7 +6,7 @@ roi: "10-15h"
 info: "Saved Weekly"
 industry: "Wellness & Retail"
 platform: "Shopify"
-image: ""
+image: "/images/case-studies/inoki.jpg"
 featured: true
 clientUrl: https://inokibathhouse.com
 logoText: INOKI
