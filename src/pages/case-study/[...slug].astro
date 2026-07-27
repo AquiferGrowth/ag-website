@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, headline, description, roi, info, industry, platform, image, imageFocus, challenges, solutions, results, highlights, clientUrl } = entry.data;
+const { title, headline, heroH1, description, roi, info, industry, platform, image, imageFocus, challenges, solutions, results, highlights, clientUrl } = entry.data;
 const CardTag = clientUrl ? 'a' : 'div';
 const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noopener' } : {};
 ---
@@ -27,8 +27,10 @@ const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noo
 			<div class="cs-container">
 				<div class="cs-hero-grid">
 					<div class="cs-hero-text">
-						<h1>{title} {headline}</h1>
-						<p class="cs-desc">{description}</p>
+						<h1>{heroH1 ? heroH1 : `${title} ${headline}`}</h1>
+						{description.split('\n\n').map(para => (
+							<p class="cs-desc">{para}</p>
+						))}
 
 						{highlights && highlights.length > 0 && (
 							<ul class="cs-highlights">

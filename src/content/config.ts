@@ -58,6 +58,7 @@ const caseStudies = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		headline: z.string(),
+		heroH1: z.string().optional(),
 		description: z.string(),
 		roi: z.string(),
 		info: z.string(), // e.g., "$10k Saved/mo"
