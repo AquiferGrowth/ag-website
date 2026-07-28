@@ -1179,32 +1179,26 @@ const tuesdayStops = [
           </h2>
         </div>
 
-        <div class="cs-listing-grid">
+        <div class="cs-grid">
           {featuredCaseStudies.map(cs => (
-            <article class="cs-listing-card">
-              {cs.data.image ? (
-                <a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-listing-image cs-lc--${cs.slug}`} style={`background-image: url(${cs.data.image}); background-position: ${cs.data.imageFocus || 'center'}`}>
-                  <div class="cs-listing-overlay"></div>
-                  {cs.data.industry && <span class="cs-listing-tag">{cs.data.industry}</span>}
-                </a>
-              ) : (
-                <a href={`/case-study/${cs.slug}`} class={`cs-listing-colour cs-lc--${cs.slug}`}>
-                  <svg class="cs-lc-blob" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <ellipse cx="330" cy="50" rx="140" ry="110" opacity="0.18"/>
-                    <ellipse cx="70" cy="190" rx="110" ry="85" opacity="0.13"/>
-                    <ellipse cx="200" cy="120" rx="75" ry="55" opacity="0.09"/>
+            <div class="cs-outer-card">
+              <a href={`/case-study/${cs.slug}`} class={`cs-inner cs-inner--${cs.slug} ${cs.data.image ? 'cs-inner--image' : ''}`}>
+                {cs.data.image ? (
+                  <img src={cs.data.image} alt={cs.data.title} class="cs-inner-img" style={`object-position: ${cs.data.imageFocus || 'center'}`} loading="lazy" />
+                ) : (
+                  <svg class="cs-blob" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <ellipse cx="320" cy="60" rx="130" ry="100" opacity="0.18"/>
+                    <ellipse cx="80" cy="240" rx="110" ry="85" opacity="0.13"/>
+                    <ellipse cx="200" cy="150" rx="80" ry="60" opacity="0.10"/>
                   </svg>
-                  {cs.data.industry && <span class="cs-listing-tag">{cs.data.industry}</span>}
-                  <span class="cs-lc-title">{cs.data.title}</span>
-                </a>
-              )}
-              <div class="cs-listing-content">
-                <h3 class="cs-listing-headline">{cs.data.headline}</h3>
-                <a href={`/case-study/${cs.slug}`} class="cs-listing-cta">
-                  Read case study <span class="cs-cta-arrow">→</span>
-                </a>
-              </div>
-            </article>
+                )}
+                <div class="cs-inner-scrim"></div>
+                <span class="cs-title">{cs.data.title}</span>
+              </a>
+              <a href={`/case-study/${cs.slug}`} class="cs-cta-btn">
+                See Full Case Study <span class="cs-arrow">↗</span>
+              </a>
+            </div>
           ))}
         </div>
         </div>
@@ -4482,6 +4476,96 @@ const tuesdayStops = [
   .en-cases { padding: 3rem 0; }
   .en-cases .section-header { margin-bottom: 2.5rem; }
   .en-cases .section-header h2 { text-transform: none; font-size: clamp(2rem, 3.6vw, 3rem); }
+
+  /* ── Case study cards (matches home page) ── */
+  .cs-grid {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  .cs-outer-card {
+    flex: 1;
+    min-width: 0;
+    background: #f3dad7;
+    border-radius: 24px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .cs-inner {
+    position: relative;
+    border-radius: 16px;
+    height: 260px;
+    background: #2a2a2a;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .cs-inner:hover { opacity: 0.93; transform: translateY(-2px); }
+  .cs-inner-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .cs-inner-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.05) 40%, rgba(0,0,0,0.5) 100%);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .cs-inner:not(.cs-inner--image) .cs-inner-scrim { display: none; }
+  .cs-blob {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .cs-blob ellipse { fill: #ffffff; }
+  .cs-title {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.15;
+    padding: 0 1.5rem;
+  }
+  .cs-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    align-self: center;
+    background: #fff;
+    color: #1a1a1a;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .cs-cta-btn:hover { background: #f5f5f5; transform: translateY(-1px); }
+  .cs-arrow { color: #e8334a; font-size: 0.95rem; }
+  @media (max-width: 768px) {
+    .cs-grid { flex-direction: column; }
+    .cs-inner { height: 220px; }
+  }
 
   .cs-listing-grid {
     display: grid;

@@ -1,56 +1,40 @@
 ---
 title: "Inoki Bathhouse"
 headline: "Replaced Spreadsheet Operations with a Fully Integrated, AI-Ready System"
-description: "Inoki Bathhouse was running complex operations across inventory, orders, and fulfillment, all out of spreadsheets that didn't talk to each other. AquiferGrowth came in and rebuilt the entire operational foundation: a centralized, integrated system with automation that instantly reclaimed hours every week. They're now building AI capabilities on top of it. A complete operational overhaul."
-roi: "10-15h"
-info: "Saved Weekly"
+heroH1: "We Rebuilt Inoki Bathhouse's Inventory and Production System"
+problemIntro: "Before working with Aquifer Growth, Inoki Bathhouse ran inventory and production out of Google Sheets. It worked at first, but as the data grew, the sheets started to break."
+description: "Inoki Bathhouse ran inventory and production out of Google Sheets. It held up at first, but as the catalog and the data grew, the sheets started to break: clones once a sheet got too big, version-control headaches, historic data buried, and a single wrong edit able to take the whole thing down.\n\nInventory also had to be kept accurate against Shopify by hand. Production numbers weren't tied to it, and calculating the raw materials for each production run was manual and error-prone.\n\nWe rebuilt it in Airtable as one connected system. Production ties directly to inventory, sell-through and location data drive capacity planning, and every production run deducts its raw materials automatically. Inoki now saves over 10 hours a month on inventory alone, on a platform that stays steady as it grows."
+roi: "10+ hrs"
+info: "Saved monthly on inventory alone"
 industry: "Wellness & Retail"
-platform: "Shopify"
+platform: "Shopify + Airtable"
 image: "/images/case-studies/inoki.jpg"
 featured: true
-clientUrl: https://inokibathhouse.com
-logoText: INOKI
-logoBrand: BATHHOUSE
+clientUrl: "https://inokibathhouse.com"
+logoText: "INOKI"
+logoBrand: "BATHHOUSE"
 challenges:
-  - title: Fragmented Operations
-    body: Inventory management, order management, and order processing each lived in
-      separate spreadsheets with no integration between them. Any update in one
-      place required manual changes everywhere else, creating constant
-      opportunities for error and misalignment.
-  - title: No Single Source of Truth
-    body: With data spread across disconnected files, the team had no reliable,
-      real-time view of the business. Decisions were made on stale information,
-      and operational visibility was effectively nonexistent.
-  - title: Manual Overhead at Every Step
-    body: Every operational area, from logging inventory to processing orders,
-      required manual input. As the business grew, so did the burden. The team
-      was spending more time managing data than running the business.
+  - title: "Spreadsheets that broke as they grew"
+    body: "As the data grew, Google Sheets started to fail. It needed new clones once a sheet got too big, version control turned messy, historic data was hard to pull, and one wrong cell edit could break the whole thing."
+  - title: "Inventory wasn't tied to production"
+    body: "Production numbers lived apart from inventory, so keeping Shopify accurate meant manual cross-checking. When numbers didn't match, tracking down the cause could eat most of a day."
+  - title: "Manual production and ingredient math"
+    body: "Deciding what to produce, and calculating the raw materials each run consumed, was done by hand. As volume grew, the hours and the errors grew with it."
+  - title: "No easy read on capacity"
+    body: "Without sell-through rate and location inventory in one place, planning manufacturing capacity meant pulling numbers together manually every time."
 solutions:
-  - title: Centralized, Integrated System
-    body: AquiferGrowth built a single operational hub connecting inventory
-      management, order management, and order processing, eliminating the need
-      for manual cross-referencing and giving the team a unified, real-time view
-      of the entire business.
-  - title: End-to-End Automation
-    body: Key workflows across inventory updates, order routing, and processing were
-      fully automated, removing manual touchpoints that were slowing the team
-      down and introducing unnecessary human error.
-  - title: AI-Ready Infrastructure
-    body: The system was architected with future AI capabilities in mind. With
-      connected data flowing through a centralized platform, Inoki is now
-      actively building AI-powered capabilities on top of the foundation
-      AquiferGrowth put in place.
-results: Since partnering with AquiferGrowth, Inoki Bathhouse has undergone a
-  complete operational transformation. Spreadsheets are gone. Every core
-  function, inventory, orders, fulfillment, now runs through a single integrated
-  system with automations handling what used to require hours of manual effort
-  every week. The team has reclaimed meaningful time, operates with far greater
-  visibility, and is now in a position to layer AI capabilities on top of a
-  solid, scalable foundation. What started as an operational fix has become a
-  platform for long-term growth.
+  - title: "One system in Airtable"
+    body: "We moved inventory and production into a single Airtable system, so everything lives in one place and the team no longer keeps Shopify inventory accurate by hand."
+  - title: "Production planning from sell-through"
+    body: "Sell-through rate and location inventory now drive production planning, making manufacturing capacity easy to size and schedule. That alone saves one to two hours a week."
+  - title: "Automatic raw-material deduction"
+    body: "Every production run automatically deducts the raw materials it uses, based on quantity. The ingredient math that used to be manual is now instant, with far less room for human error."
+  - title: "A platform that scales"
+    body: "Airtable stays stable as the database grows: proper edit permissions, historic data intact, and none of the cloning or breakage that Google Sheets ran into over time."
+results: "Since moving from Google Sheets to Airtable, Inoki Bathhouse saves over 10 hours a month on inventory alone. Production numbers now tie directly to inventory in one place, so the team no longer keeps Shopify in sync by hand, and when a discrepancy does come up it takes about an hour to trace instead of most of a day. Planning manufacturing capacity off sell-through and location inventory saves another one to two hours a week, and automatic raw-material deduction on every production run has cut both time and human error. Airtable has also held up where Sheets fell apart: no clones, no version-control mess, and no one accidentally breaking the whole system as the data grows."
 pubDate: 2024-05-10
 highlights:
-  - Spreadsheet operations fully replaced with a centralized system
-  - Inventory, order management & fulfillment unified in one place
-  - AI capabilities actively being built on top of the new infrastructure
+  - "10+ hours a month saved on inventory alone"
+  - "1-2 hours a week saved on production capacity planning"
+  - "Inventory discrepancies traced in about an hour, down from most of a day"
 ---

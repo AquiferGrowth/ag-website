@@ -13,12 +13,22 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const { title, headline, heroH1, description, roi, info, industry, platform, image, imageFocus, challenges, solutions, results, highlights, clientUrl } = entry.data;
+const { title, headline, heroH1, problemIntro, mockup, mockupRows, description, roi, info, industry, platform, image, imageFocus, challenges, solutions, results, highlights, clientUrl } = entry.data;
+
+// Rows for the Retool-style inventory mock: use per-study data if provided, else a default set.
+const invRows = mockupRows ?? [
+	{ product: 'Wave Hoop Earrings',   sku: 'SG-1042', onHand: '128', incoming: '+200', weeks: '9.0',  status: 'ok' },
+	{ product: 'Sunburst Pendant',     sku: 'SG-2088', onHand: '12',  incoming: '0',    weeks: '1.2',  status: 'low' },
+	{ product: 'Shell Anklet',         sku: 'SG-3471', onHand: '0',   incoming: '+150', weeks: '0.0',  status: 'reorder' },
+	{ product: 'Pearl Huggies',        sku: 'SG-5533', onHand: '340', incoming: '+100', weeks: '12.0', status: 'ok' },
+	{ product: 'Tidal Chain Bracelet', sku: 'SG-6120', onHand: '54',  incoming: '0',    weeks: '3.4',  status: 'low' },
+	{ product: 'Coral Stud Set',       sku: 'SG-7043', onHand: '612', incoming: '+50',  weeks: '18.0', status: 'ok' },
+];
 const CardTag = clientUrl ? 'a' : 'div';
 const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noopener' } : {};
 ---
 
-<Layout title={`${title} | Case Study`} description={description}>
+<Layout title={`AquiferGrowth | ${title} Case Study`} description={description}>
 	<Header />
 	
 	<main class="cs-page">
@@ -73,16 +83,6 @@ const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noo
 										<span class="cs-meta-label">Industry</span>
 										<span class="cs-meta-value">{industry}</span>
 									</div>
-									{platform && (
-										<div class="cs-meta-item">
-											<span class="cs-meta-label">Platform</span>
-											<span class="cs-meta-value cs-meta-stack">
-												{platform.split(',').map(p => (
-													<span class="cs-meta-line">{p.trim()}</span>
-												))}
-											</span>
-										</div>
-									)}
 								</div>
 							</div>
 						</div>
@@ -103,7 +103,7 @@ const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noo
 								<div class="cs-tl-content">
 									<h2>The Problem</h2>
 									<p class="cs-tl-intro">
-										Before working with Aquifer Growth, {title} struggled to keep up with the operational demands of their catalog. Manual processes couldn't scale.
+										{problemIntro ? problemIntro : `Before working with Aquifer Growth, ${title} struggled to keep up with the operational demands of their catalog. Manual processes couldn't scale.`}
 									</p>
 									{challenges.map(c => (
 										<div class="cs-tl-item">
@@ -127,6 +127,152 @@ const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noo
 											<p>{s.body}</p>
 										</div>
 									))}
+								</div>
+							</div>
+						)}
+
+						<!-- How it looks (illustrative mockup) -->
+						{mockup && (
+							<div class="cs-tl-section">
+								<div class="cs-tl-marker"></div>
+								<div class="cs-tl-content">
+									<h2>How it looks</h2>
+									<p class="cs-tl-intro">Illustrative. Real data sits behind access controls, but this is the shape of it: {mockup === 'inventory' ? 'inventory, purchase orders, and forecasting in one connected system.' : mockup === 'materials' ? 'planning, inventory, and raw-material forecasting, fully linked to their Shopify storefront.' : 'every SKU received, attributed, tagged, and made searchable in one system.'}</p>
+
+									{mockup === 'catalog' && (
+									<div class="cs-mock">
+										<!-- Attribution grid -->
+										<div class="cs-mock-card cs-mock-card--grid">
+											<div class="cs-mock-bar">
+												<span class="cs-mock-dots"><i></i><i></i><i></i></span>
+												<span class="cs-mock-tab">Catalog · Attribution</span>
+											</div>
+											<div class="cs-mock-grid">
+												<div class="cs-mock-grow cs-mock-grow--head">
+													<span>Product</span><span>Brand</span><span>Skin concern</span><span>Key ingredients</span>
+												</div>
+												<div class="cs-mock-grow">
+													<span class="cs-mock-name">Snail Mucin Essence</span>
+													<span><span class="cs-chip cs-chip--brand">COSRX</span></span>
+													<span><span class="cs-chip">Hydration</span><span class="cs-chip">Barrier</span></span>
+													<span><span class="cs-chip cs-chip--ing">Snail Mucin</span><span class="cs-chip cs-chip--ing">Panthenol</span></span>
+												</div>
+												<div class="cs-mock-grow">
+													<span class="cs-mock-name">Heartleaf Soothing Toner</span>
+													<span><span class="cs-chip cs-chip--brand">Anua</span></span>
+													<span><span class="cs-chip">Redness</span><span class="cs-chip">Sensitivity</span></span>
+													<span><span class="cs-chip cs-chip--ing">Heartleaf</span><span class="cs-chip cs-chip--ing">Niacinamide</span></span>
+												</div>
+												<div class="cs-mock-grow">
+													<span class="cs-mock-name">Rice Glow Serum</span>
+													<span><span class="cs-chip cs-chip--brand">Beauty of Joseon</span></span>
+													<span><span class="cs-chip">Brightening</span><span class="cs-chip">Dullness</span></span>
+													<span><span class="cs-chip cs-chip--ing">Rice</span><span class="cs-chip cs-chip--ing">Niacinamide</span></span>
+												</div>
+												<div class="cs-mock-grow">
+													<span class="cs-mock-name">Centella Ampoule</span>
+													<span><span class="cs-chip cs-chip--brand">SKIN1004</span></span>
+													<span><span class="cs-chip">Barrier Repair</span></span>
+													<span><span class="cs-chip cs-chip--ing">Centella</span></span>
+												</div>
+											</div>
+											<div class="cs-mock-foot">14,000+ products &middot; 25 fields each</div>
+										</div>
+
+										<div class="cs-mock-col">
+											<!-- AI attribution card -->
+											<div class="cs-mock-card cs-mock-card--ai">
+												<div class="cs-mock-ai-head">
+													<span class="cs-mock-ai-badge">AI</span>
+													<span>Product Attribution</span>
+												</div>
+												<div class="cs-mock-ai-name">Heartleaf 77% Soothing Toner</div>
+												<div class="cs-mock-ai-rows">
+													<div class="cs-mock-ai-row"><span>Category</span><span>Skincare &middot; Toner</span></div>
+													<div class="cs-mock-ai-row"><span>Country</span><span>South Korea</span></div>
+													<div class="cs-mock-ai-row"><span>Skin concerns</span><span>Redness, Sensitivity</span></div>
+													<div class="cs-mock-ai-row"><span>Key ingredients</span><span>Heartleaf, Niacinamide</span></div>
+												</div>
+												<div class="cs-mock-ai-status"><span class="cs-mock-ai-check">&#10003;</span> Attributed &middot; ready for review</div>
+											</div>
+
+											<!-- Merchandising taxonomy -->
+											<div class="cs-mock-card cs-mock-card--tax">
+												<div class="cs-mock-tax-label">Merchandising taxonomy</div>
+												<div class="cs-mock-tax-cloud">
+													<span class="cs-chip cs-chip--tag">Brand:COSRX</span>
+													<span class="cs-chip cs-chip--tag">COO:Korea</span>
+													<span class="cs-chip cs-chip--tag">Concern:Dehydration</span>
+													<span class="cs-chip cs-chip--tag">Formulation:Serum</span>
+													<span class="cs-chip cs-chip--tag">Badge:Staff Pick</span>
+													<span class="cs-chip cs-chip--tag">Area:Face</span>
+													<span class="cs-chip cs-chip--tag">Live-Aug</span>
+													<span class="cs-chip cs-chip--tag">Bestseller</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									)}
+
+									{mockup === 'inventory' && (
+									<div class="cs-rt">
+										<div class="cs-rt-side">
+											<div class="cs-rt-logo"><span class="cs-rt-logo-mark"></span>{title}</div>
+											<div class="cs-rt-nav">
+											<div class="cs-rt-grp">Catalog</div>
+											<div class="cs-rt-item">Products</div>
+											<div class="cs-rt-item">Collections</div>
+											<div class="cs-rt-item">SKUs</div>
+											<div class="cs-rt-grp">Inventory</div>
+											<div class="cs-rt-item">Purchase Orders</div>
+											<div class="cs-rt-item">Stock</div>
+											<div class="cs-rt-item">Counts</div>
+											<div class="cs-rt-item">Suppliers</div>
+											<div class="cs-rt-item is-active">Forecasting</div>
+											<div class="cs-rt-grp">Orders</div>
+											<div class="cs-rt-grp">Reports</div>
+											</div>
+										</div>
+										<div class="cs-rt-main">
+											<div class="cs-rt-head"><span class="cs-rt-title">Inventory Forecasting</span><span class="cs-rt-stat">1,240 SKUs</span></div>
+											<div class="cs-rt-filters"><span class="cs-rt-filter">Look back &middot; 8 weeks</span><span class="cs-rt-filter">Reorder QTY</span><span class="cs-rt-filter">Weeks of supply</span></div>
+											<div class="cs-rt-table">
+												<div class="cs-rt-row cs-rt-row--head"><span>Product</span><span>SKU</span><span>On hand</span><span>Incoming</span><span>Wks supply</span><span>Status</span></div>
+												{invRows.map(r => (
+												<div class="cs-rt-row"><span class="cs-rt-prod">{r.product}</span><span class="cs-rt-sku">{r.sku}</span><span>{r.onHand}</span><span class={r.incoming !== '0' ? 'cs-rt-inc' : ''}>{r.incoming}</span><span>{r.weeks}</span><span><i class={`cs-rt-dot cs-rt-dot--${r.status}`}></i></span></div>
+												))}
+											</div>
+										</div>
+									</div>
+									)}
+									{mockup === 'materials' && (
+									<div class="cs-at">
+										<div class="cs-at-side">
+											<div class="cs-at-base"><span class="cs-at-base-mark"></span>Claymoo Ops</div>
+											<div class="cs-at-tables">
+											<div class="cs-at-tbl">Shopify Orders <span class="cs-at-sync">Synced</span></div>
+											<div class="cs-at-tbl">Kits</div>
+											<div class="cs-at-tbl">Kit Formulas</div>
+											<div class="cs-at-tbl">Pigment Recipes</div>
+											<div class="cs-at-tbl">Raw Materials</div>
+											<div class="cs-at-tbl is-active">Forecast</div>
+											<div class="cs-at-tbl">Purchase Orders</div>
+											</div>
+										</div>
+										<div class="cs-at-main">
+											<div class="cs-at-head"><span class="cs-at-title">Raw Material Forecast</span><span class="cs-at-shopify"><i></i> Linked to Shopify</span></div>
+											<div class="cs-at-table">
+												<div class="cs-at-row cs-at-row--head"><span>Material</span><span>On hand</span><span>Used / wk</span><span>Days left</span><span>Status</span></div>
+												<div class="cs-at-row"><span class="cs-at-mat"><i class="cs-at-sw" style="background:#eeeeee;border-color:#cccccc"></i>White Clay</span><span>42 kg</span><span>8.5 kg</span><span>34 d</span><span><span class="cs-chip cs-chip--ok">In stock</span></span></div>
+												<div class="cs-at-row"><span class="cs-at-mat"><i class="cs-at-sw" style="background:#e8364e;border-color:#e8364e"></i>Red Pigment</span><span>1.2 kg</span><span>0.4 kg</span><span>21 d</span><span><span class="cs-chip cs-chip--ok">In stock</span></span></div>
+												<div class="cs-at-row"><span class="cs-at-mat"><i class="cs-at-sw" style="background:#f2c14e;border-color:#f2c14e"></i>Yellow Pigment</span><span>0.3 kg</span><span>0.35 kg</span><span>6 d</span><span><span class="cs-chip cs-chip--reorder">Reorder</span></span></div>
+												<div class="cs-at-row"><span class="cs-at-mat"><i class="cs-at-sw" style="background:#2d6cdf;border-color:#2d6cdf"></i>Blue Pigment</span><span>0.8 kg</span><span>0.2 kg</span><span>28 d</span><span><span class="cs-chip cs-chip--ok">In stock</span></span></div>
+												<div class="cs-at-row"><span class="cs-at-mat"><i class="cs-at-sw" style="background:#3aa76d;border-color:#3aa76d"></i>Green Pigment</span><span>0.15 kg</span><span>0.18 kg</span><span>5 d</span><span><span class="cs-chip cs-chip--low">Low</span></span></div>
+											</div>
+											<div class="cs-at-foot">Consumption computed from Shopify sales &times; kit formulas &times; pigment recipes</div>
+										</div>
+									</div>
+									)}
 								</div>
 							</div>
 						)}
@@ -455,6 +601,454 @@ const cardLinkProps = clientUrl ? { href: clientUrl, target: '_blank', rel: 'noo
 		font-size: 0.9rem;
 		line-height: 1.75;
 		color: #444;
+	}
+
+	/* ─── How it looks (mockups) ─── */
+	.cs-mock {
+		display: grid;
+		grid-template-columns: 1.5fr 1fr;
+		gap: 1rem;
+		margin-top: 1.5rem;
+	}
+	.cs-mock-card {
+		background: #fff;
+		border: 1px solid #e6e6e6;
+		border-radius: 12px;
+		box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+		overflow: hidden;
+	}
+	.cs-mock-col { display: flex; flex-direction: column; gap: 1rem; }
+
+	/* Window bar */
+	.cs-mock-bar {
+		display: flex;
+		align-items: center;
+		gap: 0.6rem;
+		padding: 0.6rem 0.85rem;
+		background: #f7f6f3;
+		border-bottom: 1px solid #ececec;
+	}
+	.cs-mock-dots { display: inline-flex; gap: 5px; }
+	.cs-mock-dots i { width: 9px; height: 9px; border-radius: 50%; background: #d9d6cf; }
+	.cs-mock-dots i:nth-child(1) { background: #f3b0b0; }
+	.cs-mock-dots i:nth-child(2) { background: #f5d59a; }
+	.cs-mock-dots i:nth-child(3) { background: #a9d9b0; }
+	.cs-mock-tab {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.66rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #777;
+	}
+
+	/* Attribution grid */
+	.cs-mock-grow {
+		display: grid;
+		grid-template-columns: 1.4fr 1fr 1.3fr 1.5fr;
+		gap: 0.6rem;
+		align-items: center;
+		padding: 0.7rem 0.85rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.cs-mock-grow--head {
+		background: #fafafa;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #999;
+	}
+	.cs-mock-name { font-size: 0.78rem; font-weight: 600; color: #1a1a1a; }
+	.cs-mock-grow span { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+	.cs-mock-grow > span:first-child { display: block; }
+	.cs-chip {
+		display: inline-flex;
+		align-items: center;
+		font-size: 0.66rem;
+		font-weight: 600;
+		padding: 0.12rem 0.5rem;
+		border-radius: 999px;
+		background: #eef0f4;
+		color: #43506b;
+		white-space: nowrap;
+	}
+	.cs-chip--brand { background: #eee7f7; color: #6b4aa0; }
+	.cs-chip--ing { background: #e7f2ec; color: #2f7a52; }
+	.cs-chip--tag { background: #fdeef0; color: var(--accent-primary, #e8364e); }
+	.cs-mock-foot {
+		padding: 0.6rem 0.85rem;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.64rem;
+		letter-spacing: 0.05em;
+		color: #999;
+		background: #fafafa;
+	}
+
+	/* AI attribution card */
+	.cs-mock-card--ai { padding: 1rem 1.1rem 1.1rem; }
+	.cs-mock-ai-head {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: #777;
+		margin-bottom: 0.75rem;
+	}
+	.cs-mock-ai-badge {
+		background: linear-gradient(135deg, var(--accent-primary, #e8364e), #ff7e5f);
+		color: #fff;
+		font-size: 0.62rem;
+		font-weight: 800;
+		padding: 0.1rem 0.4rem;
+		border-radius: 5px;
+		letter-spacing: 0.06em;
+	}
+	.cs-mock-ai-name { font-size: 0.9rem; font-weight: 700; color: #1a1a1a; margin-bottom: 0.7rem; }
+	.cs-mock-ai-rows { display: flex; flex-direction: column; gap: 0.4rem; }
+	.cs-mock-ai-row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.75rem;
+		font-size: 0.76rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 1px solid #f2f2f2;
+	}
+	.cs-mock-ai-row span:first-child { color: #999; }
+	.cs-mock-ai-row span:last-child { color: #333; font-weight: 500; text-align: right; }
+	.cs-mock-ai-status {
+		margin-top: 0.8rem;
+		font-size: 0.72rem;
+		font-weight: 600;
+		color: #2f7a52;
+	}
+	.cs-mock-ai-check {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 15px; height: 15px;
+		border-radius: 50%;
+		background: #2f7a52;
+		color: #fff;
+		font-size: 0.6rem;
+		margin-right: 0.15rem;
+	}
+
+	/* Merchandising taxonomy */
+	.cs-mock-card--tax { padding: 1rem 1.1rem 1.1rem; }
+	.cs-mock-tax-label {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.64rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #999;
+		margin-bottom: 0.7rem;
+	}
+	.cs-mock-tax-cloud { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+	/* Inventory table rows */
+	.cs-mock-inv {
+		display: grid;
+		grid-template-columns: 0.7fr 1.6fr 0.7fr 0.8fr 0.9fr;
+		gap: 0.6rem;
+		align-items: center;
+		padding: 0.7rem 0.85rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	.cs-mock-inv--head {
+		background: #fafafa;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.6rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: #999;
+	}
+	.cs-mock-inv span { display: flex; }
+	.cs-mock-inv > span:last-child { flex-wrap: wrap; gap: 0.3rem; }
+	.cs-mock-sku {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.66rem;
+		color: #888;
+	}
+	.cs-mock-num { font-size: 0.82rem; font-weight: 700; color: #1a1a1a; }
+	.cs-mock-inc { font-size: 0.74rem; color: #6b8f6f; }
+	.cs-chip--ok { background: #e7f2ec; color: #2f7a52; }
+	.cs-chip--low { background: #fdf1dc; color: #a5741a; }
+	.cs-chip--reorder { background: #fdeef0; color: var(--accent-primary, #e8364e); }
+
+	/* Forecast mini bars */
+	.cs-mock-fc { display: flex; flex-direction: column; gap: 0.55rem; }
+	.cs-mock-fc-row {
+		display: grid;
+		grid-template-columns: 1fr 1.4fr auto;
+		gap: 0.6rem;
+		align-items: center;
+		font-size: 0.72rem;
+		color: #555;
+	}
+	.cs-mock-fc-bar {
+		height: 7px;
+		background: #eee;
+		border-radius: 999px;
+		overflow: hidden;
+	}
+	.cs-mock-fc-bar i {
+		display: block;
+		height: 100%;
+		border-radius: 999px;
+		background: #2f7a52;
+	}
+	.cs-mock-fc-bar i.low { background: #e0a13a; }
+	.cs-mock-fc-bar i.reorder { background: var(--accent-primary, #e8364e); }
+	.cs-mock-fc-row > span:last-child {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.66rem;
+		color: #888;
+		text-align: right;
+	}
+
+	/* Retool-style app window */
+	.cs-rt {
+		display: flex;
+		margin-top: 1.5rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+		background: #fff;
+	}
+	.cs-rt-side {
+		flex: 0 0 172px;
+		background: #14161c;
+		padding: 1rem 0.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+	}
+	.cs-rt-logo {
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+		color: #fff;
+		font-weight: 800;
+		font-size: 0.92rem;
+		letter-spacing: -0.01em;
+		padding: 0 0.35rem 0.9rem;
+	}
+	.cs-rt-logo-mark {
+		width: 18px; height: 18px;
+		border-radius: 5px;
+		background: linear-gradient(135deg, var(--accent-primary, #e8364e), #ff7e5f);
+	}
+	.cs-rt-nav { display: flex; flex-direction: column; gap: 0.1rem; }
+	.cs-rt-grp {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.58rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #6b7180;
+		padding: 0.7rem 0.5rem 0.3rem;
+	}
+	.cs-rt-item {
+		font-size: 0.76rem;
+		color: #c3c7d1;
+		padding: 0.34rem 0.55rem;
+		border-radius: 6px;
+	}
+	.cs-rt-item.is-active {
+		background: rgba(255, 209, 102, 0.16);
+		color: #ffd166;
+		font-weight: 600;
+	}
+	.cs-rt-main { flex: 1; min-width: 0; padding: 1.1rem 1.25rem 1.25rem; }
+	.cs-rt-head {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		margin-bottom: 0.9rem;
+	}
+	.cs-rt-title { font-size: 1.05rem; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; }
+	.cs-rt-stat {
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.7rem;
+		font-weight: 700;
+		color: #888;
+	}
+	.cs-rt-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.9rem; }
+	.cs-rt-filter {
+		font-size: 0.68rem;
+		color: #555;
+		background: #f4f4f5;
+		border: 1px solid #e6e6e6;
+		border-radius: 7px;
+		padding: 0.3rem 0.6rem;
+	}
+	.cs-rt-table { border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+	.cs-rt-row {
+		display: grid;
+		grid-template-columns: 1.7fr 0.9fr 0.7fr 0.8fr 0.9fr 0.6fr;
+		gap: 0.6rem;
+		align-items: center;
+		padding: 0.6rem 0.8rem;
+		border-bottom: 1px solid #f2f2f2;
+		font-size: 0.76rem;
+		color: #333;
+	}
+	.cs-rt-row:last-child { border-bottom: none; }
+	.cs-rt-row--head {
+		background: #fafafa;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.58rem;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: #999;
+	}
+	.cs-rt-prod { font-weight: 600; color: #1a1a1a; }
+	.cs-rt-sku { font-family: var(--font-mono, 'IBM Plex Mono', monospace); font-size: 0.68rem; color: #888; }
+	.cs-rt-inc { color: #2f7a52; }
+	.cs-rt-dot { display: inline-block; width: 11px; height: 11px; border-radius: 50%; }
+	.cs-rt-dot--ok { background: #2f9e5f; }
+	.cs-rt-dot--low { background: #e0a13a; }
+	.cs-rt-dot--reorder { background: var(--accent-primary, #e8364e); box-shadow: 0 0 0 3px rgba(232,54,78,0.15); }
+
+	/* Airtable-style materials app */
+	.cs-at {
+		display: flex;
+		margin-top: 1.5rem;
+		border: 1px solid #e0e0e0;
+		border-radius: 12px;
+		overflow: hidden;
+		box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+		background: #fff;
+	}
+	.cs-at-side {
+		flex: 0 0 178px;
+		background: #f7f7fb;
+		border-right: 1px solid #eceaf3;
+		padding: 0.9rem 0.7rem;
+	}
+	.cs-at-base {
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-weight: 800;
+		font-size: 0.9rem;
+		color: #1a1a1a;
+		padding: 0 0.35rem 0.85rem;
+	}
+	.cs-at-base-mark {
+		width: 18px; height: 18px;
+		border-radius: 5px;
+		background: linear-gradient(135deg, #7c5cff, #ff8a5c);
+	}
+	.cs-at-tables { display: flex; flex-direction: column; gap: 0.12rem; }
+	.cs-at-tbl {
+		display: flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-size: 0.76rem;
+		color: #555;
+		padding: 0.36rem 0.55rem;
+		border-radius: 6px;
+	}
+	.cs-at-tbl::before {
+		content: '';
+		width: 12px; height: 12px;
+		border-radius: 3px;
+		background: #d7d3e6;
+		flex-shrink: 0;
+	}
+	.cs-at-tbl.is-active { background: #efeaff; color: #5a3ec8; font-weight: 600; }
+	.cs-at-tbl.is-active::before { background: #7c5cff; }
+	.cs-at-sync {
+		margin-left: auto;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.52rem;
+		font-weight: 700;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: #2f7a52;
+		background: #e7f2ec;
+		padding: 0.08rem 0.3rem;
+		border-radius: 4px;
+	}
+	.cs-at-main { flex: 1; min-width: 0; padding: 1.1rem 1.25rem 1.25rem; }
+	.cs-at-head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0.9rem;
+	}
+	.cs-at-title { font-size: 1.05rem; font-weight: 800; color: #1a1a1a; letter-spacing: -0.02em; }
+	.cs-at-shopify {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		font-size: 0.7rem;
+		font-weight: 600;
+		color: #5a8f6f;
+	}
+	.cs-at-shopify i { width: 8px; height: 8px; border-radius: 50%; background: #5cb85c; }
+	.cs-at-table { border: 1px solid #eee; border-radius: 8px; overflow: hidden; }
+	.cs-at-row {
+		display: grid;
+		grid-template-columns: 1.7fr 0.9fr 0.9fr 0.8fr 0.9fr;
+		gap: 0.6rem;
+		align-items: center;
+		padding: 0.6rem 0.8rem;
+		border-bottom: 1px solid #f2f2f2;
+		font-size: 0.76rem;
+		color: #333;
+	}
+	.cs-at-row:last-child { border-bottom: none; }
+	.cs-at-row--head {
+		background: #fafafa;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.58rem;
+		font-weight: 700;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: #999;
+	}
+	.cs-at-mat { display: flex; align-items: center; gap: 0.5rem; font-weight: 600; color: #1a1a1a; }
+	.cs-at-sw {
+		width: 14px; height: 14px;
+		border-radius: 4px;
+		border: 1px solid rgba(0,0,0,0.12);
+		flex-shrink: 0;
+	}
+	.cs-at-foot {
+		margin-top: 0.7rem;
+		font-family: var(--font-mono, 'IBM Plex Mono', monospace);
+		font-size: 0.62rem;
+		letter-spacing: 0.03em;
+		color: #999;
+	}
+
+	@media (max-width: 768px) {
+		.cs-mock { grid-template-columns: 1fr; }
+		.cs-mock-inv { grid-template-columns: 1.4fr 0.7fr 0.9fr; }
+		.cs-mock-inv > span:nth-child(1), .cs-mock-inv > span:nth-child(4) { display: none; }
+		.cs-mock-inv--head > span:nth-child(1), .cs-mock-inv--head > span:nth-child(4) { display: none; }
+		.cs-rt-side { flex-basis: 132px; }
+		.cs-rt-row { grid-template-columns: 1.6fr 0.7fr 0.8fr 0.5fr; }
+		.cs-rt-row > span:nth-child(2), .cs-rt-row > span:nth-child(5) { display: none; }
+		.cs-rt-row--head > span:nth-child(2), .cs-rt-row--head > span:nth-child(5) { display: none; }
+		.cs-at-side { flex-basis: 140px; }
+		.cs-at-row { grid-template-columns: 1.5fr 0.9fr 0.8fr 0.9fr; }
+		.cs-at-row > span:nth-child(3) { display: none; }
+		.cs-at-row--head > span:nth-child(3) { display: none; }
+		.cs-mock-grow { grid-template-columns: 1fr 1fr; }
+		.cs-mock-grow > span:nth-child(3), .cs-mock-grow > span:nth-child(4) { display: none; }
+		.cs-mock-grow--head > span:nth-child(3), .cs-mock-grow--head > span:nth-child(4) { display: none; }
 	}
 
 	/* ─── Responsive ─── */

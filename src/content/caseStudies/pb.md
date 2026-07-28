@@ -1,6 +1,7 @@
 ---
 title: "Pilabarre"
 headline: "Built and Now Run the Operational Backbone as an Embedded Partner"
+heroH1: "We Built and Now Run Pilabarre's Operational Backbone as an Embedded Partner"
 description: "PB needed more than a tool, they needed an ops team. AquiferGrowth built a full inventory management system covering forecasting, product management, collections, and PO workflows, then stayed embedded with the team to run those operations day to day. It's not a hand-off, it's a continuous partnership where AquiferGrowth is an active part of how PB runs the business."
 roi: "Embedded"
 info: "Ops Partnership"
@@ -11,6 +12,14 @@ featured: true
 clientUrl: "https://pila-barre.com"
 logoText: "PB"
 logoBrand: "MANAGED OPS"
+mockup: "inventory"
+mockupRows:
+  - { product: "Flow State Grip Socks",     sku: "PB-1042", onHand: "420", incoming: "+300", weeks: "8.0",  status: "ok" }
+  - { product: "Flower Power Grip Socks",   sku: "PB-2088", onHand: "36",  incoming: "0",    weeks: "1.4",  status: "low" }
+  - { product: "Cheetah Heart Grip Socks",  sku: "PB-3471", onHand: "0",   incoming: "+500", weeks: "0.0",  status: "reorder" }
+  - { product: "Coastal Grip Sock Bundle",  sku: "PB-5533", onHand: "610", incoming: "+200", weeks: "11.0", status: "ok" }
+  - { product: "Cream Best Grip Socks",     sku: "PB-6120", onHand: "88",  incoming: "0",    weeks: "2.6",  status: "low" }
+  - { product: "Bridal Pilates Sock Bundle", sku: "PB-7043", onHand: "240", incoming: "+120", weeks: "14.0", status: "ok" }
 pubDate: 2024-11-20
 challenges:
   - title: "Operations Spread Across Disconnected Tools"

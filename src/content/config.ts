@@ -59,6 +59,16 @@ const caseStudies = defineCollection({
 		title: z.string(),
 		headline: z.string(),
 		heroH1: z.string().optional(),
+		problemIntro: z.string().optional(),
+		mockup: z.enum(['catalog', 'inventory', 'materials']).optional(),
+		mockupRows: z.array(z.object({
+			product: z.string(),
+			sku: z.string(),
+			onHand: z.string(),
+			incoming: z.string(),
+			weeks: z.string(),
+			status: z.enum(['ok', 'low', 'reorder']),
+		})).optional(),
 		description: z.string(),
 		roi: z.string(),
 		info: z.string(), // e.g., "$10k Saved/mo"
