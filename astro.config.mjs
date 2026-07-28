@@ -7,6 +7,8 @@ export default defineConfig({
   redirects: {
     '/build': '/design-and-dev',
     '/industries/ecommerce': '/industries/ecommerce-and-retail',
+    '/case-study/beauty': '/case-study/sukoshi-mart',
+    '/case-study/pb': '/case-study/pilabarre',
   },
   vite: {
     server: {

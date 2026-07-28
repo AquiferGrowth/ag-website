@@ -8,7 +8,7 @@ const allCaseStudies = (await getCollection('caseStudies')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 // Pin a specific set + order for the ecommerce page (PB added explicitly)
-const featuredSlugs = ['staygolden', 'hairstrong', 'pb'];
+const featuredSlugs = ['staygolden', 'hairstrong', 'pilabarre'];
 const featuredCaseStudies = featuredSlugs
   .map(slug => allCaseStudies.find(cs => cs.slug === slug))
   .filter(Boolean);

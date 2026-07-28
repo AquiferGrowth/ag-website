@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content';
 const allCaseStudies = (await getCollection('caseStudies')).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const featuredSlugs = ['staygolden', 'hairstrong', 'pb'];
+const featuredSlugs = ['staygolden', 'hairstrong', 'pilabarre'];
 const featuredCaseStudies = featuredSlugs
   .map(slug => allCaseStudies.find(cs => cs.slug === slug))
   .filter(Boolean);
