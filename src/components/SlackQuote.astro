@@ -7,9 +7,11 @@ interface Props {
 	date: string;
 	quote: string;
 	size?: 'lg' | 'sm';
+	/** Rendered hidden until the wall's "Show more" is pressed */
+	overflow?: boolean;
 }
 
-const { name, initials, company, channel, date, quote, size = 'sm' } = Astro.props;
+const { name, initials, company, channel, date, quote, size = 'sm', overflow = false } = Astro.props;
 
 const isDM = !channel.startsWith('#');
 const channelName = isDM ? channel : channel.slice(1);
@@ -28,7 +30,7 @@ const hash = [...company].reduce((acc, ch) => (acc * 31 + ch.charCodeAt(0)) >>> 
 const tint = tints[hash % tints.length];
 ---
 
-<article class={`sq sq--${size}`} data-company={company}>
+<article class={`sq sq--${size}`} data-company={company} data-overflow={overflow ? 'true' : undefined} hidden={overflow}>
 	<div class="sq__meta">
 		{isDM ? (
 			<svg class="sq__meta-icon" width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2.5 3.5h11v7h-6l-3 2.5v-2.5h-2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>

@@ -20,14 +20,24 @@
     "quote": "y'all are the absolute BEST. I didn't expect this to be so in-depth, but it shows how incredible your team is. We value you two so much"
   },
   {
-    "id": "pilabarre-cam-2026-08-27-a",
-    "name": "Cam R.",
-    "initials": "CR",
-    "company": "Pila Barre",
-    "channel": "Direct message",
-    "date": "2026-08-27",
+    "id": "livehealthillie-erin-2026-06-17",
+    "name": "Erin W.",
+    "initials": "EW",
+    "company": "Live Healthillie",
+    "channel": "#aquifergrowth-livehealthilliecom",
+    "date": "2026-06-17",
     "featured": true,
-    "quote": "You do phenomenal work but youre also a great guy and a great friend"
+    "quote": "Thank you guys a ton for your efficiency & work on this. […] we're excited to see it all come together and give those loyal customers some TLC. Appreciate it team"
+  },
+  {
+    "id": "ryse-trung-2025-04-17",
+    "name": "Trung P.",
+    "initials": "TP",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-04-17",
+    "featured": true,
+    "quote": "This design is really nice I'm very impressed\n\nSolid work."
   },
   {
     "id": "pilabarre-cam-2026-08-27-b",
@@ -40,13 +50,43 @@
     "quote": "That data is absolutely crucial in helping us order inventory; so epic!!"
   },
   {
+    "id": "pulsefx-katherine-2025-07-09",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-07-09",
+    "featured": true,
+    "quote": "beautiful!! Thanks Ashwin it captured everything we talked about in our meeting"
+  },
+  {
+    "id": "ryse-sappho-2025-08-16",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-08-16",
+    "featured": false,
+    "quote": "Just reviewed the changes, and I love it! The tone is perfect, and I had almost no notes across all the posts"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-27-a",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "Direct message",
+    "date": "2026-08-27",
+    "featured": false,
+    "quote": "You do phenomenal work but youre also a great guy and a great friend"
+  },
+  {
     "id": "pilabarre-cam-2026-07-07",
     "name": "Cam R.",
     "initials": "CR",
     "company": "Pila Barre",
     "channel": "#aquifergrowth-operations-pilabarre",
     "date": "2026-07-07",
-    "featured": true,
+    "featured": false,
     "quote": "Incredible! thank you\n\nIve been using retool today super helpful thus far parsign POs etc 💪 thankful to have yall"
   },
   {
@@ -56,7 +96,7 @@
     "company": "Pila Barre",
     "channel": "#aquifergrowth-pilabarre",
     "date": "2026-10-07",
-    "featured": true,
+    "featured": false,
     "quote": "THANK YALL!\n\nHuge help adding the barcodes in there for us\n\nI can see the light 😅"
   },
   {
@@ -66,7 +106,7 @@
     "company": "PulseFX",
     "channel": "#aquifergrowth-pulsefx",
     "date": "2025-06-03",
-    "featured": true,
+    "featured": false,
     "quote": "This is reallllly good Divjot. amazing job"
   },
   {
@@ -110,6 +150,46 @@
     "quote": "thank you Divjot this is super helpful."
   },
   {
+    "id": "pilabarre-cam-2026-10-02",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-10-02",
+    "featured": false,
+    "quote": "Sounds good 🫡 We appreciate you"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-31",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-08-31",
+    "featured": false,
+    "quote": "Sounds good! We appreciate you all so much"
+  },
+  {
+    "id": "pilabarre-cam-2026-02-23",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-02-23",
+    "featured": false,
+    "quote": "This looks fantastic on both mobile and desktop"
+  },
+  {
+    "id": "pilabarre-cam-2026-02-18",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-02-18",
+    "featured": false,
+    "quote": "Nice to meet you! Super excited to see what we can do with the checkout and cart."
+  },
+  {
     "id": "pilabarre-madi-2026-10-07",
     "name": "Madi R.",
     "initials": "MR",
@@ -128,6 +208,86 @@
     "date": "2026-10-12",
     "featured": false,
     "quote": "Yall are the best! thank you!!!!"
+  },
+  {
+    "id": "ryse-sappho-2026-03-27",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2026-03-27",
+    "featured": false,
+    "quote": "These are perfect! I love the designs and the easy toggle in the CMS."
+  },
+  {
+    "id": "ryse-sappho-2026-03-20",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2026-03-20",
+    "featured": false,
+    "quote": "These are perfect! Super consistent, and in line with the reference."
+  },
+  {
+    "id": "ryse-sappho-2026-01-17",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2026-01-17",
+    "featured": false,
+    "quote": "So much better! Very minimal notes added, will be ready to post after notes addressed"
+  },
+  {
+    "id": "ryse-sappho-2025-11-28",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-11-28",
+    "featured": false,
+    "quote": "Everything is hereby approved […] I love the changes"
+  },
+  {
+    "id": "ryse-sappho-2025-11-12",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-11-12",
+    "featured": false,
+    "quote": "This looks great! I love the introduction of the dog, the focus on '$ saved', and the 'free guide' idea seems realistic to me."
+  },
+  {
+    "id": "ryse-sappho-2025-09-25",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-09-25",
+    "featured": false,
+    "quote": "This is a great start! The layout looks good, and I like the lighter vibe."
+  },
+  {
+    "id": "ryse-sappho-2025-09-08",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-09-08",
+    "featured": false,
+    "quote": "I love it! I have a few minimal notes, but otherwise it's good to go. I can also really see how it follows the AIO principles outlined in the doc."
+  },
+  {
+    "id": "ryse-sappho-2025-08-22",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2025-08-22",
+    "featured": false,
+    "quote": "I love it! This design is approved, and we can send it to development."
   },
   {
     "id": "zoleo-julia-2026-10-09",
@@ -160,6 +320,16 @@
     "quote": "Great going team, let's keep the momentum"
   },
   {
+    "id": "zoleo-sam-2026-10-13",
+    "name": "Sam",
+    "initials": "S",
+    "company": "ZOLEO",
+    "channel": "#aquifergrowth-zoleo",
+    "date": "2026-10-13",
+    "featured": false,
+    "quote": "Hey Divjot and team, been seeing your wonderful work and excited to work with you!"
+  },
+  {
     "id": "pulsefx-katherine-2025-06-09",
     "name": "Katherine L.",
     "initials": "KL",
@@ -190,6 +360,26 @@
     "quote": "Amazing!!! Thank you so much"
   },
   {
+    "id": "pulsefx-katherine-2025-06-20",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-06-20",
+    "featured": false,
+    "quote": "Thank you for the update!!! This looks great!"
+  },
+  {
+    "id": "pulsefx-marc-2025-05-24",
+    "name": "Marc R.",
+    "initials": "MR",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-05-24",
+    "featured": false,
+    "quote": "Awesome man! Looking forward to seeing things in action. We have been super excited."
+  },
+  {
     "id": "virusintl-melanie-2026-10-13",
     "name": "Melanie",
     "initials": "M",
@@ -210,6 +400,36 @@
     "quote": "thank you so much for this breakdown!"
   },
   {
+    "id": "livehealthillie-erin-2026-09-28",
+    "name": "Erin W.",
+    "initials": "EW",
+    "company": "Live Healthillie",
+    "channel": "#aquifergrowth-livehealthilliecom",
+    "date": "2026-09-28",
+    "featured": false,
+    "quote": "would be amazing, thanks so much for your support with facilitating this"
+  },
+  {
+    "id": "livehealthillie-erin-2026-06-02",
+    "name": "Erin W.",
+    "initials": "EW",
+    "company": "Live Healthillie",
+    "channel": "#aquifergrowth-livehealthilliecom",
+    "date": "2026-06-02",
+    "featured": false,
+    "quote": "awesome, let's knock this out of the park! […] Appreciate all you guys do"
+  },
+  {
+    "id": "livehealthillie-erin-2026-02-23",
+    "name": "Erin W.",
+    "initials": "EW",
+    "company": "Live Healthillie",
+    "channel": "#aquifergrowth-livehealthilliecom",
+    "date": "2026-02-23",
+    "featured": false,
+    "quote": "the design looks great"
+  },
+  {
     "id": "savi-avi-2026-04-10",
     "name": "Avi Y.",
     "initials": "AY",
@@ -228,5 +448,25 @@
     "date": "2026-03-16",
     "featured": false,
     "quote": "this looks great."
+  },
+  {
+    "id": "bellowater-joseph-2026-03-18",
+    "name": "Joseph",
+    "initials": "J",
+    "company": "Bellowater",
+    "channel": "#aquifergrowth-bellowater",
+    "date": "2026-03-18",
+    "featured": false,
+    "quote": "these are much better. […] the design looks good"
+  },
+  {
+    "id": "sukoshi-coey-2024-08-29",
+    "name": "Coey C.",
+    "initials": "CC",
+    "company": "Sukoshi Mart",
+    "channel": "#aquifergrowth-sukoshi",
+    "date": "2024-08-29",
+    "featured": false,
+    "quote": "Sounds great, thanks so much for the update!"
   }
 ]
