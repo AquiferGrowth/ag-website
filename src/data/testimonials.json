@@ -7,6 +7,8 @@
     "channel": "#aquifergrowth-ryse",
     "date": "2026-05-22",
     "featured": true,
+    "spotlight": true,
+    "rating": 5,
     "quote": "Ashwin and Divjot did an excellent job working on our custom project! Their technical expertise and creativity with both written and visual content enabled us to create something truly unique, and highly relevant to our marketing needs. They also did an excellent job adjusting to new technology as it became available, pivoting from SEO to a more AI-optimized strategy as the project went on. 5 stars!"
   },
   {
@@ -296,7 +298,7 @@
     "company": "ZOLEO",
     "channel": "#aquifergrowth-zoleo",
     "date": "2026-10-09",
-    "featured": false,
+    "featured": true,
     "quote": "Thank you Divjot this is a great step forward!!! We will review asap!"
   },
   {

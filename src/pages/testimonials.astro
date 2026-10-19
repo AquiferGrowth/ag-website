@@ -3,9 +3,24 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SlackQuote from '../components/SlackQuote.astro';
-import testimonials from '../data/testimonials.json';
+import testimonialsData from '../data/testimonials.json';
 
-const featured = testimonials.filter((t) => t.featured);
+interface Testimonial {
+	id: string;
+	name: string;
+	initials: string;
+	company: string;
+	channel: string;
+	date: string;
+	featured: boolean;
+	spotlight?: boolean;
+	rating?: number;
+	quote: string;
+}
+const testimonials = testimonialsData as Testimonial[];
+
+const spotlight = testimonials.find((t) => t.spotlight) ?? testimonials.find((t) => t.featured);
+const featured = testimonials.filter((t) => t.featured && t !== spotlight);
 const wall = testimonials
 	.filter((t) => !t.featured)
 	.sort((a, b) => b.date.localeCompare(a.date));
@@ -22,10 +37,7 @@ const companies = Object.entries(companyCounts)
 // Hero stats, derived from the data so they never go stale
 const totalMessages = testimonials.length;
 const totalClients = new Set(testimonials.map((t) => t.company)).size;
-const years = testimonials.map((t) => Number(t.date.slice(0, 4)));
-const firstYear = Math.min(...years);
-const lastYear = Math.max(...years);
-const yearRange = firstYear === lastYear ? String(firstYear) : `${firstYear}–${lastYear}`;
+const firstYear = Math.min(...testimonials.map((t) => Number(t.date.slice(0, 4))));
 
 // The wall opens collapsed; "Show more" reveals the rest
 const INITIAL_WALL = 12;
@@ -59,8 +71,8 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 						<dd>{totalClients}</dd>
 					</div>
 					<div class="tm-stat">
-						<dt>Sent between</dt>
-						<dd>{yearRange}</dd>
+						<dt>Since</dt>
+						<dd>{firstYear}</dd>
 					</div>
 				</dl>
 				<a href="/contact" class="tm-btn">
@@ -81,6 +93,11 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 						<h2 class="tm-section__title">The ones we'd <span class="text-gradient">frame</span></h2>
 						<p class="tm-section__sub">A few that sum up what it's like to have us run the function.</p>
 					</div>
+					{spotlight && (
+						<div class="tm-spotlight">
+							<SlackQuote {...spotlight} size="xl" />
+						</div>
+					)}
 					<div class="tm-featured">
 						{featured.map((t) => (
 							<SlackQuote {...t} size="lg" />
@@ -97,7 +114,7 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 			<div class="container">
 				<div class="tm-intro">
 					<h2 class="tm-section__title">Every thank-you we've been <span class="text-gradient">sent</span></h2>
-					<p class="tm-section__sub">Newest first. Filter by client.</p>
+					<p class="tm-section__sub">Newest at the top. Filter by client.</p>
 				</div>
 
 				<div class="tm-filters" role="group" aria-label="Filter messages by client">
@@ -418,12 +435,19 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		text-wrap: balance;
 	}
 
-	/* Featured: two-column masonry */
-	.tm-featured {
-		columns: 2;
-		column-gap: 1.25rem;
+	/* Spotlight: one framed card, centred, with room for its offset shadow */
+	.tm-spotlight {
+		max-width: 860px;
+		margin: 0 auto 2.25rem;
+		padding-right: 10px;
 	}
-	.tm-featured > :global(*) { margin-bottom: 1.25rem; }
+
+	/* Featured: three equal columns */
+	.tm-featured {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1.1rem;
+	}
 
 	/* ══════ FILTER CHIPS ══════ */
 	.tm-filters {
@@ -470,12 +494,12 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 	}
 
 	/* ══════ WALL ══════ */
-	/* Row-major grid so "newest first" reads left to right */
+	/* Masonry columns: short thank-yous pack tightly instead of stretching to the tallest card in their row */
 	.tm-wall {
-		display: grid;
-		grid-template-columns: repeat(3, minmax(0, 1fr));
-		gap: 1rem;
+		columns: 3;
+		column-gap: 1rem;
 	}
+	.tm-wall > :global(*) { margin-bottom: 1rem; }
 	.tm-more {
 		display: flex;
 		justify-content: center;
@@ -530,7 +554,8 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 
 	/* ══════ RESPONSIVE ══════ */
 	@media (max-width: 960px) {
-		.tm-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+		.tm-wall { columns: 2; }
+		.tm-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	}
 	@media (max-width: 720px) {
 		.tm-hero { padding: 3rem 0 2rem; }
@@ -539,8 +564,9 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		.tm-stat dd { font-size: 1.3rem; }
 		.tm-stat dt { font-size: 0.6rem; letter-spacing: 0.06em; }
 		.tm-sheet { padding: 2.25rem 1rem; border-radius: 28px; }
-		.tm-featured { columns: 1; }
-		.tm-wall { grid-template-columns: minmax(0, 1fr); }
+		.tm-spotlight { padding-right: 6px; margin-bottom: 1.5rem; }
+		.tm-featured { grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
+		.tm-wall { columns: 1; }
 		.tm-filters {
 			flex-wrap: nowrap;
 			justify-content: flex-start;
