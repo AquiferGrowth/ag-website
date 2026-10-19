@@ -1,0 +1,436 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import SlackQuote from '../components/SlackQuote.astro';
+import testimonials from '../data/testimonials.json';
+
+const featured = testimonials.filter((t) => t.featured);
+const wall = testimonials
+	.filter((t) => !t.featured)
+	.sort((a, b) => b.date.localeCompare(a.date));
+
+// One chip per company on the wall, most messages first
+const companyCounts = wall.reduce<Record<string, number>>((acc, t) => {
+	acc[t.company] = (acc[t.company] ?? 0) + 1;
+	return acc;
+}, {});
+const companies = Object.entries(companyCounts)
+	.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+	.map(([company, count]) => ({ company, count }));
+---
+
+<Layout
+	title="Client Testimonials | Aquifer Growth"
+	description="Real messages from Aquifer Growth clients, pulled from our shared Slack channels. See what founders say about having us run their operations."
+>
+	<Header />
+	<main>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- HERO                                        -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="tm-hero">
+			<div class="tm-hero__bg-blur"></div>
+			<div class="tm-hero__bg-blur tm-hero__bg-blur--right"></div>
+			<div class="container tm-hero__inner animate-fade-in">
+				<span class="tm-eyebrow">Testimonials</span>
+				<h1 class="tm-hero__title">Our clients, in their <span class="text-gradient">own words</span></h1>
+				<p class="tm-hero__sub">No polished quotes. These are the actual messages our clients send us, pulled straight from our shared Slack channels, exactly as written.</p>
+				<a href="/contact" class="tm-btn">
+					<span>Talk to us</span>
+					<span class="tm-animated-dots"><span></span><span></span><span></span></span>
+				</a>
+				<p class="tm-hero__note">Shared with permission. Messages, companies and dates are real. Last names are shortened for privacy.</p>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- FEATURED                                    -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="tm-section">
+			<div class="container">
+				<div class="tm-sheet">
+					<div class="tm-intro">
+						<h2 class="tm-section__title">The ones we'd <span class="text-gradient">frame</span></h2>
+						<p class="tm-section__sub">A few that sum up what it's like to have us run the function.</p>
+					</div>
+					<div class="tm-featured">
+						{featured.map((t) => (
+							<SlackQuote {...t} size="lg" />
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- THE WALL                                    -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="tm-section">
+			<div class="container">
+				<div class="tm-intro">
+					<h2 class="tm-section__title">Every thank-you we've been <span class="text-gradient">sent</span></h2>
+					<p class="tm-section__sub">Newest first. Filter by client.</p>
+				</div>
+
+				<div class="tm-filters" role="group" aria-label="Filter messages by client">
+					<button type="button" class="tm-chip" data-filter="all" aria-pressed="true">
+						All <span class="tm-chip__count">{wall.length}</span>
+					</button>
+					{companies.map(({ company, count }) => (
+						<button type="button" class="tm-chip" data-filter={company} aria-pressed="false">
+							{company} <span class="tm-chip__count">{count}</span>
+						</button>
+					))}
+				</div>
+				<p class="tm-sr-only" id="tm-filter-status" aria-live="polite"></p>
+
+				<div class="tm-wall" id="tm-wall">
+					{wall.map((t) => (
+						<SlackQuote {...t} />
+					))}
+				</div>
+			</div>
+		</section>
+
+		<!-- ═══════════════════════════════════════════ -->
+		<!-- CLOSING CTA                                 -->
+		<!-- ═══════════════════════════════════════════ -->
+		<section class="tm-cta">
+			<div class="container">
+				<div class="tm-cta__band">
+					<h2 class="tm-cta__title">Want messages like these in your own <span class="text-gradient">Slack</span>?</h2>
+					<p class="tm-cta__sub">We own the ops function so you can run the company.</p>
+					<a href="/contact" class="tm-btn tm-btn--lg">
+						<span>Get started</span>
+						<span class="tm-animated-dots"><span></span><span></span><span></span></span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+	</main>
+	<Footer />
+</Layout>
+
+<script>
+	const chips = document.querySelectorAll<HTMLButtonElement>('.tm-chip');
+	const cards = document.querySelectorAll<HTMLElement>('#tm-wall [data-company]');
+	const status = document.getElementById('tm-filter-status');
+
+	chips.forEach((chip) => {
+		chip.addEventListener('click', () => {
+			const filter = chip.dataset.filter;
+			chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+
+			let shown = 0;
+			cards.forEach((card) => {
+				const match = filter === 'all' || card.dataset.company === filter;
+				card.hidden = !match;
+				if (match) shown++;
+			});
+
+			if (status) {
+				status.textContent = `Showing ${shown} ${shown === 1 ? 'message' : 'messages'}${filter === 'all' ? '' : ` from ${filter}`}`;
+			}
+		});
+	});
+</script>
+
+<style>
+	main { overflow-x: hidden; }
+
+	.text-gradient {
+		background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		color: transparent;
+	}
+
+	.tm-sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		white-space: nowrap;
+	}
+
+	/* ══════ HERO ══════ */
+	.tm-hero {
+		position: relative;
+		padding: 4.5rem 0 3rem;
+		overflow: hidden;
+	}
+	.tm-hero__bg-blur {
+		position: absolute;
+		top: -180px;
+		left: -160px;
+		width: 520px;
+		height: 520px;
+		border-radius: 50%;
+		background: radial-gradient(circle, rgba(255, 77, 109, 0.16), rgba(255, 77, 109, 0) 65%);
+		filter: blur(60px);
+		pointer-events: none;
+		z-index: 0;
+	}
+	.tm-hero__bg-blur--right {
+		top: auto;
+		left: auto;
+		right: -180px;
+		bottom: -220px;
+		width: 620px;
+		height: 620px;
+		background: radial-gradient(circle, rgba(255, 126, 95, 0.14), rgba(255, 126, 95, 0) 65%);
+	}
+	.tm-hero__inner {
+		position: relative;
+		z-index: 2;
+		max-width: 820px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.25rem;
+	}
+	.tm-eyebrow {
+		display: inline-block;
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--accent-primary);
+		padding: 0.35rem 0.8rem;
+		border: 1px solid rgba(255, 77, 109, 0.35);
+		border-radius: 999px;
+		background: rgba(255, 77, 109, 0.06);
+	}
+	.tm-hero__title {
+		font-family: var(--font-display);
+		font-weight: 850;
+		font-size: clamp(2.3rem, 5.5vw, 4.4rem);
+		line-height: 1;
+		letter-spacing: -0.035em;
+		text-transform: uppercase;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.tm-hero__sub {
+		font-size: clamp(1.02rem, 1.4vw, 1.2rem);
+		line-height: 1.55;
+		color: var(--text-secondary);
+		max-width: 620px;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.tm-hero__note {
+		font-family: var(--font-mono);
+		font-size: 0.74rem;
+		line-height: 1.5;
+		color: #888;
+		max-width: 520px;
+		margin: 0.5rem 0 0;
+	}
+
+	/* ══════ BUTTON ══════ */
+	.tm-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.7rem;
+		background: #FF7A7A;
+		color: #1A1A1A;
+		padding: 0.9rem 1.5rem;
+		border: 2px solid #000;
+		border-radius: 999px;
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 0.95rem;
+		text-decoration: none;
+		box-shadow: 4px 4px 0 #000;
+		margin-top: 0.5rem;
+		transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+		            box-shadow 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+	.tm-btn:hover {
+		transform: translate(-2px, -2px);
+		box-shadow: 6px 6px 0 #000;
+	}
+	.tm-btn--lg {
+		font-size: 1.05rem;
+		padding: 1.05rem 1.9rem;
+	}
+	.tm-animated-dots {
+		display: inline-flex;
+		gap: 3px;
+		align-items: center;
+	}
+	.tm-animated-dots span {
+		width: 4px;
+		height: 4px;
+		border-radius: 50%;
+		background: #1A1A1A;
+		animation: tm-dot 1.4s infinite ease-in-out both;
+	}
+	.tm-animated-dots span:nth-child(1) { animation-delay: -0.32s; }
+	.tm-animated-dots span:nth-child(2) { animation-delay: -0.16s; }
+	@keyframes tm-dot {
+		0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+		40% { transform: scale(1); opacity: 1; }
+	}
+
+	/* ══════ SECTIONS ══════ */
+	.tm-section {
+		padding: 2.5rem 0;
+		position: relative;
+	}
+	.tm-sheet {
+		background: #F3F0E9;
+		border-radius: 44px;
+		padding: 3.25rem 2.5rem;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	.tm-intro {
+		max-width: 780px;
+		margin: 0 auto 2.25rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+	.tm-section__title {
+		font-family: var(--font-display);
+		font-weight: 850;
+		font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+		line-height: 1.05;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.tm-section__sub {
+		font-size: clamp(1rem, 1.3vw, 1.15rem);
+		line-height: 1.6;
+		color: var(--text-secondary);
+		margin: 0;
+		text-wrap: balance;
+	}
+
+	/* Featured: two-column masonry */
+	.tm-featured {
+		columns: 2;
+		column-gap: 1.25rem;
+	}
+	.tm-featured > :global(*) { margin-bottom: 1.25rem; }
+
+	/* ══════ FILTER CHIPS ══════ */
+	.tm-filters {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.5rem;
+		margin: 0 auto 2rem;
+		max-width: 900px;
+	}
+	.tm-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		font-family: var(--font-sans);
+		font-size: 0.85rem;
+		font-weight: 700;
+		color: var(--text-primary);
+		background: var(--bg-secondary);
+		border: 1.5px solid rgba(0, 0, 0, 0.15);
+		border-radius: 999px;
+		padding: 0.45rem 0.95rem;
+		cursor: pointer;
+		transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+	}
+	.tm-chip:hover {
+		border-color: var(--accent-primary);
+		color: var(--accent-primary);
+	}
+	.tm-chip:focus-visible {
+		outline: 2px solid var(--accent-primary);
+		outline-offset: 2px;
+	}
+	.tm-chip[aria-pressed="true"] {
+		background: var(--bg-dark);
+		border-color: var(--bg-dark);
+		color: var(--text-on-dark);
+	}
+	.tm-chip__count {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 600;
+		opacity: 0.6;
+	}
+
+	/* ══════ WALL ══════ */
+	/* Row-major grid so "newest first" reads left to right */
+	.tm-wall {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	/* ══════ CLOSING CTA ══════ */
+	.tm-cta {
+		padding: 2.5rem 0 1rem;
+	}
+	.tm-cta__band {
+		background: var(--bg-dark);
+		border-radius: 44px;
+		padding: 4rem 2rem;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+	.tm-cta__title {
+		font-family: var(--font-display);
+		font-weight: 850;
+		font-size: clamp(1.8rem, 3.6vw, 3rem);
+		line-height: 1.05;
+		letter-spacing: -0.03em;
+		text-transform: uppercase;
+		color: var(--text-on-dark);
+		max-width: 760px;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.tm-cta__sub {
+		font-size: clamp(1rem, 1.3vw, 1.15rem);
+		line-height: 1.6;
+		color: rgba(249, 247, 242, 0.7);
+		margin: 0 0 0.5rem;
+	}
+
+	/* ══════ RESPONSIVE ══════ */
+	@media (max-width: 960px) {
+		.tm-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	}
+	@media (max-width: 720px) {
+		.tm-hero { padding: 3rem 0 2rem; }
+		.tm-sheet { padding: 2.25rem 1rem; border-radius: 28px; }
+		.tm-featured { columns: 1; }
+		.tm-wall { grid-template-columns: minmax(0, 1fr); }
+		.tm-filters {
+			flex-wrap: nowrap;
+			justify-content: flex-start;
+			overflow-x: auto;
+			margin-left: -1rem;
+			margin-right: -1rem;
+			padding: 0.25rem 1rem;
+			scrollbar-width: none;
+		}
+		.tm-filters::-webkit-scrollbar { display: none; }
+		.tm-chip { flex-shrink: 0; }
+		.tm-cta__band { padding: 3rem 1.25rem; border-radius: 28px; }
+	}
+</style>

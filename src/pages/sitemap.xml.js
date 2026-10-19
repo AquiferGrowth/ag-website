@@ -21,6 +21,7 @@ export async function GET(context) {
     '/ai-seo',
     '/team',
     '/case-studies',
+    '/testimonials',
     '/industries/ecommerce-and-retail',
     '/industries/retail',
   ];

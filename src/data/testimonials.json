@@ -1,0 +1,232 @@
+[
+  {
+    "id": "ryse-sappho-2026-05-22",
+    "name": "Sappho H.",
+    "initials": "SH",
+    "company": "RYSE",
+    "channel": "#aquifergrowth-ryse",
+    "date": "2026-05-22",
+    "featured": true,
+    "quote": "Ashwin and Divjot did an excellent job working on our custom project! Their technical expertise and creativity with both written and visual content enabled us to create something truly unique, and highly relevant to our marketing needs. They also did an excellent job adjusting to new technology as it became available, pivoting from SEO to a more AI-optimized strategy as the project went on. 5 stars!"
+  },
+  {
+    "id": "pilabarre-madi-2026-08-27",
+    "name": "Madi R.",
+    "initials": "MR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-operations-pilabarre",
+    "date": "2026-08-27",
+    "featured": true,
+    "quote": "y'all are the absolute BEST. I didn't expect this to be so in-depth, but it shows how incredible your team is. We value you two so much"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-27-a",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "Direct message",
+    "date": "2026-08-27",
+    "featured": true,
+    "quote": "You do phenomenal work but youre also a great guy and a great friend"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-27-b",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "Direct message",
+    "date": "2026-08-27",
+    "featured": true,
+    "quote": "That data is absolutely crucial in helping us order inventory; so epic!!"
+  },
+  {
+    "id": "pilabarre-cam-2026-07-07",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-operations-pilabarre",
+    "date": "2026-07-07",
+    "featured": true,
+    "quote": "Incredible! thank you\n\nIve been using retool today super helpful thus far parsign POs etc 💪 thankful to have yall"
+  },
+  {
+    "id": "pilabarre-cam-2026-10-07",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-10-07",
+    "featured": true,
+    "quote": "THANK YALL!\n\nHuge help adding the barcodes in there for us\n\nI can see the light 😅"
+  },
+  {
+    "id": "pulsefx-katherine-2025-06-03",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-06-03",
+    "featured": true,
+    "quote": "This is reallllly good Divjot. amazing job"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-10",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-08-10",
+    "featured": false,
+    "quote": "SUPER valuable for us and shopify has no native way to pull it"
+  },
+  {
+    "id": "pilabarre-cam-2026-06-11-a",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-06-11",
+    "featured": false,
+    "quote": "That will be incredibly valuable especcially for any future aquisition as they wont know the products etc like we do"
+  },
+  {
+    "id": "pilabarre-cam-2026-06-11-b",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-06-11",
+    "featured": false,
+    "quote": "Incredible! I really appreciate you"
+  },
+  {
+    "id": "pilabarre-cam-2026-08-11",
+    "name": "Cam R.",
+    "initials": "CR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-08-11",
+    "featured": false,
+    "quote": "thank you Divjot this is super helpful."
+  },
+  {
+    "id": "pilabarre-madi-2026-10-07",
+    "name": "Madi R.",
+    "initials": "MR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-pilabarre",
+    "date": "2026-10-07",
+    "featured": false,
+    "quote": "thank you guys as well. You two are the best!"
+  },
+  {
+    "id": "pilabarre-madi-2026-10-12",
+    "name": "Madi R.",
+    "initials": "MR",
+    "company": "Pila Barre",
+    "channel": "#aquifergrowth-operations-pilabarre",
+    "date": "2026-10-12",
+    "featured": false,
+    "quote": "Yall are the best! thank you!!!!"
+  },
+  {
+    "id": "zoleo-julia-2026-10-09",
+    "name": "Julia F.",
+    "initials": "JF",
+    "company": "ZOLEO",
+    "channel": "#aquifergrowth-zoleo",
+    "date": "2026-10-09",
+    "featured": false,
+    "quote": "Thank you Divjot this is a great step forward!!! We will review asap!"
+  },
+  {
+    "id": "zoleo-julia-2026-09-17",
+    "name": "Julia F.",
+    "initials": "JF",
+    "company": "ZOLEO",
+    "channel": "#aquifergrowth-zoleo",
+    "date": "2026-09-17",
+    "featured": false,
+    "quote": "Thank you! Great job!"
+  },
+  {
+    "id": "zoleo-avrine-2026-09-30",
+    "name": "Avrine R.",
+    "initials": "AR",
+    "company": "ZOLEO",
+    "channel": "#aquifergrowth-zoleo",
+    "date": "2026-09-30",
+    "featured": false,
+    "quote": "Great going team, let's keep the momentum"
+  },
+  {
+    "id": "pulsefx-katherine-2025-06-09",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-06-09",
+    "featured": false,
+    "quote": "soooo amazing guys, thank you so much"
+  },
+  {
+    "id": "pulsefx-katherine-2025-05-31",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-05-31",
+    "featured": false,
+    "quote": "This is great!! Thank you so much"
+  },
+  {
+    "id": "pulsefx-katherine-2025-12-10",
+    "name": "Katherine L.",
+    "initials": "KL",
+    "company": "PulseFX",
+    "channel": "#aquifergrowth-pulsefx",
+    "date": "2025-12-10",
+    "featured": false,
+    "quote": "Amazing!!! Thank you so much"
+  },
+  {
+    "id": "virusintl-melanie-2026-10-13",
+    "name": "Melanie",
+    "initials": "M",
+    "company": "Virus Intl",
+    "channel": "#aquifergrowth-virusintl",
+    "date": "2026-10-13",
+    "featured": false,
+    "quote": "Okay, amazing. Thank you so, so much!"
+  },
+  {
+    "id": "livehealthillie-erin-2026-05-05",
+    "name": "Erin W.",
+    "initials": "EW",
+    "company": "Live Healthillie",
+    "channel": "#aquifergrowth-livehealthilliecom",
+    "date": "2026-05-05",
+    "featured": false,
+    "quote": "thank you so much for this breakdown!"
+  },
+  {
+    "id": "savi-avi-2026-04-10",
+    "name": "Avi Y.",
+    "initials": "AY",
+    "company": "SAVI",
+    "channel": "#aquifergrowth-savi",
+    "date": "2026-04-10",
+    "featured": false,
+    "quote": "YES! Love that"
+  },
+  {
+    "id": "savi-avi-2026-03-16",
+    "name": "Avi Y.",
+    "initials": "AY",
+    "company": "SAVI",
+    "channel": "#aquifergrowth-savi",
+    "date": "2026-03-16",
+    "featured": false,
+    "quote": "this looks great."
+  }
+]
