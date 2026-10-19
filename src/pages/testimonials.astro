@@ -51,6 +51,14 @@ const clients = Object.keys(clientCounts).sort((a, b) => clientCounts[b] - clien
 // The wall opens collapsed; "Show more" reveals the rest
 const INITIAL_WALL = 12;
 const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
+
+// Explicit columns rather than CSS multicol: Safari mis-sizes multicol containers when
+// children toggle `hidden`, which left phantom space under the page. Cards are dealt
+// round-robin so "newest" reads left to right; the script re-deals on filter and resize.
+const WALL_COLS = 3;
+const wallColumns = Array.from({ length: WALL_COLS }, (_, c) =>
+	wall.map((t, i) => ({ t, i })).filter(({ i }) => i % WALL_COLS === c),
+);
 ---
 
 <Layout
@@ -137,8 +145,12 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 				<p class="tm-filter-status" id="tm-filter-status" aria-live="polite"></p>
 
 				<div class="tm-wall" id="tm-wall" data-initial={INITIAL_WALL}>
-					{wall.map((t, i) => (
-						<SlackQuote {...t} industry={industryOf(t.company)} overflow={i >= INITIAL_WALL} />
+					{wallColumns.map((column) => (
+						<div class="tm-col">
+							{column.map(({ t, i }) => (
+								<SlackQuote {...t} industry={industryOf(t.company)} index={i} overflow={i >= INITIAL_WALL} />
+							))}
+						</div>
 					))}
 				</div>
 
@@ -174,8 +186,27 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 
 <script>
 	const chips = document.querySelectorAll<HTMLButtonElement>('.tm-chip[data-filter]');
-	const cards = document.querySelectorAll<HTMLElement>('#tm-wall [data-company]');
+	const wallEl = document.getElementById('tm-wall');
+	const columns = Array.from(wallEl?.querySelectorAll<HTMLElement>('.tm-col') ?? []);
+	// Newest-first order, independent of which column a card currently sits in
+	const cards = Array.from(wallEl?.querySelectorAll<HTMLElement>('[data-company]') ?? [])
+		.sort((a, b) => Number(a.dataset.index) - Number(b.dataset.index));
 	const status = document.getElementById('tm-filter-status');
+
+	const columnCount = () => (window.innerWidth <= 720 ? 1 : window.innerWidth <= 960 ? 2 : 3);
+
+	// Deal visible cards round-robin into the active columns so rows read left to right
+	function dealColumns() {
+		if (!columns.length) return;
+		const n = Math.min(columnCount(), columns.length);
+		let k = 0;
+		cards.forEach((card) => {
+			if (card.hidden) return;
+			columns[k % n].appendChild(card);
+			k++;
+		});
+		columns.forEach((col, i) => { col.hidden = i >= n; });
+	}
 	const moreBtn = document.getElementById('tm-show-more') as HTMLButtonElement | null;
 	const moreWrap = moreBtn?.parentElement ?? null;
 
@@ -195,6 +226,8 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 			card.hidden = !match || overflow;
 			if (!card.hidden) shown++;
 		});
+
+		dealColumns();
 
 		if (moreWrap) moreWrap.hidden = !collapsed;
 		if (moreBtn) moreBtn.setAttribute('aria-expanded', String(expanded));
@@ -220,6 +253,16 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		});
 	});
 
+	let lastCols = columnCount();
+	dealColumns();
+	window.addEventListener('resize', () => {
+		const n = columnCount();
+		if (n !== lastCols) {
+			lastCols = n;
+			dealColumns();
+		}
+	}, { passive: true });
+
 	moreBtn?.addEventListener('click', () => {
 		expanded = true;
 		render();
@@ -231,7 +274,9 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 </script>
 
 <style>
-	main { overflow-x: hidden; }
+	/* `clip`, not `hidden`: hidden would make <main> a nested scroll container, which
+	   Safari then scrolls on its own (stuck wheel, phantom space above the footer). */
+	main { overflow-x: clip; }
 
 	.text-gradient {
 		background: linear-gradient(135deg, var(--accent-primary), var(--accent-orange));
@@ -497,12 +542,20 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 	}
 
 	/* ══════ WALL ══════ */
-	/* Masonry columns: short thank-yous pack tightly instead of stretching to the tallest card in their row */
+	/* Three independent stacks: short thank-yous pack tightly instead of stretching to the tallest card in their row */
 	.tm-wall {
-		columns: 3;
-		column-gap: 1rem;
+		display: grid;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 1rem;
+		align-items: start;
 	}
-	.tm-wall > :global(*) { margin-bottom: 1rem; }
+	.tm-col {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		min-width: 0;
+	}
+	.tm-col[hidden] { display: none; }
 	.tm-more {
 		display: flex;
 		justify-content: center;
@@ -557,7 +610,7 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 
 	/* ══════ RESPONSIVE ══════ */
 	@media (max-width: 960px) {
-		.tm-wall { columns: 2; }
+		.tm-wall { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 		.tm-featured { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 	}
 	@media (max-width: 720px) {
@@ -565,7 +618,7 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		.tm-sheet { padding: 2.25rem 1rem; border-radius: 28px; }
 		.tm-spotlight { padding-right: 6px; margin-bottom: 1.5rem; }
 		.tm-featured { grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
-		.tm-wall { columns: 1; }
+		.tm-wall { grid-template-columns: minmax(0, 1fr); }
 		.tm-filters {
 			flex-wrap: nowrap;
 			justify-content: flex-start;
