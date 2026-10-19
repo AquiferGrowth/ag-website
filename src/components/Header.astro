@@ -24,6 +24,7 @@ import { SITE_TITLE } from '../consts';
 				</div>
 			</div>
 			<HeaderLink href="/case-studies">Case Studies</HeaderLink>
+			<HeaderLink href="/testimonials">Testimonials</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/contact">Contact</HeaderLink>
 		</div>
@@ -52,6 +53,7 @@ import { SITE_TITLE } from '../consts';
 		</div>
 	</div>
 	<a href="/case-studies" class="mobile-menu__link">Case Studies</a>
+	<a href="/testimonials" class="mobile-menu__link">Testimonials</a>
 	<a href="/blog" class="mobile-menu__link">Blog</a>
 	<a href="/contact" class="mobile-menu__link">Contact</a>
 </div>
@@ -341,8 +343,14 @@ import { SITE_TITLE } from '../consts';
 		pointer-events: auto;
 	}
 
-	/* ── Responsive breakpoint ── */
-	@media (max-width: 640px) {
+	/* ── Responsive breakpoints ── */
+	/* Tablet: six links still fit if they sit a little tighter */
+	@media (max-width: 1060px) {
+		.links { gap: 1rem; font-size: 0.78rem; letter-spacing: 0.04em; }
+		.pill-nav { padding: 0.75rem 1.5rem; }
+	}
+	/* Below this the links no longer fit on one line, so switch to the drawer */
+	@media (max-width: 880px) {
 		.pill-nav { padding: 0.65rem 1.25rem; }
 		.links { display: none; }
 		.hamburger { display: flex; }

@@ -934,6 +934,11 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 					</button>
 					<span class="expand-label" id="expand-label">More reviews</span>
 				</div>
+
+				<div class="cs-view-more testimonials-view-more">
+					<p class="testimonials-view-more__note">Those are the polished ones. The unpolished ones, straight from our shared Slack channels, are here too.</p>
+					<a href="/testimonials" class="btn btn-secondary">Read the Slack Messages →</a>
+				</div>
 			</section>
 		)}
 
@@ -4399,6 +4404,21 @@ const otherCases = allCaseStudies.filter(c => c.slug !== featuredCase?.slug);
 		font-size: 0.8rem;
 		color: #9ca3af;
 		font-weight: 500;
+	}
+
+	.testimonials-view-more {
+		flex-direction: column;
+		align-items: center;
+		gap: 1.1rem;
+		text-align: center;
+	}
+	.testimonials-view-more__note {
+		margin: 0;
+		max-width: 520px;
+		font-size: 0.95rem;
+		line-height: 1.55;
+		color: var(--text-secondary);
+		text-wrap: balance;
 	}
 
 	@media (max-width: 900px) {
