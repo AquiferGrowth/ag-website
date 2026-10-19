@@ -48,11 +48,6 @@ const clientCounts = testimonials.reduce<Record<string, number>>((acc, t) => {
 }, {});
 const clients = Object.keys(clientCounts).sort((a, b) => clientCounts[b] - clientCounts[a] || a.localeCompare(b));
 
-// Hero stats, derived from the data so they never go stale
-const totalMessages = testimonials.length;
-const totalClients = new Set(testimonials.map((t) => t.company)).size;
-const firstYear = Math.min(...testimonials.map((t) => Number(t.date.slice(0, 4))));
-
 // The wall opens collapsed; "Show more" reveals the rest
 const INITIAL_WALL = 12;
 const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
@@ -75,20 +70,6 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 				<span class="tm-eyebrow">Testimonials</span>
 				<h1 class="tm-hero__title">Our clients, in their <span class="text-gradient">own words</span></h1>
 				<p class="tm-hero__sub">No polished quotes. These are the actual messages our clients send us, pulled straight from our shared Slack channels, exactly as written.</p>
-				<dl class="tm-stats" aria-label="Testimonials at a glance">
-					<div class="tm-stat">
-						<dt>Messages</dt>
-						<dd>{totalMessages}</dd>
-					</div>
-					<div class="tm-stat">
-						<dt>Clients</dt>
-						<dd>{totalClients}</dd>
-					</div>
-					<div class="tm-stat">
-						<dt>Since</dt>
-						<dd>{firstYear}</dd>
-					</div>
-				</dl>
 				<a href="/contact" class="tm-btn">
 					<span>Talk to us</span>
 					<span class="tm-animated-dots"><span></span><span></span><span></span></span>
@@ -373,47 +354,6 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		background: rgba(255, 255, 255, 0.6);
 	}
 
-	/* ══════ HERO STATS ══════ */
-	.tm-stats {
-		display: flex;
-		justify-content: center;
-		gap: 0;
-		margin: 0.25rem 0 0;
-		padding: 0;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 18px;
-		background: var(--bg-secondary);
-		overflow: hidden;
-	}
-	.tm-stat {
-		display: flex;
-		flex-direction: column-reverse;
-		align-items: center;
-		gap: 0.15rem;
-		padding: 0.85rem 1.6rem;
-		min-width: 120px;
-	}
-	.tm-stat + .tm-stat {
-		border-left: 1px solid rgba(0, 0, 0, 0.1);
-	}
-	.tm-stat dt {
-		font-family: var(--font-mono);
-		font-size: 0.68rem;
-		font-weight: 600;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
-		color: #888;
-	}
-	.tm-stat dd {
-		margin: 0;
-		font-family: var(--font-display);
-		font-weight: 850;
-		font-size: 1.6rem;
-		line-height: 1;
-		letter-spacing: -0.02em;
-		color: var(--text-primary);
-	}
-
 	/* ══════ BUTTON ══════ */
 	.tm-btn {
 		display: inline-flex;
@@ -622,10 +562,6 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 	}
 	@media (max-width: 720px) {
 		.tm-hero { padding: 3rem 0 2rem; }
-		.tm-stats { width: 100%; max-width: 420px; border-radius: 14px; }
-		.tm-stat { flex: 1; min-width: 0; padding: 0.7rem 0.5rem; }
-		.tm-stat dd { font-size: 1.3rem; }
-		.tm-stat dt { font-size: 0.6rem; letter-spacing: 0.06em; }
 		.tm-sheet { padding: 2.25rem 1rem; border-radius: 28px; }
 		.tm-spotlight { padding-right: 6px; margin-bottom: 1.5rem; }
 		.tm-featured { grid-template-columns: minmax(0, 1fr); gap: 0.85rem; }
