@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SlackQuote from '../components/SlackQuote.astro';
 import testimonialsData from '../data/testimonials.json';
+import clientIndustries from '../data/clientIndustries.json';
 
 interface Testimonial {
 	id: string;
@@ -19,20 +20,33 @@ interface Testimonial {
 }
 const testimonials = testimonialsData as Testimonial[];
 
+const industryMap = clientIndustries as Record<string, string>;
+const industryOf = (company: string) => industryMap[company] ?? 'Other';
+
 const spotlight = testimonials.find((t) => t.spotlight) ?? testimonials.find((t) => t.featured);
 const featured = testimonials.filter((t) => t.featured && t !== spotlight);
 const wall = testimonials
 	.filter((t) => !t.featured)
 	.sort((a, b) => b.date.localeCompare(a.date));
 
-// One chip per company on the wall, most messages first
-const companyCounts = wall.reduce<Record<string, number>>((acc, t) => {
+// One chip per industry on the wall, most messages first, with the clients behind each chip
+const industryStats = wall.reduce<Record<string, { count: number; clients: Set<string> }>>((acc, t) => {
+	const key = industryOf(t.company);
+	acc[key] ??= { count: 0, clients: new Set() };
+	acc[key].count++;
+	acc[key].clients.add(t.company);
+	return acc;
+}, {});
+const industries = Object.entries(industryStats)
+	.sort((a, b) => b[1].count - a[1].count || a[0].localeCompare(b[0]))
+	.map(([industry, { count, clients }]) => ({ industry, count, clients: [...clients].sort() }));
+
+// Every client, for the hero strip (most messages first)
+const clientCounts = testimonials.reduce<Record<string, number>>((acc, t) => {
 	acc[t.company] = (acc[t.company] ?? 0) + 1;
 	return acc;
 }, {});
-const companies = Object.entries(companyCounts)
-	.sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-	.map(([company, count]) => ({ company, count }));
+const clients = Object.keys(clientCounts).sort((a, b) => clientCounts[b] - clientCounts[a] || a.localeCompare(b));
 
 // Hero stats, derived from the data so they never go stale
 const totalMessages = testimonials.length;
@@ -79,6 +93,11 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 					<span>Talk to us</span>
 					<span class="tm-animated-dots"><span></span><span></span><span></span></span>
 				</a>
+				<ul class="tm-clients" aria-label="Clients quoted on this page">
+					{clients.map((c) => (
+						<li>{c}</li>
+					))}
+				</ul>
 				<p class="tm-hero__note">Shared with permission. Messages, companies and timestamps are real. Last names are shortened for privacy, and anything we trimmed is marked […].</p>
 			</div>
 		</section>
@@ -114,24 +133,31 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 			<div class="container">
 				<div class="tm-intro">
 					<h2 class="tm-section__title">Every thank-you we've been <span class="text-gradient">sent</span></h2>
-					<p class="tm-section__sub">Newest at the top. Filter by client.</p>
+					<p class="tm-section__sub">Newest at the top. Filter by the kind of company you run.</p>
 				</div>
 
-				<div class="tm-filters" role="group" aria-label="Filter messages by client">
+				<div class="tm-filters" role="group" aria-label="Filter messages by industry">
 					<button type="button" class="tm-chip" data-filter="all" aria-pressed="true">
 						All <span class="tm-chip__count">{wall.length}</span>
 					</button>
-					{companies.map(({ company, count }) => (
-						<button type="button" class="tm-chip" data-filter={company} aria-pressed="false">
-							{company} <span class="tm-chip__count">{count}</span>
+					{industries.map(({ industry, count, clients }) => (
+						<button
+							type="button"
+							class="tm-chip"
+							data-filter={industry}
+							data-clients={clients.join(', ')}
+							aria-pressed="false"
+							title={clients.join(', ')}
+						>
+							{industry} <span class="tm-chip__count">{count}</span>
 						</button>
 					))}
 				</div>
-				<p class="tm-sr-only" id="tm-filter-status" aria-live="polite"></p>
+				<p class="tm-filter-status" id="tm-filter-status" aria-live="polite"></p>
 
 				<div class="tm-wall" id="tm-wall" data-initial={INITIAL_WALL}>
 					{wall.map((t, i) => (
-						<SlackQuote {...t} overflow={i >= INITIAL_WALL} />
+						<SlackQuote {...t} industry={industryOf(t.company)} overflow={i >= INITIAL_WALL} />
 					))}
 				</div>
 
@@ -175,13 +201,15 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 	let filter = 'all';
 	let expanded = false;
 
-	// "All" starts collapsed; a client filter always shows every match,
-	// since no single client has enough messages to need collapsing.
+	let filterClients = '';
+
+	// "All" starts collapsed; an industry filter always shows every match,
+	// since no single industry has enough messages to need collapsing.
 	function render() {
 		const collapsed = filter === 'all' && !expanded;
 		let shown = 0;
 		cards.forEach((card) => {
-			const match = filter === 'all' || card.dataset.company === filter;
+			const match = filter === 'all' || card.dataset.industry === filter;
 			const overflow = collapsed && card.dataset.overflow === 'true';
 			card.hidden = !match || overflow;
 			if (!card.hidden) shown++;
@@ -191,13 +219,21 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		if (moreBtn) moreBtn.setAttribute('aria-expanded', String(expanded));
 
 		if (status) {
-			status.textContent = `Showing ${shown} ${shown === 1 ? 'message' : 'messages'}${filter === 'all' ? '' : ` from ${filter}`}`;
+			if (filter === 'all') {
+				status.textContent = '';
+				status.hidden = true;
+			} else {
+				const n = filterClients.split(', ').filter(Boolean).length;
+				status.textContent = `${shown} ${shown === 1 ? 'message' : 'messages'} from ${n} ${n === 1 ? 'client' : 'clients'} in ${filter.toLowerCase()}: ${filterClients}`;
+				status.hidden = false;
+			}
 		}
 	}
 
 	chips.forEach((chip) => {
 		chip.addEventListener('click', () => {
 			filter = chip.dataset.filter ?? 'all';
+			filterClients = chip.dataset.clients ?? '';
 			chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
 			render();
 		});
@@ -224,14 +260,17 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		color: transparent;
 	}
 
-	.tm-sr-only {
-		position: absolute;
-		width: 1px;
-		height: 1px;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
-		white-space: nowrap;
+	.tm-filter-status {
+		font-family: var(--font-mono);
+		font-size: 0.74rem;
+		line-height: 1.5;
+		color: #666;
+		text-align: center;
+		max-width: 720px;
+		margin: -1rem auto 1.75rem;
 	}
+	.tm-filter-status:empty,
+	.tm-filter-status[hidden] { display: none; }
 
 	/* ══════ HERO ══════ */
 	.tm-hero {
@@ -308,6 +347,30 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 		color: #888;
 		max-width: 520px;
 		margin: 0.5rem 0 0;
+	}
+
+	/* ══════ HERO CLIENT STRIP ══════ */
+	.tm-clients {
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 0.4rem 0.6rem;
+		margin: 1.25rem 0 0;
+		padding: 0;
+		max-width: 640px;
+	}
+	.tm-clients li {
+		font-family: var(--font-display);
+		font-weight: 800;
+		font-size: 0.78rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--text-secondary);
+		padding: 0.3rem 0.7rem;
+		border: 1.5px solid rgba(0, 0, 0, 0.12);
+		border-radius: 999px;
+		background: rgba(255, 255, 255, 0.6);
 	}
 
 	/* ══════ HERO STATS ══════ */
@@ -575,6 +638,9 @@ const hiddenCount = Math.max(wall.length - INITIAL_WALL, 0);
 			margin-right: -1rem;
 			padding: 0.25rem 1rem;
 			scrollbar-width: none;
+			/* Fade the right edge so it's clear the chip row scrolls */
+			-webkit-mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
+			mask-image: linear-gradient(to right, #000 calc(100% - 2.5rem), transparent);
 		}
 		.tm-filters::-webkit-scrollbar { display: none; }
 		.tm-chip { flex-shrink: 0; }

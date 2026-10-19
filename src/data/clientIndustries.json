@@ -1,0 +1,12 @@
+{
+  "_comment": "Maps each client on /testimonials to the industry chip it filters under. Add a line here when a new client appears in testimonials.json; unmapped clients fall under 'Other'.",
+  "Pila Barre": "Retail & E-commerce",
+  "Sukoshi Mart": "Retail & E-commerce",
+  "Virus Intl": "Retail & E-commerce",
+  "Bellowater": "Retail & E-commerce",
+  "RYSE": "Consumer Tech",
+  "ZOLEO": "Consumer Tech",
+  "Live Healthillie": "Health & Wellness",
+  "SAVI": "Media & Creative",
+  "PulseFX": "B2B Services"
+}

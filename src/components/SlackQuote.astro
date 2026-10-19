@@ -10,6 +10,8 @@ interface Props {
 	size?: 'sm' | 'lg' | 'xl';
 	/** Star rating the client gave in the message itself (only shown when they wrote one) */
 	rating?: number;
+	/** Industry bucket the wall filter matches on */
+	industry?: string;
 	/** Rendered hidden until the wall's "Show more" is pressed */
 	overflow?: boolean;
 }
@@ -23,6 +25,7 @@ const {
 	quote,
 	size = 'sm',
 	rating,
+	industry,
 	overflow = false,
 } = Astro.props;
 
@@ -48,6 +51,7 @@ const stars = rating ? Math.min(Math.max(Math.round(rating), 0), 5) : 0;
 <article
 	class={`sq sq--${size}`}
 	data-company={company}
+	data-industry={industry}
 	data-overflow={overflow ? 'true' : undefined}
 	hidden={overflow}
 >
